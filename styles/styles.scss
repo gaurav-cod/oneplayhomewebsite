@@ -21,13 +21,13 @@
 
 .bgimage {
     width: 100%;
-    height: 780px;
+    padding-bottom: 450px !important;
     background: url("../assets/Background\ -\ Desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     
     @media (max-width: 425px) {
-        height: 560px;
+        padding-bottom: 300px !important;
     }
 }
 
