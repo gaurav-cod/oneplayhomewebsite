@@ -5,44 +5,79 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
   <link rel="stylesheet" href="./styles/styles.css" />
   <title>OnePlay | About Us</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid px-lg-5">
-      <a class="navbar-brand" href="./index.html">
-        <img src="assets/logo.png" alt="" class="light-version-logo" width="140" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#how-it-works">How it works?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#pricing">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#faq">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./download.html">Download</a>
-          </li>
-        </ul>
-        <!-- <form class="d-flex">
-              <button class="btn btn-link text-decoration-none text-light me-2">Login</button>
-              <button class="btn btn-outline-light" type="submit">Sign up</button>
-            </form> -->
+  <nav
+      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
+    >
+      <div class="container px-lg-5">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="assets/logo.png"
+            alt=""
+            class="light-version-logo"
+            width="140"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./subscription.html">Subscription</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games.html">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./download.html">Download</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <a
+              href="https://oneplay.netlify.app/login"
+              class="btn btn-link text-decoration-none text-light me-2"
+              >Login</a
+            >
+            <a
+              href="https://oneplay.netlify.app/signup"
+              class="btn btn-outline-light signup-button"
+              type="submit"
+              >Sign up</a
+            >
+          </form>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <div class="jumbotron bgimage p-lg-5 p-md-4 p-3 text-center">
     <img src="assets/logo.png" style="width: 277px; margin-top: 184px" alt="" />
@@ -141,34 +176,66 @@
     </div>
   </div>
 
-  <footer class="text-center text-center py-5" style="background-color: #1d1a2e">
-    <img src="assets/logo.png" alt="" class="light-version-logo" width="250" />
+  <footer class="py-5 footer-section">
     <div class="container">
+      <img
+        src="assets/logo.png"
+        alt=""
+        class="light-version-logo"
+        width="250"
+      />
       <div class="row my-5 text-white-50">
-        <div class="col-lg-1 col-md-12"></div>
-        <a href="./index.html#how-it-works" class="col-lg-2 col-md-12 text-decoration-none text-white-50">How it works?</a>
-        <a href="./index.html#pricing" class="col-lg-2 col-md-12 text-decoration-none text-white-50">Pricing</a>
-        <a href="./index.html#faq" class="col-lg-2 col-md-12 text-decoration-none text-white-50">FAQ</a>
-        <a href="./privacy.html" class="col-lg-2 col-md-12 text-decoration-none text-white-50">Privacy Policy</a>
-        <div class="col-lg-2 col-md-12">Terms of Service</div>
-        <div class="col-lg-1 col-md-12"></div>
+        <a
+          href="./system requirement.html"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >System Requirements</a
+        >
+        <a
+          href="./about.html"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >About Us</a
+        >
+        <a
+          href="./subscription.html"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >Pricing</a
+        >
+        <a
+          href="#faq"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >Support</a
+        >
+        <a
+          href="./privacy.html"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >Privacy Policy</a
+        >
+        <a
+          href="./tnc.html"
+          class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+          >Terms of Service</a
+        >
       </div>
+
+      <div style="width: min-content" class="social-icons m-auto">
+        <ul class="pl-0 list-unstyled d-flex align-items-end">
+          <li class="d-flex flex-column justify-content-center me-2">
+            <i class="fa fa-facebook facebook-icon"></i>
+          </li>
+          <li class="d-flex flex-column justify-content-center me-2">
+            <i class="fa fa-instagram facebook-icon"></i>
+          </li>
+          <li class="d-flex flex-column justify-content-center">
+            <i class="fa fa-twitter facebook-icon"></i>
+          </li>
+        </ul>
+      </div>
+
+      <br />
+      <p style="color: #8a94a6">
+        © 2021 RainBox Media Pvt Ltd. All Rights Reserved.
+      </p>
     </div>
-    <div style="width: min-content" class="social-icons m-auto">
-      <ul class="pl-0 list-unstyled d-flex align-items-end">
-        <li class="d-flex flex-column justify-content-center me-2">
-          <img src="assets/Facebook.png" width="50" style="border-radius: 0px" />
-        </li>
-        <li class="d-flex flex-column justify-content-center me-2">
-          <img src="assets/Instagram.png" width="50" style="border-radius: 0px" />
-        </li>
-        <li class="d-flex flex-column justify-content-center">
-          <img src="assets/Twitter.png" width="50" style="border-radius: 0px" />
-        </li>
-      </ul>
-    </div>
-    <br />
-    <p style="color: #8a94a6">© 2021 All Rights Reserved to OnePlay</p>
   </footer>
 </body>
 

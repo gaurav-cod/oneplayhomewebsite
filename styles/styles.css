@@ -63,7 +63,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #121212;
 }
 
 *,
@@ -12319,7 +12319,7 @@ fieldset:disabled .btn {
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
-  --bs-body-bg: #fff;
+  --bs-body-bg: #121212;
 }
 
 *,
@@ -14592,19 +14592,11 @@ body {
   background-size: cover;
 }
 
-.gameplay-image {
-  width: 86%;
-}
-
-.gameplay {
-  text-align: center;
-}
-
 .gameplay-text {
   font-size: 24px;
   font-weight: 400;
   color: #fff;
-  margin: -112px auto 0px auto;
+  margin: 112px auto 0px auto;
   width: 424px;
   padding-bottom: 72px;
   text-align: center;
@@ -14807,9 +14799,12 @@ body {
 }
 
 .built-section {
-  background: transparent linear-gradient(106deg, #3b2a9d 0%, #5a2aa2 100%);
+  background-image: url(../assets/Background\ banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   padding: 120px 0px;
+  min-height: 1280px;
 }
 
 .step-info {
@@ -14902,7 +14897,7 @@ body {
 
 .ultra-section {
   background-size: cover;
-  background-image: url(https://asianacircus.com/wp-content/uploads/2018/10/dark-anime-characters-Medium.jpg);
+  background-image: url(../assets/resident-evil-hero-banner-02-ps4-us-03jan19-1110x720.jpg);
 }
 
 .ultra-text {
@@ -14921,12 +14916,12 @@ body {
   padding: 9px;
   margin: 0px auto;
   text-align: center;
-  width: 50%;
+  width: 70%;
   border-radius: 12px;
 }
 
 .text-fade {
-  color: #88888b;
+  color: #88888b !important;
   /* font-weight: bold;
   font-size: 48px; */
 }
