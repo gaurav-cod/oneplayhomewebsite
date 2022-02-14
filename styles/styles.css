@@ -14635,7 +14635,7 @@ body {
 }
 
 .humanplaying-image {
-  width: 450px;
+  width: 45%;
   display: inline-block;
 }
 
@@ -14660,20 +14660,20 @@ body {
 }
 
 .playtogether-section {
-  width: 336px;
+  width: 290px;
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 31px;
+  margin-right: 70px;
 }
 
 .discover-section {
-  width: 336px;
+  width: 290px;
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 31px;
-  margin-top: -131px;
+  margin-right: 64px;
+  margin-top: -177px;
 }
 
 .livegame-section {
@@ -14689,7 +14689,7 @@ body {
   text-align: initial;
   display: inline-block;
   vertical-align: top;
-  margin: -177px 0px 0px 487px;
+  margin: -177px 0px 0px 620px;
 }
 
 .powersection-button {
@@ -14954,6 +14954,16 @@ body {
 
 .verticle-line.col-4:last-child::after {
   display: none;
+}
+
+.stepper {
+  position: absolute;
+  top: 5rem;
+  height: 2px;
+  background-color: #D9E2EC;
+  width: 373px;
+  left: 18%;
+  margin-left: 1rem;
 }
 
 .remember-password {
