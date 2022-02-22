@@ -73,3 +73,21 @@ const changeVideo = (el) => {
   // video.setAttribute("src", url);
   // video.play();
 };
+
+function loginEvent() {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Home',
+    eventAction: 'login',
+    eventLabel: 'User hit login button',
+  });
+}
+
+function signUpEvent() {
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Home',
+    eventAction: 'signup',
+    eventLabel: 'User hit signup button',
+  });
+}

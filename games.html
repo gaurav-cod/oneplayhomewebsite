@@ -72,7 +72,7 @@
               >Login</a
             >
             <a
-              href="http://103.242.119.222:8090/"
+              href="http://103.242.119.222:8090/?redirect=signup"
               class="btn btn-outline-light signup-button"
               type="submit"
               >Sign up</a
@@ -85,175 +85,7 @@
     <div class="container-sm pt-3">
       <div class="container-sm py-5">
         <h2 class="display-6 mt-5 text-white">Best of 2021</h2>
-        <div class="py-5 row">
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/1.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/2.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/3.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/4.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/5.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/6.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/7.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/8.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/9.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/10.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/11.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/12.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/13.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-5 col-lg-3 mb-4">
-            <a class="card card-block border-0">
-              <img
-                style="border-radius: 24px"
-                class="card-img"
-                src="assets/games/14.jpg"
-                height="153"
-                width="219"
-                alt=""
-              />
-            </a>
-          </div>
+        <div id="games-list" class="py-5 row">
         </div>
       </div>
     </div>
@@ -299,13 +131,22 @@
         <div style="width: min-content" class="social-icons m-auto">
           <ul class="pl-0 list-unstyled d-flex align-items-end">
             <li class="d-flex flex-column justify-content-center me-2">
-              <i class="fa fa-facebook facebook-icon"></i>
+              <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
+                <i class="fa fa-facebook facebook-icon"></i>
+              </a>
             </li>
             <li class="d-flex flex-column justify-content-center me-2">
-              <i class="fa fa-instagram facebook-icon"></i>
+              <a
+                href="https://www.instagram.com/oneplaycloudgaming/"
+                target="_blank"
+              >
+                <i class="fa fa-instagram facebook-icon"></i>
+              </a>
             </li>
             <li class="d-flex flex-column justify-content-center">
-              <i class="fa fa-twitter facebook-icon"></i>
+              <a href="https://twitter.com/CloudOneplay" target="_blank">
+                <i class="fa fa-twitter facebook-icon"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -319,5 +160,20 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/games.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-220923953-1");
+    </script>
   </body>
 </html>

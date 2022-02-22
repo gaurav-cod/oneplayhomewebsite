@@ -14295,6 +14295,14 @@ progress {
   background-size: cover;
 }
 
+.about-banner {
+  background: url("../assets/Background\ -\ Desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 140px !important;
+  padding-bottom: 140px !important;
+}
+
 .bgimage {
   width: 100%;
   padding-bottom: 450px !important;
@@ -14587,7 +14595,7 @@ body {
 .gameplay-section {
   width: 100%;
   /* height: 799px; */
-  background: url(../assets/Background-gameplay.jpg);
+  background: url(../assets/Background\ -\ Desktop.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -14605,6 +14613,13 @@ body {
 .games-images-section {
   background-color: #121212;
   /* position: relative; */
+}
+
+.meet-connect-section {
+  width: 100%;
+  background: url(../assets/The\ Team\ Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .getyourgame-text {
@@ -14652,40 +14667,39 @@ body {
 }
 
 .meet-sub-titles {
-  font-size: 24px;
+  font-size: 28px;
   color: #fff;
   font-weight: 600;
   margin: 0px;
-  opacity: 0.76;
 }
 
 .playtogether-section {
-  width: 290px;
+  width: 300px;
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 
 .discover-section {
-  width: 290px;
+  width: 300px;
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 64px;
+  margin-right: 50px;
   margin-top: -177px;
 }
 
 .livegame-section {
-  width: 257px;
+  width: 300px;
   text-align: initial;
   display: inline-block;
   vertical-align: top;
-  margin-left: 33px;
+  margin-left: -33px;
 }
 
 .chatontext-section {
-  width: 257px;
+  width: 300px;
   text-align: initial;
   display: inline-block;
   vertical-align: top;
@@ -14697,7 +14711,6 @@ body {
   line-break: 1;
   margin: 0px auto;
   text-align: center;
-  padding: 150px 0px;
 }
 
 .power-text {
@@ -14804,7 +14817,7 @@ body {
   background-size: cover;
   text-align: center;
   padding: 120px 0px;
-  min-height: 1280px;
+  min-height: 1300px;
 }
 
 .step-info {
@@ -14897,7 +14910,9 @@ body {
 
 .ultra-section {
   background-size: cover;
-  background-image: url(../assets/resident-evil-hero-banner-02-ps4-us-03jan19-1110x720.jpg);
+  background-image: url(../assets/Background\ -\ Desktop.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .ultra-text {
@@ -14974,6 +14989,13 @@ body {
   color: #fff;
 }
 
+.member-avater {
+  background-image: linear-gradient(to right, #1e67de4f -4%, #8250e0);
+  border-radius: 50%;
+  height: 175px;
+  width: 175px;
+}
+
 .row-hero {
   height: 100vh;
   width: 100%;
@@ -15036,5 +15058,5 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
 }
