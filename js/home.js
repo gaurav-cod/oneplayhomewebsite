@@ -1,5 +1,5 @@
 function loadGames() {
-  return fetch("https://103.242.119.222/api/games?page=0&limit=90", {
+  return fetch("https://rendermix.oneplay.in/v1/games?page=0&limit=90", {
     headers: {
       "content-type": "application/json",
     },
@@ -21,7 +21,7 @@ loadGames().then((data) => {
       gameEl.className = "swiper-slide";
       gameEl.innerHTML = `
       <img src="${
-        "https://oneplay-assets-dev.s3.ap-south-1.amazonaws.com/game_assets_4/" +
+        "https://cdn.edge-net.co/game_assets/" +
         game.oplay_id +
         game.text_background_image
       }" class="img-list" alt="" />
