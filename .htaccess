@@ -28,7 +28,7 @@ RewriteRule ^(.*)$ $1.php
 # Hide the contents of directories
 IndexIgnore *
 
-<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|py|pyc|.git|env)$">
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|py|pyc|.git|env|html)$">
 Order Allow,Deny
 Deny from all
 </FilesMatch>
