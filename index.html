@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OnePlay | Cloud Gaming | Cloud PC</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
+    >
+      <div class="container px-lg-5">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="assets/logo.png"
+            alt=""
+            class="light-version-logo"
+            width="140"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                href="./subscription.html"
+                >Subscription</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./games.html"
+                >Games</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./download.html"
+                >Download</a
+              >
+            </li>
+          </ul>
+         <form class="d-flex">
+            <a
+              href="/login/"
+              class="btn btn-link text-decoration-none text-light me-2"
+              >Login</a
+            >
+            <a
+              href="/speedtest/?redirect=signup"
+              class="btn btn-outline-light signup-button"
+              type="submit"
+              >Sign up</a
+            >
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="video-section row-hero d-flex flex-column justify-content-center"
+    >
+      <div class="video-parallax">
+        <video id="mVideo" autoplay muted loop>
+          <source src="./assets/My Movie.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="backdrop"></div>
+
+      <div class="drivesection-button" style="z-index: 10">
+        <p class="main-text">
+          Dive into the parallel world with a click of a button
+        </p>
+        <p class="main-sub-text">
+          High graphics games without owning any hardware.
+        </p>
+        <button class="btn getstarted-button">Get started</button>
+      </div>
+    </div>
+
+    <div class="gameplay-section banner">
+      <div class="container">
+        <div class="text-center pt-5">
+          <p class="gameplay-text mt-5 mb-0">
+            Available for all connection speeds, from 6Mb/s and 4G up
+          </p>
+          <img src="./assets/Gameplay.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="games-images-section">
+      <div class="meet-connect-section">
+        <div class="container">
+          <div class="getyour-section">
+            <p class="getyourgame-text">Get your game on with your friends!</p>
+            <p class="meet-text">
+              Meet | <span class="connect-text">Connect |</span>
+              <span class="play-text">Play</span>
+            </p>
+          </div>
+          <div class="humanplay-section">
+            <div class="playtogether-section">
+              <p class="meet-sub-titles">Play together</p>
+              <p class="subtitles-content">
+                Run all your Windows software remotely without noticeable
+                latency.
+              </p>
+            </div>
+            <img src="./assets/Friends.png" class="humanplaying-image" alt="" />
+            <div class="livegame-section">
+              <p class="meet-sub-titles">Live Game Streaming</p>
+              <p class="subtitles-content">
+                Run all your Windows software remotely without noticeable
+                latency.
+              </p>
+            </div>
+
+            <div class="discover-section">
+              <p class="meet-sub-titles">Discover gamers</p>
+              <p class="subtitles-content">
+                Run all your Windows software remotely without noticeable
+                latency.
+              </p>
+            </div>
+            <div class="chatontext-section">
+              <p class="meet-sub-titles">Chat on text or audio</p>
+              <p class="subtitles-content">
+                Run all your Windows software remotely without noticeable
+                latency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supportsallstores-section banner position-relative">
+        <div class="backdrop"></div>
+        <div class="container position-relative">
+          <div class="powersection-button">
+            <p class="power-text">The power of cloud at your fingertips</p>
+            <p class="power-content">Choose from a collection of 1000+ games</p>
+            <a href="./games.html" class="btn getstarted-button"
+              >Explore games</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid ultra-section banner position-relative py-5">
+        <div class="container latency-section position-relative">
+          <div class="my-5">
+            <div class="row">
+              <div class="col-8">
+                <div>
+                  <div class="ultraimage-wrapper">
+                    <video
+                      id="alt-video"
+                      style="width: 100%"
+                      autoplay
+                      muted
+                      loop
+                      src="assets/videoplayback.mp4"
+                    ></video>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this, 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4')"
+                >
+                  <p class="ultra-text">Ultra low latency</p>
+                  <p class="ultra-content">
+                    Run all your Windows software remotely without noticeable
+                    latency.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this, 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4')"
+                >
+                  <p class="text-fade ultra-text">Synced instantly</p>
+                  <p class="ultra-content text-fade">
+                    Enjoy a native Windows 10 PC experience. Access all your PC
+                    application softwares.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this, 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')"
+                >
+                  <p class="text-fade ultra-text">Native 4K Quality</p>
+                  <p class="ultra-content text-fade">
+                    Smooth and Crispy Stream, so that you can dive deeper.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this, 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4')"
+                >
+                  <p class="text-fade ultra-text">Supports all stores</p>
+                  <p class="ultra-content text-fade">
+                    Play and Download the Games from STEAM, EPIC, UPLAY and more
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="built-section d-flex flex-column justify-content-between">
+      <div class="py-4">
+        <p class="built-text">Built for the crazy ones</p>
+        <p class="built-content">Easy to get started. Cancel anytime</p>
+        <div class="container">
+          <div class="row py-5 verticle-line">
+            <div class="col-4">
+              <p class="step-no1">1</p>
+              <p class="step-number">Step</p>
+              <p class="step-info">Check Requirements</p>
+              <div class="stepper"></div>
+            </div>
+            <div class="col-4">
+              <p class="step-no1">2</p>
+              <p class="step-number">Step</p>
+              <p class="step-info">Install OnePlay</p>
+              <div class="stepper" style="left: 51.3%"></div>
+            </div>
+            <div class="col-4">
+              <p class="step-no1">3</p>
+              <p class="step-number">Step</p>
+              <p class="step-info">Dive in and Enjoy</p>
+            </div>
+          </div>
+
+          <button class="btn builtget-button">Get Started</button>
+        </div>
+      </div>
+
+      <div class="container">
+        <img
+          src="assets/logo.png"
+          alt=""
+          class="light-version-logo"
+          width="250"
+        />
+        <div class="row my-5 text-white-50">
+          <div class="col-lg-1 col-md-12"></div>
+          <a
+            href="./system requirement.html"
+            class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+            >System Requirements</a
+          >
+          <a
+            href="./about.html"
+            class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+            >About Us</a
+          >
+          <a
+            href="./subscription.html"
+            class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+            >Pricing</a
+          >
+          <a
+            href="./privacy.html"
+            class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+            >Privacy Policy</a
+          >
+          <a
+            href="./tnc.html"
+            class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+            >Terms of Service</a
+          >
+          <div class="col-lg-1 col-md-12"></div>
+        </div>
+
+        <div style="width: min-content" class="social-icons m-auto">
+          <ul class="pl-0 list-unstyled d-flex align-items-end">
+            <li class="d-flex flex-column justify-content-center me-2">
+              <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
+                <i class="fa fa-facebook facebook-icon"></i>
+              </a>
+            </li>
+            <li class="d-flex flex-column justify-content-center me-2">
+              <a
+                href="https://www.instagram.com/oneplaycloudgaming/"
+                target="_blank"
+              >
+                <i class="fa fa-instagram facebook-icon"></i>
+              </a>
+            </li>
+            <li class="d-flex flex-column justify-content-center">
+              <a href="https://twitter.com/CloudOneplay" target="_blank">
+                <i class="fa fa-twitter facebook-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <br />
+        <p style="color: #8a94a6">
+          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-220923953-1");
+    </script>
+  </body>
+</html>
