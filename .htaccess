@@ -1,5 +1,8 @@
 RewriteEngine on
 
+# Block git
+RedirectMatch 404 /\.git
+
 # ensure www.
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
@@ -9,10 +12,10 @@ RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-ErrorDocument 400 "<pre> Oh No! this url does not seems good to handle, please try again later."
-ErrorDocument 401 "<pre> Oh Shit!, No Such File Found."
-ErrorDocument 404 "<pre> Oh Shit!, No Such File Found."
-ErrorDocument 403 "<pre> Oh Shit!, No Such File Found."
+ErrorDocument 400 "<pre> No Such File Found."
+ErrorDocument 401 "<pre> No Such File Found."
+ErrorDocument 404 "<pre> No Such File Found."
+ErrorDocument 403 "<pre> No Such File Found."
 ErrorDocument 500 "<pre> Oh No!, Its a server side error, please try again later"
 ErrorDocument 502 "<pre> Oh No!, Its a server side error, please try again later"
 ErrorDocument 503 "<pre> Oh No!, Its a server side error, please try again later" 
@@ -22,40 +25,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.php -f 
 RewriteRule ^(.*)$ $1.php 
 
-<filesMatch "\.(js|css|png|jpeg|jpg|ico)$">
-    SetOutputFilter DEFLATE
-</filesMatch>
-
-<ifModule mod_expires.c>  
-        ExpiresActive On  
-        ExpiresByType image/x-icon "access plus 2592000 seconds"  
-        ExpiresByType image/jpeg "access plus 2592000 seconds"  
-        ExpiresByType image/png "access plus 2592000 seconds"  
-        ExpiresByType image/gif "access plus 2592000 seconds"  
-        ExpiresByType image/svg+xml "access plus 2592000 seconds"
-        ExpiresByType application/x-font-ttf "access plus 2592000 seconds"
-        ExpiresByType application/x-font-truetype "access plus 2592000 seconds"
-        ExpiresByType application/x-font-opentype "access plus 2592000 seconds"
-        ExpiresByType application/x-font-woff "access plus 2592000 seconds"
-        ExpiresByType application/font-woff2 "access plus 2592000 seconds"
-        ExpiresByType application/vnd.ms-fontobject "access plus 2592000 seconds"
-        ExpiresByType application/font-sfnt "access plus 2592000 seconds"
-        ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"  
-        ExpiresByType text/css "access plus 604800 seconds"  
-        ExpiresByType text/javascript "access plus 216000 seconds"  
-        ExpiresByType application/javascript "access plus 216000 seconds"  
-        ExpiresByType application/x-javascript "access plus 216000 seconds"  
-        ExpiresByType application/xhtml+xml "access plus 600 seconds"  
-
-        <Files "manifest.json">
-         ExpiresDefault "access plus 1 month"
-        </Files>
-        <Files "favicon.png">
-         ExpiresDefault "access plus 1 month"
-        </Files>
-</ifModule>  
-
- 
 # Hide the contents of directories
 IndexIgnore *
 
@@ -64,4 +33,4 @@ Order Allow,Deny
 Deny from all
 </FilesMatch>
 
-RedirectMatch 404 /\.git
+
