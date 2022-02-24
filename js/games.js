@@ -21,7 +21,7 @@ loadGames().then((data) => {
       <img
         class="card-img"
         src="${
-          "https://oneplay-assets-dev.s3.ap-south-1.amazonaws.com/game_assets_4/" +
+          "https://cdn.edge-net.co/game_assets/" +
           game.oplay_id +
           game.text_background_image
         }"

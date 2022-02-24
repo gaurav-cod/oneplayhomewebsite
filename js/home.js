@@ -1,5 +1,5 @@
 function loadGames() {
-  return fetch("https://rendermix.oneplay.in/v1/games?page=0&limit=90", {
+  return fetch("https://103.242.119.222/api/games?page=0&limit=90", {
     headers: {
       "content-type": "application/json",
     },
