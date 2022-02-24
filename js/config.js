@@ -1,4 +1,4 @@
-export const config = {
+window.config = {
     SIGNUP_URL: 'http://103.242.119.222:8090/?redirect=signup',
     GAMES_API: 'https://103.242.119.222/api/games',
     APP_URL: 'https://oneplay.netlify.app',

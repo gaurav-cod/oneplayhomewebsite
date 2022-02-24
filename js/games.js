@@ -1,5 +1,3 @@
-import { config } from "./config";
-
 function loadGames() {
   return fetch(config.GAMES_API + "?page=0&limit=100", {
     headers: {

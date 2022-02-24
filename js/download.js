@@ -1,5 +1,3 @@
-import { config } from "./config";
-
 function getOS() {
   const userAgent = window.navigator.userAgent,
     platform = window.navigator.platform,

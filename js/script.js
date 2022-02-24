@@ -1,5 +1,3 @@
-import { config } from "./config";
-
 function check() {
   var Password = document.getElementById("enterPassword");
   var Confirmpassword = document.getElementById("repeatPassword");
