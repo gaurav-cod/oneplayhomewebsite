@@ -92,10 +92,10 @@
     <div class="bgimage2 p-lg-5 p-md-4 p-3 py-5 text-center">
       <div class="py-5"></div>
       <img class="laptop" src="assets/Laptop on gasming page.png" alt="" />
-      <h3 class="mb-4 text-white">Download for MacOS now</h3>
-      <button class="btn btn-light text-primary">
+      <h3 class="mb-4 text-white">Download for <span id="os"></span> now</h3>
+      <a id="download" href="" class="btn btn-light text-primary">
         <h6 class="m-0">Download</h6>
-      </button>
+      </a>
       <div class="py-4"></div>
     </div>
 
@@ -113,7 +113,10 @@
                 class="card-body d-flex text-white justify-content-center align-items-center"
               >
                 <img width="24" src="assets/PngItem_471536.svg" alt="" />
-                <h6 class="my-0 ms-2">Windows</h6>
+                <div class="ms-2">
+                  <h6 class="my-0">Windows</h6>
+                  <p class="my-0 small text-neon">(Available)</p>
+                </div>
               </div>
             </div>
             <div class="card mb-3" style="background-color: #1d1a2f">
@@ -121,35 +124,10 @@
                 class="card-body d-flex text-white justify-content-center align-items-center"
               >
                 <img width="24" src="assets/apple-logo (1).svg" alt="" />
-                <h6 class="my-0 ms-2">MacOs</h6>
-              </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div
-                class="card-body d-flex text-white justify-content-center align-items-center"
-              >
-                <img width="24" src="assets/android-logo.svg" alt="" />
-                <h6 class="my-0 ms-2">Android</h6>
-              </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div
-                class="card-body d-flex text-white justify-content-center align-items-center"
-              >
-                <img width="24" src="assets/apple-logo (1).svg" alt="" />
-                <h6 class="my-0 ms-2">ios</h6>
-              </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div
-                class="card-body d-flex text-white justify-content-center align-items-center"
-              >
-                <img
-                  width="24"
-                  src="assets/29f641b507ccb60bb7a62a830b988736-removebg-preview.svg"
-                  alt=""
-                />
-                <h6 class="my-0 ms-2">Amazon Fire TV</h6>
+                <div class="ms-2">
+                  <h6 class="my-0">MacOs</h6>
+                  <p class="my-0 small text-neon">(Available)</p>
+                </div>
               </div>
             </div>
             <div class="card mb-3" style="background-color: #1d1a2f">
@@ -157,7 +135,32 @@
                 class="card-body d-flex text-white justify-content-center align-items-center"
               >
                 <img width="24" src="assets/Rectangle 94.svg" alt="" />
-                <h6 class="my-0 ms-2">Google TV</h6>
+                <div class="ms-2">
+                  <h6 class="my-0">Android TV</h6>
+                  <p class="my-0 small text-white-50">(Coming Soon)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="background-color: #1d1a2f">
+              <div
+                class="card-body d-flex text-white justify-content-center align-items-center"
+              >
+                <img width="24" src="assets/chrome.svg" alt="" />
+                <div class="ms-2">
+                  <h6 class="my-0">Browser</h6>
+                  <p class="my-0 small text-white-50">(Coming Soon)</p>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="background-color: #1d1a2f">
+              <div
+                class="card-body d-flex text-white justify-content-center align-items-center"
+              >
+                <img width="24" src="assets/android-logo.svg" alt="" />
+                <div class="ms-2">
+                  <h6 class="my-0">Android</h6>
+                  <p class="my-0 small text-white-50">(Coming Soon)</p>
+                </div>
               </div>
             </div>
           </div>
@@ -261,6 +264,7 @@
     </footer>
 
     <script src="./js/script.js"></script>
+    <script src="./js/download.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async

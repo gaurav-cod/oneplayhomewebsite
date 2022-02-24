@@ -8686,6 +8686,11 @@ fieldset:disabled .btn {
   color: rgba(var(--bs-success-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-neon {
+  --bs-text-opacity: 1;
+  color: #39ff14 !important;
+}
+
 .text-info {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
@@ -14650,7 +14655,8 @@ body {
 }
 
 .humanplaying-image {
-  width: 45%;
+  width: 150%;
+  margin-left: -96px;
   display: inline-block;
 }
 
@@ -14678,7 +14684,6 @@ body {
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 50px;
 }
 
 .discover-section {
@@ -14686,8 +14691,6 @@ body {
   text-align: end;
   display: inline-block;
   vertical-align: top;
-  margin-right: 50px;
-  margin-top: -177px;
 }
 
 .livegame-section {
@@ -14695,7 +14698,6 @@ body {
   text-align: initial;
   display: inline-block;
   vertical-align: top;
-  margin-left: -33px;
 }
 
 .chatontext-section {
@@ -14703,7 +14705,6 @@ body {
   text-align: initial;
   display: inline-block;
   vertical-align: top;
-  margin: -177px 0px 0px 620px;
 }
 
 .powersection-button {
@@ -14975,7 +14976,7 @@ body {
   position: absolute;
   top: 5rem;
   height: 2px;
-  background-color: #D9E2EC;
+  background-color: #d9e2ec;
   width: 373px;
   left: 18%;
   margin-left: 1rem;
