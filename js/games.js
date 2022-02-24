@@ -1,5 +1,7 @@
+import { config } from "./config";
+
 function loadGames() {
-  return fetch("https://103.242.119.222/api/games?page=0&limit=100", {
+  return fetch(config.GAMES_API + "?page=0&limit=100", {
     headers: {
       "content-type": "application/json",
     },
@@ -21,7 +23,7 @@ loadGames().then((data) => {
       <img
         class="card-img"
         src="${
-          "https://cdn.edge-net.co/game_assets/" +
+          config.GAMES_ASSETS_PREFIX +
           game.oplay_id +
           game.text_background_image
         }"

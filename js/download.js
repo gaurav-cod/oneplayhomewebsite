@@ -1,3 +1,5 @@
+import { config } from "./config";
+
 function getOS() {
   const userAgent = window.navigator.userAgent,
     platform = window.navigator.platform,
@@ -20,7 +22,7 @@ function getOS() {
 }
 
 function getDownloadLink() {
-    const userAgent = window.navigator.userAgent,
+  const userAgent = window.navigator.userAgent,
     platform = window.navigator.platform,
     macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
     windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
@@ -28,9 +30,9 @@ function getDownloadLink() {
     os = document.getElementById("download");
 
   if (macosPlatforms.indexOf(platform) !== -1) {
-    os.setAttribute("href", "https://oneplay.in/assets/")
+    os.setAttribute("href", config.MACOS_DOWNLOAD_URL);
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os.setAttribute("href", "https://oneplay.in/assets/");
+    os.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
   }
 }
 

@@ -1,3 +1,5 @@
+import { config } from "./config";
+
 function check() {
   var Password = document.getElementById("enterPassword");
   var Confirmpassword = document.getElementById("repeatPassword");
@@ -91,3 +93,22 @@ function signUpEvent() {
     eventLabel: 'User hit signup button',
   });
 }
+
+function loadLinks() {
+  const map = [
+    {selector: "#login", url: config.APP_URL + "/login"},
+    {selector: "#signup", url: config.SIGNUP_URL},
+    {selector: "#starter", url: config.APP_URL + "?subscribe=starter"},
+    {selector: "#founder", url: config.APP_URL + "?subscribe=founder"},
+    {selector: "#elite", url: config.APP_URL + "?subscribe=elite"},
+  ];
+
+  map.forEach((item) => {
+    const el = document.querySelector(item.selector);
+    if (el) {
+      el.setAttribute("href", item.url);
+    }
+  });
+}
+
+loadLinks();
