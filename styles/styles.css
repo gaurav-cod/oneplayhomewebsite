@@ -14946,8 +14946,12 @@ body {
   padding: 30px 0px;
 }
 
+.cnt-img {
+  width: 450px;
+}
+
 .forblurbackground {
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(6px);
 }
 
 .background-circle {
@@ -15060,4 +15064,58 @@ body {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .drivesection-button, .powersection-button {
+    width: 80%;
+  }
+
+  .main-text, .power-text, .built-text {
+    font-size: 30px;
+  }
+
+  .main-sub-text, .power-content, .built-content {
+    font-size: 18px;
+    margin: 24px 0;
+  }
+
+  .gameplay {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .gameplay-text {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .humanplaying-image {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .playtogether-section, .discover-section, .livegame-section, .chatontext-section {
+    text-align: start;
+    width: 80%;
+    margin-left: 24px;
+  }
+  
+  .ultra-text, .ultra-content {
+    width: 90%;
+    margin-left: 24px;
+  }
+
+  .built-section {
+    min-height: 1700px;
+    padding: 80px 0;
+  }
+
+  .tabs-section li .tab-link {
+    margin: 0 30px 0 0;
+  }
+
+  .cnt-img {
+    width: 100%;
+  }
 }
