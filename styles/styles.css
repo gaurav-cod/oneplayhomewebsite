@@ -14858,7 +14858,7 @@ body {
 }
 
 .facebook-icon {
-  font-size: 35px;
+  font-size: 35px !important;
   color: #b0b7c3;
   margin: 25px;
 }
@@ -15081,13 +15081,29 @@ body {
   }
 
   .gameplay {
-    width: 80%;
+    width: 100%;
     margin-bottom: 40px;
   }
 
   .gameplay-text {
     width: 80%;
     font-size: 18px;
+  }
+
+  .getyourgame-text {
+    font-size: 20px;
+  }
+
+  .meet-text {
+    font-size: 32px;
+  }
+
+  .getyour-section {
+    padding: 90px 0 32px;
+  }
+
+  .meet-sub-titles {
+    font-size: 24px;
   }
 
   .humanplaying-image {
