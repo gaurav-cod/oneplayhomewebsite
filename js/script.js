@@ -96,9 +96,9 @@ function loadLinks() {
   const map = [
     {selector: "#login", url: config.APP_URL + "/login"},
     {selector: "#signup", url: config.SIGNUP_URL},
-    {selector: "#starter", url: config.APP_URL + "?subscribe=starter"},
-    {selector: "#founder", url: config.APP_URL + "?subscribe=founder"},
-    {selector: "#elite", url: config.APP_URL + "?subscribe=elite"},
+    {selector: "#starter", url: config.APP_URL + "?subscribe=Starter"},
+    {selector: "#founder", url: config.APP_URL + "?subscribe=Founder"},
+    {selector: "#elite", url: config.APP_URL + "?subscribe=Elite"},
   ];
 
   map.forEach((item) => {
