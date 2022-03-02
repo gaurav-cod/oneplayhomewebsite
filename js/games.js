@@ -24,8 +24,7 @@ loadGames().then((data) => {
           game.oplay_id +
           game.text_background_image
         }"
-        height="170"
-        width="280"
+        class="game-img"
         alt=""
       />
     </div>

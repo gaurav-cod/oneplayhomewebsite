@@ -25,7 +25,7 @@
     <nav
       class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
     >
-      <div class="container px-lg-5">
+      <div class="container">
         <a class="navbar-brand" href="./index.html">
           <img
             src="assets/logo.png"
@@ -100,12 +100,17 @@
           Available on all your favourite devices
         </h4>
         <div
-          class="dropdown-divider my-3"
+          class="dropdown-divider my-5"
           style="background-color: #ffffff23"
         ></div>
         <div class="row">
           <div class="col-md-3 col-sm-12">
-            <div class="card mb-3" style="background-color: #1d1a2f">
+            <a
+              id="download-win"
+              href=""
+              class="card mb-3 text-decoration-none"
+              style="background: #1d1a2f"
+            >
               <div class="card-body d-flex text-white justify-content-center">
                 <div class="d-flex align-items-center" style="min-width: 140px">
                   <img width="24" src="assets/PngItem_471536.svg" alt="" />
@@ -115,8 +120,13 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
+            </a>
+            <a
+              id=""
+              href=""
+              class="card mb-3 text-decoration-none"
+              style="background-color: #1d1a2f"
+            >
               <div class="card-body d-flex text-white justify-content-center">
                 <div class="d-flex align-items-center" style="min-width: 140px">
                   <img width="24" src="assets/apple-logo (1).svg" alt="" />
@@ -126,7 +136,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </a>
             <div class="card mb-3" style="background-color: #1d1a2f">
               <div class="card-body d-flex text-white justify-content-center">
                 <div class="d-flex align-items-center" style="min-width: 140px">
@@ -164,15 +174,15 @@
           <div class="col-md-1 col-sm-12"></div>
           <div class="col-md-8 col-sm-12">
             <div class="px-5 px-md-0 my-5 my-md-0">
-              <h4 class="text-white">Installing OnePlay on Android</h4>
+              <h4 class="text-white my-3">Installing OnePlay on Android</h4>
 
               <ul class="list-unstyled text-white">
-                <li>1. Download OnePlay app from the Google Play</li>
-                <li>2. Open OnePlay app and create an account</li>
-                <li>
+                <li class="mb-2">1. Download OnePlay app from the Google Play</li>
+                <li class="mb-2">2. Open OnePlay app and create an account</li>
+                <li class="mb-2">
                   3. Connect a Xbox One Bluetooth compatible wireless controller
                 </li>
-                <li>4. Pick a game and play instantly!</li>
+                <li class="mb-2">4. Pick a game and play instantly!</li>
               </ul>
             </div>
           </div>
@@ -267,6 +277,7 @@
       integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/download.js"></script>
