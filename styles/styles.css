@@ -14605,12 +14605,21 @@ body {
   background-size: cover;
 }
 
+.next-gen-text {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  margin: 40px auto 0px auto;
+  width: 560px;
+  text-align: center;
+}
+
 .gameplay-text {
   font-size: 24px;
   font-weight: 400;
   color: #fff;
   margin: 112px auto 0px auto;
-  width: 424px;
+  width: 480px;
   padding-bottom: 72px;
   text-align: center;
 }
@@ -14655,8 +14664,8 @@ body {
 }
 
 .humanplaying-image {
-  width: 150%;
-  margin-left: -120px;
+  width: 130%;
+  margin-left: -100px;
   display: inline-block;
 }
 
@@ -14708,7 +14717,7 @@ body {
 }
 
 .powersection-button {
-  width: 590px;
+  width: 640px;
   line-break: 1;
   margin: 0px auto;
   text-align: center;
@@ -15071,7 +15080,6 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-
 .game-img {
   width: 280px;
   height: 170px;
@@ -15104,8 +15112,13 @@ body {
   }
 
   .gameplay-text {
-    width: 80%;
-    font-size: 18px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .next-gen-text {
+    width: 100%;
+    font-size: 24px;
   }
 
   .getyourgame-text {
@@ -15155,5 +15168,9 @@ body {
 
   .cnt-img {
     width: 100%;
+  }
+
+  .systemrequirement-topsection {
+    padding: 70px;
   }
 }

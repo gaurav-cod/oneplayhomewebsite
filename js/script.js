@@ -104,10 +104,10 @@ function loadLinks() {
   ];
 
   map.forEach((item) => {
-    const el = document.querySelector(item.selector);
-    if (el) {
-      el.setAttribute("href", item.url);
-    }
+    const elementList = document.querySelectorAll(item.selector);
+    elementList.forEach((element) => {
+      element.setAttribute("href", item.url);
+    });
   });
 }
 
