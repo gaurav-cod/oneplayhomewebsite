@@ -15118,7 +15118,7 @@ body {
 
   .next-gen-text {
     width: 100%;
-    font-size: 24px;
+    font-size: 30px;
   }
 
   .getyourgame-text {
@@ -15147,9 +15147,14 @@ body {
   .livegame-section,
   .chatontext-section {
     text-align: start;
-    width: 80%;
-    margin-left: 24px;
+    width: 100%;
+    text-align: center;
   }
+
+  .playtogether-section,
+  .livegame-section {
+    margin-bottom: 32px;
+  } 
 
   .ultra-text,
   .ultra-content {
