@@ -13,29 +13,6 @@ function check() {
 
 // -------------------------images-Slider---------------
 
-var swiper = new Swiper(".image-firstrow", {
-  slidesPerView: 5.5,
-  spaceBetween: 1,
-  speed: 1000,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
-});
-
-var swiper = new Swiper(".image-secondrow", {
-  slidesPerView: 5.5,
-  spaceBetween: 1,
-  speed: 1500,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-});
 
 // var swiper = new Swiper(".image-thirdrow", {
 //     slidesPerView: 4,

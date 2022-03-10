@@ -14827,7 +14827,7 @@ body {
   background-size: cover;
   text-align: center;
   padding: 120px 0px;
-  min-height: 1200px;
+  min-height: 100vh;
 }
 
 .step-info {
@@ -14965,7 +14965,8 @@ body {
 }
 
 .forblurbackground {
-  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px) !important;
+  backdrop-filter: blur(6px) !important;
 }
 
 .background-circle {
