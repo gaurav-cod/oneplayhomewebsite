@@ -15180,4 +15180,9 @@ body {
   .systemrequirement-topsection {
     padding: 70px;
   }
+
+  .step-info {
+    text-align: start;
+    margin-bottom: 48px;
+  }
 }
