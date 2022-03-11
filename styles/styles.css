@@ -14531,6 +14531,7 @@ body {
 
 .signup-button {
   background-image: linear-gradient(to right, #1e67de -4%, #8250e0);
+  background-image: -moz-linear-gradient(to right, #1e67de -4%, #8250e0);
   border: none;
 }
 
