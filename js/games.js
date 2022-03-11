@@ -19,11 +19,7 @@ loadGames().then((data) => {
     gameEl.innerHTML = `
     <div class="d-flex flex-column align-items-center">
       <img
-        src="${
-          config.GAMES_ASSETS_PREFIX +
-          game.oplay_id +
-          game.text_background_image
-        }"
+        src="${game.text_background_image}"
         class="game-img"
         alt=""
       />

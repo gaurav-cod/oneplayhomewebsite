@@ -20,11 +20,7 @@ loadGames().then((data) => {
       const gameEl = document.createElement("div");
       gameEl.className = "swiper-slide";
       gameEl.innerHTML = `
-      <img src="${
-        config.GAMES_ASSETS_PREFIX +
-        game.oplay_id +
-        game.text_background_image
-      }" class="img-list" alt="" />
+      <img src="${game.text_background_image}" class="img-list" alt="" />
     `;
       listEl.appendChild(gameEl);
     });
@@ -41,7 +37,7 @@ loadGames().then((data) => {
       disableOnInteraction: false,
     },
   });
-  
+
   var swiper = new Swiper(".image-secondrow", {
     slidesPerView: 5.5,
     spaceBetween: 1,
