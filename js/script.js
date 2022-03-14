@@ -13,17 +13,21 @@ function check() {
 
 // -------------------------images-Slider---------------
 
-
-// var swiper = new Swiper(".image-thirdrow", {
-//     slidesPerView: 4,
-//     spaceBetween: 5,
-//     centeredSlides: true,
-//     loop: true,
-//     autoplay: {
-//         delay: 2000,
-//         disableOnInteraction: false,
-//     },
-// });
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
 /**
  *
@@ -52,32 +56,32 @@ const changeVideo = (el) => {
 };
 
 function loginEvent() {
-  ga('send', {
-    hitType: 'event',
-    eventCategory: 'Home',
-    eventAction: 'login',
-    eventLabel: 'User hit login button',
+  ga("send", {
+    hitType: "event",
+    eventCategory: "Home",
+    eventAction: "login",
+    eventLabel: "User hit login button",
   });
 }
 
 function signUpEvent() {
-  ga('send', {
-    hitType: 'event',
-    eventCategory: 'Home',
-    eventAction: 'signup',
-    eventLabel: 'User hit signup button',
+  ga("send", {
+    hitType: "event",
+    eventCategory: "Home",
+    eventAction: "signup",
+    eventLabel: "User hit signup button",
   });
 }
 
 function loadLinks() {
   const map = [
-    {selector: "#login", url: config.APP_URL + "/login"},
-    {selector: "#signup", url: config.SIGNUP_URL},
-    {selector: "#starter", url: config.APP_URL + "?subscribe=Starter"},
-    {selector: "#founder", url: config.APP_URL + "?subscribe=Founder"},
-    {selector: "#elite", url: config.APP_URL + "?subscribe=Elite"},
-    {selector: "#download-mac", url: config.MACOS_DOWNLOAD_URL},
-    {selector: "#download-win", url: config.WINDOWS_DOWNLOAD_URL},
+    { selector: "#login", url: config.APP_URL + "/login" },
+    { selector: "#signup", url: config.SIGNUP_URL },
+    { selector: "#starter", url: config.APP_URL + "?subscribe=Starter" },
+    { selector: "#founder", url: config.APP_URL + "?subscribe=Founder" },
+    { selector: "#elite", url: config.APP_URL + "?subscribe=Elite" },
+    { selector: "#download-mac", url: config.MACOS_DOWNLOAD_URL },
+    { selector: "#download-win", url: config.WINDOWS_DOWNLOAD_URL },
   ];
 
   map.forEach((item) => {
@@ -88,4 +92,27 @@ function loadLinks() {
   });
 }
 
+function handleLogout() {
+  document.cookie =
+    "op_session_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  location.reload();
+}
+
+function handleAuth() {
+  const session = getCookie("op_session_token");
+  const login = document.querySelector("#login");
+  const signup = document.querySelector("#signup");
+  const logout = document.querySelector("#logout");
+  if (session) {
+    login.style.display = "none";
+    signup.style.display = "none";
+    logout.style.display = "block";
+  } else {
+    login.style.display = "block";
+    signup.style.display = "block";
+    logout.style.display = "none";
+  }
+}
+
 loadLinks();
+handleAuth();

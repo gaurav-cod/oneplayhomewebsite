@@ -75,16 +75,26 @@
           </ul>
           <form class="d-flex">
             <a
-              href="/login/"
+              id="login"
+              href=""
               class="btn btn-link text-decoration-none text-light me-2"
               >Login</a
             >
             <a
-              href="/speedtest/?redirect=signup"
+              id="signup"
+              href=""
               class="btn btn-outline-light signup-button"
               type="submit"
               >Sign up</a
             >
+            <button
+              id="logout"
+              class="btn btn-outline-light signup-button"
+              type="button"
+              onclick="handleLogout()"
+            >
+              Logout
+            </button>
           </form>
         </div>
       </div>
