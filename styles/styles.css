@@ -14519,6 +14519,11 @@ body {
   border: none !important;
 }
 
+.light-version-logo {
+  width: 150px;
+  padding: 16px 32px 16px 0;
+}
+
 /* --------------------------------homepage--------------------- */
 
 .main-text {
