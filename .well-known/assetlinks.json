@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "in.oneplay.root.debug",
+    "sha256_cert_fingerprints":
+    ["A2:1B:09:A5:4A:E6:F1:17:CB:6B:A6:B2:29:28:46:91:6B:EB:DE:69:36:0F:16:66:2F:18:3B:3A:E6:B9:A0:3E"]
+  }
+}]
