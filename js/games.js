@@ -15,7 +15,7 @@ loadGames().then((data) => {
   const listEl = document.querySelector("#games-list");
   data.forEach((game) => {
     const gameEl = document.createElement("div");
-    gameEl.className = "col-sm-12 col-md-6 col-lg-4 col-xxl-3 mb-4";
+    gameEl.className = "col-6 col-lg-4 col-xxl-3 mb-4";
     gameEl.innerHTML = `
     <div class="d-flex flex-column align-items-center">
       <img
