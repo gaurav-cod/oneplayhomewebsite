@@ -40,6 +40,19 @@ function getLinkByTarget(target) {
   }
 }
 
+function getTabByTarget(target) {
+  switch (target) {
+    case "macos":
+      return "MacOS";
+    case "windows":
+      return "WindowsPC";
+    case "andriod":
+      return "Android";
+    default:
+      return "";
+  }
+}
+
 function getOS() {
   const userAgent = window.navigator.userAgent,
     platform = window.navigator.platform,
@@ -82,5 +95,38 @@ function getDownloadLink() {
   }
 }
 
+function selectTab() {
+  const userAgent = window.navigator.userAgent,
+    platform = window.navigator.platform,
+    macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+    windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
+    iosPlatforms = ["iPhone", "iPad", "iPod"],
+    target = getQueryJSON().target;
+
+  if (target) {
+    const id = getTabByTarget(target);
+    const tab = document.querySelector(`[href='#${id}']`);
+    const tabDescription = document.querySelector(`#${id}`);
+    tab.classList.add("active");
+    tabDescription.classList.add("active");
+  } else if (macosPlatforms.indexOf(platform) !== -1) {
+    const tab = document.querySelector("[href='#MacOS']");
+    const tabDescription = document.querySelector("#MacOS");
+    tab.classList.add("active");
+    tabDescription.classList.add("active");
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    const tab = document.querySelector("[href='#WindowsPC']");
+    const tabDescription = document.querySelector("#WindowsPC");
+    tab.classList.add("active");
+    tabDescription.classList.add("active");
+  } else if (/Android/.test(userAgent)) {
+    const tab = document.querySelector("[href='#Android']");
+    const tabDescription = document.querySelector("#Android");
+    tab.classList.add("active");
+    tabDescription.classList.add("active");
+  }
+}
+
 getOS();
 getDownloadLink();
+selectTab();
