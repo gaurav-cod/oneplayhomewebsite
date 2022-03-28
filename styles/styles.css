@@ -14364,6 +14364,8 @@ progress {
   padding: 98px;
   font-weight: bold;
   background-image: url(../assets/Hero-1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .systems-section {

@@ -80,6 +80,7 @@ function loadLinks() {
     { selector: "#starter", url: config.APP_URL + "?subscribe=Starter" },
     { selector: "#founder", url: config.APP_URL + "?subscribe=Founder" },
     { selector: "#elite", url: config.APP_URL + "?subscribe=Elite" },
+    { selector: "#speed-test", url: config.SPEED_TEST_URL },
   ];
 
   map.forEach((item) => {
