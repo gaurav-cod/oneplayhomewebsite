@@ -15,7 +15,7 @@ function getCookie(cname) {
 }
 
 if (getCookie("op_session_token")) {
-  window.location.href = "/dashboard";
+  window.location.href = "/dashboard/";
 }
 
 function loadGames() {
