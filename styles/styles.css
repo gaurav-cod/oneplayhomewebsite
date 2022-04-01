@@ -14347,6 +14347,14 @@ progress {
   }
 }
 
+live {
+  background-color: red;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+  white-space: nowrap;
+}
+
 /*# sourceMappingURL=styles.css.map */
 
 /* ----------------------------------system requirement-------------- */
@@ -15167,7 +15175,7 @@ body {
   .playtogether-section,
   .livegame-section {
     margin-bottom: 32px;
-  } 
+  }
 
   .ultra-text,
   .ultra-content {
