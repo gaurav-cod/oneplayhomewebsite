@@ -14294,18 +14294,21 @@ progress {
   background-image: linear-gradient(to right, #1e67de -4%, #8250e0);
 }
 
-.team {
-  background: url("../assets/The Team Background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .about-banner {
-  background: url("../assets/Background\ -\ Desktop.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding-top: 140px !important;
   padding-bottom: 140px !important;
+}
+
+.about-main {
+  max-width: 1000px;
+  font-size: 3.1rem;
+}
+
+.about-desc {
+  background-image: url(../assets/about/bg\ gradient.png);
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: bottom;
 }
 
 .bgimage {
@@ -14980,10 +14983,6 @@ body {
   padding: 30px 0px;
 }
 
-.cnt-img {
-  width: 450px;
-}
-
 .forblurbackground {
   -webkit-backdrop-filter: blur(6px) !important;
   backdrop-filter: blur(6px) !important;
@@ -15030,10 +15029,16 @@ body {
 }
 
 .member-avater {
-  background-image: linear-gradient(to right, #1e67de4f -4%, #8250e0);
-  border-radius: 50%;
-  height: 175px;
-  width: 175px;
+  border-radius: 12px;
+  height: 264px;
+}
+
+.member-title {
+  margin-top: -56px !important;
+}
+
+.member-desc {
+  margin-bottom: 56px !important;
 }
 
 .row-hero {
@@ -15106,6 +15111,14 @@ body {
   height: 170px;
   box-shadow: 6px 5px 4px 2px #0e0d0d;
   border-radius: 4px;
+}
+
+.independence {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  border-radius: 40px;
+  min-height: 540px;
 }
 
 @media (max-width: 768px) {
@@ -15192,7 +15205,7 @@ body {
   }
 
   .cnt-img {
-    width: 100%;
+    width: 100% !important;
   }
 
   .systemrequirement-topsection {
@@ -15214,8 +15227,17 @@ body {
   }
 
   .member-avater {
-    width: 100px;
-    height: 100px;
+    height: 140px;
+  }
+
+  .member-title {
+    margin-top: 12px !important;
+    color: white !important;
+  }
+
+  .member-desc {
+    margin-bottom: 24px !important;
+    color: white !important;
   }
 
   .img-list {
@@ -15235,5 +15257,9 @@ body {
   .game-img {
     width: 150px;
     height: 100px;
+  }
+
+  .about-main {
+    font-size: 2.1rem;
   }
 }
