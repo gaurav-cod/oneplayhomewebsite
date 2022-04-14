@@ -352,155 +352,7 @@
         Frequently Asked Questions
       </h2>
       <div class="container text-start mb-5" style="max-width: 780px">
-        <div id="accordion">
-          <div class="card mb-3" style="background-color: #1d1a2f">
-            <div class="card-header" id="headingOne">
-              <h5 class="mb-0">
-                <button
-                  class="text-white btn collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseOne"
-                  aria-expanded="true"
-                  aria-controls="collapseOne"
-                >
-                  Where are your servers located?
-                </button>
-              </h5>
-            </div>
-
-            <div
-              id="collapseOne"
-              class="collapse show"
-              aria-labelledby="headingOne"
-              data-parent="#accordion"
-            >
-              <div class="card-body text-white-50">
-                <div class="px-3">
-                  Our Servers are located in Mumbai (more regions coming soon).
-                  They are powered by 10GBPS+ Internet Connectivity.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-3" style="background-color: #1d1a2f">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button
-                  class="btn text-white collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  Is there a free trial?
-                </button>
-              </h5>
-            </div>
-            <div
-              id="collapseTwo"
-              class="collapse"
-              aria-labelledby="headingTwo"
-              data-parent="#accordion"
-            >
-              <div class="card-body text-white-50">
-                <div class="px-3">
-                  1 Month free trial is included post your account is verfied
-                  (usually takes 24 hours or less).
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-3" style="background-color: #1d1a2f">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button
-                  class="btn text-white collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseThree"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  Can I use my OnePlay for other things than gaming?
-                </button>
-              </h5>
-            </div>
-            <div
-              id="collapseThree"
-              class="collapse"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
-            >
-              <div class="card-body text-white-50">
-                <div class="px-3">
-                  You are only allowed to play games and not use OnePlay for any
-                  other purpose, please read our terms and conditions for more
-                  details.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-3" style="background-color: #1d1a2f">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button
-                  class="btn text-white collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseFour"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  Do i need to purchase games?
-                </button>
-              </h5>
-            </div>
-            <div
-              id="collapseFour"
-              class="collapse"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
-            >
-              <div class="card-body text-white-50">
-                <div class="px-3">
-                  We dont host any games as of now, so you can use any existing
-                  store to buy/sync games, like steam, epic etc.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-3" style="background-color: #1d1a2f">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button
-                  class="btn text-white collapsed"
-                  data-toggle="collapse"
-                  data-target="#collapseFive"
-                  aria-expanded="false"
-                  aria-controls="collapseThree"
-                >
-                  What is the requirements for using OnePlay
-                </button>
-              </h5>
-            </div>
-            <div
-              id="collapseFive"
-              class="collapse"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
-            >
-              <div class="card-body text-white-50">
-                <div class="px-3">
-                  You need a minimum of 10MB/s Internet Connection on Wired
-                  Ethernet or WiFI 5. We dont recommend using WiFi 2.4GHZ. Your
-                  system should have a minimum of 2GB Ram.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="accordion"></div>
       </div>
     </div>
 
@@ -626,19 +478,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      const buttons = document.querySelectorAll(".collapsed");
-      buttons.forEach((b) =>
-        b.addEventListener("click", (e) => {
-          document
-            .querySelectorAll(".collapse")
-            .forEach((c) => c.classList.remove("show"));
-          const targetName = e.target.getAttribute("data-target");
-          const target = document.querySelector(targetName);
-          target.classList.toggle("show");
-        })
-      );
-    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-RGBMM302HH"
@@ -654,5 +493,6 @@
     </script>
     <script src="./js/config.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/faq.js"></script>
   </body>
 </html>
