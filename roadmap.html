@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>OnePlay | Cloud Gaming | Cloud PC</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./styles/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -21,7 +21,8 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
-    <title>OnePlay | Privacy Policy</title>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
 
   <body>
@@ -30,11 +31,7 @@
     >
       <div class="container">
         <a class="navbar-brand" href="./index.html">
-          <img
-            src="assets/logo.png"
-            alt=""
-            class="light-version-logo"
-          />
+          <img src="assets/logo.png" alt="" class="light-version-logo" />
         </a>
         <button
           class="navbar-toggler"
@@ -113,58 +110,13 @@
       </div>
     </nav>
 
-    <div class="pt-5" style="background-color: #100d21">
-      <div class="pt-5"></div>
-      <div class="container py-5">
-        <h1 class="text-white mb-5 text-center text-md-start">
-          Privacy Policy
-        </h1>
-        <p class="text-white-50">
-          1. Information we collect <br /><br />
+    <div class="fornav-section"></div>
+    <section class="systemrequirement-topsection">Roadmap</section>
 
-          When you visit our website, our servers may automatically log the
-          standard data provided by your web browser. It may include your IP
-          address, your browser type and version, the pages you visit, the time
-          and date of your visit, the time spent on each page, and other
-          details.
-          <br /><br />
-          We may also collect data about the device you’re using to access our
-          website. This data may include the device type, operating system,
-          unique device identifiers, device settings, and geo-location data.
-          What we collect can depend on the individual settings of your device
-          and software. We recommend checking the policies of your device
-          manufacturer or software provider to learn what information they make
-          available to us.
-          <br /><br />
-          We may ask for personal information, such as your:<br />
-          i. Name<br />
-          ii. Email<br />
-          iii. Date of birth<br />
-          iv. Phone/mobile number<br />
-          v. Address<br />
-          vi. Payment information<br />
-          vii. And other kinds of data that accumulates over the normal course
-          of operation on our platform.<br /><br /><br />
-
-          2. Collection and use of information <br /><br />
-          We may collect, hold, use and disclose information for the following
-          purposes and personal information will not be further processed in a
-          manner that is incompatible with these purposes: <br /><br />
-
-          i. to process any transactional or ongoing payments;<br />
-          ii. to enable you to access and use our services;<br />
-          iii. to contact and communicate with you;<br />
-          iv. for internal record keeping and administrative purposes;<br />
-          v. for analytics, market research and business development, including
-          to operate and improve our website, associated applications and
-          associated social media platforms;<br />
-          vi. for advertising and marketing, including to send you promotional
-          information about our products and services and information about
-          third parties that we consider may be of interest to you; and<br />
-          vii. to comply with our legal obligations and resolve any disputes that we
-          may have.<br />
-        </p>
-      </div>
+    <div class="container-sm pt-3">
+      <ul id="roadmap" class="timeline text-white">
+        
+      </ul>
     </div>
 
     <footer class="py-5 footer-section">
@@ -203,10 +155,7 @@
                   </a>
                 </li>
                 <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://discord.gg/CyNeDNNrZs"
-                    target="_blank"
-                  >
+                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
                     <i class="fab fa-discord facebook-icon"></i>
                   </a>
                 </li>
@@ -283,12 +232,15 @@
       </div>
     </footer>
 
-    <script src="./js/config.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/config.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/roadmap.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -303,7 +255,5 @@
 
       gtag("config", "UA-220923953-1");
     </script>
-
-    <script src="./js/script.js"></script>
   </body>
 </html>
