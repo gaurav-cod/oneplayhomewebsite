@@ -28,7 +28,7 @@ loadJobs().then((data) => {
   data.forEach((job) => {
     const jobEl = document.createElement("a");
     jobEl.className = "card bg-dark mb-4 text-decoration-none";
-    jobEl.href = "/job?id=" + job.id;
+    jobEl.href = "job.html?id=" + job.id;
     jobEl.innerHTML = `
     <div
         class="card-body row align-items-center text-center text-md-start"
