@@ -1,24 +1,19 @@
-// colorClass = warning, success, info, danger
-
 const roadmaps = [
   {
     title: "2018, Q1",
     description:
-      "- ICO Pre-Sale\n- PKT ICO and Blockchain Integration\n- The first cryptocurrency exchanges are entered",
+      "ICO Pre-Sale\nPKT ICO and Blockchain Integration\nThe first cryptocurrency exchanges are entered",
     done: true,
-    colorClass: "danger",
   },
   {
     title: "2018, Q2",
-    description: "- ICO Sale\n- The first cryptocurrency exchanges are entered",
+    description: "ICO Sale\nThe first cryptocurrency exchanges are entered",
     done: true,
-    colorClass: "warning",
   },
   {
     title: "2018, Q3",
-    description: "- ICO Sale\n- The first cryptocurrency exchanges are entered",
+    description: "ICO Sale\nThe first cryptocurrency exchanges are entered",
     done: false,
-    colorClass: "info",
   },
 ];
 
@@ -31,19 +26,20 @@ roadmaps.forEach((roadmap, index) => {
     roadmapItem.classList.add("timeline-inverted");
   }
   roadmapItem.innerHTML = `
-          <div class="timeline-badge ${roadmap.colorClass}">
+          <div class="timeline-heading d-none d-lg-block">
+            <h4 class="timeline-title">${roadmap.title}</h4>
+          </div>
+          <div class="timeline-badge">
             ${roadmap.done ? '<i class="fas fa-check"></i>' : ""}
           </div>
           <div class="timeline-panel">
-            <div class="timeline-heading">
-              <h4 class="timeline-title">${roadmap.title}</h4>
-            </div>
-            <div class="timeline-body">
+          <h4 class="timeline-title d-block d-lg-none">${roadmap.title}</h4>
+            <ul class="timeline-body">
               ${roadmap.description
                 .split("\n")
-                .map((line) => `<p>${line}</p>`)
+                .map((line) => `<li class="my-3">${line}</li>`)
                 .join("")}
-            </div>
+            </ul>
           </div>
     `;
   roadmapList.appendChild(roadmapItem);

@@ -15289,7 +15289,7 @@ body {
 }
 
 .timeline > li {
-  margin-bottom: 20px;
+  margin-bottom: 56px;
   position: relative;
 }
 
@@ -15317,7 +15317,7 @@ body {
   width: 46%;
   float: left;
   border: 1px solid #d4d4d4;
-  border-radius: 2px;
+  border-radius: 8px;
   padding: 20px;
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
@@ -15359,7 +15359,7 @@ body {
   top: 16px;
   left: 50%;
   margin-left: -25px;
-  background-color: #999999;
+  background-image: linear-gradient(to right, #1e67de -4%, #8250e0);
   z-index: 100;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -15403,6 +15403,19 @@ body {
 
 .timeline-badge.info {
   background-color: #5bc0de !important;
+}
+
+.timeline-heading {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 44%;
+  text-align: start;
+}
+
+.timeline-inverted > .timeline-heading {
+  left: 0;
+  text-align: end;
 }
 
 .timeline-title {
