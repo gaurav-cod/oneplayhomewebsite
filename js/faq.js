@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "How much does the OnePlay subscription cost?",
     answer: `
-        OnePlay is a subscription service. We offer you three amazing subscription plans that will fit all your needs. We have a Starter Edition for Rs. 199, Founder Edition for Rs. 499 and Elite Edition for Rs. 899. The higher the plan you choose, the more games you have access to. You will also gain more features such as HD quality and 4K streaming.<br><br>
+        OnePlay is a subscription service. We offer you three amazing subscription plans that will fit all your needs. We have a Starter Edition for Rs. 199, Founder Edition for Rs. 499 and Elite Edition for Rs. 799. The higher the plan you choose, the more games you have access to. You will also gain more features such as HD quality and 4K streaming.<br><br>
         You can pay via Debit Card, Credit Card or UPI.<br>
         Once subscribed you can cancel your subscription at any point.
       `,
@@ -89,15 +89,15 @@ const faqs = [
   },
   {
     question: "Does OnePlay give Store Credentials?",
-    answer: `OnePlay does not provide storage credentials like Steam/Epic/Ubisoft/Origin/battle.net. It is suggested that you have an existing account with these administrations, with whichever game you want to play before you login to our platform.`,
+    answer: `OnePlay does not provide store credentials like Steam/Epic/Ubisoft/Origin/battle.net. It is suggested that you have an existing account with these administrations, with whichever game you want to play before you login to our platform.`,
   },
   {
-    question: "DoesOnePlay have access to my credentials?",
+    question: "Does OnePlay have access to my credentials?",
     answer: `OnePlay does not store your credentials on their servers. Each session is purged after your use. Only your Login ID is temporarily stored as a cache.`,
   },
   {
     question: "How do I claim my refund?",
-    answer: `Click on the link given here to read our refund and cancellation policy. No refunds are provided for any hourly or weekly plans.`,
+    answer: `Click on the <a href='tnc.html#refund'>link</a> given here to read our refund and cancellation policy. No refunds are provided for any hourly or weekly plans.`,
   },
   {
     question: "Are there any prerequisites for the mobile app?",
