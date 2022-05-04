@@ -14534,12 +14534,11 @@ body {
 
 .light-version-logo {
   width: 150px;
-  padding: 16px 32px 16px 0;
+  padding: 16px 0;
 }
 
 .light-version-logo-footer {
-  width: 100%;
-  padding: 32px 64px;
+  padding: 32px 0;
 }
 
 /* --------------------------------homepage--------------------- */
@@ -15046,6 +15045,17 @@ body {
   width: 100%;
   position: relative;
   overflow: hidden;
+}
+
+.beta {
+  font-size: 8px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3f00b4;
+  padding: 2px 4px;
+  margin-left: 4px;
+  margin-right: 16px;
+  border-radius: 4px;
 }
 
 .video-parallax {
