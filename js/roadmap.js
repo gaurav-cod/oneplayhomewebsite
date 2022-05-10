@@ -75,14 +75,11 @@ const roadmaps = [
 const roadmapList = document.getElementById("roadmap");
 
 roadmaps.forEach((roadmap, index) => {
-  const isEven = index % 2 === 0;
   const roadmapItem = document.createElement("li");
-  if (isEven) {
-    roadmapItem.classList.add("timeline-inverted");
-  }
+  roadmapItem.classList.add("timeline-inverted");
   roadmapItem.innerHTML = `
           <div class="timeline-heading d-none d-lg-block">
-            <h4 class="timeline-title">${roadmap.title}</h4>
+            <h4 class="timeline-title fw-bold">${roadmap.title}</h4>
           </div>
           <div class="timeline-badge">
             ${roadmap.done ? '<i class="fas fa-check"></i>' : ""}
@@ -92,7 +89,7 @@ roadmaps.forEach((roadmap, index) => {
             <ul class="timeline-body">
               ${roadmap.description
                 .split("\n")
-                .map((line) => `<li class="my-3">${line}</li>`)
+                .map((line) => `<li class="mb-3">${line}</li>`)
                 .join("")}
             </ul>
           </div>
