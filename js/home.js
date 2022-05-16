@@ -19,7 +19,7 @@ if (getCookie("op_session_token")) {
 }
 
 function loadGames() {
-  return fetch(config.GAMES_API + "?page=0&limit=30", {
+  return fetch(config.BASE_API + "/games?page=0&limit=30", {
     headers: {
       "content-type": "application/json",
     },

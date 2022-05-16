@@ -113,5 +113,41 @@ function handleAuth() {
   }
 }
 
+function loadSeriousNotification() {
+  fetch(config.BASE_API + "/notification/serious", {
+    headers: {
+      "content-type": "application/json",
+    },
+    referrerPolicy: "strict-origin-when-cross-origin",
+    mode: "cors",
+    credentials: "omit",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      if (!!data.text) {
+        const html = `
+          <div id="serious" class="bg-danger p-3 text-center">
+            <span class="text-white">
+              ${data.text}
+            </span>
+            <button 
+              class="btn btn-sm btn-danger"
+              style="float: right"
+              onclick="closeSeriousNotification()"
+            >
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        `;
+        document.body.insertAdjacentHTML("afterbegin", html);
+      }
+    });
+}
+
+function closeSeriousNotification() {
+  document.getElementById("serious").remove();
+}
+
 loadLinks();
 handleAuth();
+loadSeriousNotification();

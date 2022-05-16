@@ -4599,7 +4599,8 @@ fieldset:disabled .btn {
   justify-content: space-between;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
@@ -14368,11 +14369,6 @@ live {
 /*# sourceMappingURL=styles.css.map */
 
 /* ----------------------------------system requirement-------------- */
-
-.fornav-section {
-  padding: 45px;
-  background-color: #221a2d;
-}
 
 .systemrequirement-topsection {
   /* background: transparent linear-gradient(106deg, #6A41EB 0%, #923DE9 100%); */
