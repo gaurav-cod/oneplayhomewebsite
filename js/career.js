@@ -1,5 +1,5 @@
 async function loadJobs() {
-  return fetch(config.CAREER_API + "/jobs?page=0&limit=100", {
+  return fetch(config.BASE_API + "/career/jobs?page=0&limit=100", {
     headers: {
       "content-type": "application/json",
     },

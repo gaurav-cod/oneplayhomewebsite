@@ -15,7 +15,7 @@ function getQueryJSON() {
 async function loadJob() {
   const id = getQueryJSON().id || "id";
 
-  return fetch(config.CAREER_API + "/jobs/" + id, {
+  return fetch(config.BASE_API + "/career/jobs/" + id, {
     headers: {
       "content-type": "application/json",
     },
