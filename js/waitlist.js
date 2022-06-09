@@ -1,5 +1,5 @@
 async function saveRequest(first_name, last_name, email, phone_number) {
-  return fetch(config.BASE_API + "/waitlist", {
+  return fetch(config.BASE_API + "/logging/waitlist", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -48,7 +48,7 @@ function submitForm() {
 }
 
 async function getWaitlistCount() {
-  return fetch(config.BASE_API + "/waitlist/count", {
+  return fetch(config.BASE_API + "/logging/waitlist/count", {
     method: "GET",
     headers: {
       "content-type": "application/json",
