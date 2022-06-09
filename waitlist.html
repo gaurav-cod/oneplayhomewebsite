@@ -25,25 +25,24 @@
     <link rel="stylesheet" href="./styles/styles.css" />
 
     <style>
-        .focusStyle::placeholder {
-            color: #838688;
-            font-size: 15px;
-        }
+      .focusStyle::placeholder {
+        color: #838688;
+        font-size: 15px;
+      }
 
-        .focusStyle {
-            color: #333333;
-            font-size: 15px;
-            height: 38px;
-            padding: 10px 15px;
-        }
+      .focusStyle {
+        color: #333333;
+        font-size: 15px;
+        height: 38px;
+        padding: 10px 15px;
+      }
 
-        .focusStyle:focus {
-            border: 1px solid rgba(121,187,238,0.75) !important;
-            box-shadow: 0 0 5px rgb(82 168 236 / 50%);
-            outline: 0;
-        }
+      .focusStyle:focus {
+        border: 1px solid rgba(121, 187, 238, 0.75) !important;
+        box-shadow: 0 0 5px rgb(82 168 236 / 50%);
+        outline: 0;
+      }
     </style>
-
   </head>
 
   <body>
@@ -52,11 +51,7 @@
     >
       <div class="container">
         <a class="navbar-brand" href="./index.html">
-          <img
-            src="assets/logo.png"
-            alt=""
-            class="light-version-logo"
-          />
+          <img src="assets/logo.png" alt="" class="light-version-logo" />
           <span class="beta">BETA</span>
         </a>
         <button
@@ -136,33 +131,66 @@
       </div>
     </nav>
 
-    <section class="systemrequirement-topsection">Wait List<h5>500 in Wait-list, hurry up!</h5></section>
+    <section class="systemrequirement-topsection">
+      Wait List
+      <h5><span id="waitlist-count">0</span> in Wait-list, hurry up!</h5>
+    </section>
 
     <div class="container-sm pt-3">
-        <div class="row py-5 d-flex justify-content-center">
-            <div class="col-md-6 card card-boy bg-white p-4">
-                <h5 class="fw-bold">Wait List:</h5>
-                <form action="" method="post">
-                    <div class="row">
-                        <div class="col-md-6 mt-2 mb-2">
-                            <input type="text" class="form-control focusStyle" name="first_name" placeholder="First Name" />
-                        </div>
-                        <div class="col-md-6 mt-2 mb-2">
-                            <input type="text" class="form-control focusStyle" name="last_name" placeholder="Last Name" />
-                        </div>
-                        <div class="col-md-6 mt-2 mb-2">
-                            <input type="email" class="form-control focusStyle" name="email" placeholder="Email" />
-                        </div>
-                        <div class="col-md-6 mt-2 mb-2">
-                            <input type="number" class="form-control focusStyle" name="phone" placeholder="Phone Number" />
-                        </div>
-                        <div class="col-md-12 mt-4 text-center">
-                            <button type="submit" class="btn btn-lg btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </form>
+      <div class="row py-5 d-flex justify-content-center">
+        <div class="col-md-6 card card-boy bg-white p-4">
+          <h5 class="fw-bold">Wait List:</h5>
+          <form id="form">
+            <div class="row">
+              <div class="col-md-6 mt-2 mb-2">
+                <input
+                  id="first_name"
+                  type="text"
+                  class="form-control focusStyle"
+                  name="first_name"
+                  placeholder="First Name"
+                />
+              </div>
+              <div class="col-md-6 mt-2 mb-2">
+                <input
+                  id="last_name"
+                  type="text"
+                  class="form-control focusStyle"
+                  name="last_name"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div class="col-md-6 mt-2 mb-2">
+                <input
+                  id="email"
+                  type="email"
+                  class="form-control focusStyle"
+                  name="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="col-md-6 mt-2 mb-2">
+                <input
+                  id="phone_number"
+                  type="number"
+                  class="form-control focusStyle"
+                  name="phone"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="col-md-12 mt-4 text-center">
+                <button
+                  id="submit-btn"
+                  type="submit"
+                  class="btn btn-lg btn-primary"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
+          </form>
         </div>
+      </div>
     </div>
 
     <footer class="py-5 footer-section">
@@ -202,10 +230,7 @@
                   </a>
                 </li>
                 <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://discord.gg/CyNeDNNrZs"
-                    target="_blank"
-                  >
+                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
                     <i class="fab fa-discord facebook-icon"></i>
                   </a>
                 </li>
@@ -297,6 +322,7 @@
     <script src="./js/config.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/waitlist.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
