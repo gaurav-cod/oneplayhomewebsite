@@ -31,6 +31,19 @@ function loadGames() {
     .then((data) => data);
 }
 
+function getWaitlistCount() {
+  return fetch(config.BASE_API + "/accounts/waitlist_users", {
+    headers: {
+      "content-type": "application/json",
+    },
+    referrerPolicy: "strict-origin-when-cross-origin",
+    mode: "cors",
+    credentials: "omit",
+  })
+    .then((res) => res.json())
+    .then((data) => data.data);
+}
+
 loadGames().then((data) => {
   [1, 2, 3].forEach((page) => {
     const listEl = document.querySelector("#swiper" + page);
@@ -69,4 +82,8 @@ loadGames().then((data) => {
       disableOnInteraction: false,
     },
   });
+});
+
+getWaitlistCount().then((data) => {
+  document.querySelector("#waitlist-count").innerHTML = `${data + 50}`;
 });
