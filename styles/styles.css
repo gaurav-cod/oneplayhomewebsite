@@ -15030,17 +15030,17 @@ body {
   color: #fff;
 }
 
-.member-avater {
+.member-card {
+  background-image: linear-gradient(to right, #1e67de -4%, #8250e0);
   border-radius: 12px;
-  height: 264px;
+  text-align: center;
 }
 
-.member-title {
-  margin-top: -56px !important;
-}
-
-.member-desc {
-  margin-bottom: 56px !important;
+.member-avatar {
+  width: 100%;
+  background: #e3e3e3;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px #e3e3e3;
 }
 
 .row-hero {
@@ -15244,20 +15244,6 @@ body {
 
   .invert-mobile {
     flex-direction: column-reverse;
-  }
-
-  .member-avater {
-    height: 140px;
-  }
-
-  .member-title {
-    margin-top: 12px !important;
-    color: white !important;
-  }
-
-  .member-desc {
-    margin-bottom: 24px !important;
-    color: white !important;
   }
 
   .img-list {
