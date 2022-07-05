@@ -84,6 +84,6 @@ loadGames().then((data) => {
   });
 });
 
-getWaitlistCount().then((data) => {
-  document.querySelector("#waitlist-count").innerHTML = `${data + 50}`;
-});
+// getWaitlistCount().then((data) => {
+//   document.querySelector("#waitlist-count").innerHTML = `${data + 50}`;
+// });
