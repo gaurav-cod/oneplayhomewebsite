@@ -28,25 +28,50 @@ const roadmaps = [
   {
     title: "2022, Q2",
     description: "Bug Fixing and End2End Integration",
-    done: false,
+    done: true,
   },
   {
     title: "2022, Q2",
     description: "Going fully open source from server and client side",
-    done: false,
+    done: true,
   },
   {
     title: "2022, Q2",
     description: "WebRTC Implementation for Gaming over Browser",
+    done: true,
+  },
+  {
+    title: "2022, Q2",
+    description: "IPFS based Storing User Data",
+    done: true,
+  },
+  {
+    title: "2022, Q3",
+    description: "Integration of Smart Contracts and Blockchain",
     done: false,
   },
   {
     title: "2022, Q3",
-    description: "VR Client for Oculus",
+    description: "Login with Blockchain ID",
+    done: false,
+  },
+  {
+    title: "2022, Q3",
+    description: "POC on First Node hosting from Out-side a datacenter",
     done: false,
   },
   {
     title: "2022, Q4",
+    description: "Onboarding multiple partners",
+    done: false,
+  },
+  {
+    title: "2022, Q4",
+    description: "Beta Live Video Streaming and Share Play",
+    done: false,
+  },
+  {
+    title: "2023, Q1",
     description: "Release First OneOS designed for de-centralized cloud gaming - completely open source",
     done: false,
   },
