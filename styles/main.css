@@ -240,3 +240,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+.bgBlur {
+    -webkit-backdrop-filter: blur(6px) !important;
+    backdrop-filter: blur(6px) !important;
+}
