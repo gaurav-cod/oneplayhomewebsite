@@ -217,3 +217,26 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
+.rightMarginNegative {
+    margin-right: -130px;
+}
+
+.rightMargin {
+    margin-left: 130px;
+}
+
+/* .leftMarginNegative {
+    margin-left: -140px;
+}
+
+.rightMargin {
+    margin-right: 140px;
+} */
+
+.purpleGradient {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
