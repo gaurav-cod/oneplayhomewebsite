@@ -156,7 +156,14 @@ body {
     line-height: 42px;
 }
 
-.gradientAnchor {
+/* .gradientAnchor {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+} */
+
+.gradientAnchor a {
     background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -244,4 +251,68 @@ body {
 .bgBlur {
     -webkit-backdrop-filter: blur(6px) !important;
     backdrop-filter: blur(6px) !important;
+}
+
+.h56 {
+    height: 56px;
+}
+
+.borderRadius10 {
+    border-radius: 10px;
+}
+
+.bgTransparent {
+    background-color: transparent;
+}
+
+.inputFocus:focus {
+    background-color: transparent;
+    box-shadow: none;
+    color: #DCDCDC !important;
+    
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: #fff !important;
+}
+
+::placeholder {
+    color: #DCDCDC !important;
+    opacity: 1; /* Firefox */
+}
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #DCDCDC !important;
+}
+  
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #DCDCDC !important;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../assets/about-us/-.svg');
+}
+
+.accordion-button::after {
+ background-image: url('../assets/about-us/+.svg');
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text !important;
+    border-bottom: 0px !important;
+}
+
+.removeButtonFocus:focus {
+    box-shadow: none !important;
+}
+
+.customBorder {
+    border-color: #3E4246 !important;
 }
