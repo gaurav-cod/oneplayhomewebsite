@@ -1,8 +1,8 @@
 body {
     background-color: #000000;
     font-family: 'Poppins';
-    overflow-x: hidden;
     letter-spacing: 0.02em;
+    overflow-x: hidden;
 }
 
 .beta {
@@ -66,8 +66,9 @@ body {
 }
 
 .font50 {
-    font-size: 50px;
-    line-height: 70px;
+    /* font-size: 50px; */
+    font-size: 3.125rem;
+    line-height: 4.375rem;
 }
 
 .font800 {
@@ -90,7 +91,7 @@ body {
     border-radius: 50%;
 }
 
-.lineBg {
+/* .lineBg {
     background-image: url('.././assets/home/Vector\ 4.svg');
     background-repeat: no-repeat;
     background-size:  contain;
@@ -98,7 +99,7 @@ body {
     margin-top: -250px;
     background-clip: border-box;
     background-origin: border-box;
-}
+} */
 
 .linearCircle2 {
     display: flex;
@@ -315,4 +316,39 @@ input:-webkit-autofill:active  {
 
 .customBorder {
     border-color: #3E4246 !important;
+}
+
+.container {
+    /* margin-left: 0%;
+    margin-right: 0%; */
+    /* max-width: 100% !important; */
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.lineBg {
+    background-image: url('../assets/home/Group 81.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    margin-top: -380px;
+    
+}
+
+.marginRightNegative {
+    margin-right: -19%;
+}
+
+.marginLeftNegative {
+    margin-left: -19%;
+}
+
+.negativeLeft {
+    margin-left: -60px;
+}
+
+.padding500 {
+    padding-top: 480px;
 }
