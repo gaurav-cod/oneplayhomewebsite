@@ -439,6 +439,20 @@ input:-webkit-autofill:active  {
     height: auto;
 }
 
+.carousel-control-prev-icon.inactive-prev {
+    background: linear-gradient(270deg, #616161 100%, #434343 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: not-allowed;
+}
+
+.carousel-control-next-icon.inactive-next {
+    background: linear-gradient(270deg, #616161 100%, #434343 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: not-allowed;
+}
+
 .carousel-control-next, .carousel-control-prev {
     width: 2%;
 }
