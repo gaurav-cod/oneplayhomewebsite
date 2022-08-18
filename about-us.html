@@ -51,7 +51,7 @@
                     <a class="nav-link" href="./games.html">Games</a>
                     </li>
                     <li class="nav-item ms-3 me-3">
-                    <a class="nav-link" href="./download.html">Download</a>
+                    <a class="nav-link" href="./downloa$(this).html">Download</a>
                     </li>
                     <li class="nav-item ms-3 me-3">
                     <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
@@ -299,11 +299,15 @@
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#teamcarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fa fa-3x fa-solid fa-chevron-left" aria-hidden="true"></i></span>
+                        <span class="carousel-control-prev-icon inactive-prev" aria-hidden="true">
+                            <i class="fa fa-3x fa-solid fa-chevron-left" aria-hidden="true"></i>
+                        </span>
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#teamcarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fa fa-3x fa-solid fa-chevron-right" aria-hidden="true"></i></span>
+                        <span class="carousel-control-next-icon" aria-hidden="true">
+                            <i class="fa fa-3x fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        </span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
@@ -518,7 +522,17 @@
                 interval: 5000,
                 wrap: false
             });
+
+            const totalTeamCarouselItem = $("#teamcarousel .carousel-inner .carousel-item").length;
+            $(".carousel").on('slide.bs.carousel', function (event) {
+                if(event.from === 0) $("#teamcarousel .carousel-control-prev-icon").removeClass('inactive-prev');
+                if(event.to === 0) $("#teamcarousel .carousel-control-prev-icon").addClass('inactive-prev');
+
+                if(event.from === totalTeamCarouselItem -1) $("#teamcarousel .carousel-control-next-icon").removeClass('inactive-next');
+                if(event.to === totalTeamCarouselItem -1) $("#teamcarousel .carousel-control-next-icon").addClass('inactive-next');
+            })
         });
     </script>
   </body>
 </html>
+
