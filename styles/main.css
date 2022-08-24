@@ -132,6 +132,10 @@ body {
     color: #DCDCDC;
 }
 
+.offWhiteColor:hover {
+    color: #DCDCDC;
+}
+
 .font20 {
     font-size: 20px;
     line-height: 34px;
@@ -507,4 +511,27 @@ input:-webkit-autofill:active  {
 
 .carousel-control-next, .carousel-control-prev {
     width: 2%;
+}
+
+.h60 {
+    height: 60px;
+}
+
+.downloadBg {
+    background-image: url('../assets/download/Group\ 118.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.lightBlackBg {
+    background-color: #212123;
+}
+
+.borderRadius20 {
+    border-radius: 20px;
+}
+
+.borderLeftcolor {
+    border-left: 2px solid #3E4246;
 }
