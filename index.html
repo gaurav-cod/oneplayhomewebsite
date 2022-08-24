@@ -1,8 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -33,418 +32,493 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
 
     <!-- Custom CSS Link -->
-    <link href="./styles/main.css" rel="stylesheet" />
-    <!-- <link href="./styles/styles.css" rel="stylesheet" /> -->
+    <link href="./styles/styles.css" rel="stylesheet" />
 
     <title>OnePlay | Cloud Gaming | Cloud PC</title>
   </head>
+
   <body>
-    <!-- Navbar Section Start -->
-    <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
-      <div class="container-fluid ps-5 pe-5">
+    <nav
+      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
+    >
+      <div class="container">
         <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+          <img src="assets/logo.png" alt="" class="light-version-logo" />
+          <span class="beta">BETA</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
             </li>
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link" href="./subscription.html">Subscription</a>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./subscription.html"
+                >Subscription</a
+              >
             </li>
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link" href="./games.html">Games</a>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./games.html">Games</a>
             </li>
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link" href="./download.html">Download</a>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./download.html"
+                >Download</a
+              >
             </li>
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                href="./decentralization.html"
+                target="_blank"
+                >Decentralization</a
+              >
             </li>
           </ul>
           <form class="d-flex">
-            <button class="btn removeFocus height48 p-0 ms-3" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></button>
-            <button class="btn font18 lightWhite height48 font500 removeFocus align-middle ms-3" id="login">Log in</button>
-            <button type="submit" class="btn font18 text-white height48 w131 font500 removeFocus linearGradient align-middle borderRadius60 ms-3" id="signup">Sign Up</button>
+            <a
+              id="speed-test"
+              href=""
+              class="btn btn-link text-decoration-none text-light"
+            >
+              <i class="fas fa-tachometer-alt"></i>
+            </a>
+            <a
+              id="login"
+              href=""
+              class="btn btn-link text-decoration-none text-light me-2"
+              >Login</a
+            >
+            <a
+              id="signup"
+              href=""
+              class="btn btn-outline-light signup-button"
+              type="submit"
+              >Sign up</a
+            >
+            <button
+              id="logout"
+              class="btn btn-outline-light signup-button"
+              type="button"
+              onclick="handleLogout()"
+            >
+              Logout
+            </button>
           </form>
         </div>
       </div>
     </nav>
-    <div class="container pe-0">
-      <div class="row pt-5">
-        <div class="col-lg-6 mt-5 align-self-center pe-lg-5">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1 class="text-white font50 font800">
-                LIVE the adventure with OnePlay
-              </h1>
-              <p class="font20 font500 offWhiteColor mt-4 pe-lg-5 me-lg-5">
-                Run your favorite games without the
-                hassle of owning any hardware
-              </p>
-            </div>
-          </div>
-          <div class="gradientBorderbottom mt-4 mb-4 negativeLeft"></div>
-          <div class="row">
-            <div class="col-auto mt-3">
-              <div class="me-5">
-                <p class="font20 font500 offWhiteColor mb-0">Wait List</p>
-                <h1 class="font38 font700 text-white">2,589</h1>
-              </div>
-            </div>
-            <!-- <div class="col-auto mt-3">
-              <div class="ms-5">
-                <p class="font20 font500 offWhiteColor mb-0">Current Players</p>
-                <h1 class="font38 font700 text-white numericLinear">3,821</h1>
-              </div>
-            </div> -->
-          </div>
-          <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Join Today</button>
-        </div>
-        <div class="col-lg-6 pe-0">
-          <!-- <div class="rightMarginNegative rightMargin">
-            <div class="linearCircle">
 
+    <div
+      class="video-section row-hero d-flex flex-column justify-content-center negativeMarginTop paddingTop"
+    >
+      <div class="video-parallax">
+        <video id="mVideo" autoplay muted loop>
+          <source src="./assets/My Movie.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="backdrop"></div>
+
+      <div class="drivesection-button" style="z-index: 10">
+        <p class="main-text">LIVE The Adventure with OnePlay</p>
+        <p class="main-sub-text">
+          Run your favorite games without the hassles of owning any hardware
+        </p>
+        <a id="signup" href="" class="btn getstarted-button fw-bold"
+          ><span id="waitlist-count">500+</span> in Waitlist</a
+        >
+      </div>
+    </div>
+
+    <div class="gameplay-section banner">
+      <div class="container">
+        <div class="text-center pt-5">
+          <p class="next-gen-text">The Next Generation Cloud Gaming Platform</p>
+          <p class="gameplay-text mt-5 mb-0">
+            Accessible and Affordable Gaming For Everyone With Just 15 Mbps
+            Speed & 4G Network
+          </p>
+          <img class="gameplay" src="./assets/Gameplay.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="games-images-section">
+      <div class="meet-connect-section">
+        <div class="container">
+          <div class="getyour-section">
+            <p class="getyourgame-text">So Let The Games Begin!</p>
+            <p class="meet-text">
+              Meet | <span class="connect-text">Connect |</span>
+              <span class="play-text">Play</span>
+            </p>
+          </div>
+          <div class="humanplay-section row">
+            <div class="col-12 col-md-4">
+              <div class="playtogether-section my-md-5">
+                <p class="meet-sub-titles">Play together</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+              <div class="py-md-5"></div>
+              <div class="discover-section mt-md-5">
+                <p class="meet-sub-titles">Discover Your Competition</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
             </div>
-          </div> -->
-          <div class="row justify-content-end">
-            <div class="col-md-10">
-              <div class="marginRightNegative">
-                <img src="./assets/home/Image (2).svg" class="img-fluid" alt="img" />
+
+            <div class="col-12 col-md-4">
+              <img
+                src="./assets/Friends.png"
+                class="humanplaying-image"
+                alt=""
+              />
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="livegame-section my-md-5">
+                <p class="meet-sub-titles">Stream Live Games</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+              <div class="py-md-5"></div>
+              <div class="chatontext-section mt-md-5">
+                <p class="meet-sub-titles">Chat With Fellow Gamers</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container lineBg ps-0">
-      <div class="row padding500">
-        <div class="col-lg-5 ps-0 mt-5">
-          <div class="marginLeftNegative mt-5">
-            <img src="./assets/home/IMG 2.svg" class="img-fluid" alt="sec-2" />
+
+      <div class="supportsallstores-section banner position-relative">
+        <div class="backdrop"></div>
+        <div class="container position-relative">
+          <div class="powersection-button">
+            <p class="power-text">
+              The Journey Of A Thousand Games Begins In the Cloud...
+            </p>
+            <p class="power-content">
+              Choose from a collection of more than 1000+ Games At Your
+              Fingertips
+            </p>
+            <a href="./games.html" class="btn getstarted-button"
+              >Explore games</a
+            >
           </div>
-          <!-- <div class="linearCircle2 linearCircle">
-            <img src="./assets/home/iPad 2.svg" width="458px" height="365px" class="img-fluid align-middle mr38" alt="ipad" />
-          </div> -->
         </div>
-        <div class="col-lg-7 align-self-center mt-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <h1 class="text-white font50 font800">
-                Play on any device of your choice
-              </h1>
-              <p class="font20 font500 offWhiteColor mt-4">
-                Accessible and affordable gaming for everyone 
-                with just 15 Mbps speed & 4G network
-              </p>
-              <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Get Started</button>
+        <div class="container-fluid images-list" style="margin-top: 96px">
+          <div class="imagesrow-one">
+            <div class="swiper mySwiper image-firstrow">
+              <div id="swiper1" class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="imagesrow-two">
+            <div class="swiper mySwiper image-secondrow">
+              <div id="swiper2" class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="imagesrow-one">
+            <div class="swiper mySwiper image-firstrow">
+              <div id="swiper3" class="swiper-wrapper"></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="row padding100 text-center mt-5">
-        <!-- <div class="row lineBg2 justify-content-end mt-5"> -->
-        <div class="col-md-12 mt-5">
-          <h1 class="text-white font50 font800 mt-5">
-            Play . Stream . Compete . Level up
-          </h1>
-          <div class="row justify-content-center">
-            <div class="col-lg-6 text-center mt-4">
-              <p class="font20 font500 offWhiteColor">
-                Play & chat with your friends, stream Live Games,
-                & discover your competition.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-3 mt-5 align-self-center text-center">
-          <img src="./assets/home/Chat.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 font20 font500 offWhiteColor mb-0">Chat with friends</p>
-        </div>
-        <div class="col-md-6 mt-5 text-center">
-          <img src="./assets/home/pubg_character 4 (1).svg" class="img-fluid" alt="dash" />
-        </div>
-        <div class="col-md-3 mt-5 align-self-center text-center">
-          <img src="./assets/home/Level_up.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 font20 font500 offWhiteColor mb-0">Level up your gaming</p>
-        </div>
-      </div>
-    </div>
-    <div class="container mt-5">
-      <div class="row justify-content-center padding100">
-        <div class="col-md-7 text-center">
-          <h1 class="text-white font50 font800">
-            Powered by Decentralised Network
-          </h1>
-        </div>
-      </div>
-      <div class="row mb-5">
-        <div class="col-md-3 align-self-center text-center">
-          <img src="./assets/home/Minning.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 mb-0 font20 font500 offWhiteColor">Use for minning</p>
-        </div>
-        <div class="col-md-6 text-center">
-          <div class="card bgTransparent border-0">
-            <img src="./assets/home/blockchain 1.svg" class="card-img" alt="blockchain">
-            <div class="card-img-overlay">
-              <div class="row justify-content-center">
-                <div class="col-lg-10">
-                  <p class="font20 font500 offWhiteColor">
-                    Open source OS, Network & Streaming, host or run your own node.
+
+      <div
+        class="container-fluid ultra-section banner position-relative py-0 py-md-5"
+      >
+        <div class="container latency-section position-relative">
+          <div class="my-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-8">
+                <div>
+                  <div class="ultraimage-wrapper">
+                    <video
+                      id="alt-video"
+                      style="width: 100%"
+                      autoplay
+                      muted
+                      loop
+                      src="assets/videoplayback.mp4"
+                    ></video>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="ultra-text">Ultra Low Latency</p>
+                  <p class="ultra-content">
+                    Discover top-tier performance, high frame rates and low
+                    latency to offer you the best experience.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Sync Instantly</p>
+                  <p class="ultra-content text-fade">
+                    Relish the experience of a native Windows 10 PC in an
+                    instant. Have ready access to all your PC application
+                    software with the click of a button.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Native 4K Resolution</p>
+                  <p class="ultra-content text-fade">
+                    High definition streaming with 4K resolution to give you an
+                    immersive gaming experience.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Supports All Stores</p>
+                  <p class="ultra-content text-fade">
+                    When it comes to gaming- be limitless. OnePlay supports all
+                    stores from STEAM and EPIC to UPLAY and more.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <p class="mt-4 mb-0 font20 font500 offWhiteColor">Rent out your own server, Learn more about <span class="purpleGradient">B2B</span></p>
-        </div>
-        <div class="col-md-3 align-self-center text-center">
-          <img src="./assets/home/App.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 mb-0 font20 font500 offWhiteColor">Run your apps</p>
-        </div>
-      </div>
-      </div>
-      <div class="container pe-0">
-        <div class="row padding100">
-          <div class="col-lg-6 mt-5 align-self-center">
-            <h1 class="text-white font50 font800">
-              Enjoy Tripple AAA games
-            </h1>
-            <div class="row">
-              <div class="col-md-9 mt-4">
-                <p class="font20 font500 offWhiteColor">
-                  Choose from a collection of more than 1000+ Games At Your Fingertips
-                </p>
-                <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Browse Games</button>
-                <p class="font20 font500 offWhiteColor pe-lg-4 mt-5">
-                  We support all major stores
-                </p>
-              </div>
-            </div>
-            <div class="row mt-4">
-              <div class="col">
-                <a href="#"><img src="./assets/home/blizzard.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/epic.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/origin.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/warg.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/steam.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/riot.svg" class="img-fluid" alt="blizzard" /></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="row justify-content-end">
-              <div class="col-lg-10">
-                <div class="rightMarginNegative">
-                  <img src="./assets/home/Image.svg" class="img-fluid" alt="game-Image" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-      <div class="row padding100">
-        <div class="col-md-4 mt-5 text-center">
-          <img src="./assets/home/Latency.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 mb-0 font38 font700 offWhiteColor">Low latency</p>
-          <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
-            High performance, unlimited frame rates, & low latency to offer you
-            the best experience.
-          </p>
-        </div>
-        <div class="col-md-4 mt-5 text-center">
-          <img src="./assets/home/Sync.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 mb-0 font38 font700 offWhiteColor">Sync Instantly</p>
-          <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
-            Relish the experience of a native Windows 10 PC with a click 
-            of a button.
-          </p>
-        </div>
-        <div class="col-md-4 mt-5 text-center">
-          <img src="./assets/home/4K 1.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 mb-0 font38 font700 offWhiteColor">Supports 4K</p>
-          <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
-            High definition streaming with 4K resolution gives you an immersive gaming experience.
-          </p>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row padding100">
-        <div class="col-12 p-0">
-          <hr class="border-bottom customBorderColor" />
-        </div>
-      </div>
-      <div class="container">
-        <div class="row padding100">
-          <div class="col">
-            <h1 class="text-white font50 font800">
-              Stay Updated
-            </h1>
-          </div>
-          <div class="col-auto align-self-center borderRadius60">
-            <button class="btn font18 text-white border-gradient-purple height48 font500 p-1 removeFocus gradientBorder align-middle"><span class="ps-5 pe-5">Browse Articles</span></button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 mt-5">
-            <hr class="border-bottom customBorderColor" />
-          </div>
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-3 mt-3 mb-3">
-                <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
-              </div>
-              <div class="col-md-5 mt-3 mb-3 align-self-center">
-                <h3 class="font28 font700 text-white">Build Your Own Market In The Universe Of NFTs</h3>
-                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 12, 2022 . Crypto currency</p>
-              </div>
-              <div class="col-md-4 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                <a href="#" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12">
-            <hr class="border-bottom customBorderColor" />
-          </div>
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-3 mt-3 mb-3">
-                <img src="./assets/home/Rectangle 91 (1).svg" class="img-fluid" alt="blog" />
-              </div>
-              <div class="col-md-5 mt-3 mb-3 align-self-center">
-                <h3 class="font28 font700 text-white">Big Brands Too Want To Be A Part Of The NFT World</h3>
-                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 15, 2022 . NFT</p>
-              </div>
-              <div class="col-md-4 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                <a href="#" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+    <div class="built-section d-flex flex-column justify-content-between">
+      <div class="py-4">
+        <p class="built-text">Get Your Game On</p>
+        <p class="built-content">In 3 Easy Steps</p>
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 ms-md-5">
+              <div class="row">
+                <div class="col-md-1 d-none d-md-block"></div>
+                <div class="col-12 col-md-1 mb-5 mb-md-0">
+                  <p class="step-no1">1</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Check The Requirements
+                  </p>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                  <hr class="bg-white mt-4" style="height: 2px" />
+                </div>
+                <div class="col-12 col-md-1 mb-5 mb-md-0">
+                  <p class="step-no1">2</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Install OnePlay
+                  </p>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                  <hr class="bg-white mt-4" style="height: 2px" />
+                </div>
+                <div class="col-12 col-md-1">
+                  <p class="step-no1">3</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Dive In & Live The Experience
+                  </p>
+                </div>
+                <div class="col-md-1 d-none d-md-block"></div>
               </div>
             </div>
-          </div>
-          <div class="col-12">
-            <hr class="border-bottom customBorderColor" />
-          </div>
-        </div>
-        <div class="row padding100">
-          <div class="col-md-11">
-              <div class="card borderRadius30 linearGradient border-0">
-                  <div class="card-body text-white pe-0">
-                      <div class="row">
-                          <div class="col-md-7 ps-lg-5 pt-lg-4 pb-lg-4 align-self-center pe-0">
-                              <h1 class="font50 font800 mb-0">
-                                  Get OnePlay on
-                              </h1>
-                              <h1 class="font50 font800 mb-0">
-                                  your favorite device
-                              </h1>
-                              <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                              <button class="btn align-middle font18 text-white height48 ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4" id="login">Get Started</button>
-                              <a href="#" class="btn height48 mt-4 text-white font18 font500 align-middle pt-3 ms-5"><u>Browse Plans</u></a>
-                          </div>
-                          <div class="col-md-5 align-self-center p-0">
-                              <div class="mr130">
-                                  <img src="./assets/home/laptop 1 (1).svg" class="img-fluid" alt="laptop" />
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="row padding100">
-          <div class="col-md-12">
-            <a class="navbar-brand" href="./index.html">
-              <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
-            </a>
-            <div class="row">
-              <div class="col-md-3 mt-5">
-                <p class="font20 font600 text-white">Company</p>
-                <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">About Us</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Roadmap</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Jobs</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Plans & Pricing</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Blog</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-5">
-                <p class="font20 font600 text-white">Get Help</p>
-                <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Your Profile</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">FAQs</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Support</a></li>
-                  <li class="mt-2"><a href="./contact-us.html" class="text-decoration-none">Contact Us</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Feedback</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-5">
-                <p class="font20 font600 text-white">Boring Stuff</p>
-                <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Terms & Conditions</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Disclaimer</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Plans & Pricing</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Blog</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3 mt-5">
-                <p class="font20 font600 text-white">Get Early Access Drops!</p>
-                <button class="btn font18 text-white height48 font500 removeFocus ps-3 pe-3 linearGradient borderRadius60 mt-2" id="login"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</button>
-                <div class="row mt-4 font500 font20 footerWhiteColor">
-                  <div class="col ps-4">
-                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank" class="me-4"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank" class="me-4"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com/CloudOneplay" target="_blank" class="me-4"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://medium.com/@oneplay_gaming" target="_blank" class="me-4"><i class="fab fa-medium facebook-icon"></i></a>
-                  </div>
+            <div class="col-12 d-none d-md-block">
+              <div class="row">
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                  <p class="step-info">Check The Requirements</p>
+                </div>
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                  <p class="step-info">Install OnePlay</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="step-info">Dive In & Live The Experience</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-12 p-0">
-          <hr class="border-bottom customBorderColor" />
-        </div>
-      </div>
-      <div class="container mb-4 mt-4">
-        <div class="row">
-          <div class="col-md-12">
-            <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
-            <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
-          </div>
+          <a id="login" href="" class="btn builtget-button">Get Started</a>
         </div>
       </div>
     </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <footer class="py-5 footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/logo.png"
+              alt=""
+              class="light-version-logo-footer"
+              width="200"
+            />
+            <span class="beta">BETA</span>
+            <div style="width: min-content" class="social-icons m-auto">
+              <ul class="pl-0 list-unstyled d-flex align-items-end">
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
+                    <i class="fab fa-facebook facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a
+                    href="https://www.instagram.com/oneplaycloudgaming/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center">
+                  <a href="https://twitter.com/CloudOneplay" target="_blank">
+                    <i class="fab fa-twitter facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
+                    <i class="fab fa-medium facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
+                    <i class="fab fa-discord facebook-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2"></div>
+          <div class="col-12 col-lg-3"></div>
+          <div class="col-12 col-lg-3">
+            <ul class="list-unstyled mt-5 text-center text-md-start">
+              <li class="mb-2">
+                <a
+                  href="./system requirement.html"
+                  class="text-decoration-none text-white-50"
+                  >System Requirements</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./about.html"
+                  class="text-decoration-none text-white-50"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./subscription.html"
+                  class="text-decoration-none text-white-50"
+                  >Pricing</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./contact.html"
+                  class="text-decoration-none text-white-50"
+                  >Contact Us</a
+                >
+              </li>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+              <li class="mb-2">
+                <a
+                  href="./career.html"
+                  class="text-decoration-none text-white-50"
+                  >Career</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./decentralization.html"
+                  class="text-decoration-none text-white-50"
+                  >Decentralization</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./privacy.html"
+                  class="text-decoration-none text-white-50"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./tnc.html"
+                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <p class="text-white-50 text-center text-md-start ms-4">
+          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-220923953-1");
+    </script>
   </body>
 </html>
