@@ -9,13 +9,39 @@
 }
 
 /* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .height100vh {
+        height: auto !important;
+    }
 
+    .customH1 h1 {
+        font-size: 2.5rem !important;
+        line-height: 3.3rem;
+    }
 }
 
 /* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { 
+@media (min-width: 992px) and (max-width: 1198.98px) { 
+    .font20 {
+        font-size: 16px !important;
+        line-height: 22px;
+    }
 
+    .customH1 h1 {
+        font-size: 1.7rem !important;
+        line-height: 2.5rem;
+    }
+
+    .custom-choose input[type='radio'] + label, .custom-choose input[type='radio']:not(checked) + label {
+        padding: 9px 23px !important;
+        font-size: 15px !important;
+        margin-right: 15px !important;
+    }
+
+    .custom-choose input[type='radio']:checked + label::before
+    {
+        left: 5px !important;
+    }
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -29,16 +55,57 @@
         font-size: 3.12rem !important;
         line-height: 4.37rem !important;
     }
+
+    .font20 {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .customContainer .container {
+        padding-left: 9% !important;
+        padding-right: 9% !important;
+    }
+
+    .customContainer .container h1 {
+        font-size: 2.2rem !important;
+        line-height: 2.5rem;
+    }
+
+    .custom-choose input[type='radio'] + label, .custom-choose input[type='radio']:not(checked) + label {
+        padding: 9px 27.5px !important;
+    }
+
+    .custom-choose input[type='radio']:checked + label::before
+    {
+        left: 5px !important;
+    }
+    
+}
+
+@media (min-width: 1400px) and (max-width: 1798px) {
+    .customContainer .container {
+        padding-left: 9% !important;
+        padding-right: 9% !important;
+    }
+
+    .customContainer .container h1 {
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+    }
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1799.98px) { 
+    .customContainer .container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 2099.98px) { 
-
+    
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -46,6 +113,16 @@
     .container {
         padding-left: 3% !important;
         padding-right: 3% !important;
+    }
+
+    .customContainer .container {
+        padding-left: 20% !important;
+        padding-right: 20% !important;
+    }
+
+    .largeScreenHeight {
+        height: 90vh;
+        align-items: center;
     }
 }
 
@@ -351,6 +428,14 @@ input:-webkit-autofill:active  {
    color: #DCDCDC !important;
 }
 
+input {
+    border: 2px solid #434343 !important;
+}
+
+.inputBorder {
+    border: 2px solid #434343;
+}
+
 .accordion-button:not(.collapsed)::after {
     background-image: url('../assets/about-us/-.svg');
 }
@@ -534,4 +619,85 @@ input:-webkit-autofill:active  {
 
 .borderLeftcolor {
     border-left: 2px solid #3E4246;
+}
+
+.height100vh {
+    height: 100vh;
+}
+
+.height75vh {
+    height: 75vh;
+    align-items: center;
+}
+
+.signupBg {
+    background-image: url('../assets/signup/Mask\ group.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.loginBg {
+    background-color: #212123;
+}
+
+.custom-choose
+{
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+}
+
+.custom-choose input[type='radio']
+{
+    display: none;
+}
+
+.custom-choose input[type='radio'] + label,.custom-choose input[type='radio']:not(checked) + label
+{
+    padding: 9px 45.5px;
+    border: solid 2px #434343;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 31px;
+    transition: .4s;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    color: #DCDCDC;
+}
+
+.custom-choose input[type='radio']:checked + label
+{
+    position: relative;
+    border: solid 2px #434343;
+    background: #444444;
+    color: #FFF;
+    transition: .4s;
+}
+
+.custom-choose input[type='radio']:checked + label::before
+{
+    content:'✓';
+    position: absolute;
+    left: 16px;
+}
+
+.overflowYScroll {
+    overflow-y: scroll;
+}
+
+.anchor {
+    border-bottom: 1px solid #A83AFE;
+}
+
+.custom .form-switch .form-check-input {
+    width: 34px !important;
+    height: 20px !important;
+    margin-top: 6px;
+}
+
+.custom .form-check-input:checked {
+    background-color: #6E59FE !important;
 }
