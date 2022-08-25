@@ -655,7 +655,7 @@ input {
 
 .custom-choose input[type='radio'] + label,.custom-choose input[type='radio']:not(checked) + label
 {
-    padding: 9px 45.5px;
+    padding: 9px 37.5px;
     border: solid 2px #434343;
     border-radius: 10px;
     text-align: center;
