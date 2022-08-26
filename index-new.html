@@ -1,19 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- font awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,6 +15,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Font Family Poppins -->
     <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
@@ -42,7 +37,7 @@
     <!-- Navbar Section Start -->
     <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
       <div class="container-fluid ps-5 pe-5">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="./index-new.html">
           <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,31 +45,39 @@
         </button>
         <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item ms-3 me-3">
+            <li class="nav-item me-3">
               <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
             </li>
-            <li class="nav-item ms-3 me-3">
+            <li class="nav-item me-3">
               <a class="nav-link" href="./subscription.html">Subscription</a>
             </li>
-            <li class="nav-item ms-3 me-3">
+            <!-- <li class="nav-item ms-3 me-3">
               <a class="nav-link" href="./games.html">Games</a>
+            </li> -->
+            <li class="nav-item me-3">
+              <a class="nav-link" href="./download-new.html">Download</a>
             </li>
-            <li class="nav-item ms-3 me-3">
-              <a class="nav-link" href="./download.html">Download</a>
-            </li>
-            <li class="nav-item ms-3 me-3">
+            <li class="nav-item me-3">
               <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <button class="btn removeFocus height48 p-0 ms-3" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></button>
-            <button class="btn font18 lightWhite height48 font500 removeFocus align-middle ms-3" id="login">Log in</button>
-            <button type="submit" class="btn font18 text-white height48 w131 font500 removeFocus linearGradient align-middle borderRadius60 ms-3" id="signup">Sign Up</button>
+          <form class="=">
+            <div class="row">
+              <div class="col-auto align-self-center ps-0">
+                <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+              </div>
+              <div class="col-auto align-self-center ps-0">
+                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+              </div>
+              <div class="col-auto align-self-center ps-0">
+                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+              </div>
+            </div>
           </form>
         </div>
       </div>
     </nav>
-    <div class="container pe-0">
+    <div class="container pe-0 websiteContainer">
       <div class="row pt-5">
         <div class="col-lg-6 mt-5 align-self-center pe-lg-5">
           <div class="row">
@@ -103,7 +106,7 @@
               </div>
             </div> -->
           </div>
-          <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Join Today</button>
+          <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" href="./sign-up.html">Join Today</a>
         </div>
         <div class="col-lg-6 pe-0">
           <!-- <div class="rightMarginNegative rightMargin">
@@ -121,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div class="container lineBg ps-0">
+    <div class="container lineBg ps-0 websiteContainer">
       <div class="row padding500">
         <div class="col-lg-5 ps-0 mt-5">
           <div class="marginLeftNegative mt-5">
@@ -141,7 +144,7 @@
                 Accessible and affordable gaming for everyone 
                 with just 15 Mbps speed & 4G network
               </p>
-              <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Get Started</button>
+              <a role="button" class="btn btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" href="./login.html">Get Started</a>
             </div>
           </div>
         </div>
@@ -176,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5">
+    <div class="container mt-5 websiteContainer">
       <div class="row justify-content-center padding100">
         <div class="col-md-7 text-center">
           <h1 class="text-white font50 font800">
@@ -210,7 +213,7 @@
         </div>
       </div>
       </div>
-      <div class="container pe-0">
+      <div class="container pe-0 websiteContainer">
         <div class="row padding100">
           <div class="col-lg-6 mt-5 align-self-center">
             <h1 class="text-white font50 font800">
@@ -221,30 +224,30 @@
                 <p class="font20 font500 offWhiteColor">
                   Choose from a collection of more than 1000+ Games At Your Fingertips
                 </p>
-                <button class="btn font18 text-white height48 ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login">Browse Games</button>
+                <a role="button" class="btn btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" href="#">Browse Games</a>
                 <p class="font20 font500 offWhiteColor pe-lg-4 mt-5">
                   We support all major stores
                 </p>
               </div>
             </div>
             <div class="row mt-4">
-              <div class="col">
-                <a href="#"><img src="./assets/home/blizzard.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/blizzard.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/epic.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/epic.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/origin.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/origin.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/warg.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/warg.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/steam.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/steam.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
-              <div class="col">
-                <a href="#"><img src="./assets/home/riot.svg" class="img-fluid" alt="blizzard" /></a>
+              <div class="col-auto">
+                <img src="./assets/home/riot.svg" class="img-fluid mr-3" alt="blizzard" />
               </div>
             </div>
           </div>
@@ -259,7 +262,7 @@
           </div>
         </div>
       </div>
-      <div class="container">
+      <div class="container websiteContainer">
       <div class="row padding100">
         <div class="col-md-4 mt-5 text-center">
           <img src="./assets/home/Latency.svg" class="img-fluid" alt="dash" />
@@ -287,7 +290,7 @@
       </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid websiteContainer">
       <div class="row padding100">
         <div class="col-12 p-0">
           <hr class="border-bottom customBorderColor" />
@@ -301,7 +304,7 @@
             </h1>
           </div>
           <div class="col-auto align-self-center borderRadius60">
-            <button class="btn font18 text-white border-gradient-purple height48 font500 p-1 removeFocus gradientBorder align-middle"><span class="ps-5 pe-5">Browse Articles</span></button>
+            <a href="https://medium.com/@oneplay_gaming" class="btn btn-lg font20 text-white border-gradient-purple font500 p-1 removeFocus gradientBorder align-middle"><span class="ps-5 pe-5">Browse Articles</span></a>
           </div>
         </div>
         <div class="row">
@@ -309,18 +312,20 @@
             <hr class="border-bottom customBorderColor" />
           </div>
           <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-3 mt-3 mb-3">
-                <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
+            <!-- <a href="#"> -->
+              <div class="row">
+                <div class="col-md-3 mt-3 mb-3">
+                  <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
+                </div>
+                <div class="col-md-5 mt-3 mb-3 align-self-center">
+                  <h3 class="font28 font700 text-white">Build Your Own Market In The Universe Of NFTs</h3>
+                  <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 12, 2022 . Crypto currency</p>
+                </div>
+                <div class="col-md-4 mt-3 mb-3 align-self-center text-end gradientAnchor">
+                  <a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                </div>
               </div>
-              <div class="col-md-5 mt-3 mb-3 align-self-center">
-                <h3 class="font28 font700 text-white">Build Your Own Market In The Universe Of NFTs</h3>
-                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 12, 2022 . Crypto currency</p>
-              </div>
-              <div class="col-md-4 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                <a href="#" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
-              </div>
-            </div>
+            <!-- </a> -->
           </div>
           <div class="col-12">
             <hr class="border-bottom customBorderColor" />
@@ -335,7 +340,7 @@
                 <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 15, 2022 . NFT</p>
               </div>
               <div class="col-md-4 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                <a href="#" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
+                <a href="https://medium.com/@oneplay_gaming/big-brands-too-want-to-be-a-part-of-the-nft-world-4ac6453f5e34" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
               </div>
             </div>
           </div>
@@ -356,7 +361,7 @@
                                   your favorite device
                               </h1>
                               <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                              <button class="btn align-middle font18 text-white height48 ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4" id="login">Get Started</button>
+                              <a href="./login.html" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
                               <a href="#" class="btn height48 mt-4 text-white font18 font500 align-middle pt-3 ms-5"><u>Browse Plans</u></a>
                           </div>
                           <div class="col-md-5 align-self-center p-0">
@@ -371,45 +376,39 @@
         </div>
         <div class="row padding100">
           <div class="col-md-12">
-            <a class="navbar-brand" href="./index.html">
+            <a class="navbar-brand" href="./index-new.html">
               <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
             </a>
             <div class="row">
               <div class="col-md-3 mt-5">
                 <p class="font20 font600 text-white">Company</p>
                 <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">About Us</a></li>
+                  <li class="mt-2"><a href="./index-new.html" class="text-decoration-none">Home</a></li>
+                  <li class="mt-2"><a href="./about-us.html" class="text-decoration-none">About Us</a></li>
                   <li class="mt-2"><a href="#" class="text-decoration-none">Roadmap</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Jobs</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Plans & Pricing</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Blog</a></li>
+                  <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
+                  <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
+                  <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
                 </ul>
               </div>
               <div class="col-md-3 mt-5">
                 <p class="font20 font600 text-white">Get Help</p>
                 <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Your Profile</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">FAQs</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Support</a></li>
+                  <li class="mt-2"><a href="./contact-us.html" class="text-decoration-none">FAQs</a></li>
                   <li class="mt-2"><a href="./contact-us.html" class="text-decoration-none">Contact Us</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Feedback</a></li>
                 </ul>
               </div>
               <div class="col-md-3 mt-5">
                 <p class="font20 font600 text-white">Boring Stuff</p>
                 <ul class="font500 font20 footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Privacy Policy</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Terms & Conditions</a></li>
+                  <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                  <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
                   <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Disclaimer</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Plans & Pricing</a></li>
-                  <li class="mt-2"><a href="#" class="text-decoration-none">Blog</a></li>
                 </ul>
               </div>
               <div class="col-md-3 mt-5">
                 <p class="font20 font600 text-white">Get Early Access Drops!</p>
-                <button class="btn font18 text-white height48 font500 removeFocus ps-3 pe-3 linearGradient borderRadius60 mt-2" id="login"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</button>
+                <a href="https://discord.gg/CyNeDNNrZs" class="btn font18 btn-lg text-white font500 removeFocus linearGradient borderRadius60 mt-2"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                 <div class="row mt-4 font500 font20 footerWhiteColor">
                   <div class="col ps-4">
                     <a href="https://www.facebook.com/ONEPLAYIN" target="_blank" class="me-4"><i class="fa-brands fa-facebook"></i></a>
@@ -446,5 +445,21 @@
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   -->
+
+    <script src="./js/config.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-220923953-1");
+    </script>
   </body>
 </html>
