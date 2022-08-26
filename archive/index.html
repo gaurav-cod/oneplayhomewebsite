@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+    <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Font Family Poppins -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+    <!-- Custom CSS Link -->
+    <link href="./styles/styles.css" rel="stylesheet" />
+
+    <title>OnePlay | Cloud Gaming | Cloud PC</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img src="assets/logo.png" alt="" class="light-version-logo" />
+          <span class="beta">BETA</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./subscription.html"
+                >Subscription</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./games.html">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="./download.html"
+                >Download</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                href="./decentralization.html"
+                target="_blank"
+                >Decentralization</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <a
+              id="speed-test"
+              href=""
+              class="btn btn-link text-decoration-none text-light"
+            >
+              <i class="fas fa-tachometer-alt"></i>
+            </a>
+            <a
+              id="login"
+              href=""
+              class="btn btn-link text-decoration-none text-light me-2"
+              >Login</a
+            >
+            <a
+              id="signup"
+              href=""
+              class="btn btn-outline-light signup-button"
+              type="submit"
+              >Sign up</a
+            >
+            <button
+              id="logout"
+              class="btn btn-outline-light signup-button"
+              type="button"
+              onclick="handleLogout()"
+            >
+              Logout
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="video-section row-hero d-flex flex-column justify-content-center negativeMarginTop paddingTop"
+    >
+      <div class="video-parallax">
+        <video id="mVideo" autoplay muted loop>
+          <source src="./assets/My Movie.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="backdrop"></div>
+
+      <div class="drivesection-button" style="z-index: 10">
+        <p class="main-text">LIVE The Adventure with OnePlay</p>
+        <p class="main-sub-text">
+          Run your favorite games without the hassles of owning any hardware
+        </p>
+        <a id="signup" href="" class="btn getstarted-button fw-bold"
+          ><span id="waitlist-count">500+</span> in Waitlist</a
+        >
+      </div>
+    </div>
+
+    <div class="gameplay-section banner">
+      <div class="container">
+        <div class="text-center pt-5">
+          <p class="next-gen-text">The Next Generation Cloud Gaming Platform</p>
+          <p class="gameplay-text mt-5 mb-0">
+            Accessible and Affordable Gaming For Everyone With Just 15 Mbps
+            Speed & 4G Network
+          </p>
+          <img class="gameplay" src="./assets/Gameplay.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="games-images-section">
+      <div class="meet-connect-section">
+        <div class="container">
+          <div class="getyour-section">
+            <p class="getyourgame-text">So Let The Games Begin!</p>
+            <p class="meet-text">
+              Meet | <span class="connect-text">Connect |</span>
+              <span class="play-text">Play</span>
+            </p>
+          </div>
+          <div class="humanplay-section row">
+            <div class="col-12 col-md-4">
+              <div class="playtogether-section my-md-5">
+                <p class="meet-sub-titles">Play together</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+              <div class="py-md-5"></div>
+              <div class="discover-section mt-md-5">
+                <p class="meet-sub-titles">Discover Your Competition</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+              <img
+                src="./assets/Friends.png"
+                class="humanplaying-image"
+                alt=""
+              />
+            </div>
+
+            <div class="col-12 col-md-4">
+              <div class="livegame-section my-md-5">
+                <p class="meet-sub-titles">Stream Live Games</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+              <div class="py-md-5"></div>
+              <div class="chatontext-section mt-md-5">
+                <p class="meet-sub-titles">Chat With Fellow Gamers</p>
+                <!-- <p class="subtitles-content">
+                  Run all your Windows software remotely without noticeable
+                  latency.
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supportsallstores-section banner position-relative">
+        <div class="backdrop"></div>
+        <div class="container position-relative">
+          <div class="powersection-button">
+            <p class="power-text">
+              The Journey Of A Thousand Games Begins In the Cloud...
+            </p>
+            <p class="power-content">
+              Choose from a collection of more than 1000+ Games At Your
+              Fingertips
+            </p>
+            <a href="./games.html" class="btn getstarted-button"
+              >Explore games</a
+            >
+          </div>
+        </div>
+        <div class="container-fluid images-list" style="margin-top: 96px">
+          <div class="imagesrow-one">
+            <div class="swiper mySwiper image-firstrow">
+              <div id="swiper1" class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="imagesrow-two">
+            <div class="swiper mySwiper image-secondrow">
+              <div id="swiper2" class="swiper-wrapper"></div>
+            </div>
+          </div>
+          <div class="imagesrow-one">
+            <div class="swiper mySwiper image-firstrow">
+              <div id="swiper3" class="swiper-wrapper"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid ultra-section banner position-relative py-0 py-md-5"
+      >
+        <div class="container latency-section position-relative">
+          <div class="my-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-lg-8">
+                <div>
+                  <div class="ultraimage-wrapper">
+                    <video
+                      id="alt-video"
+                      style="width: 100%"
+                      autoplay
+                      muted
+                      loop
+                      src="assets/videoplayback.mp4"
+                    ></video>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-4">
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="ultra-text">Ultra Low Latency</p>
+                  <p class="ultra-content">
+                    Discover top-tier performance, high frame rates and low
+                    latency to offer you the best experience.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Sync Instantly</p>
+                  <p class="ultra-content text-fade">
+                    Relish the experience of a native Windows 10 PC in an
+                    instant. Have ready access to all your PC application
+                    software with the click of a button.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Native 4K Resolution</p>
+                  <p class="ultra-content text-fade">
+                    High definition streaming with 4K resolution to give you an
+                    immersive gaming experience.
+                  </p>
+                </div>
+                <div
+                  class="mt-5"
+                  style="cursor: pointer"
+                  onmouseover="changeVideo(this)"
+                >
+                  <p class="text-fade ultra-text">Supports All Stores</p>
+                  <p class="ultra-content text-fade">
+                    When it comes to gaming- be limitless. OnePlay supports all
+                    stores from STEAM and EPIC to UPLAY and more.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="built-section d-flex flex-column justify-content-between">
+      <div class="py-4">
+        <p class="built-text">Get Your Game On</p>
+        <p class="built-content">In 3 Easy Steps</p>
+        <div class="container">
+          <div class="row py-5">
+            <div class="col-12 ms-md-5">
+              <div class="row">
+                <div class="col-md-1 d-none d-md-block"></div>
+                <div class="col-12 col-md-1 mb-5 mb-md-0">
+                  <p class="step-no1">1</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Check The Requirements
+                  </p>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                  <hr class="bg-white mt-4" style="height: 2px" />
+                </div>
+                <div class="col-12 col-md-1 mb-5 mb-md-0">
+                  <p class="step-no1">2</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Install OnePlay
+                  </p>
+                </div>
+                <div class="col-md-3 d-none d-md-block">
+                  <hr class="bg-white mt-4" style="height: 2px" />
+                </div>
+                <div class="col-12 col-md-1">
+                  <p class="step-no1">3</p>
+                  <p class="step-number">Step</p>
+                  <p class="step-info d-block d-md-none text-center">
+                    Dive In & Live The Experience
+                  </p>
+                </div>
+                <div class="col-md-1 d-none d-md-block"></div>
+              </div>
+            </div>
+            <div class="col-12 d-none d-md-block">
+              <div class="row">
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                  <p class="step-info">Check The Requirements</p>
+                </div>
+                <div class="col-12 col-md-4 mb-5 mb-md-0">
+                  <p class="step-info">Install OnePlay</p>
+                </div>
+                <div class="col-12 col-md-4">
+                  <p class="step-info">Dive In & Live The Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a id="login" href="" class="btn builtget-button">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="py-5 footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <img
+              src="assets/logo.png"
+              alt=""
+              class="light-version-logo-footer"
+              width="200"
+            />
+            <span class="beta">BETA</span>
+            <div style="width: min-content" class="social-icons m-auto">
+              <ul class="pl-0 list-unstyled d-flex align-items-end">
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
+                    <i class="fab fa-facebook facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a
+                    href="https://www.instagram.com/oneplaycloudgaming/"
+                    target="_blank"
+                  >
+                    <i class="fab fa-instagram facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center">
+                  <a href="https://twitter.com/CloudOneplay" target="_blank">
+                    <i class="fab fa-twitter facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
+                    <i class="fab fa-medium facebook-icon"></i>
+                  </a>
+                </li>
+                <li class="d-flex flex-column justify-content-center me-2">
+                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
+                    <i class="fab fa-discord facebook-icon"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-12 col-lg-2"></div>
+          <div class="col-12 col-lg-3"></div>
+          <div class="col-12 col-lg-3">
+            <ul class="list-unstyled mt-5 text-center text-md-start">
+              <li class="mb-2">
+                <a
+                  href="./system requirement.html"
+                  class="text-decoration-none text-white-50"
+                  >System Requirements</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./about.html"
+                  class="text-decoration-none text-white-50"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./subscription.html"
+                  class="text-decoration-none text-white-50"
+                  >Pricing</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./contact.html"
+                  class="text-decoration-none text-white-50"
+                  >Contact Us</a
+                >
+              </li>
+
+              <li class="mb-2">
+                <a
+                  href="./career.html"
+                  class="text-decoration-none text-white-50"
+                  >Career</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./decentralization.html"
+                  class="text-decoration-none text-white-50"
+                  >Decentralization</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./privacy.html"
+                  class="text-decoration-none text-white-50"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="./tnc.html"
+                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <p class="text-white-50 text-center text-md-start ms-4">
+          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-220923953-1");
+    </script>
+  </body>
+</html>
