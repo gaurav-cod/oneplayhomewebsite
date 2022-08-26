@@ -23,8 +23,8 @@
 /* // Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) and (max-width: 1198.98px) { 
     .font20 {
-        font-size: 16px !important;
-        line-height: 22px;
+        font-size: 15px !important;
+        line-height: 25px !important;
     }
 
     .customH1 h1 {
@@ -41,6 +41,20 @@
     .custom-choose input[type='radio']:checked + label::before
     {
         left: 5px !important;
+    }
+
+    .websiteContainer .font50 {
+        font-size: 2.4rem;
+        line-height: 3.375rem;
+    }
+
+    .font38 {
+        font-size: 33px !important;
+    }
+
+    .navbarText .navbar-nav .nav-link {
+        font-size: 14px !important;
+        line-height: 18px !important;
     }
 }
 
@@ -126,6 +140,9 @@
     }
 }
 
+html {
+    overflow-x: hidden;
+}
 
 body {
     background-color: #000000;
@@ -163,7 +180,7 @@ body {
 
 .font18 {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 30px;
 }
 
 .font500 {
