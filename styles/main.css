@@ -1,6 +1,70 @@
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+    .customPadding {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
 
+    .MobileView {
+        display: inline !important;
+    }
+
+    .desktopView {
+        display: none;
+    }
+
+    .mobileScreenLogo {
+        width: 100px !important;
+    }
+
+    .font20 {
+        font-size: 14px !important;
+        line-height: 21px !important;
+    }
+
+    .navbarText .navbar-nav .nav-link {
+        font-size: 16px !important;
+        line-height: 26px !important;
+        padding: 10px 10px;
+    }
+
+    .hrBorderColor {
+        border-bottom: 1px solid #DCDCDC;
+    }
+
+    .customH1 h1 {
+        font-size: 28px !important;
+        line-height: 40px !important;
+    }
+
+    .centerTextResponsive {
+        text-align: center;
+    }
+
+    .padding500 {
+        padding-top: 385px !important;
+    }
+
+    .lineBg {
+        background-image: none !important;
+    }
+
+    .removePaddingTop {
+        padding-top: 0px !important;
+    }
+
+    .padding100 {
+        padding-top: 60px !important;
+    }
+
+    .font28 {
+        font-size: 20px !important;
+        line-height: 34px !important;
+    }
+
+    .marginTopNegative {
+        margin-top: -85px;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -15,9 +79,18 @@
     }
 
     .customH1 h1 {
-        font-size: 2.5rem !important;
-        line-height: 3.3rem;
+        font-size: 2.3rem !important;
+        line-height: 3rem;
     }
+
+    .lineBg {
+        background-image: none !important;
+    }
+
+    .centerTextResponsiveTab {
+        text-align: center;
+    }
+    
 }
 
 /* // Large devices (desktops, less than 1200px) */
@@ -144,6 +217,18 @@
         height: 90vh;
         align-items: center;
     }
+}
+
+.MobileView {
+    display: none;
+}
+
+.padding50{
+    padding-top: 50px;
+}
+
+.lineHeight40 {
+    line-height: 40px !important;
 }
 
 html {
@@ -319,6 +404,7 @@ body {
                       linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
+    padding: 0px;
 }
 
 .font28 {
