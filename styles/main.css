@@ -38,7 +38,7 @@
     }
 
     .centerTextResponsive {
-        text-align: center;
+        text-align: center !important;
     }
 
     .padding500 {
@@ -89,6 +89,14 @@
     .wh230 {
         width: 120px !important;
         height: 120px !important;
+    }
+
+    .paddingTop100 {
+        padding-top: 100px;
+    }
+
+    .inputMarginTop {
+        margin-top: 20px !important;
     }
     
 }
