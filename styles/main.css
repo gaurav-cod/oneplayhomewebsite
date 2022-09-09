@@ -65,6 +65,32 @@
     .marginTopNegative {
         margin-top: -85px;
     }
+
+    .rightLinegradient, .leftLinegradient {
+        background-image: none !important;
+    }
+
+    .padding400 {
+        padding-top: 300px !important;
+    }
+
+    .padding150 {
+        padding-top: 60px !important;
+    }
+
+    .wrapper {
+        height: 218px !important;
+    }
+
+    .padding200 {
+        padding-top: 90px !important;
+    }
+
+    .wh230 {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -89,6 +115,23 @@
 
     .centerTextResponsiveTab {
         text-align: center;
+    }
+
+    .rightLinegradient, .leftLinegradient {
+        background-image: none !important;
+    }
+
+    .tabPaddingTop {
+        padding-top: 100px;
+    }
+
+    .wrapper {
+        height: 300px !important;
+    }
+
+    .wh230 {
+        width: 170px !important;
+        height: 170px !important;
     }
     
 }
