@@ -91,6 +91,21 @@
         height: 120px !important;
     }
     
+    .paddingTop50 {
+        padding-top: 50px !important;
+    }
+
+    .marginTopMobile {
+        margin-top: 40px;
+    }
+
+    .h60 {
+        height: 44px !important;
+    }
+
+    .margintopDownload {
+        margin-top: 30px !important;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -132,6 +147,18 @@
     .wh230 {
         width: 170px !important;
         height: 170px !important;
+    }
+
+    .marginToptab {
+        margin-top: 40px ;
+    }
+
+    .tabViewHide {
+        display: none;
+    }
+
+    .tabViewShow {
+        display: inline !important;
     }
     
 }
@@ -263,6 +290,10 @@
 }
 
 .MobileView {
+    display: none;
+}
+
+.tabViewShow {
     display: none;
 }
 
