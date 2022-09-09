@@ -32,13 +32,15 @@
     <body>
         <!-- Navbar Section Start -->
         <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
-            <div class="container-fluid ps-5 pe-5">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
                 </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" href="./sign-up.html">Sign Up</a>
+                
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
@@ -48,7 +50,7 @@
                             <a class="nav-link" href="./subscription.html">Subscription</a>
                         </li>
                         <!-- <li class="nav-item ms-3 me-3">
-                        <a class="nav-link" href="./games.html">Games</a>
+                            <a class="nav-link" href="./games.html">Games</a>
                         </li> -->
                         <li class="nav-item me-3">
                             <a class="nav-link" href="./download.html">Download</a>
@@ -57,28 +59,37 @@
                             <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
                         </li>
                     </ul>
-                    <form class="">
+                    <form class="desktopView">
                         <div class="row">
-                        <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
-                        </div>
-                        <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
-                        </div>
-                        <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
-                        </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+                            </div>
                         </div>
                     </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </nav>
 
-        <div class="container padding200">
+        <div class="container padding150 customH1">
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="text-center">
-                        <h1 class="text-white font50 font800">
+                        <h1 class="text-white font50 font800 mt-5">
                             Privacy Policy
                         </h1>
                         <p class="font20 font500 offWhiteColor mt-4">
@@ -176,7 +187,7 @@
                         <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
                     </a>
                     <div class="row">
-                        <div class="col-md-3 mt-5">
+                        <div class="col-md-4 col-lg-3 col-4 mt-5">
                             <p class="font20 font600 text-white">Company</p>
                             <ul class="font500 font20 footerWhiteColor list-unstyled">
                                 <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
@@ -187,14 +198,14 @@
                                 <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3 mt-5">
+                        <div class="col-md-4 col-lg-3 col-4 mt-5">
                             <p class="font20 font600 text-white">Get Help</p>
                             <ul class="font500 font20 footerWhiteColor list-unstyled">
                                 <li class="mt-2"><a href="./contact.html" class="text-decoration-none">FAQs</a></li>
                                 <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3 mt-5">
+                        <div class="col-md-4 col-lg-3 col-4 mt-5">
                             <p class="font20 font600 text-white">Boring Stuff</p>
                             <ul class="font500 font20 footerWhiteColor list-unstyled">
                                 <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
@@ -202,7 +213,7 @@
                                 <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
                             </ul>
                         </div>
-                        <div class="col-md-3 mt-5">
+                        <div class="col-md-12 col-lg-3 mt-5 centerTextResponsiveTab">
                             <p class="font20 font600 text-white">Get Early Access Drops!</p>
                             <a href="https://discord.gg/CyNeDNNrZs" class="btn font18 btn-lg text-white font500 removeFocus linearGradient borderRadius60 mt-2"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                             <div class="row mt-4 font500 font20 footerWhiteColor">
@@ -227,7 +238,7 @@
         </div>
         <div class="container mb-4 mt-4">
             <div class="row">
-                <div class="col-md-12 p-0">
+                <div class="col-md-12 p-lg-0">
                     <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                     <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
                 </div>
