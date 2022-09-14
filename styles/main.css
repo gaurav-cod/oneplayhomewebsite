@@ -606,7 +606,7 @@ body {
 }
 
 .bgTransparent {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .inputFocus:focus {
@@ -913,4 +913,8 @@ input {
 .wh230 {
     width: 230px;
     height: 230px;
+}
+
+.backgroundNone {
+    background-image: none;
 }
