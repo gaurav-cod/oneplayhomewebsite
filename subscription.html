@@ -1,501 +1,530 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <title>OnePlay | Cloud Gaming | Cloud PC</title>
-  </head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo.png" alt="" class="light-version-logo" />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a
-              id="signup"
-              href=""
-              class="btn btn-outline-light signup-button"
-              type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <div
-      id="pricing"
-      class="jumbotron bgimage p-5 text-center position-relative negativeMarginTop paddingTop"
-      style="background-color: #16132c"
-    >
-      <h2
-        class="display-6 text-white mt-5 pt-5 mx-auto fw-bold"
-        style="max-width: 690px"
-      >
-        High Strung Gaming At Affordable Prices
-      </h2>
-      <p class="mt-3 text-white-50 mx-auto" style="max-width: 600px">
-        * 1 Month free trial on all accounts, after approval from backend.
-      </p>
-      <div class="container p-mb-5">
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card h-100 shadow-lg px-3 py-4 pricing text-start">
-              <div class="card-body">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h2 class="text-white">Starter Edition <live>Coming Soon</live></h2>
-                    <div class="d-flex align-items-center">
-                      <p class="text-white-50 m-0">Rs.</p>
-                      <h1 class="text-white mx-2">199/-</h1>
-                      <p class="text-white-50 m-0">Per month</p>
-                    </div>
-                    <div class="dropdown-divider bg-light"></div>
-                    <br />
-                    <ul class="list-group list-group-flush">
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Upto 720p Gaming</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Supports Mobile</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2"
-                          >1 Month Free Trial</span
-                        >
-                      </li>
+        <!-- font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Font Family Poppins -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" href="./sign-up.html">Sign Up</a>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                        </li>
+                        <!-- <li class="nav-item ms-3 me-3">
+                            <a class="nav-link" href="./games.html">Games</a>
+                        </li> -->
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
                     </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container padding150 customH1">
+          <div class="row justify-content-center">
+            <div class="col-lg-9">
+              <div class="text-center">
+                <h2 class="text-white font50 customfont50 font800 mt-5">
+                  High Strung Gaming At Affordable Prices
+                </h2>
+                <p class="font20 font500 offWhiteColor mt-4">
+                  * 1 Month free trial on all accounts, after approval from backend.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-10 padding100">
+              <div class="subscriptionAccordion accordion" id="accordionExample2">
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading1">
+                    <button class="accordion-button collapsed font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                      Starter Edition
+                    </button>
+                  </h2>
+                  <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
+                                  <p class="mb-1 font38 font700 text-white">$1.49</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    90 minutes
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-4 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
+                                  <p class="mb-1 font38 font700 text-white">$8.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    15 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
+                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
+                                </div>
+                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
+                                  <p class="mb-1 font38 font700 text-white">$19.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    50 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="d-grid gap-2 mt-3">
-                    <a
-                      id="starter"
-                      href=""
-                      class="btn btn-primary bg-gradient-primary"
-                      type="button"
-                      >Subscribe Now</a
-                    >
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading2">
+                    <button class="accordion-button font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                      Founder Edition
+                    </button>
+                  </h2>
+                  <div id="collapse2" class="accordion-collapse show" aria-labelledby="heading2" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
+                                  <p class="mb-1 font38 font700 text-white">$1.49</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    90 minutes
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-4 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
+                                  <p class="mb-1 font38 font700 text-white">$8.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    15 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
+                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
+                                </div>
+                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
+                                  <p class="mb-1 font38 font700 text-white">$19.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    50 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading3">
+                    <button class="accordion-button collapsed font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      Elite Edition
+                    </button>
+                  </h2>
+                  <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample2">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
+                                  <p class="mb-1 font38 font700 text-white">$1.49</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    90 minutes
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-4 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
+                                  <p class="mb-1 font38 font700 text-white">$8.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    15 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
+                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
+                                </div>
+                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 mt-4">
+                          <div class="card bgTransparent border-0 lightBlackBg borderRadius30">
+                            <div class="card-body p-4">
+                              <div class="row">
+                                <div class="col-lg-3 col-md-6 col-7">
+                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
+                                  <p class="mb-1 font38 font700 text-white">$19.99</p>
+                                  <p class="mb-1 font16 font500 offWhiteColor">
+                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                                    50 hours
+                                  </p>
+                                </div>
+                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card h-100 shadow-lg px-3 py-4 pricing text-start">
-              <div class="card-body">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h2 class="text-white">Founder Edition <live>Coming Soon</live></h2>
-                    <div class="d-flex align-items-center">
-                      <p class="text-white-50 m-0">Rs.</p>
-                      <h1 class="text-white mx-2">499/-</h1>
-                      <p class="text-white-50 m-0">Per month</p>
+        </div>
+        <div class="container padding100 websiteContainer">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-11 text-center mb-5">
+              <h1 class="text-white font50 font800">
+                Browse FAQs
+              </h1>
+            </div>
+            <div class="col-md-12 col-lg-11">
+              <div class="customAccordion accordion" id="accordionExample">
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent" id="headingOne">
+                    <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      What is Cloud Gaming?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <p class="font20 font500 offWhiteColor border-bttom">
+                            Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="gradientBorderbottom mt-2"></div>
                     </div>
-                    <div class="dropdown-divider bg-light"></div>
-                    <br />
-                    <ul class="list-group list-group-flush">
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2"
-                          >Upto 1080p Gaming</span
-                        >
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Supports Mobile</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Supports HD</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2"
-                          >1 Month Free Trial</span
-                        >
-                      </li>
-                    </ul>
                   </div>
-                  <div class="d-grid gap-2 mt-3">
-                    <a
-                      id="founder"
-                      href=""
-                      class="btn btn-primary bg-gradient-primary"
-                      type="button"
-                      >Subscribe Now</a
-                    >
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent" id="headingTwo">
+                    <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      What is OnePlay?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <p class="font20 font500 offWhiteColor border-bttom">
+                            Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="gradientBorderbottom mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent" id="headingThree">
+                    <button class="accordion-button font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                      Where are your servers located?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <p class="font20 font500 offWhiteColor border-bttom">
+                            Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="gradientBorderbottom mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent" id="headingFour">
+                    <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      How much does the OnePlay Subscription cost?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <p class="font20 font500 offWhiteColor border-bttom">
+                            Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="gradientBorderbottom mt-2"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item bgTransparent">
+                  <h2 class="accordion-header bgTransparent" id="headingFive">
+                    <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                      Do I need to download the games? 
+                    </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body ps-0 pe-0 pt-0">
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <p class="font20 font500 offWhiteColor border-bttom">
+                            Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="gradientBorderbottom mt-2"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card h-100 shadow-lg px-3 py-4 pricing text-start">
-              <div class="card-body">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h2 class="text-white">Elite Edition <live>Coming Soon</live></h2>
-                    <div class="d-flex align-items-center">
-                      <p class="text-white-50 m-0">Rs.</p>
-                      <h1 class="text-white mx-2">799/-</h1>
-                      <p class="text-white-50 m-0">Per month</p>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col p-0">
+              <hr class="border-bottom customBorderColor mt-0"/>
+            </div>
+          </div>
+        </div>
+        <div class="container padding100">
+          <div class="row">
+            <div class="col-md-12">
+              <a class="navbar-brand" href="./index.html">
+                <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+              </a>
+              <div class="row">
+                <div class="col-md-4 col-lg-3 col-4 mt-5">
+                  <p class="font20 font600 text-white">Company</p>
+                  <ul class="font500 font20 footerWhiteColor list-unstyled">
+                    <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
+                    <li class="mt-2"><a href="./about.html" class="text-decoration-none">About Us</a></li>
+                    <li class="mt-2"><a href="#" class="text-decoration-none">Roadmap</a></li>
+                    <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
+                    <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
+                    <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 col-lg-3 col-4 mt-5">
+                  <p class="font20 font600 text-white">Get Help</p>
+                  <ul class="font500 font20 footerWhiteColor list-unstyled">
+                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">FAQs</a></li>
+                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 col-lg-3 col-4 mt-5">
+                  <p class="font20 font600 text-white">Boring Stuff</p>
+                  <ul class="font500 font20 footerWhiteColor list-unstyled">
+                    <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                    <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
+                    <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-12 col-lg-3 mt-5 centerTextResponsiveTab">
+                  <p class="font20 font600 text-white">Get Early Access Drops!</p>
+                  <a href="https://discord.gg/CyNeDNNrZs" class="btn font18 btn-lg text-white font500 removeFocus linearGradient borderRadius60 mt-2"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                  <div class="row mt-4 font500 font20 footerWhiteColor">
+                    <div class="col ps-4">
+                      <a href="https://www.facebook.com/ONEPLAYIN" target="_blank" class="me-4"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank" class="me-4"><i class="fa-brands fa-instagram"></i></a>
+                      <a href="https://twitter.com/CloudOneplay" target="_blank" class="me-4"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="https://medium.com/@oneplay_gaming" target="_blank" class="me-4"><i class="fab fa-medium facebook-icon"></i></a>
                     </div>
-                    <div class="dropdown-divider bg-light"></div>
-                    <br />
-                    <ul class="list-group list-group-flush">
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Upto 4K Gaming</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Supports Mobile</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2">Supports HD</span>
-                      </li>
-                      <li class="d-flex align-items-center mb-3">
-                        <img src="./assets/select-symbol.svg" alt="" />
-                        <span class="text-white-50 ms-2"
-                          >1 Month Free Trial</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="d-grid gap-2 mt-3">
-                    <a
-                      id="elite"
-                      href=""
-                      class="btn btn-primary bg-gradient-primary"
-                      type="button"
-                      >Subscribe Now</a
-                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <h2
-        class="display-5 text-white mt-3 mt-lg-5 mx-auto fw-bold"
-        style="max-width: 645px"
-      >
-        One subscription to play anytime and anywhere
-      </h2>
-      <div
-        class="position-absolute d-flex justify-content-center"
-        style="bottom: -100px; left: 0; width: 100%"
-      >
-        <img class="hero-img" src="./assets/subscription/devices.png" alt="" />
-      </div>
-    </div>
-
-    <div class="jumbotron bgimage2 p-lg-5 p-md-4 text-center">
-      <div class="py-4"></div>
-      <div class="py-4"></div>
-      <div class="container">
-        <div class="row py-5">
-          <a
-            href="./download.html?target=windows"
-            class="col-6 col-md mb-5 mb-md-0 py-2 text-decoration-none download"
-          >
-            <img
-              src="./assets/subscription/pc.svg"
-              style="height: 70px"
-              alt=""
-            />
-            <p class="my-3 text-white">Windows PC</p>
-            <p class="m-0" style="color: #39ff14">(Available)</p>
-          </a>
-          <a
-            href="./download.html?target=macos"
-            class="col-6 col-md mb-5 mb-md-0 py-2 text-decoration-none download"
-          >
-            <img
-              src="./assets/subscription/notebook-computer.svg"
-              style="height: 70px"
-              alt=""
-            />
-            <p class="my-3 text-white">Mac OS</p>
-            <p class="m-0" style="color: #39ff14">(Available)</p>
-          </a>
-          <div class="col-6 col-md mb-5 mb-md-0 py-2">
-            <img
-              src="./assets/subscription/monitor.svg"
-              style="height: 70px"
-              alt=""
-            />
-            <p class="my-3 text-white">Android TV</p>
-            <p class="text-white-50 m-0">(Coming soon)</p>
-          </div>
-          <div class="col-6 col-md mb-5 mb-md-0 py-2">
-            <img
-              src="./assets/subscription/chrome.svg"
-              style="height: 70px"
-              alt=""
-            />
-            <p class="my-3 text-white">Browser</p>
-            <p class="text-white-50 m-0">(Coming soon)</p>
-          </div>
-          <div class="col-md py-2">
-            <img
-              src="./assets/subscription/smartphone.svg"
-              style="height: 70px"
-              alt=""
-            />
-            <p class="my-3 text-white">Android</p>
-            <p class="text-white-50 m-0">(Coming soon)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="faq"
-      class="p-lg-5 p-md-4 p-3 py-5 text-center"
-      style="background-color: #100d21"
-    >
-      <h2
-        class="display-6 text-white mt-3 mb-5 mt-lg-5 mx-auto fw-bold"
-        style="max-width: 690px"
-      >
-        Frequently Asked Questions
-      </h2>
-      <div class="container text-start mb-5" style="max-width: 780px">
-        <div id="accordion"></div>
-      </div>
-    </div>
-
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo.png"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://discord.gg/CyNeDNNrZs"
-                    target="_blank"
-                  >
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
+        <div class="container-fluid mt-4">
+          <div class="row">
+            <div class="col p-0">
+              <hr class="border-bottom customBorderColor"/>
             </div>
           </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
+        </div>
+        <div class="container mb-4 mt-4">
+          <div class="row">
+            <div class="col-md-12 p-lg-0">
+              <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+              <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+            </div>
           </div>
         </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+        
+        <!-- Optional JavaScript; choose one of the two! -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-RGBMM302HH"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-      gtag("config", "G-RGBMM302HH");
-    </script>
-    <script src="./js/config.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/faq.js"></script>
-  </body>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/download.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-220923953-1");
+        </script>
+    </body>
 </html>
