@@ -453,6 +453,33 @@
       </div>
     </div>
 
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Launch static backdrop modal
+    </button> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="legalModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content backgroundBlur bg-dark">
+          <div class="modal-body customOffWhite ps-4 pb-4 pe-4">
+            <div class="text-end mb-3"><button type="button" class="btn-close backgroundNone text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-circle-xmark"></i></button></div>
+            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain content, which appears on our website, infringes
+            upon copyrights that you own or represent, you may send us a written notification at <strong class="text-white">legal.team@mail.oneplay.in</strong> stating the details of the copyrighted work
+            claimed to be infringed, in accordance with the provisions of the Copyright Act, 1957. Upon your notification, we may remove or disable access to any such content. To be effective, your notification
+            of claimed infringement must be a written communication provided to us that includes substantially the following:
+            <ol>
+              <li>Identification of the copyrighted work claimed to be infringed, or if multiple copyrighted works are covered by a single notification, a representative list of such works;</li>
+              <li>Information reasonably sufficient to permit us to contact you, such as an address, telephone number, and, if available, an electronic mail address at which you may be contacted;</li>
+              <li>A statement that you have a good faith belief that the use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law;</li>
+              <li>A statement that the information in the notification is accurate, and under penalty of perjury, that you are the owner of copyright or authorized to act on behalf of the owner of an exclusive right that is allegedly infringed. </li>
+            </ol>
+            Following receipt of your communication, we may ask you to provide further or supplemental information, prior to removing any content which was displayed on the Service.
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -468,6 +495,9 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -476,6 +506,14 @@
       gtag("js", new Date());
 
       gtag("config", "UA-220923953-1");
+
+      $(function() {
+        if (sessionStorage.getItem('#legalModal') !== 'true') {
+         $('#legalModal').modal('show');
+         setTimeout("$('#legalModal').modal('hide');",10000);
+         sessionStorage.setItem('#legalModal','true');     
+        }
+      });
     </script>
   </body>
 </html>
