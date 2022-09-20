@@ -39,7 +39,7 @@
                 <a class="navbar-brand float-left" href="./index.html">
                     <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
                 </a>
-                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" href="./sign-up.html">Sign Up</a>
+                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" id="signup" href="">Sign Up</a>
                 
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
@@ -49,9 +49,6 @@
                         <li class="nav-item me-3">
                             <a class="nav-link" href="./subscription.html">Subscription</a>
                         </li>
-                        <!-- <li class="nav-item ms-3 me-3">
-                            <a class="nav-link" href="./games.html">Games</a>
-                        </li> -->
                         <li class="nav-item me-3">
                             <a class="nav-link" href="./download.html">Download</a>
                         </li>
@@ -65,10 +62,10 @@
                                 <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
@@ -104,7 +101,6 @@
                         </div>
                     </div>
                     <a id="download" href="" class="btn btn-lg font18 text-white ps-4 pe-4 pt-lg-3 pb-lg-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4">Download for <span id="os"></span></a>
-                    <!-- <button class="btn h60 removeFocus font16 font500 offWhiteColor align-middle mt-4">Windows 7 or higher</button> -->
                 </div>
                 <div class="col-md-6 text-end desktopView">
                     <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
@@ -137,7 +133,7 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font50 font700 desktopView">Mac</h1>
-                                        <button class="btn h60 font18 text-white ps-5 pe-5 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</button>
+                                        <a href="./download.html?target=macos" class="btn btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
                                     </div>
                                     <div class="col-lg-4 col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-4 pe-4">
@@ -158,17 +154,11 @@
                                         <img src="./assets/download/mac 2 (1).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
                                     </div>
                                     <div class="col-md-4 align-self-center tabViewHide">
-                                        <!-- <div class="ps-4 pe-4">
-                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div> -->
                                         <h1 class="text-white font50 font700 text-center desktopView">Android</h1>
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font50 font700 tabViewShow">Android</h1>
-                                        <button class="btn h60 font18 text-white ps-5 pe-5 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</button>
+                                        <a href="#" class="btn btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
                                     </div>
                                 </div>
                             </div>
@@ -183,17 +173,11 @@
                                         <img src="./assets/download/mac 2 (2).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
                                     </div>
                                     <div class="col-md-4 align-self-center tabViewHide">
-                                        <!-- <div class="ps-4 pe-4">
-                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div> -->
                                         <h1 class="text-white font50 font700 text-center desktopView tabViewHide">Android TV</h1>
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font50 font700 tabViewShow">Android TV</h1>
-                                        <button class="btn h60 font18 text-white ps-5 pe-5 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</button>
+                                        <a href="#" class="btn btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
                                     </div>
                                 </div>
                             </div>
@@ -208,17 +192,11 @@
                                         <img src="./assets/download/mac 2 (3).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
                                     </div>
                                     <div class="col-md-4 align-self-center tabViewHide">
-                                        <!-- <div class="ps-4 pe-4">
-                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div> -->
                                         <h1 class="text-white font50 font700 text-center desktopView">Web Browser</h1>
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font50 font700 tabViewShow">Web Browser</h1>
-                                        <button class="btn h60 font18 text-white ps-5 pe-5 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</button>
+                                        <a href="#" class="btn btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
                                     </div>
                                 </div>
                             </div>
@@ -241,8 +219,8 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font50 font700 desktopView tabViewShow">Windows</h1>
-                                        <button class="btn h60 font18 text-white ps-5 pe-5 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</button>
+                                        <h1 class="text-white font50 font700 desktopView">Windows</h1>
+                                        <a href="./download.html?target=windows" class="btn btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
                                     </div>
                                     <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-4 pe-4">
@@ -289,7 +267,7 @@
                             <ul class="font500 font20 footerWhiteColor list-unstyled">
                                 <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
                                 <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
-                                <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Cancellation Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-md-12 col-lg-3 mt-5 centerTextResponsiveTab">
@@ -331,8 +309,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
         <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

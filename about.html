@@ -38,7 +38,7 @@
                 <a class="navbar-brand float-left" href="./index.html">
                     <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
                 </a>
-                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" href="./sign-up.html">Sign Up</a>
+                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 MobileView" id="signup" href="">Sign Up</a>
                 
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
@@ -48,9 +48,6 @@
                         <li class="nav-item me-3">
                             <a class="nav-link" href="./subscription.html">Subscription</a>
                         </li>
-                        <!-- <li class="nav-item ms-3 me-3">
-                            <a class="nav-link" href="./games.html">Games</a>
-                        </li> -->
                         <li class="nav-item me-3">
                             <a class="nav-link" href="./download.html">Download</a>
                         </li>
@@ -64,10 +61,10 @@
                                 <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
@@ -98,7 +95,7 @@
                         Stream your favorite games, anytime & on any device 
                         with your progress being saved in the cloud!
                     </p>
-                    <a role="button" class="btn btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" href="./login.html">Get Started</a>
+                    <a role="button" class="btn btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" href="">Get Started</a>
                 </div>
                 <div class="col-md-6 align-self-center desktopView">
                     <div class="marginRightNegative">
@@ -214,9 +211,6 @@
                         The OnePlay team is a multicultural melting pot of competent & knowledgeable industry experts.
                     </h1>
                 </div>
-                <!-- <div class="col-md-4 text-end align-self-end">
-                    <img src="./assets/aboutus/Vector 6.svg" class="img-fluid mb-4" alt="border" />
-                </div> -->
                 <div class="col-md-12 centerTextResponsive">
                     <div id="teamcarousel" class="carousel slide" data-interval="1000">
                         <div class="carousel-inner">
@@ -297,24 +291,6 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    
-                    <!-- <div class="row padding100">
-                        <div class="col-md-12 cardGradientBorder">
-                            <div class="card blackBg borderRadius150">
-                                <div class="row m-1">
-                                    <div class="col p-2 align-self-center">
-                                        <p class="mb-0 font20 font500 offWhiteColor ms-2">We are always looking forward to work with talented people.</p>
-                                    </div>
-                                    <div class="col-auto align-self-center pe-0">
-                                        <a href="./career.html" class="btn font20 font500 text-white borderRadius60 linearGradient ps-4 pe-4">View Career Opportunities</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="padding70">
-                        <img src="./assets/aboutus/Vector 7.svg" class="img-fluid" alt="vector" />
-                    </div> -->
                     <div class="row padding100 desktopView">
                         <div class="col-12 p-0">
                             <hr class="border-bottom customBorderColor" />
@@ -375,7 +351,6 @@
                         <hr class="border-bottom customBorderColor" />
                     </div>
                     <div class="col-md-12">
-                    <!-- <a href="#"> -->
                         <div class="row">
                             <div class="col-md-4 col-lg-3 mt-3 mb-3">
                                 <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
@@ -388,7 +363,6 @@
                                 <a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none font20 font500">Read more<i class="fa-solid fa-arrow-up-right-from-square ms-2"></i></a>
                             </div>
                         </div>
-                    <!-- </a> -->
                     </div>
                     <div class="col-12">
                         <hr class="border-bottom customBorderColor" />
@@ -427,8 +401,8 @@
                                             your favorite device
                                         </h1>
                                         <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                                        <a href="./login.html" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
-                                        <a href="#" class="btn height48 mt-4 text-white font18 font500 align-middle pt-3 ms-5"><u>Browse Plans</u></a>
+                                        <a id="login" href="" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
+                                        <a href="./subscription.html" class="btn height48 mt-4 text-white font18 font500 align-middle pt-3 ms-5"><u>Browse Plans</u></a>
                                     </div>
                                     <div class="col-lg-5 col-md-3 align-self-center p-0 desktopView">
                                         <div class="mr130">
@@ -469,7 +443,7 @@
                                 <ul class="font500 font20 footerWhiteColor list-unstyled">
                                     <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
                                     <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
-                                    <li class="mt-2"><a href="#" class="text-decoration-none">Cancellation Policy</a></li>
+                                    <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Cancellation Policy</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-12 col-lg-3 mt-5 centerTextResponsiveTab">
@@ -508,9 +482,6 @@
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="./js/config.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
