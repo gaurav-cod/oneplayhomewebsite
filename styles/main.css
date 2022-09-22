@@ -322,6 +322,10 @@ html {
     overflow-x: hidden;
 }
 
+.btn {
+    border: none;
+}
+
 body {
     background-color: #151515;
     font-family: 'Poppins';
