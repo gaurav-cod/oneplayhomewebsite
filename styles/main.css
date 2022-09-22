@@ -303,7 +303,7 @@
 }
 
 .MobileView {
-    display: none !important;
+    display: none;
 }
 
 .tabViewShow {
@@ -323,7 +323,7 @@ html {
 }
 
 body {
-    background-color: #000000;
+    background-color: #151515;
     font-family: 'Poppins';
     letter-spacing: 0.02em;
     overflow-x: hidden;
