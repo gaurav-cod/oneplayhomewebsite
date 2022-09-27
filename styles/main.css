@@ -929,10 +929,6 @@ input, textarea {
     width: 100%;
 }
 
-.h48 {
-    height: 48px;
-}
-
-.wh28 {
-   font-size: 2rem;
+.disabledBtnGradient {
+    background: linear-gradient(270deg, #616161 0%, #434343 100%);
 }
