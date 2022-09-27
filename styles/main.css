@@ -487,11 +487,11 @@ body {
 .gradientBorder {
     border: 1px solid transparent;
     border-radius: 60px;
-    background-image: linear-gradient(#000000, #000000), 
-                      linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+    background-image: linear-gradient(#151515, #151515), 
+                      linear-gradient(270deg, #E1DCFE 0%, #7E67FD 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    padding: 0px;
+    padding: 2px;
 }
 
 .font28 {
@@ -923,4 +923,12 @@ input {
     position: sticky;
     top: 0;
     width: 100%;
+}
+
+.h48 {
+    height: 48px;
+}
+
+.wh28 {
+   font-size: 2rem;
 }
