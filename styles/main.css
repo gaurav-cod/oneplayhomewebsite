@@ -924,3 +924,7 @@ input {
     top: 0;
     width: 100%;
 }
+
+.disabledBtnGradient {
+    background: linear-gradient(270deg, #616161 0%, #434343 100%);
+}
