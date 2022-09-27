@@ -322,6 +322,10 @@ html {
     overflow-x: hidden;
 }
 
+.btn {
+    border: none;
+}
+
 body {
     background-color: #151515;
     font-family: 'Poppins';
@@ -421,7 +425,7 @@ body {
 }
 
 .font20 {
-    font-size: 20px;
+    font-size: 20px !important;
     line-height: 34px;
 }
 
