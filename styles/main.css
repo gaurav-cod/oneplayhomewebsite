@@ -425,7 +425,7 @@ body {
 }
 
 .font20 {
-    font-size: 20px;
+    font-size: 20px !important;
     line-height: 34px;
 }
 
@@ -927,4 +927,12 @@ input {
     position: sticky;
     top: 0;
     width: 100%;
+}
+
+.h48 {
+    height: 48px;
+}
+
+.wh28 {
+   font-size: 2rem;
 }
