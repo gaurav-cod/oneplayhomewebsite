@@ -932,3 +932,7 @@ input, textarea {
 .disabledBtnGradient {
     background: linear-gradient(270deg, #616161 0%, #434343 100%);
 }
+
+.wh28 {
+    font-size: 2rem;
+}
