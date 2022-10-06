@@ -385,7 +385,11 @@ body {
     font-weight: 500;
     font-size: 18px;
     line-height: 20px;
-    color: #E2E2E4;
+    color: #959595;
+}
+
+.activenav {
+    color: #DCDCDC !important;
 }
 
 .wh48 {
