@@ -1,347 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <title>OnePlay | Career</title>
-  </head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground top-0"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo.png" alt="" class="light-version-logo" />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a id="signup" href="" class="btn btn-outline-light" type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <div
-      class="bgimage2 p-lg-5 p-md-4 p-3 py-5 text-center negativeMarginTop paddingTop"
-    >
-      <div class="py-5"></div>
-      <h1 class="my-4 text-white fw-bold">Work with OnePlay</h1>
-      <p class="text-white mb-4 mx-auto" style="max-width: 500px">
-        We are looking for talented, ambitious, and BOLD people to build the
-        future of gaming.
-      </p>
-      <a href="#jobs" class="btn btn-light text-primary"> View job openings </a>
-      <div class="py-5"></div>
-    </div>
+        <!-- font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="py-5" style="background-color: #100d21">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-md-6 col-12 mb-5 mb-md-0 text-center text-md-start">
-            <h3 class="fw-bold text-white">Why OnePlay</h3>
-            <p class="text-white mt-3" style="max-width: 350px">
-              Multidisciplinary team of engineers and designers at the forefront
-              of building a great gaming product.
-            </p>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <div class="d-flex align-items-center mb-5">
-              <h3 class="fw-bold text-white m-0">01</h3>
-              <div class="text-white ms-3">
-                A truly impactful product in cloud gaming space
-              </div>
-            </div>
-            <div class="d-flex align-items-center mb-5">
-              <h3 class="fw-bold text-white m-0">02</h3>
-              <div class="text-white ms-3">Really fast moving environment</div>
-            </div>
-            <div class="d-flex align-items-center mb-5">
-              <h3 class="fw-bold text-white m-0">03</h3>
-              <div class="text-white ms-3">Human and Core centric</div>
-            </div>
-            <div class="d-flex align-items-center mb-5">
-              <h3 class="fw-bold text-white m-0">04</h3>
-              <div class="text-white ms-3">
-                Top notch technologies and tough leaders
-              </div>
-            </div>
-            <div class="d-flex align-items-center">
-              <h3 class="fw-bold text-white m-0">05</h3>
-              <div class="text-white ms-3">
-                A great team culture and amazing people
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
 
-    <div class="py-5" style="background-color: #16132c">
-      <div class="container py-4 text-center text-md-start">
-        <h3 class="text-white fw-bold mb-5">Our perks</h3>
-        <div class="row">
-          <div class="col-12 col-md-4 mb-3 mb-md-0">
-            <div class="card" style="background-color: #100d21">
-              <div class="card-body">
-                <img src="assets/career/salary.png" width="56" alt="" />
-                <p class="text-white mt-3 mb-0">Competitive salaries</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-3 mb-md-0">
-            <div class="card" style="background-color: #100d21">
-              <div class="card-body">
-                <img src="assets/career/heartbeat.png" width="56" alt="" />
-                <p class="text-white mt-3 mb-0">Health and wellness benefits</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="card" style="background-color: #100d21">
-              <div class="card-body">
-                <img src="assets/career/clock.png" width="56" alt="" />
-                <p class="text-white mt-3 mb-0">Flexible time off</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
 
-    <div id="jobs" class="py-5" style="background-color: #100d21">
-      <div class="container py-5">
-        <h3 class="text-white fw-bold mb-5 text-center">All Job Openings</h3>
-        <div id="jobs-list" class="container" style="max-width: 800px">
-          
-        </div>
-      </div>
-    </div>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo.png"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
+        <!-- Font Family Poppins -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+        </nav>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+          integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+          crossorigin="anonymous"
+        ></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/career.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/career.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-220923953-1");
-    </script>
-  </body>
+          gtag("config", "UA-220923953-1");
+        </script>
+    </body>
 </html>
