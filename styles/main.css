@@ -1146,3 +1146,15 @@ input, textarea {
 .marginRightNagative {
     margin-right: -20%;
 }
+
+.alertBg {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+}
+
+.removeCrossBg {
+    background-image: none;
+}
+
+.borderRadius0 {
+    border-radius: 0px !important;
+}
