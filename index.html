@@ -35,7 +35,7 @@
       <button type="button" class="btn-close removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
     </div>
     <!-- Navbar Section Start -->
-    <nav class="navbar navbar-expand-lg pt-4 pb-4 bgBlur navbarFixed fixed-top">
+    <nav class="navbar sticky-top navbar-expand-lg pt-4 pb-4 bgBlur">
       <div class="container-fluid ps-5 pe-5 customPadding">
         <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
@@ -85,8 +85,9 @@
           </div>
         </div>
       </div>
+      
     </nav>
-    <div class="container pe-lg-0 websiteContainer customH1 centerTextResponsive padding100">
+    <div class="container pe-lg-0 websiteContainer customH1 centerTextResponsive pt-4">
       <div class="row">
         <div class="col-lg-6 MobileView padding50">
           <img src="./assets/home/Slider 1.svg" class="img-fluid" alt="img" />
@@ -506,14 +507,8 @@
       gtag("config", "UA-220923953-1");
 
       $(function() {
-        // if (sessionStorage.getItem('#legalModal') !== 'true') {
-        //  $('#legalModal').modal('show');
-        //  setTimeout("$('#legalModal').modal('hide');",10000);
-        //  sessionStorage.setItem('#legalModal','true');     
-        // }
         if (sessionStorage.getItem('#legalAlert') !== 'true') {
          $('#legalAlert').removeClass('d-none');
-         $('.navbarFixed').removeClass('fixed-top');
          setTimeout("$('#legalAlert').hide();",10000);
          sessionStorage.setItem('#legalAlert','true');   
         }
