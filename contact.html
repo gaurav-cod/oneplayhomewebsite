@@ -1,278 +1,545 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>OnePlay | Cloud Gaming | Cloud PC</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img
-            src="assets/logo.png"
-            alt=""
-            class="light-version-logo"
-          />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a
-              id="signup"
-              href=""
-              class="btn btn-outline-light signup-button"
-              type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+        <!-- font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <section class="systemrequirement-topsection negativeMarginTop paddingTop"><p class="mt-5 mb-0">Contact Us</p></section>
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
 
-    <div class="container-sm pt-3">
-      <div class="container-sm py-5 d-flex justify-content-center">
-        <script src="https://desk.zoho.com/portal/api/feedbackwidget/707776000000194129?orgId=773466876&displayType=iframe"></script>
-        <iframe
-          id="zsfeedbackFrame"
-          width="890"
-          height="570"
-          name="zsfeedbackFrame"
-          scrolling="no"
-          allowtransparency="false"
-          frameborder="0"
-          border="0"
-          src="https://desk.zoho.com/support/fbw?formType=AdvancedWebForm&fbwId=edbsn4d0bfb90ef44080e2403488fe043681b54b99a5c1457c2f263b97a1fb6c1b2a7&xnQsjsdp=edbsn88f0e44718835c7cde0e42d081a97d02&mode=showNewWidget&displayType=iframe"
-        ></iframe>
-      </div>
-    </div>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
 
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo.png"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://discord.gg/CyNeDNNrZs"
-                    target="_blank"
-                  >
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Font Family Poppins -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
+        </nav>
+
+        <div class="container pe-lg-0 websiteContainer customH1 centerTextResponsive tabPaddingTop">
+            <div class="row">
+                <div class="col-md-6 text-end MobileView paddingTop100 centerTextResponsive">
+                    <div class="row justify-content-end">
+                        <div class="col-md-10">
+                            <img src="./assets/contactUs/Contact 1.svg" class="img-fluid" alt="vector" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-end pt-5 mb-4 pe-lg-5">
+                    <h1 class="text-white font50 font800">
+                        Your voice matters
+                    </h1>
+                    <p class="font20 font500 offWhiteColor mt-4 me-lg-5">
+                        We are always here to listen. Let’s enhance 
+                        our community together.
+                    </p>
+                </div>
+                <div class="col-md-6 text-end desktopView">
+                    <div class="row justify-content-end">
+                        <div class="col-md-10">
+                            <img src="./assets/about-us/Group 79.svg" class="img-fluid" alt="vector" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/config.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        <div class="container-fluid pt-5">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
 
-      gtag("config", "UA-220923953-1");
-    </script>
-  </body>
+        <div class="container padding100 websiteContainer customH1 centerTextResponsive">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-12">
+                            <h1 class="text-white font50 font800">
+                                Need help with OnePlay?
+                            </h1>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="font20 font500 offWhiteColor mt-4">
+                                You can contact one of our friendly Customer 
+                                Success team members below.
+                            </p>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 mt-5 inputMarginTop">
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="name" placeholder="Name" />
+                            </div>
+                            <div class="col-lg-6 mt-5 inputMarginTop">
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="EmailPhone" placeholder="Email or Phone" />
+                            </div>
+                            <div class="col-lg-12 mt-5 inputMarginTop">
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="Subject" placeholder="Subject" />
+                            </div>
+                            <div class="col-lg-12 mt-5 inputMarginTop">
+                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="Message" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-lg-12 mt-5 text-end inputMarginTop centerTextResponsive">
+                                <input type="submit" class="btn border-0 font18 text-white height48 ps-4 pe-4 font500 removeFocus linearGradient align-middle borderRadius60" value="Send your message" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row mt-5 inputMarginTop">
+                        <div class="col-md-5 col-lg-6 mt-5 gradientAnchor inputMarginTop">
+                            <h3 class="font28 font700 text-white">Drop us an email</h3>
+                            <p class="font20 font500 mb-0"><a href="mailto:team@oneplay.in">team@oneplay.in</a></p>
+                            <u class="font20 font500 offWhiteColor">Copy address</u>
+                        </div>
+                        <div class="col-md-7 col-lg-6 mt-5 gradientAnchor inputMarginTop">
+                            <h3 class="font28 font700 text-white">Prefer a phone call?</h3>
+                            <p class="font20 font500 mb-0"><a href="tel:750 628 9694">+91 750 628 9694 </a></p>
+                            <span class="font20 font500 offWhiteColor">Mon - Sat, 8:00 AM to 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid padding100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="container websiteContainer customH1" id="FAQs">
+            <div class="row padding100 justify-content-center">
+                <div class="col-12 col-lg-10 text-center mb-5">
+                    <h1 class="text-white font50 font800">
+                        Browse FAQs
+                    </h1>
+                </div>
+                <div class="col-lg-10">
+                    <div class="customAccordion accordion" id="accordionExample">
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingOne">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    What is Cloud Gaming?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Cloud Gaming is a type of online gaming where there is no need to download or install any games on a mobile phone, PC, or console. They are stored and installed on remote servers while the audio/video is streamed to the user’s device.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingTwo">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is OnePlay?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                OnePlay is a cloud gaming platform which lets its users run any game they want to play, without having a gaming PC or the hardware to support the game. Just a fair internet connection (15Mbps) and your passion is good enough.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingThree">
+                                <button class="accordion-button font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    What are the advantages of cloud gaming? Are there any?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Here is what you get while using OnePlay:
+                                                <ul class="font20 font500 offWhiteColor">
+                                                    <li>You can play PC games like GTA 5, Witcher 3, Counter-Strike and Fortnite on Android!</li>
+                                                    <li>You can play your favorite games using OnePlay anywhere you want. On the way by bus, at school or work and during a business trip. You have your gaming PC in your pocket everywhere.</li>
+                                                    <li>You don’t have to download, install or update any game. OnePlay is all you need!</li>
+                                                </ul>
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Moreover:
+                                                <ul class="font20 font500 offWhiteColor">
+                                                    <li>Disc space is no longer your concern! Some games could take over 50GB of disc capacity, and now OnePlay takes care of storage of those monsters!</li>
+                                                    <li>You get access to your games via many devices and platforms including Android, MacOS, Windows and Xbox.</li>
+                                                </ul>
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                OnePlay works on almost every device, even those substantially old.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingFour">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Where are your servers located?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingFive">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What are the minimum requirements for OnePlay?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Internet connection requirements
+                                                <ul class="font20 font500 offWhiteColor">
+                                                    <li>OnePlay requires at least 15Mbps for 720p at 60 FPS and 25Mbps for 1080p at 60 FPS.</li>
+                                                    <li>Make sure your bandwidth is not overloaded by other tabs or applications. For the best performance, close additional tabs in your browser and programs that may affect your Internet connection (like YouTube, twitter etc.)</li>
+                                                </ul>
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                System requirements
+                                                <ul class="font20 font500 offWhiteColor">
+                                                    <li>For all devices with Android: (needs to be added)</li>
+                                                    <li>For Windows: (needs to be added)</li>
+                                                    <li>For macOS: Your macOS must be 10.11 or higher.</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingSix">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    What games are available at OnePlay?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Depending on your subscription plan you have chosen, you have access to different content. The higher the plan, the more games are at your disposal.
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                On our platform you will find games such as Fortnite, Destiny 2, Mount and Blade II: Bannerlord, Resident Evil 3, Albion Online, Neverwinter, Witcher 3, CS:GO, GTA V, Dead by Daylight, League of Legends,Team Fortress 2, Fallout 4, Path of Exile, Shadow of Tomb Raider, Cuisine Royale, Monster Hunter: World, World of Tanks, Dota 2, Paladins and MORE!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingSeven">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    How can I save my in-game progress?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                If a video game supports cloud saves, your progress will be stored in the cloud of a digital distribution platform (e.g. Steam, Epic, Origin).
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                For video games where cloud storage mechanism is not supported, OnePlay saves the user’s game data and sends it back at the beginning of a new game session on OnePlay. In this case, if a video game creates files during the game process, the correct quitting from the game is not required.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingEight">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    How often does OnePlay add games?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                OnePlay has a vast catalog of video games for all choices. Our team is regularly monitoring new game releases, selecting the most appealing and popular titles for your entertainment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingNine">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                    Do I need to download the games?
+                                </button>
+                            </h2>
+                            <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-10">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Nope! With OnePlay, our games are streamed straight to you. Indeed, that’s what makes a OnePlay subscription so worthwhile! You can access our games via our app, and no matter what device you want to play on, you can launch our games without having to wait for them to download and install.
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Just click and play!
+                                            </p>
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                Once you have installed the OnePlay app, you don’t need any more available disk space. Your saved games also stay on the cloud, and you can find them from any device simply by logging in to the app.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bgTransparent">
+                            <h2 class="accordion-header bgTransparent" id="headingTen">
+                                <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                    Are there any prerequisites for the mobile app?
+                                </button>
+                            </h2>
+                            <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                                <div class="accordion-body ps-0 pe-0 pt-0">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <p class="font20 font500 offWhiteColor border-bttom">
+                                                For the time being, our mobile application runs on Android 5 and above. We likewise suggest at least 2 GB of RAM.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="gradientBorderbottom mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container customH1">
+            <div class="row padding100 centerTextResponsive">
+                <div class="col-md-12">
+                    <div class="card borderRadius30 linearGradient border-0">
+                        <div class="card-body text-white pe-lg-0 ps-lg-5">
+                            <div class="row">
+                                <div class="col-12 MobileView">
+                                    <img src="./assets/home/laptop 1.svg" class="img-fluid marginTopNegative" alt="laptop" />
+                                </div>
+                                <div class="col-lg-7 col-md-9 ps-5 pt-4 pb-4 align-self-center pe-0">
+                                    <h1 class="font50 font800 mb-0">
+                                        Get OnePlay on
+                                    </h1>
+                                    <h1 class="font50 font800 mb-0">
+                                        your favorite device
+                                    </h1>
+                                    <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
+                                    <a id="login" href="" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
+                                    <a href="#" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-5"><u>Browse Plans</u></a>
+                                </div>
+                                <div class="col-lg-5 col-md-3 align-self-center p-0 desktopView">
+                                    <div class="mr130">
+                                        <img src="./assets/home/laptop 1.svg" class="img-fluid" alt="laptop" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row padding100">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                    </a>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-4 mt-5">
+                            <p class="footerFont font600 text-white">Company</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" class="text-decoration-none">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" class="text-decoration-none activenav">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-md-4 col-lg-3 col-4 mt-5">
+                            <p class="footerFont font600 text-white">Get Help</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./contact.html#FAQs" class="text-decoration-none">FAQs</a></li>
+                                <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="col-md-4 col-lg-4 col-4 mt-5 ps-0">
+                            <p class="footerFont font600 text-white">Boring Stuff</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-4 col-10 mt-5 text-center centerTextResponsiveTab">
+                            <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                            <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                <div class="col-12 text-center mb-4">
+                                    <a href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg text-white font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 p-0">
+                  <hr class="border-bottom customBorderColor" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                  <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                  <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="./js/config.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+
+        <!-- Spatial Navigation CDN -->
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script> 
+        <script src="./js/spatial-navigation.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-220923953-1");
+        </script>
+    </body>
 </html>
