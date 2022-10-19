@@ -1,421 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <title>OnePlay | Download</title>
-  </head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo.png" alt="" class="light-version-logo" />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a id="signup" href="" class="btn btn-outline-light" type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <div class="bgimage2 p-lg-5 p-md-4 p-3 py-5 text-center negativeMarginTop paddingTop">
-      <div class="py-5"></div>
-      <img class="laptop" src="assets/Laptop on gasming page.png" alt="" />
-      <h3 class="mb-4 text-white">Download for <span id="os"></span> now</h3>
-      <a id="download" href="" class="btn btn-light text-primary">
-        <h6 class="m-0">Download</h6>
-      </a>
-      <div class="py-4"></div>
-    </div>
+        <!-- font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="py-5" style="background-color: #100d21">
-      <div class="container">
-        <h4 class="text-white text-center text-md-start">
-          Available on all your favourite devices
-        </h4>
-        <div
-          class="dropdown-divider my-5"
-          style="background-color: #ffffff23"
-        ></div>
-        <div class="row">
-          <div class="col-md-3 col-sm-12">
-            <a
-              href="./download.html?target=windows"
-              class="card mb-3 text-decoration-none"
-              style="background: #1d1a2f"
-            >
-              <div class="card-body d-flex text-white justify-content-center">
-                <div class="d-flex align-items-center" style="min-width: 140px">
-                  <img width="24" src="assets/PngItem_471536.svg" alt="" />
-                  <div class="ms-2">
-                    <h6 class="my-0">Windows</h6>
-                    <p class="my-0 small text-neon">(Available)</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a
-              href="./download.html?target=macos"
-              class="card mb-3 text-decoration-none"
-              style="background-color: #1d1a2f"
-            >
-              <div class="card-body d-flex text-white justify-content-center">
-                <div class="d-flex align-items-center" style="min-width: 140px">
-                  <img width="24" src="assets/apple-logo (1).svg" alt="" />
-                  <div class="ms-2">
-                    <h6 class="my-0">MacOs</h6>
-                    <p class="my-0 small text-neon">(Available)</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div class="card-body d-flex text-white justify-content-center">
-                <div class="d-flex align-items-center" style="min-width: 140px">
-                  <img width="24" src="assets/Rectangle 94.svg" alt="" />
-                  <div class="ms-2">
-                    <h6 class="my-0">Android TV</h6>
-                    <p class="my-0 small text-white-50">(Coming Soon)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div class="card-body d-flex text-white justify-content-center">
-                <div class="d-flex align-items-center" style="min-width: 140px">
-                  <img width="24" src="assets/chrome.svg" alt="" />
-                  <div class="ms-2">
-                    <h6 class="my-0">Browser</h6>
-                    <p class="my-0 small text-white-50">(Coming Soon)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card mb-3" style="background-color: #1d1a2f">
-              <div class="card-body d-flex text-white justify-content-center">
-                <div class="d-flex align-items-center" style="min-width: 140px">
-                  <img width="24" src="assets/android-logo.svg" alt="" />
-                  <div class="ms-2">
-                    <h6 class="my-0">Android</h6>
-                    <p class="my-0 small text-white-50">(Coming Soon)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-9 col-sm-12">
-            <section class="systems-section">
-              <div class="tabs-section container px-lg-5">
-                <ul class="nav alltabs">
-                  <li class="active">
-                    <a
-                      data-toggle="tab"
-                      class="tabs-nav-section tab-link"
-                      href="#MacOS"
-                      >Mac OS</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      data-toggle="tab"
-                      class="tabs-nav-section tab-link"
-                      href="#WindowsPC"
-                      >Windows PC</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      data-toggle="tab"
-                      class="tabs-nav-section tab-link"
-                      href="#Android"
-                      >Android</a
-                    >
-                  </li>
-                </ul>
-        
-                <div class="tab-content">
-                  <div id="MacOS" class="tab-pane fade">
-                    <div class="tabs-description row">
-                      <div class="about-system">
-                        <p class="about-heading">
-                          All you need :
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Font Family Poppins -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link activenav" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
                         </p>
-                        <p class="tab-info">➢ Mac OS X or above</p>
-                        <p class="tab-info">➢ Macbook 2015 or above</p>
-                        <p class="tab-info">➢ Supports Keyboard/Mouse</p>
-                        <p class="tab-info">
-                          ➢ Controller - XBOX ONE, XBOX SERIES X/S, PS4/PS5
-                        </p>
-                      </div>
                     </div>
-                  </div>
-        
-                  <div id="WindowsPC" class="tab-pane fade">
-                    <div class="tabs-description">
-                      <div class="about-system">
-                        <p class="about-heading">
-                          All you need :
-                        </p>
-                        <p class="tab-info">➢ Windows 8.1 or above</p>
-                        <p class="tab-info">➢ Minimum 2GB Ram</p>
-                        <p class="tab-info">
-                          ➢ Intel I3 6TH Gen Or Above and Amd Rynzen Or Above
-                        </p>
-                        <p class="tab-info">➢ Storage 512MB required</p>
-                      </div>
-                    </div>
-                  </div>
-        
-                  <div id="Android" class="tab-pane fade">
-                    <div class="tabs-description">
-                      <div class="about-system">
-                        <h4 class="about-heading">All you need :</h4>
-                        <p class="tab-info">➢ 3GB RAM</p>
-                        <p class="tab-info">➢ 512MB STORAGE</p>
-                        <p class="tab-info">➢ BLUETOOTH 4/WIFI-5 SUPPORTED</p>
-                        <p class="tab-info">➢ CPU/Phone - From 2017 Or Above</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo.png"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://discord.gg/CyNeDNNrZs"
-                    target="_blank"
-                  >
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
             </div>
-          </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
+        </nav>
+
+        <div class="container websiteContainer customH1 centerTextResponsive">
+            <div class="row padding150 justify-content-center">
+                <div class="col-md-6 col-10 text-end MobileView paddingTop50">
+                    <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
+                </div>
+                <div class="col-md-6 align-self-center marginTopMobile">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <h1 class="text-white font50 font800 pe-lg-5">
+                                Get OnePlay for 
+                                any device
+                            </h1>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-5">
+                                Choose from a collection of Games At Your Fingertips
+                            </p>
+                        </div>
+                    </div>
+                    <a id="download" href="" class="btn border-0 btn-lg font18 text-white ps-4 pe-4 pt-lg-3 pb-lg-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4">Download for <span id="os"></span></a>
+                </div>
+                <div class="col-md-6 text-end desktopView">
+                    <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
+                </div>
+            </div>
         </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+        <div class="container-fluid mt-4 padding100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid padding100 downloadBg websiteContainer customH1 centerTextResponsive">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card lightBlackBg borderRadius20">
+                            <div class="card-body">
+                                <div class="row mt-4 mb-4 justify-content-center">
+                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
+                                        <h1 class="text-white font38 font700 MobileView">Mac</h1>
+                                        <img src="./assets/download/mac 2.svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
+                                    </div>
+                                    <div class="col-lg-5 align-self-center margintopDownload tabViewHide">
+                                        <div class="ps-4 pe-4">
+                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">Mac OS X or above Macbook 2015 or above Supports Keyboard/Mouse Controller - XBOX ONE, XBOX SERIES X/S, PS4/PS5</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
+                                        <h1 class="text-white font38 font700 desktopView">Mac</h1>
+                                        <a href="./download.html?target=macos" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
+                                        <div class="ps-4 pe-4">
+                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">Mac OS X or above Macbook 2015 or above Supports Keyboard/Mouse Controller - XBOX ONE, XBOX SERIES X/S, PS4/PS5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <div class="card lightBlackBg borderRadius20">
+                            <div class="card-body">
+                                <div class="row mt-4 mb-4 justify-content-center">
+                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
+                                        <h1 class="text-white font38 font700 MobileView">Windows</h1>
+                                        <img src="./assets/download/mac 2 (4).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
+                                    </div>
+                                    <div class="col-lg-5 col-md-4 align-self-center margintopDownload tabViewHide">
+                                        <div class="ps-4 pe-4">
+                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">3GB Ram </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">512MB Storage</p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
+                                        <h1 class="text-white font38 font700 desktopView">Windows</h1>
+                                        <a href="./download.html?target=windows" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                    </div>
+                                    <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
+                                        <div class="ps-4 pe-4">
+                                            <p class="mb-0 font20 font600 text-white">Minimum Requirements </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">3GB Ram </p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">512MB Storage</p>
+                                            <p class="mb-0 font20 font500 offWhiteColor">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <div class="card lightBlackBg borderRadius20">
+                            <div class="card-body">
+                                <div class="row mt-4 mb-4">
+                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
+                                        <h1 class="text-white font38 font700 text-center MobileView">Android</h1>
+                                        <img src="./assets/download/mac 2 (1).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
+                                    </div>
+                                    <div class="col-lg-5 col-md-4 align-self-center tabViewHide">
+                                        <h1 class="text-white font38 font700 text-center desktopView">Android</h1>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
+                                        <h1 class="text-white font38 font700 tabViewShow">Android</h1>
+                                        <a href="#" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus disabledBtnGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <div class="card lightBlackBg borderRadius20">
+                            <div class="card-body">
+                                <div class="row mt-4 mb-4">
+                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
+                                        <h1 class="text-white font38 font700 text-center MobileView">Android TV</h1>
+                                        <img src="./assets/download/mac 2 (2).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
+                                    </div>
+                                    <div class="col-lg-5 col-md-4 align-self-center tabViewHide">
+                                        <h1 class="text-white font38 font700 text-center desktopView tabViewHide">Android TV</h1>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
+                                        <h1 class="text-white font38 font700 tabViewShow">Android TV</h1>
+                                        <a href="#" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus disabledBtnGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <div class="card lightBlackBg borderRadius20">
+                            <div class="card-body">
+                                <div class="row mt-4 mb-4">
+                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
+                                        <h1 class="text-white font38 font700 text-center MobileView">Web Browser</h1>
+                                        <img src="./assets/download/mac 2 (3).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="mac" />
+                                    </div>
+                                    <div class="col-lg-5 col-md-4 align-self-center tabViewHide">
+                                        <h1 class="text-white font38 font700 text-center desktopView">Web Browser</h1>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
+                                        <h1 class="text-white font38 font700 tabViewShow">Web Browser</h1>
+                                        <a href="#" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus disabledBtnGradient borderRadius60 mt-4 margintopDownload">Coming Soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container padding150">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                    </a>
+                    <div class="row">
+                        <div class="col-md-4 col-lg-4 col-4 mt-5">
+                            <p class="footerFont font600 text-white">Company</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" class="text-decoration-none">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                            </ul>
+                        </div>
+                        <!-- <div class="col-md-4 col-lg-3 col-4 mt-5">
+                            <p class="footerFont font600 text-white">Get Help</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./contact.html#FAQs" class="text-decoration-none">FAQs</a></li>
+                                <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                            </ul>
+                        </div> -->
+                        <div class="col-md-4 col-lg-4 col-4 mt-5 ps-0">
+                            <p class="footerFont font600 text-white">Boring Stuff</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-4 col-10 mt-5 text-center centerTextResponsiveTab">
+                            <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                            <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                <div class="col-12 text-center mb-4">
+                                    <a href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg text-white font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mb-4 mt-4">
+            <div class="row">
+                <div class="col-md-12 p-lg-0">
+                    <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                    <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional JavaScript; choose one of the two! -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/download.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-      gtag("config", "UA-220923953-1");
-    </script>
-  </body>
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="./js/download.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+
+        <!-- Spatial Navigation CDN -->
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script> 
+        <script src="./js/spatial-navigation.js"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-220923953-1");
+        </script>
+    </body>
 </html>

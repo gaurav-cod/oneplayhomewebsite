@@ -1,630 +1,548 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <title>OnePlay | About Us</title>
-  </head>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo.png" alt="" class="light-version-logo" />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a
-              id="signup"
-              href=""
-              class="btn btn-outline-light signup-button"
-              type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Font Family Poppins -->
+        <link href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap' rel='stylesheet'>
+
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 fixed-top bgBlur">
+            <div class="container-fluid ps-5 pe-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container padding100 pe-lg-0 customonlyLeftPAdding websiteContainer customH1 centerTextResponsive">
+            <div class="row">
+                <div class="col-lg-6 MobileView padding50 mb-4">
+                    <img src="./assets/aboutus/Group 171.svg" class="img-fluid" alt="img" />
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <h1 class="text-white font50 font800">
+                        Enjoy playing games
+                        without a gaming rig
+                    </h1>
+                    <p class="font20 font500 offWhiteColor mt-4">
+                        Stream your favorite games, anytime & on any device 
+                        with your progress being saved in the cloud!
+                    </p>
+                    <a role="button" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" href="">Get Started</a>
+                </div>
+                <div class="col-md-6 align-self-center desktopView">
+                    <div class="marginRightNegative">
+                        <img src="./assets/aboutus/IMG_01.svg" class="img-fluid" alt="img" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </nav>
-
-    <div
-      class="jumbotron about-banner banner text-center negativeMarginTop paddingTop"
-      style="background-image: url(./assets/about/hero\ bg.png)"
-    >
-      <div class="p-lg-5 p-md-4 p-3 ">
-        <h1
-          class="fw-bold text-white mx-auto about-main"
-        >
-          Wholesome gaming experience without a gaming console or gaming PC
-        </h1>
-        <p
-          class="mt-3 text-white mx-auto"
-          style="max-width: 890px; font-size: 24px"
-        >
-          With the speeding internet, OnePlay lets you stream your favorite games,
-          anytime and on any device with your progress being saved in the cloud!
-        </p>
-      </div>
-    </div>
-
-    <div class="p-3 p-md-5 about-desc">
-      <div class="text-center">
-        <h2
-          class="text-white fw-bold mt-3 mt-lg-5 mx-auto fw-bold"
-          style="max-width: 640px"
-        >
-          OnePlay does just the same but with your favorite games!
-        </h2>
-        <p class="mt-3 mb-5 text-white mx-auto" style="max-width: 720px">
-          Instead of running the game on your hardware, you can run it on their
-          servers backed with high- end graphical memory. The game then responds
-          to your commands, and every frame gets streamed straight to your
-          gadget.
-        </p>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="card bg-black" style="border-radius: 40px">
-              <div
-                class="d-lg-flex justify-content-around align-items-center card-body"
-              >
-                <div class="text-center text-md-start">
-                  <h2 class="text-white fw-bold" style="max-width: 450px">
-                    There is no need for high-end hardware
-                  </h2>
-                  <p class="text-white" style="max-width: 450px">
-                    OnePlay doesn't require top of the line gadgets to allow you
-                    to play your favorite games. You can run even the most new
-                    age games on the oldest devices without paying a single
-                    penny on hardware updates. Cloud gaming is the most ideal
-                    choice if you don't have a high-end device but are
-                    passionate about gaming.
-                  </p>
+        <div class="container websiteContainer customLeftRightPadding customH1 centerTextResponsive tabPaddingTop">
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-10 text-end mt-5">
+                    <img src="./assets/aboutus/nohardware 1.svg" class="img-fluid" alt="nohardware" />
                 </div>
-                <img
-                  class="cnt-img mt-5 mt-md-0"
-                  src="./assets/about/Rectangle 27.png"
-                  alt=""
-                  style="width: 640px"
-                />
-              </div>
+                <div class="col-md-7 align-self-center mt-5">
+                    <div class="row justify-content-end">
+                        <div class="col-lg-11">
+                            <h1 class="text-white font50 font800">
+                                No need for high-end hardware
+                            </h1>
+                            <p class="font20 font500 offWhiteColor mt-4">
+                                Run most new age games on the oldest devices without
+                                paying a single penny on hardware updates.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="py-3"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div
-              class="card bg-black independence"
-              style="background-image: url(./assets/about/Group\ 180.png)"
-            >
-              <div class="text-center text-md-start card-body px-md-5 pt-5">
-                <h2 class="text-white fw-bold">
-                  You don't need to download games
-                </h2>
-                <p class="text-white">
-                  You won't have to download any gaming files to play a game
-                  with OnePlay. At the same time, you have the most extensive
-                  game library at your end, which is practically unthinkable
-                  with conventional gaming.
-                </p>
-              </div>
+        <div class="container-fluid rightLinegradient websiteContainer customH1 centerTextResponsive">
+            <div class="container customLeftRightPadding">
+                <div class="row padding400 justify-content-center">
+                    <div class="col-md-5 col-10 MobileView mt-5">
+                        <img src="./assets/aboutus/nodownloads 1.svg" class="img-fluid" alt="nohardware" />
+                    </div>
+                    <div class="col-md-7 align-self-center mt-5">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <h1 class="text-white font50 font800">
+                                    No more downloads
+                                    & updates
+                                </h1>
+                                <p class="font20 font500 offWhiteColor mt-4">
+                                    You won't have to download any gaming files to
+                                    play a game with OnePlay.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 desktopView mt-5">
+                        <img src="./assets/aboutus/nodownloads 1.svg" class="img-fluid" alt="nohardware" />
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div
-              class="card bg-black independence"
-              style="background-image: url(./assets/about/Group\ 179.png)"
-            >
-              <div class="text-center text-md-start card-body px-md-5 pt-5">
-                <h2 class="text-white fw-bold">
-                  You have the independence to game anywhere
-                </h2>
-                <p class="text-white">
-                  Gaming devices are generally not so portable. Even the most
-                  portable gaming laptops won’t let you play games in the
-                  railway station or a waiting room! OnePlay makes gaming
-                  extremely portable and gives you the independence to game
-                  anywhere and anytime.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="py-3"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="card bg-black" style="border-radius: 40px">
-              <div
-                class="d-lg-flex justify-content-around align-items-center card-body"
-              >
-                <div class="text-center text-md-start">
-                  <h2 class="text-white fw-bold" style="max-width: 450px">
-                    You can game on all devices
-                  </h2>
-                  <p class="text-white" style="max-width: 450px">
-                    Cloud gaming services let you game through Android, iPhones,
-                    Windows, Mac and more. It is supported on all platforms of
-                    devices, and the progress gets synced to all the devices
-                    logged under the same account. You can even continue your
-                    game on a smartphone while you don’t have access to a bigger
-                    screen.
-                  </p>
+        <div class="container-fluid leftLinegradient websiteContainer customH1 centerTextResponsive">
+            <div class="container padding400 customLeftRightPadding">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 col-10 text-end mt-5">
+                        <img src="./assets/aboutus/gaminganywhere.svg" class="img-fluid" alt="nohardware" />
+                    </div>
+                    <div class="col-md-7 align-self-center mt-5">
+                        <div class="row justify-content-end">
+                            <div class="col-md-11">
+                                <h1 class="text-white font50 font800">
+                                    Run your games anywhere
+                                </h1>
+                                <p class="font20 font500 offWhiteColor mt-4">
+                                    OnePlay makes gaming extremely portable and gives 
+                                    you the independence to game anywhere & anytime.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <img
-                  class="cnt-img mt-5 mt-md-0"
-                  src="./assets/about/Group 181.png"
-                  alt=""
-                  style="width: 640px"
-                />
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-
-      <div class="p-3 p-md-5">
-        <div class="container text-center py-5">
-          <h2 class="text-white text-uppercase fw-bold mt-5">The Team</h2>
-          <p class="text-white mx-auto" style="max-width: 800px">
-            The OnePlay team is a tight-knit, multicultural melting pot of
-            competent and knowledgeable industry experts, with just the right
-            amount of overzealousness. The pride that the OnePlay team shares
-            amongst all team members comes from the knowledge that there is no
-            obstacle that cannot be overcome when this powerhouse team comes
-            together.
-          </p>
-          <div
-            class="row py-5 mx-auto justify-content-center"
-            style="max-width: 800px"
-          >
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/harshit.png"
-                    class="member-avatar"
-                    alt=""
-                  />
+        <div class="container-fluid">
+            <div class="row padding150">
+                <div class="col-12 p-0">
+                    <hr class="border-bottom customBorderColor" />
                 </div>
-                <div class="text-white fw-bold">Harshit Jain</div>
-                <p class="text-white small pb-4">CEO, Co-Founder</p>
-              </div>
             </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/avik.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Abhik Saha</div>
-                <p class="text-white small pb-4">CTO, Co-Founder</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/mainak.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Mainak Debnath</div>
-                <p class="text-white small pb-4">Lead Engineer</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/nidhi.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Nidhi Shah</div>
-                <p class="text-white small pb-4">Python Engineer</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/ishan_talathi.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Ishan Talathi</div>
-                <p class="text-white small pb-4">Infrastructure Head</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/basant.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Basant Kumar Singh</div>
-                <p class="text-white small pb-4">Backend Engineer</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/anjali.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Anjali Kumari</div>
-                <p class="text-white small pb-4">UI Designer</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/dmitry.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Dmitry Adzhiev</div>
-                <p class="text-white small pb-4">Principial Architecture</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/do_huy_hoang.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Do Huy Hoang</div>
-                <p class="text-white small pb-4">Streaming Engineer</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/yamini.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Yamini</div>
-                <p class="text-white small pb-4">Legal Head</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/riya.png"
-                    class="member-avatar"
-                    alt=""
-                  />
-                </div>
-                <div class="text-white fw-bold">Riya Jain</div>
-                <p class="text-white small pb-4">Social Media</p>
-              </div>
-            </div>
-          </div>
-          <a
-            target="_blank"
-            href="career.html"
-            class="btn btn-primary btn-lg bg-gradient-primary px-5"
-            role="button"
-            >Work with us</a
-          >
         </div>
-      </div>
-
-      <div class="p-3 p-md-5">
-        <div class="container text-center">
-          <h2 class="text-white text-uppercase fw-bold">Advisors</h2>
-          <p class="text-white mx-auto" style="max-width: 800px">
-            Experts in their respective fields, our mentors- Tarun Katiyal and
-            Jitendra Gupta have equipped the team to take OnePlay to the next
-            level in the world of gaming and network. Our objective is to give
-            you a gaming experience anywhere, anytime without the hassle of any
-            hardware with a bare minimum cost.
-          </p>
-          <div
-            class="row py-5 mx-auto justify-content-center"
-            style="max-width: 800px"
-          >
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/tarun.png"
-                    class="member-avatar"
-                    alt=""
-                  />
+        <div class="container padding150 customLeftRightPadding websiteContainer customH1 centerTextResponsive">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-md-11 text-center">
+                    <h1 class="text-white font50 font800">
+                        Gaming across all devices
+                    </h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-9">
+                            <p class="font20 font500 offWhiteColor mt-4">
+                                Cloud gaming services let you game through Android, 
+                                iPhones, Windows, Mac and more.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-white fw-bold">Tarun Katial</div>
-                <p class="text-white small pb-4">CEO, Founder of EVE World</p>
-              </div>
-            </div>
-            <div class="col-6 col-md-4">
-              <div class="member-card">
-                <div class="pt-4 px-3 pb-2">
-                  <img
-                    src="assets/team/jitendra.png"
-                    class="member-avatar"
-                    alt=""
-                  />
+                <div class="col-md-10 mt-5">
+                    <div class="wrapper">
+                        <video class="videoControl" poster= "./assets/aboutus/Rectangle 76.svg">
+                            <source src="./assets/aboutus-video/merged_gameplay_music.mp4"type="video/mp4">
+                        </video>
+                        <div class="playpause"></div>
+                    </div>
                 </div>
-                <div class="text-white fw-bold">Jitendra Gupta</div>
-                <p class="text-white small pb-4">
-                  CEO, Founder of Jupiter Money
-                </p>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <div
-      class="jumbotron about-banner banner p-lg-5 p-md-4 p-3 text-center"
-      style="background-image: url(./assets/about/Group\ 191.png)"
-    >
-      <h1 class="fw-bold text-white mx-auto mt-5" style="max-width: 700px">
-        THE FUTURE OF GAMING IS NOW!
-      </h1>
-      <p
-        class="my-3 text-white mx-auto"
-        style="max-width: 600px; font-size: 20px"
-      >
-        Where your low-end hardware will never bottleneck your gaming journey
-        with OnePlay by your side.
-      </p>
-      <a
-        target="_blank"
-        href="contact.html"
-        class="btn btn-primary btn-lg bg-gradient-primary px-5 mb-5"
-        role="button"
-        >Request Beta Access</a
-      >
-    </div>
-
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo.png"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
+        <div class="container padding200 customLeftRightPadding websiteContainer customH1">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 col-10">
+                    <h1 class="text-white font50 font800">
+                        The OnePlay team is a multicultural melting pot of competent & knowledgeable industry experts.
+                    </h1>
+                </div>
+                <div class="col-md-12 centerTextResponsive">
+                    <div id="teamcarousel" class="teamCarousel carousel slide" data-interval="1000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-4 col-6 padding70 text-center">
+                                        <img src="./assets/TeamImg/harshit.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Harshit Jain</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">CEO, Co-Founder</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center">
+                                        <img src="./assets/TeamImg/avik.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Abhik Saha</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">CTO, Co-Founder</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/nidhi.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Nidhi Shah</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Python Engineer</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center">
+                                        <img src="./assets/TeamImg/mainak.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Mainak Debnath</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Lead Engineer</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center">
+                                        <img src="./assets/TeamImg/basant.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Basant Kumar Singh</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Senior Full Stack Developer</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center">
+                                        <img src="./assets/TeamImg/Anjali.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Anjali Kumari</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Full Stack Developer</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/ishan_talathi.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Ishan Talathi</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Infrastructure Head</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/dimitry.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Dmitry Adzhiev</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Principial Architecture</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/do_huy_hoang.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Do Huy Hoang</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Streaming Engineer</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/yamini.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Yamini</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Legal Head</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/riya.png" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white">Riya Jain</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor">Social Media</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#teamcarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon inactive-prev" aria-hidden="true">
+                                <i class="fa fa-solid fa-circle-chevron-left" aria-hidden="true"></i>
+                            </span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#teamcarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true">
+                                <i class="fa fa-solid fa-circle-chevron-right" aria-hidden="true"></i>
+                            </span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
         </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+        <div class="contianer-fluid">
+            <div class="row padding100 desktopView">
+                <div class="col-12 p-0">
+                    <hr class="border-bottom customBorderColor" />
+                </div>
+            </div>
+        </div>
+        <div class="container customLeftRightPadding websiteContainer customH1">
+            <div class="row">
+                <div class="col-md-4 padding70 MobileView">
+                    <h1 class="text-white font50 font800 mt-4">
+                        Our Mentors
+                    </h1>
+                    <p class="font20 font500 offWhiteColor mt-4">
+                        Tarun Katiyal & Jitendra Gupta have equipped the team to take OnePlay 
+                        to the next level in the world of gaming & network.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6 padding70 text-center">
+                    <img src="./assets/TeamImg/tarun.png" class="img-fluid rounded-border wh230" alt=" " />
+                    <p class="font20 font600 mt-4 mb-0 text-white">Tarun Katial</p>
+                    <p class="font20 font500 mb-0 offWhiteColor">CEO, Founder of EVE World</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-6 padding70 text-center">
+                    <img src="./assets/TeamImg/jitendra.png" class="img-fluid rounded-border wh230" alt=" " />
+                    <p class="font20 font600 mt-4 mb-0 text-white">Jitendra Gupta</p>
+                    <p class="font20 font500 mb-0 offWhiteColor">CEO, Founder of Jupiter Money</p>
+                </div>
+                <div class="col-lg-4 col-md-12 padding70 desktopView centerTextResponsiveTab align-self-center">
+                    <h1 class="text-white font50 font800 mt-4">
+                        Our Mentors
+                    </h1>
+                    <p class="font20 font500 offWhiteColor mt-4">
+                        Tarun Katiyal & Jitendra Gupta have equipped the team to take OnePlay 
+                        to the next level in the world of gaming & network.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid websiteContainer customH1">
+            <div class="row padding100">
+                <div class="col-12 p-0">
+                    <hr class="border-bottom customBorderColor" />
+                </div>
+            </div>
+            <div class="container">
+                <div class="row padding50 justify-content-center centerTextResponsive">
+                    <div class="col mt-4">
+                        <h1 class="text-white font50 font800">
+                            Stay Updated
+                        </h1>
+                    </div>
+                    <div class="col-auto mt-4 align-self-center borderRadius60">
+                        <a href="https://medium.com/@oneplay_gaming" class="btn border-0 btn-lg font20 text-white border-gradient-purple font500 removeFocus gradientBorder align-middle"><span class="ps-4 pe-4 lineHeight40">Browse Articles</span></a>
+                    </div>
+                </div>
+                <div class="row centerTextResponsive">
+                    <div class="col-12 mt-5">
+                        <hr class="border-bottom customBorderColor" />
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-3 mt-3 mb-3">
+                                <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
+                            </div>
+                            <div class="col-lg-5 col-md-8 mt-3 mb-3 align-self-center">
+                                <h3 class="font28 font700 text-white">Build Your Own Market In The Universe Of NFTs</h3>
+                                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 12, 2022 . Crypto currency</p>
+                            </div>
+                            <div class="col-lg-4 col-md-12 mt-3 mb-3 align-self-center text-end gradientAnchor">
+                                <a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none font20 font500">Read more<img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="border-bottom customBorderColor" />
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-3 mt-3 mb-3">
+                                <img src="./assets/home/Rectangle 91 (1).svg" class="img-fluid" alt="blog" />
+                            </div>
+                            <div class="col-lg-5 col-md-8 mt-3 mb-3 align-self-center">
+                                <h3 class="font28 font700 text-white">Big Brands Too Want To Be A Part Of The NFT World</h3>
+                                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 15, 2022 . NFT</p>
+                            </div>
+                            <div class="col-lg-4 col-md-12 mt-3 mb-3 align-self-center text-end gradientAnchor">
+                                <a href="https://medium.com/@oneplay_gaming/big-brands-too-want-to-be-a-part-of-the-nft-world-4ac6453f5e34" class="text-decoration-none font20 font500">Read more<img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <hr class="border-bottom customBorderColor" />
+                    </div>
+                </div>
+                <div class="row padding100 centerTextResponsive">
+                    <div class="col-md-12">
+                        <div class="card borderRadius30 linearGradient border-0">
+                            <div class="card-body text-white pe-lg-0 ps-lg-5">
+                                <div class="row">
+                                    <div class="col-12 MobileView">
+                                    <img src="./assets/home/laptop 1.svg" class="img-fluid marginTopNegative" alt="laptop" />
+                                    </div>
+                                    <div class="col-lg-7 col-md-9 ps-5 pt-4 pb-4 align-self-center pe-0">
+                                        <h1 class="font50 font800 mb-0">
+                                            Get OnePlay on
+                                        </h1>
+                                        <h1 class="font50 font800 mb-0">
+                                            your favorite device
+                                        </h1>
+                                        <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
+                                        <a id="login" href="" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
+                                        <a href="./subscription.html" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-5"><u>Browse Plans</u></a>
+                                    </div>
+                                    <div class="col-lg-5 col-md-3 align-self-center p-0 desktopView">
+                                        <div class="mr130">
+                                            <img src="./assets/home/laptop 1.svg" class="img-fluid" alt="laptop" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row padding100">
+                    <div class="col-md-12">
+                        <a class="navbar-brand" href="./index.html">
+                            <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                        </a>
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 col-4 mt-5">
+                                <p class="footerFont font600 text-white">Company</p>
+                                <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                    <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
+                                    <li class="mt-2"><a href="./about.html" class="text-decoration-none activenav">About Us</a></li>
+                                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                    <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
+                                    <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
+                                    <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                                </ul>
+                            </div>
+                            <!-- <div class="col-md-4 col-lg-3 col-4 mt-5">
+                                <p class="footerFont font600 text-white">Get Help</p>
+                                <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                    <li class="mt-2"><a href="./contact.html#FAQs" class="text-decoration-none">FAQs</a></li>
+                                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                                </ul>
+                            </div> -->
+                            <div class="col-md-4 col-lg-4 col-4 mt-5 ps-0">
+                                <p class="footerFont font600 text-white">Boring Stuff</p>
+                                <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                    <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
+                                    <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
+                                    <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12 col-lg-4 col-10 mt-5 text-center centerTextResponsiveTab">
+                                <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                                
+                                <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                    <div class="col-12 text-center mb-4">
+                                        <a href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg text-white font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                    </div>
+                                    <div class="col-auto text-center pe-4">
+                                        <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                    </div>
+                                    <div class="col-auto text-center pe-4">
+                                        <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                    </div>
+                                    <div class="col-auto text-center pe-4">
+                                        <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                    </div>
+                                    <div class="col-auto text-center pe-4">
+                                        <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 p-0">
+                    <hr class="border-bottom customBorderColor" />
+                </div>
+            </div>
+            <div class="container mb-4 mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/config.js"></script>
-    <script src="./js/script.js"></script>
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+        <!-- Optional JavaScript; choose one of the two! -->
 
-      gtag("config", "UA-220923953-1");
-    </script>
-  </body>
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="./js/script.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+
+        <!-- Spatial Navigation CDN -->
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js"></script> 
+        <script src="./js/spatial-navigation.js"></script>
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "UA-220923953-1");
+            $(function() {
+                $('.videoControl').parent().click(function () {
+                    if($(this).children(".videoControl").get(0).paused)
+                    { 
+                        $(this).children(".videoControl").get(0).play();   $(this).children(".playpause").fadeOut();
+                    }
+                    else
+                    { 
+                        $(this).children(".videoControl").get(0).pause();
+                        $(this).children(".playpause").fadeIn();
+                    }
+                });
+
+                $('.carousel').carousel({
+                    interval: 5000,
+                    wrap: false
+                });
+
+                const totalTeamCarouselItem = $("#teamcarousel .carousel-inner .carousel-item").length;
+                $(".carousel").on('slide.bs.carousel', function (event) {
+                    if(event.from === 0) $("#teamcarousel .carousel-control-prev-icon").removeClass('inactive-prev');
+                    if(event.to === 0) $("#teamcarousel .carousel-control-prev-icon").addClass('inactive-prev');
+
+                    if(event.from === totalTeamCarouselItem -1) $("#teamcarousel .carousel-control-next-icon").removeClass('inactive-next');
+                    if(event.to === totalTeamCarouselItem -1) $("#teamcarousel .carousel-control-next-icon").addClass('inactive-next');
+                })
+            });
+        </script>
+    </body>
 </html>
+
