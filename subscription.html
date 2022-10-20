@@ -39,7 +39,7 @@
                 <a class="navbar-brand float-left" href="./index.html">
                     <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
                 </a>
-                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a></span>
+                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="login" href="">Login</a></span>
                 
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
@@ -62,15 +62,16 @@
                                 <a role="button" class="btn removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" href="./login.html">Log in</a>
+                                <a role="button" class="btn font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" href="./sign-up.html">Sign Up</a>
+                                <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
                     <div class="MobileView">
                         <hr class="hrBorderColor mb-4"/>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" href="">Sign Up</a>
                         <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
                         <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                         <p class="font16 font500 gradientAnchor">
@@ -95,221 +96,62 @@
               </div>
             </div>
             <div class="col-lg-9 col-md-11 padding100">
-              <div class="subscriptionAccordion accordion" id="accordionExample2">
-                <div class="accordion-item bgTransparent">
-                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading1">
-                    <button class="accordion-button collapsed font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                      Starter
-                    </button>
-                  </h2>
-                  <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body ps-0 pe-0 pt-0">
-                      <div class="row">
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
-                                  <p class="mb-1 font38 font700 text-white">$1.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    60 minutes
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+              <div class="row">
+                <div class="col-lg-12 mt-4">
+                  <div class="card border-0 lightBlackBg borderRadius30">
+                    <div class="card-body p-4">
+                      <div class="row ps-lg-3 pt-lg-2">
+                        <div class="col-lg-4 col-md-6 col-7">
+                          <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
+                          <p class="mb-1 font38 font700 text-white">₹ 80.00</p>
+                          <p class="mb-1 font16 font500 offWhiteColor">
+                            <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                            60 minutes
+                          </p>
                         </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-4 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
-                                  <p class="mb-1 font38 font700 text-white">$4.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    7 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
-                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
-                                </div>
-                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
-                                  <p class="mb-1 font38 font700 text-white">$10.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    20 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="col-lg-8 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                          <a href="#" class="text-decoration-none font20 font500">view details > </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item bgTransparent">
-                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading2">
-                    <button class="accordion-button font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                      Founder
-                    </button>
-                  </h2>
-                  <div id="collapse2" class="accordion-collapse show" aria-labelledby="heading2" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body ps-0 pe-0 pt-0">
-                      <div class="row">
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
-                                  <p class="mb-1 font38 font700 text-white">$1.50</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    90 minutes
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                <div class="col-lg-12 mt-4">
+                  <div class="card border-0 lightBlackBg borderRadius30">
+                    <div class="card-body p-4">
+                      <div class="row ps-lg-3 pt-lg-2">
+                        <div class="col-lg-4 col-md-4 col-7">
+                          <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
+                          <p class="mb-1 font38 font700 text-white">₹ 240.00</p>
+                          <p class="mb-1 font16 font500 offWhiteColor">
+                            <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                            7 hours
+                          </p>
                         </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-4 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
-                                  <p class="mb-1 font38 font700 text-white">$9.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    15 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
-                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
-                                </div>
-                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="col-lg-4 col-md-4 align-self-center p-0 desktopView">
+                          <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
                         </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
-                                  <p class="mb-1 font38 font700 text-white">$20.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    50 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="col-lg-4 col-md-4 col-5 text-end align-self-center gradientAnchor">
+                          <a href="#" class="text-decoration-none font20 font500">view details > </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item bgTransparent">
-                  <h2 class="accordion-header bgTransparent border-bottom customBorder" id="heading3">
-                    <button class="accordion-button collapsed font38 text-white removeButtonFocus bgTransparent font700 ps-0 pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                      Elite
-                    </button>
-                  </h2>
-                  <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample2">
-                    <div class="accordion-body ps-0 pe-0 pt-0">
-                      <div class="row">
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Daily</p>
-                                  <p class="mb-1 font38 font700 text-white">$3.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    3 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                <div class="col-lg-12 mt-4">
+                  <div class="card border-0 lightBlackBg borderRadius30">
+                    <div class="card-body p-4">
+                      <div class="row ps-lg-3 pt-lg-2">
+                        <div class="col-lg-4 col-md-6 col-7">
+                          <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
+                          <p class="mb-1 font38 font700 text-white">₹ 800.00</p>
+                          <p class="mb-1 font16 font500 offWhiteColor">
+                            <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
+                            20 hours
+                          </p>
                         </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-4 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Weekly</p>
-                                  <p class="mb-1 font38 font700 text-white">$15.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    25 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-3 col-md-4 align-self-center p-0 desktopView">
-                                  <a href="#" class="btn font16 text-white font500 ps-4 pe-4 removeFocus linearGradient borderRadius10 border-0 mt-2">Recommended</a>
-                                </div>
-                                <div class="col-lg-6 col-md-4 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-12 mt-4">
-                          <div class="card border-0 lightBlackBg borderRadius30">
-                            <div class="card-body p-4">
-                              <div class="row ps-lg-3 pt-lg-2">
-                                <div class="col-lg-3 col-md-6 col-7">
-                                  <p class="mb-1 font16 font500 offWhiteColor">Monthly</p>
-                                  <p class="mb-1 font38 font700 text-white">$40.00</p>
-                                  <p class="mb-1 font16 font500 offWhiteColor">
-                                    <img src="./assets/subscriptionNew/Alarm.svg" class="img-fluid me-2" alt="" />
-                                    100 hours
-                                  </p>
-                                </div>
-                                <div class="col-lg-9 col-md-6 col-5 text-end align-self-center gradientAnchor">
-                                  <a href="#" class="text-decoration-none font20 font500">view details > </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                        <div class="col-lg-8 col-md-6 col-5 text-end align-self-center gradientAnchor">
+                          <a href="#" class="text-decoration-none font20 font500">view details > </a>
                         </div>
                       </div>
                     </div>
@@ -443,7 +285,7 @@
                 <img src="assets/logo.png" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
               </a>
               <div class="row">
-                <div class="col-md-4 col-lg-4 col-4 mt-5">
+                <div class="col-md-4 col-lg-4 col-6 mt-5">
                   <p class="footerFont font600 text-white">Company</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
                     <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
@@ -461,7 +303,7 @@
                     <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
                   </ul>
                 </div> -->
-                <div class="col-md-4 col-lg-4 col-4 mt-5 ps-0">
+                <div class="col-md-4 col-lg-4 col-6 mt-5 ps-0">
                   <p class="footerFont font600 text-white">Boring Stuff</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
                     <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
@@ -469,7 +311,7 @@
                     <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
                   </ul>
                 </div>
-                <div class="col-md-12 col-lg-4 col-10 mt-5 text-center centerTextResponsiveTab">
+                <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
                   <p class="footerFont font600 text-white">Get Early Access Drops!</p>
                   <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                     <div class="col-12 text-center mb-4">

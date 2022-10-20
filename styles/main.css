@@ -597,7 +597,7 @@ body {
 }
 
 .padding100 {
-    padding-top: 100px !important;
+    padding-top: 100px;
 }
 
 .customBorderColor {
