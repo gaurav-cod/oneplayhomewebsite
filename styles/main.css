@@ -133,6 +133,19 @@
         font-size: 30px !important;
         line-height: 40px !important;
     }
+
+    .responsivewh10 {
+        width: 10px;
+        height: 10px;
+    }
+
+    .height34 {
+        height: 34px;
+    }
+
+    .lineHeight40 {
+        line-height: 29px !important;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -437,7 +450,7 @@
 }
 
 .lineHeight40 {
-    line-height: 40px !important;
+    line-height: 40px;
 }
 
 html {
