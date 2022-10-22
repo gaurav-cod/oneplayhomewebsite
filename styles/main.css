@@ -133,6 +133,10 @@
         font-size: 30px !important;
         line-height: 40px !important;
     }
+
+    .height90vh {
+        height: auto !important;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -191,6 +195,11 @@
     .font38 {
         font-size: 25px !important;
         line-height: 30px !important;
+    }
+
+    .font50 {
+        font-size: 35px !important;
+        line-height: 45px !important;
     }
     
 }
@@ -437,7 +446,7 @@
 }
 
 .lineHeight40 {
-    line-height: 40px !important;
+    line-height: 40px;
 }
 
 html {
@@ -452,7 +461,6 @@ body {
     background-color: #151515;
     font-family: 'Poppins';
     letter-spacing: 0.02em;
-    /* overflow-x: hidden; */
 }
 
 .beta {
@@ -597,7 +605,7 @@ body {
 }
 
 .padding100 {
-    padding-top: 100px !important;
+    padding-top: 100px;
 }
 
 .customBorderColor {
@@ -1158,3 +1166,18 @@ input, textarea {
 .borderRadius0 {
     border-radius: 0px !important;
 }
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.customCareerTab {
+    overflow-x: auto;
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+ }
+ .customCareerTab .nav-link {
+   white-space: nowrap;
+ }
