@@ -446,7 +446,7 @@
 }
 
 .lineHeight40 {
-    line-height: 40px !important;
+    line-height: 40px;
 }
 
 html {
