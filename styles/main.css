@@ -458,7 +458,7 @@ html {
 }
 
 body {
-    background-color: #151515;
+    background-color: #151515 !important;
     font-family: 'Poppins';
     letter-spacing: 0.02em;
 }
