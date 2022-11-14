@@ -143,6 +143,11 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .wh100 {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -158,11 +163,6 @@
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .height100vh {
         height: auto !important;
-    }
-
-    .customH1 h1 {
-        font-size: 1.9rem !important;
-        line-height: 2.9rem;
     }
 
     .lineBg {
@@ -217,6 +217,10 @@
         overflow-x: auto;
         white-space: nowrap;
     }
+
+    .mr130 {
+        margin-right: -70px !important;
+    } 
     
 }
 
@@ -225,11 +229,6 @@
     .font20 {
         font-size: 15px !important;
         line-height: 25px !important;
-    }
-
-    .customH1 h1 {
-        font-size: 1.7rem !important;
-        line-height: 2.5rem;
     }
 
     .custom-choose input[type='radio'] + label, .custom-choose input[type='radio']:not(checked) + label {
@@ -244,8 +243,8 @@
     }
 
     .websiteContainer .font50 {
-        font-size: 2.4rem;
-        line-height: 3.375rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 
     .font38 {
@@ -277,6 +276,10 @@
         font-size: 17px !important;
         line-height: 23px !important;
     }
+
+    .mr130 {
+        margin-right: -70px !important;
+    } 
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -477,6 +480,7 @@ body {
     background-color: #151515 !important;
     font-family: 'Poppins';
     letter-spacing: 0.02em;
+    overflow-x: hidden;
 }
 
 .beta {
@@ -520,11 +524,11 @@ body {
 }
 
 .lightWhite {
-    color: #B2B3B4;
+    color: #B2B3B4 !important;
 }
 
 .lightWhite:hover {
-    color: #B2B3B4;
+    color: #B2B3B4 !important;
 }
 
 /* .linearBg {
@@ -536,7 +540,7 @@ body {
 }
 
 .borderRadius60 {
-    border-radius: 60px;
+    border-radius: 60px !important;
 }
 
 .w131 {
@@ -566,7 +570,7 @@ body {
 }
 
 .offWhiteColor {
-    color: #959595;
+    color: #959595 !important;
 }
 
 .offWhiteColor:hover {
@@ -584,16 +588,6 @@ body {
     background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%);
     border-radius: 50%;
 }
-
-/* .lineBg {
-    background-image: url('.././assets/home/Vector\ 4.svg');
-    background-repeat: no-repeat;
-    background-size:  contain;
-    background-position: right;
-    margin-top: -250px;
-    background-clip: border-box;
-    background-origin: border-box;
-} */
 
 .linearCircle2 {
     display: flex;
@@ -639,12 +633,12 @@ body {
 
 .gradientBorder {
     border: 1px solid transparent;
-    border-radius: 60px;
+    border-radius: 60px !important;
     background-image: linear-gradient(#151515, #151515), 
                       linear-gradient(270deg, #E1DCFE 0%, #7E67FD 100%);
     background-origin: border-box;
     background-clip: content-box, border-box;
-    padding: 2px;
+    padding: 2px !important;
 }
 
 .font28 {
@@ -660,7 +654,7 @@ body {
 }
 
 .borderRadius30 {
-    border-radius: 30px;
+    border-radius: 30px !important;
 }
 
 .linearBg2 {
@@ -748,7 +742,7 @@ body {
 }
 
 .borderRadius10 {
-    border-radius: 10px;
+    border-radius: 10px !important;
 }
 
 .bgTransparent {
@@ -838,17 +832,17 @@ input, textarea {
     background-repeat: no-repeat;
     background-position: center;
     background-origin: border-box;
-    margin-top: -380px;
+    margin-top: -400px;
     
 }
 
-.marginRightNegative {
+/* .marginRightNegative {
     margin-right: -19%;
 }
 
 .marginLeftNegative {
     margin-left: -19%;
-}
+} */
 
 .negativeLeft {
     margin-left: -60px;
@@ -930,7 +924,7 @@ input, textarea {
 }
 
 .borderRadius150 {
-    border-radius: 150px;
+    border-radius: 150px !important;
 }
 
 .teamCarousel .carousel-control-next-icon, .teamCarousel .carousel-control-prev-icon {
@@ -977,7 +971,7 @@ input, textarea {
 }
 
 .borderRadius20 {
-    border-radius: 20px;
+    border-radius: 20px !important;
 }
 
 .borderLeftcolor {
@@ -1176,7 +1170,7 @@ input, textarea {
 }
 
 .removeCrossBg {
-    background-image: none;
+    background-image: none !important;
 }
 
 .borderRadius0 {
@@ -1198,4 +1192,16 @@ input, textarea {
     background-position: center;
     background-size: cover;
     height: 100%;
+}
+
+.marginNegativeTop {
+    margin-top: -7% !important;
+}
+
+.marginRightNegative {
+    margin-right: -25%;
+}
+
+.marginLeftNegative {
+    margin-left: -30%;
 }
