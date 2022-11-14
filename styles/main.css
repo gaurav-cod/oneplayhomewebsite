@@ -137,11 +137,21 @@
     .height90vh {
         height: auto !important;
     }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
-
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }
 
 /* // Medium devices (tablets, less than 992px) */
@@ -200,6 +210,12 @@
     .font50 {
         font-size: 35px !important;
         line-height: 45px !important;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
     
 }
@@ -1167,12 +1183,6 @@ input, textarea {
     border-radius: 0px !important;
 }
 
-table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
 .customCareerTab {
     overflow-x: auto;
     overflow-y:hidden;
@@ -1181,3 +1191,11 @@ table {
  .customCareerTab .nav-link {
    white-space: nowrap;
  }
+
+.heroSectionBg {
+    background-image: url('/assets/Group\ 364.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
