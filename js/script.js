@@ -101,15 +101,15 @@ function handleAuth() {
   const session = getCookie("op_session_token");
   const login = document.querySelector("#login");
   const signup = document.querySelector("#signup");
-  const logout = document.querySelector("#logout");
+  // const logout = document.querySelector("#logout");
   if (session) {
     login.style.display = "none";
     signup.style.display = "none";
-    logout.style.display = "block";
+    // logout.style.display = "block";
   } else {
     login.style.display = "block";
     signup.style.display = "block";
-    logout.style.display = "none";
+    // logout.style.display = "none";
   }
 }
 
