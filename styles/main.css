@@ -481,6 +481,7 @@ body {
     font-family: 'Poppins';
     letter-spacing: 0.02em;
     overflow-x: hidden;
+    position: relative;
 }
 
 .beta {
@@ -492,6 +493,10 @@ body {
     margin-left: 4px;
     margin-right: 16px;
     border-radius: 4px;
+}
+
+a:hover {
+    color: inherit !important;
 }
 
 .navbarText .navbar-nav .nav-link {
@@ -619,7 +624,7 @@ body {
 }
 
 .customBorderColor {
-    border-color: #3E4246;
+    border-color: #3E4246 !important;
 }
 
 .font38 {
@@ -967,7 +972,7 @@ input, textarea {
 }
 
 .lightBlackBg {
-    background-color: #212123;
+    background-color: #212123 !important;
 }
 
 .borderRadius20 {
@@ -1143,7 +1148,7 @@ input, textarea {
 }
 
 .crouselBgIcon {
-    background-image: none;
+    background-image: none !important;
 }
 
 .careerUI .carousel-control-prev {
@@ -1170,7 +1175,7 @@ input, textarea {
 }
 
 .removeCrossBg {
-    background-image: none !important;
+    background-image: none !important ;
 }
 
 .borderRadius0 {
