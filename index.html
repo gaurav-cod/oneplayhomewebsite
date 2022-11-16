@@ -18,9 +18,9 @@
   
   </head>
   <body>
-    <div class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0 d-none" id="legalAlert" role="alert">
+    <div class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0" role="alert">
       <p class="mb-0 font16 font500 text-white text-center">OnePlay uses cookies to ensure the best experience. By continuing to use this website, you agree to OnePlay’s <a href="./privacy.html" class="text-white">Privacy policy</a> & <a href="./tnc.html" class="text-white">Cookie policy</a>.</p>
-      <button type="button" class="btn-close removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+      <button type="button" class="btn-close removeFocus removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
     </div>
     <!-- Navbar Section Start -->
     <nav class="navbar sticky-top navbar-expand-lg pt-4 pb-4 bgBlur">
@@ -95,7 +95,7 @@
           <div class="row">
             <div class="col mt-3">
               <p class="font20 font500 customOffWhite mb-0">Wait List</p>
-              <h1 class="font38 font700 text-white">10K+</h1>
+              <h1 class="font38 font700 text-white">12K+</h1>
               <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="signup" href="">Join Today</a>
               <a role="button" href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg offWhiteColor font500 removeFocus border-0 ms-3 mt-3 pt-3"><i class="fa-brands fa-discord me-3 font28 customOffWhite align-middle"></i>Join Discord</a>
             </div>
@@ -453,6 +453,33 @@
       </div>
     </div>
 
+
+    <div class="modal fade" id="legalModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content legalModalBg borderRadius20 offWhiteColor">
+          <div class="modal-header p-0 border-0">
+            <h5></h5>
+            <div class="text-end me-4 mt-2"><button type="button" class="btn-close removeFocus backgroundNone text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-circle-xmark p-2 borderBg borderRadius50"></i></button></div>
+          </div>
+          <div class="modal-body ps-5 pb-5 pe-5">
+            
+            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain content, which appears on our website, infringes
+            upon copyrights that you own or represent, you may send us a written notification at <strong class="text-white">legal.team@mail.oneplay.in</strong> stating the details of the copyrighted work
+            claimed to be infringed, in accordance with the provisions of the Copyright Act, 1957. Upon your notification, we may remove or disable access to any such content. To be effective, your notification
+            of claimed infringement must be a written communication provided to us that includes substantially the following:
+            <ol class="mt-4">
+              <li class="mt-4">Identification of the copyrighted work claimed to be infringed, or if multiple copyrighted works are covered by a single notification, a representative list of such works;</li>
+              <li class="mt-4">Information reasonably sufficient to permit us to contact you, such as an address, telephone number, and, if available, an electronic mail address at which you may be contacted;</li>
+              <li class="mt-4">A statement that you have a good faith belief that the use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law;</li>
+              <li class="mt-4">A statement that the information in the notification is accurate, and under penalty of perjury, that you are the owner of copyright or authorized to act on behalf of the owner of an exclusive right that is allegedly infringed. </li>
+            </ol>
+            <p class="mt-4 mb-0">Following receipt of your communication, we may ask you to provide further or supplemental information, prior to removing any content which was displayed on the Service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -478,13 +505,22 @@
 
       gtag("config", "UA-220923953-1");
 
+      // $(function() {
+      //   if (sessionStorage.getItem('#legalAlert') !== 'true') {
+      //    $('#legalAlert').removeClass('d-none');
+      //    setTimeout("$('#legalAlert').hide();",10000);
+      //    sessionStorage.setItem('#legalAlert','true');   
+      //   }
+      // });
+
       $(function() {
-        if (sessionStorage.getItem('#legalAlert') !== 'true') {
-         $('#legalAlert').removeClass('d-none');
-         setTimeout("$('#legalAlert').hide();",10000);
-         sessionStorage.setItem('#legalAlert','true');   
+        if (sessionStorage.getItem('#legalModal') !== 'true') {
+         $('#legalModal').modal('show');
+         setTimeout("$('#legalModal').modal('hide');",10000);
+         sessionStorage.setItem('#legalModal','true');     
         }
       });
+
       
     </script>
   </body>
