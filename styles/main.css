@@ -466,7 +466,7 @@ html {
 
 body {
     background-color: #151515 !important;
-    font-family: 'Poppins';
+    font-family: 'Poppins' !important;
     letter-spacing: 0.02em;
     overflow-x: hidden;
     position: relative;
@@ -929,13 +929,6 @@ input, textarea {
 
 .h60 {
     height: 60px;
-}
-
-.downloadBg {
-    background-image: url('../assets/download/Group\ 118.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
 }
 
 .lightBlackBg {
