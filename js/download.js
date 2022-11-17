@@ -35,6 +35,8 @@ function getLinkByTarget(target) {
       return config.MACOS_DOWNLOAD_URL;
     case "windows":
       return config.WINDOWS_DOWNLOAD_URL;
+    case "andriod":
+      return config.ANDROID_DOWNLOAD_URL;
     default:
       return "";
   }
@@ -92,6 +94,8 @@ function getDownloadLink() {
     os.setAttribute("href", config.MACOS_DOWNLOAD_URL);
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
+  } else if (/Android/.test(userAgent)) {
+    os.setAttribute("href", config.ANDROID_DOWNLOAD_URL);
   }
 }
 

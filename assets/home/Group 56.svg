@@ -1,13 +1,1 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="24" cy="24" r="23" fill="black" stroke="url(#paint0_linear_241_230)" stroke-width="2"/>
-<circle cx="24" cy="24" r="10" stroke="white" stroke-width="2"/>
-<path d="M30 24C30 23.6593 29.9716 23.3252 29.917 23M18 24C18 20.6863 20.6863 18 24 18C24.2784 18 24.5524 18.019 24.8207 18.0557" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<circle cx="24" cy="24" r="2" fill="white"/>
-<path d="M24 24L28.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<defs>
-<linearGradient id="paint0_linear_241_230" x1="48" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse">
-<stop stop-color="#3AA0FE"/>
-<stop offset="1" stop-color="#59FEF4"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" xmlns:v="https://vecta.io/nano"><g stroke-width="2"><circle cx="24" cy="24" r="23" fill="#000" stroke="url(#A)"/><g stroke="#fff"><circle cx="24" cy="24" r="10"/><path d="M30 24c0-.341-.028-.675-.083-1M18 24a6 6 0 0 1 6-6c.278 0 .552.019.821.056" stroke-linecap="round"/></g></g><circle cx="24" cy="24" r="2" fill="#fff"/><path d="M24 24l4.5-4.5" stroke="#fff" stroke-width="2" stroke-linecap="round"/><defs><linearGradient id="A" x1="48" y1="0" x2="0" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#3aa0fe"/><stop offset="1" stop-color="#59fef4"/></linearGradient></defs></svg>

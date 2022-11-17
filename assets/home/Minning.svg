@@ -1,14 +1,1 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M46.6116 36.1982H26.7769C24.0397 36.1982 21.8182 38.4197 21.8182 41.1569C21.8182 43.8941 24.0397 46.1156 26.7769 46.1156H46.6116C49.3488 46.1156 51.5702 43.8941 51.5702 41.1569C51.5702 38.4197 49.3488 36.1982 46.6116 36.1982Z" fill="url(#paint0_linear_5_78)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M83.0471 62.9752L65.2673 4.02246C64.6355 1.92891 62.7066 0.49585 60.5198 0.49585H32.7512C30.4841 0.49585 28.5056 2.03403 27.9463 4.23172L0.177689 113.323C-0.200162 114.805 0.128102 116.38 1.06728 117.589C2.00744 118.797 3.4524 119.504 4.98265 119.504H114.074C115.69 119.504 117.204 118.717 118.133 117.394C119.061 116.071 119.286 114.379 118.737 112.858L101.877 66.2469C101.167 64.2833 99.3026 62.9752 97.2141 62.9752H83.0471ZM79.2964 72.8925H50.6025C47.8653 72.8925 45.6438 70.6711 45.6438 67.9339C45.6438 65.1967 47.8653 62.9752 50.6025 62.9752H72.6884L56.8365 10.4132H36.6061L11.3615 109.587H107.007L93.735 72.8925H79.3678L79.3192 72.8935L79.2964 72.8925Z" fill="url(#paint1_linear_5_78)"/>
-<defs>
-<linearGradient id="paint0_linear_5_78" x1="18.843" y1="33.223" x2="69.4215" y2="55.0412" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A83AFE"/>
-<stop offset="1" stop-color="#6E59FE"/>
-</linearGradient>
-<linearGradient id="paint1_linear_5_78" x1="27.7926" y1="3.47106" x2="118.04" y2="118.512" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0CF5"/>
-<stop offset="1" stop-color="#0575E6"/>
-</linearGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="none" xmlns:v="https://vecta.io/nano"><g fill-rule="evenodd"><path d="M46.612 36.198H26.777a4.96 4.96 0 0 0-4.959 4.959 4.96 4.96 0 0 0 4.959 4.959h19.835a4.96 4.96 0 0 0 4.959-4.959 4.96 4.96 0 0 0-4.959-4.959z" fill="url(#A)"/><path d="M83.047 62.975L65.267 4.022A4.96 4.96 0 0 0 60.52.496H32.751a4.96 4.96 0 0 0-4.805 3.736L.178 113.323a4.96 4.96 0 0 0 .89 4.266 4.96 4.96 0 0 0 3.915 1.915h109.091a4.96 4.96 0 0 0 4.059-2.11c.928-1.323 1.153-3.015.604-4.536l-16.86-46.611a4.96 4.96 0 0 0-4.663-3.272H83.047zm-3.751 9.917H50.603a4.96 4.96 0 0 1-4.959-4.959 4.96 4.96 0 0 1 4.959-4.959h22.086L56.837 10.413h-20.23l-25.245 99.174h95.646L93.735 72.893H79.368l-.049.001-.023-.001z" fill="url(#B)"/></g><defs><linearGradient id="A" x1="18.843" y1="33.223" x2="69.422" y2="55.041" gradientUnits="userSpaceOnUse"><stop stop-color="#a83afe"/><stop offset="1" stop-color="#6e59fe"/></linearGradient><linearGradient id="B" x1="27.793" y1="3.471" x2="118.04" y2="118.512" gradientUnits="userSpaceOnUse"><stop stop-color="#ff0cf5"/><stop offset="1" stop-color="#0575e6"/></linearGradient></defs></svg>

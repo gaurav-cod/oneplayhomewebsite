@@ -66,14 +66,6 @@
         margin-top: -85px;
     }
 
-    .rightLinegradient, .leftLinegradient {
-        background-image: none !important;
-    }
-
-    .padding400 {
-        padding-top: 300px !important;
-    }
-
     .padding150 {
         padding-top: 60px !important;
     }
@@ -173,10 +165,6 @@
         text-align: center;
     }
 
-    .rightLinegradient, .leftLinegradient {
-        background-image: none !important;
-    }
-
     .tabPaddingTop {
         padding-top: 100px;
     }
@@ -242,7 +230,7 @@
         left: 5px !important;
     }
 
-    .websiteContainer .font50 {
+    .font50 {
         font-size: 2rem;
         line-height: 2.5rem;
     }
@@ -481,6 +469,7 @@ body {
     font-family: 'Poppins';
     letter-spacing: 0.02em;
     overflow-x: hidden;
+    position: relative;
 }
 
 .beta {
@@ -492,6 +481,10 @@ body {
     margin-left: 4px;
     margin-right: 16px;
     border-radius: 4px;
+}
+
+a:hover {
+    color: inherit !important;
 }
 
 .navbarText .navbar-nav .nav-link {
@@ -511,7 +504,7 @@ body {
 }
 
 .removeFocus:focus {
-    box-shadow: none;
+    box-shadow: none !important;
 }
 
 .font18 {
@@ -619,7 +612,7 @@ body {
 }
 
 .customBorderColor {
-    border-color: #3E4246;
+    border-color: #3E4246 !important;
 }
 
 .font38 {
@@ -852,27 +845,6 @@ input, textarea {
     padding-top: 480px;
 }
 
-.leftLinegradient {
-    background-image: url('../assets/aboutus/Vector\ 5\ \(1\).svg');
-    background-repeat: no-repeat;
-    background-origin:initial;
-    background-size: 70vh;
-    margin-top: -300px;   
-}
-
-.padding400 {
-    padding-top: 400px;
-}
-
-.rightLinegradient {
-    background-image: url('../assets/aboutus/Vector\ 3\ \(1\).svg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-origin:initial;
-    background-size: 50vh;
-    margin-top: -300px;
-}
-
 .padding150 {
     padding-top: 150px;
 }
@@ -967,7 +939,7 @@ input, textarea {
 }
 
 .lightBlackBg {
-    background-color: #212123;
+    background-color: #212123 !important;
 }
 
 .borderRadius20 {
@@ -1056,7 +1028,7 @@ input, textarea {
 }
 
 .backgroundNone {
-    background-image: none;
+    background-image: none !important;
 }
 
 .sticky-top {
@@ -1143,7 +1115,7 @@ input, textarea {
 }
 
 .crouselBgIcon {
-    background-image: none;
+    background-image: none !important;
 }
 
 .careerUI .carousel-control-prev {
@@ -1170,7 +1142,7 @@ input, textarea {
 }
 
 .removeCrossBg {
-    background-image: none !important;
+    background-image: none !important ;
 }
 
 .borderRadius0 {
@@ -1204,4 +1176,21 @@ input, textarea {
 
 .marginLeftNegative {
     margin-left: -30%;
+}
+
+.legalModalBg {
+    background-color: #151515 !important;
+}
+
+.borderBg {
+    background-color: #3E4246;
+}
+
+.borderRadius50 {
+    border-radius: 50px;
+}
+
+.modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
 }
