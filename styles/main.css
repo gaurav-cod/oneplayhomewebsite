@@ -312,7 +312,7 @@
     }
 
     .height90vh {
-        height: 95vh !important;
+        height: 65vh !important;
     }
     
 }
@@ -363,7 +363,7 @@
     }
 
     .height90vh {
-        height: 80vh !important;
+        height: 65vh !important;
     }
 }
 
@@ -403,7 +403,7 @@
     }
 
     .height90vh {
-        height: 80vh !important;
+        height: 70vh !important;
     }
 }
 
@@ -456,10 +456,6 @@
     line-height: 40px;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 .btn {
     border: none;
 }
@@ -468,7 +464,7 @@ body {
     background-color: #151515 !important;
     font-family: 'Poppins' !important;
     letter-spacing: 0.02em;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     position: relative;
 }
 
@@ -1051,7 +1047,7 @@ input, textarea {
 }
 
 .height90vh {
-    height: 85vh;
+    height: 65vh;
 }
 
 .customCareerTab.nav-pills .nav-link.active{
@@ -1186,4 +1182,8 @@ input, textarea {
 .modal-dialog-scrollable .modal-body::-webkit-scrollbar {
     width: 0px;
     height: 0px;
+}
+
+.negativeMargin {
+    margin-top: -105px !important;
 }
