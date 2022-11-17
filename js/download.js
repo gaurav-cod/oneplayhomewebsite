@@ -35,7 +35,7 @@ function getLinkByTarget(target) {
       return config.MACOS_DOWNLOAD_URL;
     case "windows":
       return config.WINDOWS_DOWNLOAD_URL;
-    case "andriod":
+    case "android":
       return config.ANDROID_DOWNLOAD_URL;
     default:
       return "";
