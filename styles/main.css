@@ -312,7 +312,7 @@
     }
 
     .height90vh {
-        height: 95vh !important;
+        height: 65vh !important;
     }
     
 }
@@ -363,7 +363,7 @@
     }
 
     .height90vh {
-        height: 80vh !important;
+        height: 65vh !important;
     }
 }
 
@@ -403,7 +403,7 @@
     }
 
     .height90vh {
-        height: 80vh !important;
+        height: 70vh !important;
     }
 }
 
@@ -456,19 +456,15 @@
     line-height: 40px;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 .btn {
     border: none;
 }
 
 body {
     background-color: #151515 !important;
-    font-family: 'Poppins';
+    font-family: 'Poppins' !important;
     letter-spacing: 0.02em;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     position: relative;
 }
 
@@ -931,13 +927,6 @@ input, textarea {
     height: 60px;
 }
 
-.downloadBg {
-    background-image: url('../assets/download/Group\ 118.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
 .lightBlackBg {
     background-color: #212123 !important;
 }
@@ -1058,7 +1047,7 @@ input, textarea {
 }
 
 .height90vh {
-    height: 85vh;
+    height: 65vh;
 }
 
 .customCareerTab.nav-pills .nav-link.active{
@@ -1193,4 +1182,8 @@ input, textarea {
 .modal-dialog-scrollable .modal-body::-webkit-scrollbar {
     width: 0px;
     height: 0px;
+}
+
+.negativeMargin {
+    margin-top: -105px !important;
 }
