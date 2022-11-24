@@ -1,14 +1,1 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_521_632)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M60 0C26.885 0 0 26.885 0 60C0 93.115 26.885 120 60 120C93.115 120 120 93.115 120 60C120 26.885 93.115 0 60 0ZM60 10C87.596 10 110 32.404 110 60C110 87.596 87.596 110 60 110C32.404 110 10 87.596 10 60C10 32.404 32.404 10 60 10ZM55 28V60C55 61.326 55.527 62.598 56.464 63.536L71.929 79C73.88 80.951 77.049 80.951 79 79C80.951 77.049 80.951 73.88 79 71.929L65 57.929V28C65 25.24 62.76 23 60 23C57.24 23 55 25.24 55 28Z" fill="url(#paint0_linear_521_632)"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear_521_632" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF0CF5"/>
-<stop offset="1" stop-color="#0575E6"/>
-</linearGradient>
-<clipPath id="clip0_521_632">
-<rect width="120" height="120" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="none" xmlns:v="https://vecta.io/nano"><g clip-path="url(#B)"><path fill-rule="evenodd" d="M60 0C26.885 0 0 26.885 0 60s26.885 60 60 60 60-26.885 60-60S93.115 0 60 0zm0 10c27.596 0 50 22.404 50 50s-22.404 50-50 50-50-22.404-50-50 22.404-50 50-50zm-5 18v32c0 1.326.527 2.598 1.464 3.536L71.929 79c1.951 1.951 5.12 1.951 7.071 0s1.951-5.12 0-7.071l-14-14V28c0-2.76-2.24-5-5-5s-5 2.24-5 5z" fill="url(#A)"/></g><defs><linearGradient id="A" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse"><stop stop-color="#ff0cf5"/><stop offset="1" stop-color="#0575e6"/></linearGradient><clipPath id="B"><path fill="#fff" d="M0 0h120v120H0z"/></clipPath></defs></svg>
