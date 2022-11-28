@@ -496,7 +496,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
 
     <!--Countly script-->
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js'></script>
+    <!-- <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js'></script> -->
 
     <script>
 
@@ -506,7 +506,7 @@
 
       //provide countly initialization parameters
       Countly.app_key = '5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815';
-      Countly.url = 'https://www.oneream.com/';
+      Countly.url = 'https://countly.dev.oneplay.co';
 
       Countly.q.push(['track_sessions']);
       Countly.q.push(['track_pageview']);
@@ -522,7 +522,7 @@
         var cly = document.createElement('script'); cly.type = 'text/javascript';
         cly.async = true;
         //enter url of script here
-        cly.src = 'https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/20.4.0/countly.min.js';
+        cly.src = 'https://countly.dev.oneplay.co/sdk/web/countly.min.js';
         cly.onload = function(){Countly.init()};
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
       })();
