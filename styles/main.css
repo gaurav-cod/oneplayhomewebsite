@@ -479,10 +479,6 @@ body {
     border-radius: 4px;
 }
 
-a:hover {
-    color: inherit !important;
-}
-
 .navbarText .navbar-nav .nav-link {
     font-weight: 500;
     font-size: 18px;
@@ -666,6 +662,10 @@ a:hover {
 .footerWhiteColor a {
     /* color: #E1E1E1; */
     color: #959595;
+}
+
+.footerWhiteColor a:hover {
+    color: #E1E1E1;
 }
 
 .footerWhiteColor {
