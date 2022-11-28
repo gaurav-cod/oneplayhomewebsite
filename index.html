@@ -500,19 +500,32 @@
 
     <script>
 
-      Countly.init({
-        app_key: "5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815",
-        // Provide your server IP or name. Use try.count.ly or us-try.count.ly
-        // or asia-try.count.ly for EE trial server.
-        // If you use your own server, make sure you have https enabled if you use
-        // https below.  
-        url: "https://www.oneream.com/"
+      //some default pre init
+      var Countly = Countly || {};
+      Countly.q = Countly.q || [];
 
-      });
-      // track sessions automatically
-      Countly.track_sessions();
-      // track pageviews automatically
-      Countly.track_pageview();
+      //provide countly initialization parameters
+      Countly.app_key = '5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815';
+      Countly.url = 'https://www.oneream.com/';
+
+      Countly.q.push(['track_sessions']);
+      Countly.q.push(['track_pageview']);
+      Countly.q.push(['track_clicks']);
+      Countly.q.push(['track_scrolls']);
+      Countly.q.push(['track_errors']);
+      Countly.q.push(['track_links']);
+      Countly.q.push(['track_forms']);
+      Countly.q.push(['collect_from_forms']);
+
+      //load countly script asynchronously
+      (function() {
+        var cly = document.createElement('script'); cly.type = 'text/javascript';
+        cly.async = true;
+        //enter url of script here
+        cly.src = 'https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/20.4.0/countly.min.js';
+        cly.onload = function(){Countly.init()};
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+      })();
 
 
       window.dataLayer = window.dataLayer || [];
@@ -542,5 +555,6 @@
 
       
     </script>
+    <noscript><img src='https://www.oneream.com//pixel.png?app_key=5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815&begin_session=1'/></noscript>
   </body>
 </html>
