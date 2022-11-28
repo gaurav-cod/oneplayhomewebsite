@@ -495,7 +495,26 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
 
+    <!--Countly script-->
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js'></script>
+
     <script>
+
+      Countly.init({
+        app_key: "5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815",
+        // Provide your server IP or name. Use try.count.ly or us-try.count.ly
+        // or asia-try.count.ly for EE trial server.
+        // If you use your own server, make sure you have https enabled if you use
+        // https below.  
+        url: "https://www.oneream.com/"
+
+      });
+      // track sessions automatically
+      Countly.track_sessions();
+      // track pageviews automatically
+      Countly.track_pageview();
+
+
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
