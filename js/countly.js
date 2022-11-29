@@ -3,7 +3,7 @@ var Countly = Countly || {};
 Countly.q = Countly.q || [];
 
 //provide countly initialization parameters
-Countly.app_key = '5cfd6a960ace7f7faaafabb7bc7a52d0a6d85815';
+Countly.app_key = '293826549c121b1284fd77dc1d359235126c6318';
 Countly.url = 'https://countly.dev.oneplay.co';
 
 Countly.q.push(['track_sessions']);
