@@ -24,17 +24,16 @@ Countly.q.push(['collect_from_forms']);
   cly.onload = function(){Countly.init()};
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 
-  const divs = document.querySelectorAll('.Oneplay');
+  const divs = document.querySelectorAll('.loginClicked');
 
   divs.forEach(el => el.addEventListener('click', event => {
     Countly.add_event({
-      key:"home_button_clicked", 
-      count: 1,
+      key:"loginClicked", 
       // segmentation: {
       //   "id": ob.id
       // }
     });
-    console.log('You clicked Oneplay');
+    console.log('You clicked loginClicked');
   }));
 
 })();
