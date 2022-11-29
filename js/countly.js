@@ -23,4 +23,18 @@ Countly.q.push(['collect_from_forms']);
   cly.src = 'https://countly.dev.oneplay.co/sdk/web/countly.min.js';
   cly.onload = function(){Countly.init()};
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+
+  const divs = document.querySelectorAll('.Oneplay');
+
+  divs.forEach(el => el.addEventListener('click', event => {
+    Countly.add_event({
+      key:"home_button_clicked", 
+      count: 1,
+      // segmentation: {
+      //   "id": ob.id
+      // }
+    });
+    console.log('You clicked Oneplay');
+  }));
+
 })();
