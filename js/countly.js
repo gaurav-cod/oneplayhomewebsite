@@ -24,16 +24,16 @@ Countly.q.push(['collect_from_forms']);
   cly.onload = function(){Countly.init()};
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 
-  const divs = document.querySelectorAll('.loginClicked');
+  const divs = document.querySelectorAll('.SubscriptionClicked');
 
   divs.forEach(el => el.addEventListener('click', event => {
     Countly.add_event({
-      key:"loginClicked", 
+      key:"SubscriptionClicked", 
       // segmentation: {
       //   "id": ob.id
       // }
     });
-    console.log('You clicked loginClicked');
+    console.log('You clicked SubscriptionClicked');
   }));
 
 })();
