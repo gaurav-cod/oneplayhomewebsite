@@ -54,7 +54,11 @@
     }
 
     .padding100 {
-        padding-top: 60px !important;
+        padding-top: 0px !important;
+    }
+
+    .paddingRemove {
+        padding-top: 0px !important;
     }
 
     .font28 {
@@ -96,7 +100,7 @@
     }
 
     .marginTopMobile {
-        margin-top: 40px;
+        margin-top: 40px !important;
     }
 
     .h60 {
@@ -477,6 +481,11 @@ body {
     margin-left: 4px;
     margin-right: 16px;
     border-radius: 4px;
+}
+
+.buttonPB {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
 }
 
 .navbarText .navbar-nav .nav-link {
@@ -1141,7 +1150,7 @@ input, textarea {
 .customCareerTab {
     overflow-x: auto;
     overflow-y:hidden;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
  }
  .customCareerTab .nav-link {
    white-space: nowrap;
@@ -1186,4 +1195,14 @@ input, textarea {
 
 .negativeMargin {
     margin-top: -105px !important;
+}
+
+.scrollTab {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scrollTab > li {
+    float: none;
+    display: inline-block;
 }
