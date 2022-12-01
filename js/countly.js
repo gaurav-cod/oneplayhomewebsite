@@ -5,6 +5,8 @@ Countly.q = Countly.q || [];
 //provide countly initialization parameters
 Countly.app_key = '293826549c121b1284fd77dc1d359235126c6318';
 Countly.url = 'https://countly.dev.oneplay.co';
+Countly.debug = true;
+Countly.app_version = "1.2";
 
 Countly.q.push(['track_sessions']);
 Countly.q.push(['track_pageview']);
@@ -38,6 +40,16 @@ Countly.q.push(["track_performance", {
   }
 }]);
 
+function countlyEvent(ob){
+  Countly.add_event({
+    key: ob.id, 
+    segmentation: {
+      "id": ob.id
+    }
+  });
+  console.log('You clicked OneplayEvent',ob.id);
+}
+
 //load countly script asynchronously
 (function() {
   var cly = document.createElement('script'); cly.type = 'text/javascript';
@@ -47,13 +59,13 @@ Countly.q.push(["track_performance", {
   cly.onload = function(){Countly.init()};
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 
-  const divs = document.querySelectorAll('.OneplayEvent');
+  // const divs = document.querySelectorAll('.OneplayEvent');
 
-  divs.forEach(el => el.addEventListener('click', event => {
-    Countly.add_event({
-      key:"OneplayEvent", 
-    });
-    console.log('You clicked OneplayEvent');
-  }));
+  // divs.forEach(el => el.addEventListener('click', event => {
+  //   Countly.add_event({
+  //     key:"OneplayEvent", 
+  //   });
+  //   console.log('You clicked OneplayEvent');
+  // }));
 
 })();
