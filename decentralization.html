@@ -1,339 +1,523 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>OnePlay | Cloud Gaming | Cloud PC</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
+    <head>
 
-    <link rel="stylesheet" href="./styles/styles.css" />
-  </head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
 
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-section navbar-transparent forblurbackground"
-    >
-      <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img src="assets/logo 1.svg" alt="" class="light-version-logo" />
-          <span class="beta">BETA</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                aria-current="page"
-                href="./index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./subscription.html"
-                >Subscription</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./games.html">Games</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active fw-bold" href="./download.html"
-                >Download</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active fw-bold"
-                href="./decentralization.html"
-                target="_blank"
-                >Decentralization</a
-              >
-            </li>
-          </ul>
-          <form class="d-flex">
-            <a
-              id="speed-test"
-              href=""
-              class="btn btn-link text-decoration-none text-light"
-            >
-              <i class="fas fa-tachometer-alt"></i>
-            </a>
-            <a
-              id="login"
-              href=""
-              class="btn btn-link text-decoration-none text-light me-2"
-              >Login</a
-            >
-            <a
-              id="signup"
-              href=""
-              class="btn btn-outline-light signup-button"
-              type="submit"
-              >Sign up</a
-            >
-            <button
-              id="logout"
-              class="btn btn-outline-light signup-button"
-              type="button"
-              onclick="handleLogout()"
-            >
-              Logout
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+        <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
 
-    <div
-      class="video-section row-hero d-flex flex-column justify-content-center negativeMarginTop paddingTop"
-    >
-      <div class="video-parallax">
-        <video id="mVideo" autoplay muted loop>
-          <source src="./assets/decentralize/ddy.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="backdrop"></div>
-
-      <div class="drivesection-button" style="z-index: 10">
-        <p class="main-text">Decentralized Cloud Streaming</p>
-        <p class="main-sub-text">
-          Focusing on streaming games to the end user in a cross platform and
-          hardware agnostic architecture.
-        </p>
-        <a id="signup" href="" class="btn getstarted-button">Get started</a>
-      </div>
-    </div>
-
-    <div class="p-3 p-md-5 decentralize-desc">
-      <div class="text-center">
-        <p class="mt-3 mb-5 text-white mx-auto" style="max-width: 720px">
-          We are building the foundation of OneCloud Network with a
-          decentralised edge based internet infastructure design in road-map
-          where anyone can host their Game/VR/Meta-Verse App & Services across
-          the distributed nodes and share a peer-to-peer infrastructure for
-          running the next generation Web 3.0.
-        </p>
-      </div>
-      <div class="py-3"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <div class="card bg-black" style="border-radius: 40px">
-              <div class="text-center text-md-start card-body px-md-5 py-5">
-                <h2 class="text-white fw-bold">What are we doing now</h2>
-                <p class="text-white mb-4">
-                  We are building Netflix of gaming where a user can instantly
-                  access catalog of 1000's of games and play them instantly in
-                  cross-platform from the nearest node without having to worry
-                  about the hardware.
-                </p>
-                <img
-                  src="./assets/decentralize/smite-neon-hero-j6.png"
-                  style="width: 100%"
-                  alt=""
-                />
-              </div>
+        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+  
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 sticky-top bgBlur">
+            <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="login" href="">Login</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link activenav" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" onclick="countlyEvent(this)" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="card bg-black" style="border-radius: 40px">
-              <div class="text-center text-md-start card-body px-md-5 py-5">
-                <h2 class="text-white fw-bold">
-                  What we are building in the basement
-                </h2>
-                <p class="text-white mb-4">
-                  A peer-to-peer supercomputing infrastructure network to run
-                  technically anything possible.
-                </p>
-                <img
-                  src="./assets/decentralize/C5P9P8vwkybwR2Gh7NkxfV.png"
-                  style="width: 100%"
-                  alt=""
-                />
-              </div>
+        </nav>
+        <div class="container-fluid decentralizationBg centerTextResponsive">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5 align-self-center text-white pt-5 pb-5 order-2 order-lg-1 order-md-1">
+                        <h1 class="font50 font800">
+                            Decentralized Cloud Streaming
+                        </h1>
+                        <p class="font20 font500 mt-4">
+                            Focusing on streaming games to the end user in 
+                            a cross platform and hardware agnostic architecture.
+                        </p>
+                    </div>
+                    <div class="col-md-7 pt-5 pb-lg-5 order-1">
+                        <img src="./assets/decentralization/banner 1.webp" class="img-fluid" alt="" />
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="py-3"></div>
-    </div>
-
-    <div
-      class="p-lg-5 p-md-4 p-3 py-5 text-center"
-      style="background-color: #16132c"
-    >
-      <h2
-        class="display-6 text-white mt-3 mb-5 mt-lg-5 mx-auto fw-bold"
-        style="max-width: 690px"
-      >
-        How What Who?
-      </h2>
-      <div class="container text-start mb-5" style="max-width: 900px">
-        <div id="accordion"></div>
-      </div>
-    </div>
-
-    <div class="gameplay-section banner">
-      <div class="container-sm pt-3">
-        <h2 class="text-center text-white fw-bold my-5">Roadmap</h2>
-        <ul id="roadmap" class="timeline text-white"></ul>
-      </div>
-    </div>
-
-    <footer class="py-5 footer-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <img
-              src="assets/logo 1.svg"
-              alt=""
-              class="light-version-logo-footer"
-              width="200"
-            />
-            <span class="beta">BETA</span>
-            <div style="width: min-content" class="social-icons m-auto">
-              <ul class="pl-0 list-unstyled d-flex align-items-end">
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://www.facebook.com/ONEPLAYIN" target="_blank">
-                    <i class="fab fa-facebook facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a
-                    href="https://www.instagram.com/oneplaycloudgaming/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center">
-                  <a href="https://twitter.com/CloudOneplay" target="_blank">
-                    <i class="fab fa-twitter facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://medium.com/@oneplay_gaming" target="_blank">
-                    <i class="fab fa-medium facebook-icon"></i>
-                  </a>
-                </li>
-                <li class="d-flex flex-column justify-content-center me-2">
-                  <a href="https://discord.gg/CyNeDNNrZs" target="_blank">
-                    <i class="fab fa-discord facebook-icon"></i>
-                  </a>
-                </li>
-              </ul>
+        <div class="container-fluid borderBottom">
+            <div class="container centerTextResponsive">
+                <div class="row">
+                    <div class="col-md-6 borderRight custompaddingTop100 paddingBottom100 removePaddingBottom">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 col-md-8 col-8">
+                                <img src="./assets/decentralization/games 1.svg" class="img-fluid" alt="" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-md-9">
+                                <p class="font38 font700 text-white mb-0">Play games without having to worry about the hardware.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ps-lg-5 ps-md-5 custompaddingTop100 paddingBottom100">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 col-md-8 col-8">
+                                <img src="./assets/decentralization/computing 1.svg" class="img-fluid" alt="" />
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-md-12">
+                                <p class="font38 font700 text-white mb-0">Computing infrastructure network to run technically anything possible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-12 col-lg-2"></div>
-          <div class="col-12 col-lg-3"></div>
-          <div class="col-12 col-lg-3">
-            <ul class="list-unstyled mt-5 text-center text-md-start">
-              <li class="mb-2">
-                <a
-                  href="./system requirement.html"
-                  class="text-decoration-none text-white-50"
-                  >System Requirements</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./about.html"
-                  class="text-decoration-none text-white-50"
-                  >About Us</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./subscription.html"
-                  class="text-decoration-none text-white-50"
-                  >Pricing</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./contact.html"
-                  class="text-decoration-none text-white-50"
-                  >Contact Us</a
-                >
-              </li>
-              
-              <li class="mb-2">
-                <a
-                  href="./career.html"
-                  class="text-decoration-none text-white-50"
-                  >Career</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./decentralization.html"
-                  class="text-decoration-none text-white-50"
-                  >Decentralization</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./privacy.html"
-                  class="text-decoration-none text-white-50"
-                  >Privacy Policy</a
-                >
-              </li>
-              <li class="mb-2">
-                <a
-                  href="./tnc.html"
-                  class="col-lg-2 col-md-12 text-decoration-none text-white-50"
-                  >Terms of Service</a
-                >
-              </li>
-            </ul>
-          </div>
         </div>
-        <hr class="bg-white" />
-        <p class="text-white-50 text-center text-md-start ms-4">
-          © 2022 RainBox Media Pvt Ltd. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
+        <div class="container custompaddingTop100 centerTextResponsive">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-white text-center">
+                    <h1 class="font50 font800">
+                        Token per Minute Ratio
+                    </h1>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7 col-md-11">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                Earn or Spend OnePlay coins. Rent your hardware to run either
+                                the Open Metaverse or any Game.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="./assets/decentralization/Group.svg" class="img-fluid mt-5" alt="" />
+                    <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custompaddingTop100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        <div class="container centerTextResponsive">
+            <div class="row">
+                <div class="col-md-6 text-end align-self-center custompaddingTop100">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-7 col-7">
+                            <img src="./assets/decentralization/Hosters.svg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center custompaddingTop100">
+                    <div class="row responsiveContent">
+                        <div class="col-lg-8 col-11">
+                            <h1 class="font50 font800 text-white">
+                                Hosters
+                            </h1>
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                Rent your hardware to run either the Open Metaverse or any Game.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 align-self-center custompaddingTop100 order-2 order-lg-1 order-md-1">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-11">
+                            <h1 class="font50 font800 text-white">
+                                Developers
+                            </h1>
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                Develop Game/VR App/DApp and let us distribute & run it over the decentralized network and 
+                                deliver it to the end user.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center custompaddingTop100 order-1">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-7 col-7">
+                            <img src="./assets/decentralization/developers.svg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-end align-self-center custompaddingTop100">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-7 col-7">
+                            <img src="./assets/decentralization/consumer.svg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center custompaddingTop100">
+                    <div class="row responsiveContent">
+                        <div class="col-lg-10 col-11">
+                            <h1 class="font50 font800 text-white">
+                                Consumers
+                            </h1>
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                Whether it's a FIFA game with friends or joining a tour of 
+                                7 Worlds in VR or Using the DApp, all running/streaming 
+                                directly from the nearest edge nodes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 align-self-center custompaddingTop100 order-2 order-lg-1 order-md-1">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 col-11">
+                            <h1 class="font50 font800 text-white">
+                                For the chain breakers
+                            </h1>
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                Open source OS, Network & Streaming Technology,host 
+                                or run your own node or connect to the network 
+                                to run the next generation internet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center custompaddingTop100 order-1">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-7 col-7">
+                            <img src="./assets/decentralization/chain_breakers.svg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 text-end align-self-center custompaddingTop100">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-md-7 col-7">
+                            <img src="./assets/decentralization/gems 1.svg" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 align-self-center custompaddingTop100">
+                    <div class="row responsiveContent">
+                        <div class="col-lg-9 col-11">
+                            <h1 class="font50 font800 text-white">
+                                Open Gems Behind
+                            </h1>
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                                KVM, CentOS, Ubuntu, Windows 10, Sunshine, 
+                                Moonlight, WebRTC, Angular, Python.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custompaddingTop100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        <div class="container custompaddingTop100">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h1 class="font50 font800 text-white">
+                        Rent Your Server
+                    </h1>
+                    <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                        Want to earn OnePlay coins? learn more about
+                    </p>
+                    <p class="font20 font500 offWhiteColor">
+                        renting your own server.
+                    </p>
+                    <p class="mb-5"><img src="./assets/decentralization/rent 1.svg" class="img-fluid mt-5" alt="" /></p>
+                    <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="signup" onclick="countlyEvent(this)" href="">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custompaddingTop100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        <div class="container custompaddingTop100">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="font50 font800 text-white">
+                        Roadmap
+                    </h1>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white pb-2">2021</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <div class="bordergradient"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Website & Dashboard & Mac/ Windows Application over Moonlight Port</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <div class="bordergradient"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Backend using Proxmox, Python, QTC++, Node, Custom Sunshine Port</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white pb-2">2022</h3>
+                            <div class="bordergradient"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor mb-4">Android Client based on Moonlight with custom OnePlay Integration - Beta</p>
+                            <p class="font20 font500 offWhiteColor mb-4">Live Streaming Integration for Streaming directly to Youtube/Twitch etc - Beta</p>
+                            <p class="font20 font500 offWhiteColor">Acquire Custom Servers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <div class="bordergradient"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor mb-4">Bug Fixing & End2End Integration</p>
+                            <p class="font20 font500 offWhiteColor mb-4">Going fully open source from server & client side</p>
+                            <p class="font20 font500 offWhiteColor">WebRTC Implementation for Gaming over Browser</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <div class="bordergradient"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">VR Client for Oculus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Release First OneOS designed for de-centralized cloud gaming - open source</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white pb-2">2023</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Run your own node or join the OnePlay Network - completely open source over blockchain for decentralized cloud gaming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Custom Servers tuned for Cloud Streaming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Bring More open nodes to join the decentralized network</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 mt-5">
+                    <div class="card bgTransparent border-0">
+                        <div class="card-header ps-0 border-0">
+                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <div class="defaultBorder"></div>
+                        </div>
+                        <div class="card-body ps-0">
+                            <p class="font20 font500 offWhiteColor">Run Custom DApp/Meta-Verse App or 3D application over the decentralized network for Developers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custompaddingTop100">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        <div class="container custompaddingTop100">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                    </a>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-6 mt-5">
+                            <p class="footerFont font600 text-white">Company</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
+                            <p class="footerFont font600 text-white">Boring Stuff</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
+                            <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                            
+                            <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                <div class="col-12 text-center mb-4">
+                                    <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.instagram.com/oneplaycloudgaming/" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mb-4 mt-4">
+            <div class="row">
+                <div class="col-md-12 p-lg-0">
+                    <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                    <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                </div>
+            </div>
+        </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="./js/config.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/roadmap.js"></script>
-    <script src="./js/decentralized.js"></script>
-    <script src="./js/countly.js"></script>
-    
-  </body>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
+        <!--Countly script-->
+        <script type="text/javascript" src="./js/countly.js"></script>
+    </body>
 </html>
+

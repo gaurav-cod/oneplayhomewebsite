@@ -144,6 +144,27 @@
         width: 100px;
         height: 100px;
     }
+
+    .custompaddingTop100 {
+        padding-top: 60px !important;
+    }
+
+    .paddingBottom100 {
+        padding-bottom: 60px !important;
+    }
+
+    .removePaddingBottom {
+        padding-bottom: 60px !important;
+    }
+
+    .responsiveContent {
+        justify-content: center !important;
+    }
+
+    .borderRight {
+        border-right: none!important;
+        border-bottom: 1px solid #3E4246;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -1205,4 +1226,34 @@ input, textarea {
 .scrollTab > li {
     float: none;
     display: inline-block;
+}
+
+.decentralizationBg {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+}
+
+.borderRight {
+    border-right: 1px solid #3E4246;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #3E4246;
+}
+
+.paddingBottom100 {
+    padding-bottom: 100px;
+}
+
+.defaultBorder {
+    height: 2px;
+    background-color: #3E4246;
+}
+
+.bordergradient {
+    height: 2px;
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+}
+
+.custompaddingTop100 {
+    padding-top: 100px;
 }
