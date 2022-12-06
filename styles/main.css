@@ -54,7 +54,7 @@
     }
 
     .padding100 {
-        padding-top: 0px !important;
+        padding-top: 70px !important;
     }
 
     .paddingRemove {
@@ -165,7 +165,16 @@
         border-right: none!important;
         border-bottom: 1px solid #3E4246;
     }
+
+    .contentcenterresponsive {
+        justify-content: center;
+    }
+
+    .paddingtopres100 {
+        padding-top: 10px !important;
+    }
 }
+
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
@@ -221,8 +230,8 @@
     }
 
     .font50 {
-        font-size: 35px !important;
-        line-height: 45px !important;
+        font-size: 33px !important;
+        line-height: 40px !important;
     }
     
     table {
@@ -234,6 +243,14 @@
     .mr130 {
         margin-right: -70px !important;
     } 
+
+    .paddingRemove {
+        padding-top: 0px !important;
+    }
+
+    .paddingtopres100 {
+        padding-top: 10px !important;
+    }
     
 }
 
@@ -1255,5 +1272,9 @@ input, textarea {
 }
 
 .custompaddingTop100 {
+    padding-top: 100px;
+}
+
+.paddingtopres100 {
     padding-top: 100px;
 }
