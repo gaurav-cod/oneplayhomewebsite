@@ -199,10 +199,6 @@
         text-align: center;
     }
 
-    .tabPaddingTop {
-        padding-top: 100px;
-    }
-
     .wrapper {
         height: 300px !important;
     }
@@ -264,12 +260,11 @@
 
     .lineBg {
         background-image: url('../assets/home/Group\ 392.svg') !important;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-origin: border-box;
-        margin-top: -400px;
         
+    }
+
+    .padding200 {
+        padding-top: 150px !important;
     }
     
 }
