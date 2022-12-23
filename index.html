@@ -14,12 +14,12 @@
     <link href="./styles/main.css" rel="stylesheet" />
     <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
 
-    <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+    <title data-i18n-key="titlesection">OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
   
   </head>
   <body>
     <div class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0" role="alert">
-      <p class="mb-0 font16 font500 text-white text-center">OnePlay uses cookies to ensure the best experience. By continuing to use this website, you agree to OnePlay’s <a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-white">Privacy policy</a> & <a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-white">Cookie policy</a>.</p>
+      <p class="mb-0 font16 font500 text-white text-center"><span data-i18n-key="alertText">OnePlay uses cookies to ensure the best experience. By continuing to use this website, you agree to OnePlay’s</span> <a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" data-i18n-key="nav-privacypolicy" class="text-white">Privacy policy</a> & <a href="./tnc.html" data-i18n-key="nav-t&c" id="t&c" onclick="countlyEvent(this)" class="text-white">Cookie policy</a>.</p>
       <button type="button" class="btn-close removeFocus removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
     </div>
     <!-- Navbar Section Start -->
@@ -29,24 +29,37 @@
           <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
         </button>
         <a class="navbar-brand float-left" href="./index.html">
-          <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+          <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta" data-i18n-key="sublogo">BETA</span>
         </a>
-        <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-0" id="login" href="">Login</a></span>
+        <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-0" id="login" data-i18n-key="nav-login" href="">Login</a></span>
         
         <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
             <li class="nav-item me-3">
-              <a class="nav-link activenav" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link activenav" id="home" onclick="countlyEvent(this)" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
+              <a class="nav-link" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
+              <a class="nav-link" id="download" onclick="countlyEvent(this)" data-i18n-key="nav-download" href="./download.html">Download</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
+              <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html" target="_blank">Decentralization</a>
             </li>
+            <li class="nav-item">
+              <select data-i18n-switcher class="form-select">
+                <option value="english">English</option>
+                <option value="hindi">Hindi (हिंदी)</option>
+                <option value="arabic">Arabic (العربية)</option>
+                <option value="korean">Korean (한국인)</option>
+                <option value="malay">Malay (Melayu)</option>
+                <option value="russian">Russian (Melayu)</option>
+                <option value="persian">Persian (فارسی)</option>
+                <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
+                <option value="urdu">Urdu (اردو)</option>
+              </select>
+          </li>
           </ul>
           <form class="desktopView">
             <div class="row">
@@ -54,21 +67,21 @@
                 <a role="button" class="btn removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid " alt="dashboard" /></a>
               </div>
               <div class="col-auto align-self-center ps-0">
-                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle loginClicked" id="login" onclick="countlyEvent(this)" href="">Log in</a>
+                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle loginClicked" data-i18n-key="nav-login" id="login" onclick="countlyEvent(this)" href="">Log in</a>
               </div>
               <div class="col-auto align-self-center ps-0">
-                <a role="button" class="btn btn-lg border-0 font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                <a role="button" class="btn btn-lg border-0 font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
               </div>
             </div>
           </form>
           <div class="MobileView">
             <hr class="hrBorderColor mb-4"/>
-            <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
-            <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
-            <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+            <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+            <p><span class="offWhiteColor font18 font500"><span data-i18n-key="nav-needhelp">Need help?</span><span class="gradientAnchor"><a href="#" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span></span></p>
+            <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
             <p class="font16 font500 gradientAnchor">
-              <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-              <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+              <a href="privacy.html" class="anchor" id="privacy" data-i18n-key="nav-privacypolicy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+              <a href="./tnc.html" class="anchor" id="t&c" data-i18n-key="nav-t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
             </p>
           </div>
         </div>
@@ -82,10 +95,10 @@
         <div class="col-lg-6 col-md-6 mt-5 align-self-center pe-lg-5">
           <div class="row">
             <div class="col-lg-10">
-              <h1 class="text-white font50 font800">
+              <h1 class="text-white font50 font800" data-i18n-key="heading">
                 LIVE the adventure with OnePlay
               </h1>
-              <p class="font20 font500 offWhiteColor mt-4 pe-lg-5 me-lg-5">
+              <p class="font20 font500 offWhiteColor mt-4 pe-lg-5 me-lg-5" data-i18n-key="subheading">
                 Run your favorite games without the
                 hassle of owning any hardware
               </p>
@@ -94,14 +107,14 @@
           <div class="gradientBorderbottom mt-4 mb-4 negativeLeft"></div>
           <div class="row">
             <div class="col mt-3">
-              <p class="font20 font500 customOffWhite mb-0">Wait List</p>
-              <h1 class="font38 font700 text-white">14K+</h1>
+              <p class="font20 font500 customOffWhite mb-0" data-i18n-key="waitList">Wait List</p>
+              <h1 class="font38 font700 text-white" data-i18n-key="waitlistCount">14K+</h1>
               <div class="row contentcenterresponsive">
                 <div class="col-auto">
-                  <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="signup" onclick="countlyEvent(this)" href="">Join Today</a>
+                  <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="signup" data-i18n-key="jointoday" onclick="countlyEvent(this)" href="">Join Today</a>
                 </div>
                 <div class="col-auto align-self-center">
-                  <a role="button" href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 pt-4 btn-lg offWhiteColor font500 removeFocus border-0 ms-3 d-none d-sm-block d-md-none d-lg-block"><i class="fa-brands fa-discord me-3 font28 customOffWhite align-middle"></i>Join Discord</a>
+                  <a role="button" href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 pt-4 btn-lg offWhiteColor font500 removeFocus border-0 ms-3 d-none d-sm-block d-md-none d-lg-block"><i class="fa-brands fa-discord me-3 font28 customOffWhite align-middle"></i><span data-i18n-key="joindiscord">Join Discord</span></a>
                 </div>
               </div>
             </div>
@@ -129,30 +142,30 @@
         <div class="col-lg-7 col-md-6 align-self-center mt-5">
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <h1 class="text-white font50 font800 pe-lg-5">
+              <h1 class="text-white font50 font800 pe-lg-5" data-i18n-key="heading2">
                 Play on any device of your choice
               </h1>
-              <p class="font20 font500 offWhiteColor mt-4">
+              <p class="font20 font500 offWhiteColor mt-4" data-i18n-key="subheading2">
                 Accessible and affordable gaming for everyone 
                 with just 20-40 Mbps speed and 4G & 5G network
               </p>
-              <a role="button" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" onclick="countlyEvent(this)" href="">Get Started</a>
+              <a role="button" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" onclick="countlyEvent(this)" href="" data-i18n-key="getStarted">Get Started</a>
             </div>
           </div>
         </div>
       </div>
       <div class="row padding200 text-center removePaddingTop marginNegativeTop">
         <div class="col-md-12 mt-5">
-          <h1 class="text-white font50 font800">
+          <h1 class="text-white font50 font800" data-i18n-key="heading3">
             Play . Stream . Compete . Level up
           </h1>
           <div class="row justify-content-center">
             <div class="col-lg-5 col-md-9 text-center mt-4">
-              <p class="font20 font500 offWhiteColor">
+              <p class="font20 font500 offWhiteColor" data-i18n-key="subheading3">
                 Play & chat with your friends, stream Live Games,
                 & discover your competition.
               </p>
-              <a role="button" class="btn border-0 font16 text-white font500 removeFocus linearGradient mt-4" href="">Coming Soon</a>
+              <a role="button" class="btn border-0 font16 text-white font500 removeFocus linearGradient mt-4" data-i18n-key="commingsoon" href="">Coming Soon</a>
             </div>
           </div>
         </div>
@@ -160,7 +173,7 @@
       <div class="row">
         <div class="col-md-3 col-6 mt-5 align-self-center text-center desktopView">
           <img src="./assets/home/Chat.svg" class="img-fluid" alt="dash" />
-          <p class="mt-4 font20 font500 offWhiteColor mb-0">Chat with friends</p>
+          <p class="mt-4 font20 font500 offWhiteColor mb-0" data-i18n-key="chatFriends">Chat with friends</p>
         </div>
         <div class="col-md-6 mt-5 text-center">
           <img src="./assets/home/pubg_character 4 (1).svg" class="img-fluid" alt="dash" />
@@ -169,7 +182,7 @@
           <div class="row">
             <div class="col-8 col-lg-12">
               <img src="./assets/home/Chat.svg" class="img-fluid" alt="dash" />
-              <p class="mt-4 font20 font500 offWhiteColor mb-0">Chat with friends</p>
+              <p class="mt-4 font20 font500 offWhiteColor mb-0" data-i18n-key="chatFriends">Chat with friends</p>
             </div>
           </div>
         </div>
@@ -177,7 +190,7 @@
           <div class="row justify-content-end">
             <div class="col-8 col-lg-12">
               <img src="./assets/home/Level_up.svg" class="img-fluid" alt="dash" />
-              <p class="mt-4 font20 font500 offWhiteColor mb-0">Level up your gaming</p>
+              <p class="mt-4 font20 font500 offWhiteColor mb-0" data-i18n-key="levelUp">Level up your gaming</p>
             </div>
           </div>
         </div>
@@ -188,15 +201,15 @@
         <div class="col-md-9 col-lg-10 text-center">
           <div class="row justify-content-center">
             <div class="col-lg-6 text-center">
-              <h1 class="text-white font50 font800 mb-2">
+              <h1 class="text-white font50 font800 mb-2" data-i18n-key="heading4">
                 Powered by
               </h1>
-              <h1 class="text-white font50 font800 mb-2">
+              <h1 class="text-white font50 font800 mb-2" data-i18n-key="heading4-1">
                 Decentralised Network
               </h1>
-              <p class="font20 font500 offWhiteColor mt-4 mb-0">Open source OS, Network & Streaming,</p>
-              <p class="font20 font500 offWhiteColor">host or run your own node.</p>
-              <a role="button" class="btn border-0 font16 text-white font500 removeFocus linearGradient mt-4" href="">Coming Soon</a>
+              <p class="font20 font500 offWhiteColor mt-4 mb-0" data-i18n-key="subheading4">Open source OS, Network & Streaming,</p>
+              <p class="font20 font500 offWhiteColor" data-i18n-key="subheading4-1">host or run your own node.</p>
+              <a role="button" class="btn border-0 font16 text-white font500 removeFocus linearGradient mt-4" data-i18n-key="commingsoon" href="">Coming Soon</a>
             </div>
           </div>
           <div class="row justify-content-center">
@@ -206,7 +219,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-12 col-md-12 col-8">
-              <p class="mt-5 mb-0 font20 font500 offWhiteColor">Rent out your own server, Learn more about <span class="purpleGradient">B2B</span></p>
+              <p class="mt-5 mb-0 font20 font500 offWhiteColor"><span data-i18n-key="rentOut">Rent out your own server, Learn more about</span> <span class="purpleGradient" data-i18n-key="b2b">B2B</span></p>
             </div>
           </div>
         </div>
@@ -220,16 +233,16 @@
         <div class="col-lg-6 col-md-6 mt-5 align-self-center">
           <div class="row">
             <div class="col-md-12 col-lg-9">
-              <h1 class="text-white font50 font800">
+              <h1 class="text-white font50 font800" data-i18n-key="heading5">
                 Enjoy Tripple AAA games
               </h1>
             </div>
-            <div class="col-md-12 col-lg-9 mt-4">
-              <p class="font20 font500 offWhiteColor">
+            <div class="col-md-12 col-lg-8 mt-4">
+              <p class="font20 font500 offWhiteColor" data-i18n-key="subheading5">
                 Choose from a collection of Games At Your Fingertips
               </p>
-              <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="browseGame" onclick="countlyEvent(this)" href="#">Browse Games</a>
-              <p class="font20 font500 offWhiteColor pe-lg-4 mt-5">
+              <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="browseGame" data-i18n-key="btn-browseGame" onclick="countlyEvent(this)" href="#">Browse Games</a>
+              <p class="font20 font500 offWhiteColor pe-lg-4 mt-5" data-i18n-key="subheading5-1">
                 We support all major stores
               </p>
             </div>
@@ -276,8 +289,8 @@
           <div class="row justify-content-center">
             <div class="col-10 col-md-12">
               <img src="./assets/home/Latency.svg" class="img-fluid wh100" alt="dash" />
-              <p class="mt-4 mb-0 font38 font700 text-white">Low latency</p>
-              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
+              <p class="mt-4 mb-0 font38 font700 text-white" data-i18n-key="lowLatency">Low latency</p>
+              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4" data-i18n-key="lowLatency-para">
                 High performance, unlimited frame rates, & low latency to offer you
                 the best experience.
               </p>
@@ -288,8 +301,8 @@
           <div class="row justify-content-center">
             <div class="col-10 col-md-12">
               <img src="./assets/home/Sync.svg" class="img-fluid wh100" alt="dash" />
-              <p class="mt-4 mb-0 font38 font700 text-white">Sync Instantly</p>
-              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
+              <p class="mt-4 mb-0 font38 font700 text-white" data-i18n-key="syncinstantly">Sync Instantly</p>
+              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4" data-i18n-key="syncinstantly-para">
                 Relish the experience of a native Windows 10 PC with a click 
                 of a button.
               </p>
@@ -300,8 +313,8 @@
           <div class="row justify-content-center">
             <div class="col-10 col-md-11 col-lg-10">
               <img src="./assets/home/4K 1.svg" class="img-fluid wh100" alt="dash" />
-              <p class="mt-4 mb-0 font38 font700 text-white">Supports 4K</p>
-              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4">
+              <p class="mt-4 mb-0 font38 font700 text-white" data-i18n-key="Supports">Supports 4K</p>
+              <p class="font20 font500 offWhiteColor pe-lg-4 mt-4" data-i18n-key="Supports-para">
                 High definition streaming with 4K resolution gives you an immersive gaming experience.
               </p>
             </div>
@@ -319,12 +332,12 @@
       <div class="container">
         <div class="row padding50 justify-content-center centerTextResponsive">
           <div class="col mt-4 align-self-center">
-            <h1 class="text-white font50 font800 mb-0">
+            <h1 class="text-white font50 font800 mb-0" data-i18n-key="stayUpdated">
               Stay Updated
             </h1>
           </div>
           <div class="col-lg-auto col-md-auto col-12 mt-4 align-self-center borderRadius60">
-            <a href="https://medium.com/@oneplay_gaming" id="browseArticles" onclick="countlyEvent(this)" class="btn btn-lg font20 text-white font500 removeFocus gradientBorder align-middle"><span class="ps-4 pe-4 lineHeight40">Browse Articles</span></a>
+            <a href="https://medium.com/@oneplay_gaming" id="browseArticles" onclick="countlyEvent(this)" class="btn btn-lg font20 text-white font500 removeFocus gradientBorder align-middle"><span class="ps-4 pe-4 lineHeight40" data-i18n-key="btn-browseArticles">Browse Articles</span></a>
           </div>
         </div>
         <div class="row centerTextResponsive">
@@ -337,11 +350,11 @@
                   <img src="./assets/home/Rectangle 91.svg" class="img-fluid" alt="blog" />
                 </div>
                 <div class="col-lg-5 col-md-8 mt-3 mb-3 align-self-center">
-                  <h3 class="font28 font700 text-white">Build Your Own Market In The Universe Of NFTs</h3>
-                  <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 12, 2022 . Crypto currency</p>
+                  <h3 class="font28 font700 text-white" data-i18n-key="blog-1">Build Your Own Market In The Universe Of NFTs</h3>
+                  <p class="mb-0 mt-4 font20 font500 offWhiteColor" data-i18n-key="blog-1-date">Jun 12, 2022 . Crypto currency</p>
                 </div>
                 <div class="col-lg-4 col-md-12 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                  <a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none font20 font500">Read more<img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
+                  <a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none font20 font500"><span data-i18n-key="readMore">Read more</span><img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
                 </div>
               </div>
           </div>
@@ -354,11 +367,11 @@
                 <img src="./assets/home/Rectangle 91 (1).svg" class="img-fluid" alt="blog" />
               </div>
               <div class="col-lg-5 col-md-8 mt-3 mb-3 align-self-center">
-                <h3 class="font28 font700 text-white">Big Brands Too Want To Be A Part Of The NFT World</h3>
-                <p class="mb-0 mt-4 font20 font500 offWhiteColor">Jun 15, 2022 . NFT</p>
+                <h3 class="font28 font700 text-white" data-i18n-key="blog-2">Big Brands Too Want To Be A Part Of The NFT World</h3>
+                <p class="mb-0 mt-4 font20 font500 offWhiteColor" data-i18n-key="blog-2-date">Jun 15, 2022 . NFT</p>
               </div>
               <div class="col-lg-4 col-md-12 mt-3 mb-3 align-self-center text-end gradientAnchor">
-                <a href="https://medium.com/@oneplay_gaming/big-brands-too-want-to-be-a-part-of-the-nft-world-4ac6453f5e34" class="text-decoration-none font20 font500">Read more<img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
+                <a href="https://medium.com/@oneplay_gaming/big-brands-too-want-to-be-a-part-of-the-nft-world-4ac6453f5e34" class="text-decoration-none font20 font500"><span data-i18n-key="readMore">Read more</span><img src="./assets/home/Arrow_01.svg" class="img-fluid ms-2" alt="" /></a>
               </div>
             </div>
           </div>
@@ -375,15 +388,15 @@
                             <img src="./assets/home/laptop 1.svg" class="img-fluid marginTopNegative" alt="laptop" />
                           </div>
                           <div class="col-lg-7 col-md-7 ps-lg-5 pt-4 pb-4 customPadding5 align-self-center">
-                              <h1 class="font50 font800 mb-0">
+                              <h1 class="font50 font800 mb-0" data-i18n-key="heading6">
                                   Get OnePlay on
                               </h1>
-                              <h1 class="font50 font800 mb-0">
+                              <h1 class="font50 font800 mb-0" data-i18n-key="heading6-1">
                                   your favorite device
                               </h1>
-                              <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                              <a id="login" onclick="countlyEvent(this)" href="" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-0 mt-4">Get Started</a>
-                              <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn mt-4 text-white font22 font500 align-middle ms-lg-4"><u>Browse Plans</u></a>
+                              <p class="mt-4 font18 font500" data-i18n-key="subheading6">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
+                              <a id="login" onclick="countlyEvent(this)" href="" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-0 mt-4" data-i18n-key="getStarted">Get Started</a>
+                              <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn mt-4 text-white font22 font500 align-middle ms-lg-4"><u data-i18n-key="btn-browsePlans">Browse Plans</u></a>
                           </div>
                           <div class="col-lg-5 col-md-5 align-self-center p-0 desktopView">
                               <div class="mr130">
@@ -398,30 +411,30 @@
         <div class="row padding100">
           <div class="col-md-12">
             <a class="navbar-brand" href="./index.html">
-              <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+              <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta" data-i18n-key="sublogo">BETA</span>
             </a>
             <div class="row">
               <div class="col-md-6 col-lg-4 col-6 mt-5">
-                <p class="footerFont font600 text-white">Company</p>
+                <p class="footerFont font600 text-white" data-i18n-key="nav-company">Company</p>
                 <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none activenav">Home</a></li>
-                  <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none">About Us</a></li>
-                  <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
-                  <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Jobs</a></li>
-                  <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
-                  <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
+                  <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none activenav" data-i18n-key="nav-home">Home</a></li>
+                  <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                  <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-contact">Contact Us & FAQ's</a></li>
+                  <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-job">Jobs</a></li>
+                  <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                  <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                 </ul>
               </div>
               <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
-                <p class="footerFont font600 text-white">Boring Stuff</p>
+                <p class="footerFont font600 text-white" data-i18n-key="nav-boring">Boring Stuff</p>
                 <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                  <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none">Privacy Policy</a></li>
-                  <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
-                  <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
+                  <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                  <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                  <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
                 </ul>
               </div>
               <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
-                <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                <p class="footerFont font600 text-white" data-i18n-key="nav-accessDrop">Get Early Access Drops!</p>
                 <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                   <div class="col-12 text-center mb-4">
                     <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white font500 buttonPB removeFocus linearGradient borderRadius60 buttonPB border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
@@ -452,8 +465,8 @@
       <div class="container mb-4 mt-4">
         <div class="row">
           <div class="col-md-12">
-            <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
-            <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+            <p class="font16 font500 footerWhiteColor" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+            <p class="mt-4 font16 font500 mutedWhiteColor" data-i18n-key="nav-disclaimer">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
           </div>
         </div>
       </div>
@@ -516,6 +529,62 @@
          sessionStorage.setItem('#legalModal','true');     
         }
       });
+
+      const defaultLocale = "english";
+      let locale;
+      let translations = {};
+      // When the page content is ready...
+      async function setLocale(newLocale) {
+        if (newLocale === locale) return;
+        const newTranslations =
+        await fetchTranslationsFor(newLocale);
+        locale = newLocale;
+        translations = newTranslations;
+        // Set <html dir> attribute
+        document.documentElement.dir = dir(newLocale);
+        // Not necessary for direction flow, but for good measure...
+        document.documentElement.lang = newLocale;
+        translatePage();
+      }
+
+      function dir(locale) {
+        return locale === "arabic" ? "rtl" : "ltr";
+      }
+
+      async function fetchTranslationsFor(newLocale) {
+        const response = await fetch(`/lang/index/${newLocale}.json`);
+        return await response.json();
+      }
+
+      function translatePage() {
+        document
+        .querySelectorAll("[data-i18n-key]")
+        .forEach(translateElement);
+      }
+
+      function translateElement(element) {
+        const key = element.getAttribute("data-i18n-key");
+        const translation = translations[key];
+        element.innerText = translation;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        setLocale(defaultLocale);
+        bindLocaleSwitcher(defaultLocale);
+      });
+
+      // Whenever the user selects a new locale, we
+      // load the locale's translations and update
+      // the page
+
+      function bindLocaleSwitcher(initialValue) {
+        const switcher = document.querySelector("[data-i18n-switcher]");
+        switcher.value = initialValue;
+        switcher.onchange = (e) => {
+          // Set the locale to the selected option[value]
+          setLocale(e.target.value);
+        };
+      }
 
     </script>
   </body>
