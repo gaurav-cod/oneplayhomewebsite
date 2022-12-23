@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
 
         <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
     <body>
         <!-- Navbar Section Start -->
         <nav class="navbar navbar-expand-lg pt-4 pb-4 sticky-top bgBlur">
-            <div class="container-fluid ps-5 pe-5 customPadding">
+            <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
                 <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
                 </button>
@@ -32,46 +32,46 @@
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                            <a class="nav-link active" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="./subscription.html">Subscription</a>
+                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="./download.html">Download</a>
+                            <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+                            <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
                         </li>
                     </ul>
                     <form class="desktopView">
                         <div class="row">
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" onclick="countlyEvent(this)" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
                     <div class="MobileView">
                         <hr class="hrBorderColor mb-4"/>
-                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" href="">Sign Up</a>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
                         <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
                         <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                         <p class="font16 font500 gradientAnchor">
-                            <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-                            <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+                            <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
                         </p>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <div class="container mt-4 pe-lg-0 customonlyLeftPAdding customH1 centerTextResponsive">
+        <div class="container mt-lg-4 pe-lg-0 customonlyLeftPAdding customH1 centerTextResponsive">
             <div class="row">
                 <div class="col-lg-6 MobileView padding50 mb-4">
                     <img src="./assets/aboutus/Group 171.svg" class="img-fluid" alt="img" />
@@ -85,7 +85,7 @@
                         Stream your favorite games, anytime & on any device 
                         with your progress being saved in the cloud!
                     </p>
-                    <a role="button" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" href="">Get Started</a>
+                    <a role="button" class="btn border-0 btn-lg font20 text-white ps-5 pe-5 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" onclick="countlyEvent(this)" href="">Get Started</a>
                 </div>
                 <div class="col-md-6 align-self-center desktopView">
                     <div class="marginRightNegative">
@@ -94,14 +94,14 @@
                 </div>
             </div>
         </div>
-        <div class="container customLeftRightPadding customH1 centerTextResponsive tabPaddingTop">
+        <div class="container customLeftRightPadding customH1 centerTextResponsive pt-md-5">
             <div class="row justify-content-center">
-                <div class="col-md-5 col-8 text-end mt-5">
+                <div class="col-md-4 col-lg-5 col-8 text-end mt-5">
                     <img src="./assets/aboutus/nohardware 1.svg" class="img-fluid" alt="nohardware" />
                 </div>
-                <div class="col-md-7 align-self-center mt-5">
+                <div class="col-md-8 col-lg-7 align-self-center mt-5">
                     <div class="row justify-content-end">
-                        <div class="col-lg-11">
+                        <div class="col-lg-11 col-md-10">
                             <h1 class="text-white font50 font800">
                                 No need for high-end hardware
                             </h1>
@@ -116,9 +116,9 @@
                     <div class="col-md-5 col-8 MobileView mt-5">
                         <img src="./assets/aboutus/nodownloads 1.svg" class="img-fluid" alt="nohardware" />
                     </div>
-                    <div class="col-md-7 align-self-center mt-5">
+                    <div class="col-lg-7 col-md-8 align-self-center mt-5">
                         <div class="row">
-                            <div class="col-lg-9">
+                            <div class="col-lg-9 col-md-10">
                                 <h1 class="text-white font50 font800">
                                     No more downloads
                                     & updates
@@ -130,21 +130,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5 desktopView mt-5">
+                    <div class="col-lg-5 col-md-4 desktopView mt-5">
                         <img src="./assets/aboutus/nodownloads 1.svg" class="img-fluid" alt="nohardware" />
                     </div>
                 </div>
                 <div class="row justify-content-center mt-5">
-                    <div class="col-md-5 col-8 text-end mt-5">
+                    <div class="col-lg-5 col-md-4 col-8 text-end mt-5">
                         <img src="./assets/aboutus/gaminganywhere.svg" class="img-fluid" alt="nohardware" />
                     </div>
-                    <div class="col-md-7 align-self-center mt-5">
+                    <div class="col-lg-7 col-md-8 align-self-center mt-5">
                         <div class="row justify-content-end">
-                            <div class="col-md-11">
+                            <div class="col-lg-11 col-md-11">
                                 <h1 class="text-white font50 font800">
                                     Run your games anywhere
                                 </h1>
-                                <p class="font20 font500 offWhiteColor mt-4">
+                                <p class="font20 font500 offWhiteColor mt-4 pe-md-4">
                                     OnePlay makes gaming extremely portable and gives 
                                     you the independence to game anywhere & anytime.
                                 </p>
@@ -181,7 +181,7 @@
         </div>
         <div class="container padding200 customLeftRightPadding customH1">
             <div class="row">
-                <div class="col-lg-8 col-md-12 col-12">
+                <div class="col-lg-8 col-md-9 col-12">
                     <h1 class="text-white font50 font800">
                         The OnePlay team is a multicultural melting pot of competent & knowledgeable industry experts.
                     </h1>
@@ -287,17 +287,17 @@
                         to the next level in the world of gaming & network.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6 padding70 text-center">
+                <div class="col-lg-4 col-md-4 col-6 padding70 text-center">
                     <img src="./assets/TeamImg/tarun.webp" class="img-fluid rounded-border wh230" alt=" " />
                     <p class="font20 font600 mt-4 mb-0 text-white">Tarun Katial</p>
                     <p class="font20 font500 mb-0 offWhiteColor">CEO, Founder of EVE World</p>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6 padding70 text-center">
+                <div class="col-lg-4 col-md-4 col-6 padding70 text-center">
                     <img src="./assets/TeamImg/jitendra.webp" class="img-fluid rounded-border wh230" alt=" " />
                     <p class="font20 font600 mt-4 mb-0 text-white">Jitendra Gupta</p>
                     <p class="font20 font500 mb-0 offWhiteColor">CEO, Founder of Jupiter Money</p>
                 </div>
-                <div class="col-lg-4 col-md-12 padding70 desktopView centerTextResponsiveTab align-self-center">
+                <div class="col-lg-4 col-md-4 padding70 desktopView align-self-center">
                     <h1 class="text-white font50 font800 mt-4">
                         Our Mentors
                     </h1>
@@ -322,7 +322,7 @@
                         </h1>
                     </div>
                     <div class="col-lg-auto col-md-auto col-12 mt-4 align-self-center borderRadius60">
-                        <a href="https://medium.com/@oneplay_gaming" class="btn btn-lg font20 text-white font500 removeFocus gradientBorder align-middle"><span class="ps-4 pe-4 lineHeight40">Browse Articles</span></a>
+                        <a href="https://medium.com/@oneplay_gaming" class="btn btn-lg font20 text-white font500 removeFocus gradientBorder align-middle" id="browseArticles" onclick="countlyEvent(this)"><span class="ps-4 pe-4 lineHeight40">Browse Articles</span></a>
                     </div>
                 </div>
                 <div class="row centerTextResponsive">
@@ -380,8 +380,8 @@
                                             your favorite device
                                         </h1>
                                         <p class="mt-4 font18 font500">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                                        <a id="login" href="" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
-                                        <a href="./subscription.html" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-lg-4"><u>Browse Plans</u></a>
+                                        <a id="login" onclick="countlyEvent(this)" href="" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Get Started</a>
+                                        <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-lg-4"><u>Browse Plans</u></a>
                                     </div>
                                     <div class="col-lg-5 col-md-4 align-self-center p-0 desktopView">
                                         <div class="mr130">
@@ -402,20 +402,20 @@
                             <div class="col-md-6 col-lg-4 col-6 mt-5">
                                 <p class="footerFont font600 text-white">Company</p>
                                 <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                    <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
-                                    <li class="mt-2"><a href="./about.html" class="text-decoration-none activenav">About Us</a></li>
-                                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us & FAQ's</a></li>
-                                    <li class="mt-2"><a href="./career.html" class="text-decoration-none">Jobs</a></li>
-                                    <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
-                                    <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                                    <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none">Home</a></li>
+                                    <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none activenav">About Us</a></li>
+                                    <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                    <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Jobs</a></li>
+                                    <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
+                                    <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
                                 <p class="footerFont font600 text-white">Boring Stuff</p>
                                 <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                    <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
-                                    <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
-                                    <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
+                                    <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none">Privacy Policy</a></li>
+                                    <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
+                                    <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
@@ -423,19 +423,19 @@
                                 
                                 <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                                     <div class="col-12 text-center mb-4">
-                                        <a href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg text-white font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                        <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                                     </div>
                                     <div class="col-auto text-center pe-4">
-                                        <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                        <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
                                     </div>
                                     <div class="col-auto text-center pe-4">
-                                        <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                        <a href="https://www.instagram.com/oneplaycloudgaming/" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
                                     </div>
                                     <div class="col-auto text-center pe-4">
-                                        <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                        <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
                                     </div>
                                     <div class="col-auto text-center pe-4">
-                                        <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                        <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
                                     </div>
                                 </div>
                             </div>
