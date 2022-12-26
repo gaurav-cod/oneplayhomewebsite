@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html dir="ltr" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
         <link href="./styles/main.css" rel="stylesheet" />
         <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
 
-        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+        <title data-i18n-key="titlesection">OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
 
     </head>
     <body>
@@ -24,23 +24,36 @@
                     <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
                 </button>
                 <a class="navbar-brand float-left" href="./index.html">
-                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span data-i18n-key="sublogo" class="beta">BETA</span>
                 </a>
-                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="login" href="">Login</a></span>
+                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-login" id="login" href="">Login</a></span>
                 
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
+                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
+                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
+                            <a class="nav-link" id="download" onclick="countlyEvent(this)" data-i18n-key="nav-download" href="./download.html">Download</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
+                            <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                        <li class="nav-item">
+                            <select data-i18n-switcher class="form-select">
+                                <option value="english">English</option>
+                                <option value="hindi">Hindi (हिंदी)</option>
+                                <option value="arabic">Arabic (العربية)</option>
+                                <option value="korean">Korean (한국인)</option>
+                                <option value="malay">Malay (Melayu)</option>
+                                <option value="russian">Russian (Melayu)</option>
+                                <option value="persian">Persian (فارسی)</option>
+                                <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
+                                <option value="urdu">Urdu (اردو)</option>
+                            </select>
                         </li>
                     </ul>
                     <form class="desktopView">
@@ -49,21 +62,21 @@
                                 <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" onclick="countlyEvent(this)" href="">Log in</a>
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" onclick="countlyEvent(this)" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
                     <div class="MobileView">
                         <hr class="hrBorderColor mb-4"/>
-                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
-                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
-                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                        <p><span class="offWhiteColor font18 font500"><span data-i18n-key="nav-needhelp">Need help?</span><span class="gradientAnchor"><a href="#" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                         <p class="font16 font500 gradientAnchor">
-                            <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-                            <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+                            <a href="privacy.html" class="anchor" id="privacy" data-i18n-key="nav-privacypolicy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" id="t&c" data-i18n-key="nav-t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
                         </p>
                     </div>
                 </div>
@@ -74,82 +87,82 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9">
                     <div class="text-center">
-                        <h1 class="text-white font50 font800 mt-5">
+                        <h1 class="text-white font50 font800 mt-5" data-i18n-key="heading">
                             Privacy Policy
                         </h1>
-                        <p class="font20 font500 offWhiteColor mt-4">
+                        <p class="font20 font500 offWhiteColor mt-4" data-i18n-key="subheading">
                             Last updated: <span class="customOffWhite">30 August 2022</span>
                         </p>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="intro">
                                 One Play collects information about You when you create a User Account, purchase a Subscription and/or use our Service. Our Privacy Policy applies to all Users who use our Service. Terms used with a capital letter are defined in the our Terms of Use.
                             </p>
                         </div>
                         <div class="col-lg-12">
-                            <p class="font20 font600 text-white mt-4">
+                            <p class="font20 font600 text-white mt-4" data-i18n-key="point1">
                                 1.WHO WE ARE
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para1">
                                 1.1 We are Rainbox Media Pvt. Ltd, a company duly incorporated under the laws India, with its registered office 3/B/52, Kalpataru Aura, Opp.R City Mall, LBS Marg, Ghatkopar-W MUMBAI Maharashtra 400086, India. (hereinafter referred to as “Oneplay”).
                             </p>
                         </div>
                         <div class="col-lg-12">
-                            <p class="font20 font600 text-white mt-4">
+                            <p class="font20 font600 text-white mt-4" data-i18n-key="point2">
                                 2.WHAT THIS PRIVACY POLICY GOVERNS
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para2-1">
                                 2.1 This Privacy Policy applies to www.oneplay.in, your Oneplay user account, and any application used in connection with your user account, any games or videos or other content which you use via Oneplay, Oneplay payment methods, the Oneplay web forums, Oneplay customer and technical support and any other services we provide to you ("Oneplay services").
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para2-2">
                                 2.2 Specifically, this Privacy Policy governs personal information and 
                                     non-personal information which we collect from you when you're using Oneplay services. ("Personal information" means personal data which, on its own or in combination with other information, can be used to identify you and which are necessary to provide the services by Oneplay.
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para2-3">
                                 2.3 We respect your right to privacy and will only process personal information in accordance with applicable data protection legislation your jurisdiction and in our jurisdiction, being India.
                             </p>
                         </div>
                         <div class="col-lg-12">
-                            <p class="font20 font600 text-white mt-4">
+                            <p class="font20 font600 text-white mt-4" data-i18n-key="point3">
                                 3.PROTECTING CHILDREN
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para3-1">
                                 3.1 We recognise we have a special obligation to protect personal information obtained from children. We do not and will not knowingly collect personal information from any child under the age of 13. If for any reason we decide to collect Personal Information of children between 13 and 18 will we ask for their parent or guardian consent.
                             </p>
                         </div>
                         <div class="col-lg-12">
-                            <p class="font20 font600 text-white mt-4">
+                            <p class="font20 font600 text-white mt-4" data-i18n-key="point4">
                                 4.WHAT INFORMATION DO WE COLLECT
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-1">
                                 4.1 When you register a Oneplay account with us, you will need to provide us:
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-1-1">
                                 4.1.1 Your username used to identify yourself in any of services provided by us;
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-1-2">
                                 4.1.2 Your email address;
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-1-3">
                                 4.1.3 Password (which is encrypted so that we don’t have access to it);
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-1-4">
                                 4.1.4 Any other data which you supply us via our services;
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4">
                                 This information is necessary for us to provide you with Oneplay account requested by you. In your Oneplay profile settings you can also set your password. This information will be protected by your Oneplay account password. You are responsible for keeping it safe.
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-2">
                                 4.2 When you use Oneplay services we may also collect the following information:
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-2-1">
                                 4.2.1 Technical details about devices which you use to access Oneplay services, including: Internet and/or network connection (including your IP address); mobile device identifiers; your operating system, browser type or other software; your hardware details; or other technical details provided by your web browser. This is technical data about our users and their actions and patterns, which does not provide personal information;
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-2-2">
                                 4.2.2 Details of your use of Oneplay services including, but not limited to: metrics information about when and how you use Oneplay services (such as what game(s) you are playing, your current status, your interactions with others); traffic data; your geographical location; your purchase history; emails received; and links accessed; your preferences and choices such as subscriptions, preferred language and currency; your communication via chat, game reviews, published posts on forum and other Oneplay Services;
                             </p>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="para4-2-3">
                                 4.2.3 Other information required in order to help you with any queries/support you may need assistance with via the Oneplay forums or customer support, including communications with you;
                             </p>
                         </div>
@@ -165,38 +178,39 @@
                 </div>
             </div>
         </div>
+
         <div class="container padding150">
             <div class="row">
                 <div class="col-md-12">
                     <a class="navbar-brand" href="./index.html">
-                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta" data-i18n-key="sublogo">BETA</span>
                     </a>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 col-6 mt-5">
-                            <p class="footerFont font600 text-white">Company</p>
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-company">Company</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none">Home</a></li>
-                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none">About Us</a></li>
-                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
-                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Jobs</a></li>
-                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
-                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
+                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" data-i18n-key="nav-home" class="text-decoration-none">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" data-i18n-key="nav-about" class="text-decoration-none">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" data-i18n-key="nav-contact" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" data-i18n-key="nav-job" class="text-decoration-none">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-plan&pricing" class="text-decoration-none">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" data-i18n-key="nav-blog" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
-                            <p class="footerFont font600 text-white">Boring Stuff</p>
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-boring">Boring Stuff</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none activenav">Privacy Policy</a></li>
-                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
-                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
+                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none activenav" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
-                            <p class="footerFont font600 text-white">Get Early Access Drops!</p>
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-accessDrop">Get Early Access Drops!</p>
                             
                             <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                                 <div class="col-12 text-center mb-4">
-                                    <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                    <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
                                 </div>
                                 <div class="col-auto text-center pe-4">
                                     <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
@@ -216,6 +230,7 @@
                 </div>
             </div>
         </div>
+
         <div class="container-fluid mt-4">
             <div class="row">
                 <div class="col p-0">
@@ -223,11 +238,12 @@
                 </div>
             </div>
         </div>
+
         <div class="container mb-4 mt-4">
             <div class="row">
                 <div class="col-md-12 p-lg-0">
-                    <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
-                    <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                    <p class="font16 font500 footerWhiteColor" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                    <p class="mt-4 font16 font500 mutedWhiteColor" data-i18n-key="nav-disclaimer">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
                 </div>
             </div>
         </div>
@@ -246,6 +262,72 @@
         <script src="./js/download.js"></script>
         <!--Countly script-->
         <script type="text/javascript" src="./js/countly.js"></script>
- 
+
+        <script>
+            const defaultLocale = "english";
+
+            let locale;
+
+            let translations = {};
+
+            // When the page content is ready...
+
+            async function setLocale(newLocale) {
+                if (newLocale === locale) return;
+                const newTranslations =
+                    await fetchTranslationsFor(newLocale);
+                locale = newLocale;
+                translations = newTranslations;
+
+                // Set <html dir> attribute
+                document.documentElement.dir = dir(newLocale);
+                
+                // Not necessary for direction flow, but for good measure...
+                document.documentElement.lang = newLocale;
+
+                translatePage();
+            }
+
+            function dir(locale) {
+                return locale === "arabic" ? "rtl" : "ltr";
+            }
+
+            async function fetchTranslationsFor(newLocale) {
+                const response = await fetch(`/lang/privacy/${newLocale}.json`);
+                return await response.json();
+            }
+
+            function translatePage() {
+                document
+                .querySelectorAll("[data-i18n-key]")
+                .forEach(translateElement);
+            }
+
+            function translateElement(element) {
+                const key = element.getAttribute("data-i18n-key");
+                const translation = translations[key];
+                element.innerText = translation;
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                setLocale(defaultLocale);
+                bindLocaleSwitcher(defaultLocale);
+            });
+
+            // Whenever the user selects a new locale, we
+
+            // load the locale's translations and update
+
+            // the page
+
+            function bindLocaleSwitcher(initialValue) {
+                const switcher = document.querySelector("[data-i18n-switcher]");
+                switcher.value = initialValue;
+                switcher.onchange = (e) => {
+                    // Set the locale to the selected option[value]
+                    setLocale(e.target.value);
+                };
+            }
+        </script>
     </body>
 </html>
