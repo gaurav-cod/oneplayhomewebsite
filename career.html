@@ -89,7 +89,7 @@
                                 We are looking for talented, ambitious, and BOLD 
                                 people to build the future of gaming.
                             </p>
-                            <a role="button" class="btn font20 btn-lg text-white ps-4 pe-4 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="job" onclick="countlyEvent(this)" href="job.html">View Job Openings</a>
+                            <a role="button" href="#jobOpening" class="btn font20 btn-lg text-white ps-4 pe-4 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="job" onclick="countlyEvent(this)">View Job Openings</a>
                         </div>
                     </div>
                 </div>
@@ -112,26 +112,26 @@
 
         <div class="container">
             <div class="row padding100">
-                <div class="col-md-12 col-lg-6 headingText">
+                <div class="col-md-12 col-lg-12 headingText">
                     <h1 class="text-white font50 font800">
                         Our Perks
                     </h1>
                     <div class="row">
-                        <div class="col-md-4 col-lg-6 col-6 mt-5">
+                        <div class="col-md-4 col-lg-3 col-6 mt-5">
                             <img src="./assets/career-new/Salary 1.svg" height="100px" width="100px" class="img-fluid ps-3 pe-3" alt="" />
                             <p class="font20 font500 offWhiteColor mt-3">Competitive Salaries</p>
                         </div>
-                        <div class="col-md-4 col-lg-6 col-6 mt-5">
+                        <div class="col-md-4 col-lg-3 col-6 mt-5">
                             <img src="./assets/career-new/Health.svg" height="100px" width="100px" class="img-fluid ps-3 pe-3" alt="" />
                             <p class="font20 font500 offWhiteColor mt-3">Health Benefits</p>
                         </div>
-                        <div class="col-md-4 col-lg-6 col-6 mt-5">
+                        <div class="col-md-4 col-lg-3 col-6 mt-5">
                             <img src="./assets/career-new/timing 1.svg" height="100px" width="100px" class="img-fluid ps-3 pe-3" alt="" />
                             <p class="font20 font500 offWhiteColor mt-3">Flexible Timing</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-6 align-self-center mt-5">
+                <!-- <div class="col-md-12 col-lg-6 align-self-center mt-5">
                     <div id="carouselExampleIndicators" class="carousel slide careerUI" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -213,7 +213,7 @@
                         </button>
                     </div>
                     
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container-fluid padding100">
@@ -223,7 +223,7 @@
                 </div>
             </div>
         </div>
-        <div class="container padding100">
+        <div class="container padding100" id="jobOpening">
             <div class="row">
                 <div class="col-md-12 headingText">
                     <h1 class="text-white font50 font800">
@@ -234,13 +234,13 @@
                           <button class="nav-link active" id="pills-Jobs-tab" data-bs-toggle="pill" data-bs-target="#pills-Jobs" type="button" role="tab" aria-controls="pills-Jobs" aria-selected="true"><span class="me-4 ms-4">All Jobs</span></button>
                         </li>
                         <li class="nav-item me-4" role="presentation">
-                          <button class="nav-link" id="pills-Marketing-tab" data-bs-toggle="pill" data-bs-target="#pills-Marketing" type="button" role="tab" aria-controls="pills-Marketing" aria-selected="false"><span class="me-4 ms-4">Marketing</span></button>
+                          <button class="nav-link" id="pills-Marketing-tab" data-bs-toggle="pill" data-bs-target="#pills-Marketing" type="button" role="tab" aria-controls="pills-Marketing" aria-selected="false"><span class="me-4 ms-4">Developers</span></button>
                         </li>
                         <li class="nav-item me-4" role="presentation">
-                          <button class="nav-link" id="pills-Analyst-tab" data-bs-toggle="pill" data-bs-target="#pills-Analyst" type="button" role="tab" aria-controls="pills-Analyst" aria-selected="false"><span class="me-4 ms-4">Data Analyst</span></button>
+                          <button class="nav-link" id="pills-Analyst-tab" data-bs-toggle="pill" data-bs-target="#pills-Analyst" type="button" role="tab" aria-controls="pills-Analyst" aria-selected="false"><span class="me-4 ms-4">Management</span></button>
                         </li>
                         <li class="nav-item me-4" role="presentation">
-                            <button class="nav-link" id="pills-Testers-tab" data-bs-toggle="pill" data-bs-target="#pills-Testers" type="button" role="tab" aria-controls="pills-Testers" aria-selected="false"><span class="me-4 ms-4">Testers</span></button>
+                            <button class="nav-link" id="pills-Testers-tab" data-bs-toggle="pill" data-bs-target="#pills-Testers" type="button" role="tab" aria-controls="pills-Testers" aria-selected="false"><span class="me-4 ms-4">Interns</span></button>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
@@ -250,34 +250,119 @@
                                     <table class="table mb-0">
                                         <thead>
                                             <tr class="tableHeading">
-                                                <th>Title</th>
-                                                <th>Category</th>
+                                                <th class="w-20">Title</th>
+                                                <th class="w-10">Type</th>
                                                 <th>Location</th>
-                                                <th>Remote?</th>
-                                                <th>Requisition Type</th>
+                                                <th>Status</th>
+                                                <th>Skills</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tableBody">
                                             <tr>
-                                                <th>Software Engineer</th>
-                                                <td>Administrative</td>
-                                                <td>Mumbai, India</td>
-                                                <td>No</td>
-                                                <th>Regular Employee</th>
+                                                <th class="align-middle">Full-Stack Developer</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">NodeJs</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">NestJs</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">React</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">SQL</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Elastic-search </span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th>Technical Intern</th>
-                                                <td>Design</td>
-                                                <td>Mumbai, India</td>
-                                                <td>Yes</td>
-                                                <th>Temporary Employee</th>
+                                                <th class="align-middle">Python Engineer</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Cloud</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Data structure</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">OOPS</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Virtualization</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">python</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th>Accountant</th>
-                                                <td>Finance</td>
-                                                <td>Mumbai, India</td>
-                                                <td>No</td>
-                                                <th>Regular Employee</th>
+                                                <th class="align-middle">ServerOps</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbail, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">HR</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">HR Policy</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Recruitment</span>
+                                                </td>
+                                                <td class="align-middle"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Scrum Master</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbail</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">JIRA</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Project management</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Scrum or Kanban</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Sprint planning</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Sprint review</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Product Manager</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill bg-danger">Closed</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Management</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Product Marketing</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Product Planning</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Social Media Intern</th>
+                                                <td class="align-middle">Part-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Discord</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">FB</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Instagram</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">LinkedIn</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Marketing</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Content Writer</th>
+                                                <td class="align-middle">Part-Time</td>
+                                                <td class="align-middle">Mumbail, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Content</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Research</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Blogs</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Python Intern</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Code Review</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Python</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Selenium</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Unit Testing</span>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -290,22 +375,47 @@
                                     <table class="table mb-0">
                                         <thead>
                                             <tr class="tableHeading">
-                                                <th>Title</th>
-                                                <th>Category</th>
+                                                <th class="w-20">Title</th>
+                                                <th class="w-10">Type</th>
                                                 <th>Location</th>
-                                                <th>Remote?</th>
-                                                <th>Requisition Type</th>
+                                                <th>Status</th>
+                                                <th>Skills</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tableBody">
                                             <tr>
-                                                <th>Social Media Intern</th>
-                                                <td>Marketing</td>
-                                                <td>Mumbai, India</td>
-                                                <td>Yes</td>
-                                                <th>Regular Employee</th>
+                                                <th class="align-middle">Full-Stack Developer</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">NodeJs</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">NestJs</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">React</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">SQL</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Elastic-search </span>
+                                                </td>
                                             </tr>
-                                            
+                                            <tr>
+                                                <th class="align-middle">Python Engineer</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Cloud</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Data structure</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">OOPS</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Virtualization</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">python</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">ServerOps</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbail, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle"></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -317,20 +427,50 @@
                                     <table class="table mb-0">
                                         <thead>
                                             <tr class="tableHeading">
-                                                <th>Title</th>
-                                                <th>Category</th>
+                                                <th class="w-20">Title</th>
+                                                <th class="w-10">Type</th>
                                                 <th>Location</th>
-                                                <th>Remote?</th>
-                                                <th>Requisition Type</th>
+                                                <th>Status</th>
+                                                <th>Skills</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tableBody">
                                             <tr>
-                                                <th>Technical Intern</th>
-                                                <td>Design</td>
-                                                <td>Mumbai, India</td>
-                                                <td>Yes</td>
-                                                <th>Temporary Employee</th>
+                                                <th class="align-middle">HR</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">HR Policy</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Recruitment</span>
+                                                </td>
+                                                <td class="align-middle"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Scrum Master</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbail</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">JIRA</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Project management</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Scrum or Kanban</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Sprint planning</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Sprint review</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle">Product Manager</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill bg-danger">Closed</span>
+                                                </td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Management</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Product Marketing</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Product Planning</span>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -343,42 +483,50 @@
                                     <table class="table mb-0">
                                         <thead>
                                             <tr class="tableHeading">
-                                                <th>Title</th>
-                                                <th>Category</th>
+                                                <th class="w-20">Title</th>
+                                                <th class="w-10">Type</th>
                                                 <th>Location</th>
-                                                <th>Remote?</th>
-                                                <th>Requisition Type</th>
+                                                <th>Status</th>
+                                                <th>Skills</th>
                                             </tr>
                                         </thead>
                                         <tbody class="tableBody">
-                                            <!-- <tr>
-                                                <th>Software Engineer</th>
-                                                <td>Administrative</td>
-                                                <td>Mumbai, India</td>
-                                                <td>No</td>
-                                                <th>Regular Employee</th>
+                                            <tr>
+                                                <th class="align-middle">Social Media Intern</th>
+                                                <td class="align-middle">Part-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Discord</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">FB</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Instagram</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">LinkedIn</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Marketing</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th>Technical Intern</th>
-                                                <td>Design</td>
-                                                <td>Mumbai, India</td>
-                                                <td>Yes</td>
-                                                <th>Temporary Employee</th>
+                                                <th class="align-middle">Content Writer</th>
+                                                <td class="align-middle">Part-Time</td>
+                                                <td class="align-middle">Mumbail, Remote</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Content</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Research</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Blogs</span>
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <th>Accountant</th>
-                                                <td>Finance</td>
-                                                <td>Mumbai, India</td>
-                                                <td>No</td>
-                                                <th>Regular Employee</th>
+                                                <th class="align-middle">Python Intern</th>
+                                                <td class="align-middle">Full-Time</td>
+                                                <td class="align-middle">Mumbai</td>
+                                                <td class="align-middle"><span class="badge fontweight400 rounded-pill bg-success">Open</span></td>
+                                                <td class="align-middle">
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Code Review</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Python</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Selenium</span>
+                                                    <span class="badge fontweight400 rounded-pill alertBg">Unit Testing</span>
+                                                </td>
                                             </tr>
-                                            <tr>
-                                                <th>Accountant</th>
-                                                <td>Finance</td>
-                                                <td>Mumbai, India</td>
-                                                <td>No</td>
-                                                <th>Regular Employee</th>
-                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
