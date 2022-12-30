@@ -1305,3 +1305,7 @@ input, textarea {
 .fontweight400 {
     font-weight: 500 !important;
 }
+
+#more {
+    display: none;
+}

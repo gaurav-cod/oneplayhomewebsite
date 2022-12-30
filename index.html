@@ -468,7 +468,7 @@
 
 
     <div class="modal fade" id="legalModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-md">
         <div class="modal-content legalModalBg borderRadius20 offWhiteColor">
           <div class="modal-header p-0 border-0">
             <h5></h5>
@@ -476,7 +476,7 @@
           </div>
           <div class="modal-body ps-lg-5 pb-5 ps-3 pe-3 pe-lg-5">
             
-            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain content, which appears on our website, infringes
+            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain cont<span id="dots">...</span><span id="more">ent, which appears on our website, infringes
             upon copyrights that you own or represent, you may send us a written notification at <strong class="text-white">legal.team@mail.oneplay.in</strong> stating the details of the copyrighted work
             claimed to be infringed, in accordance with the provisions of the Copyright Act, 1957. Upon your notification, we may remove or disable access to any such content. To be effective, your notification
             of claimed infringement must be a written communication provided to us that includes substantially the following:
@@ -487,6 +487,8 @@
               <li class="mt-4">A statement that the information in the notification is accurate, and under penalty of perjury, that you are the owner of copyright or authorized to act on behalf of the owner of an exclusive right that is allegedly infringed. </li>
             </ol>
             <p class="mt-4 mb-0">Following receipt of your communication, we may ask you to provide further or supplemental information, prior to removing any content which was displayed on the Service.</p>
+            </span>
+            <button onclick="myFunction()" class="btn pt-0 text-white removeButtonFocus" id="myBtn">Read more</button>
           </div>
         </div>
       </div>
@@ -516,13 +518,31 @@
       //   }
       // });
 
+      
+
       $(function() {
-        if (sessionStorage.getItem('#legalModal') !== 'true') {
+        if (localStorage.getItem('#legalModal') !== 'true') {
          $('#legalModal').modal('show');
          setTimeout("$('#legalModal').modal('hide');",10000);
-         sessionStorage.setItem('#legalModal','true');     
+         localStorage.setItem('#legalModal','true');     
         }
       });
+
+      function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("more");
+        var btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more"; 
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less"; 
+          moreText.style.display = "inline";
+        }
+      }
 
       const defaultLocale = "english";
       let locale;
