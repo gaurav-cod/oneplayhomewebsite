@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
   SpatialNavigation.makeFocusable();
 
   // Focus the first navigable element.
-  // SpatialNavigation.focus();
+  SpatialNavigation.focus();
 });
 
 $.getScript('https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js', function() {
