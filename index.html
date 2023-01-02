@@ -18,7 +18,7 @@
   
   </head>
   <body>
-    <div class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0" role="alert">
+    <div class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0" id="topAlert" role="alert">
       <p class="mb-0 font16 font500 text-white text-center"><span data-i18n-key="alertText">OnePlay uses cookies to ensure the best experience. By continuing to use this website, you agree to OnePlay’s</span> <a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" data-i18n-key="nav-privacypolicy" class="text-white">Privacy policy</a> & <a href="./tnc.html" data-i18n-key="nav-t&c" id="t&c" onclick="countlyEvent(this)" class="text-white">Cookie policy</a>.</p>
       <button type="button" class="btn-close removeFocus removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
     </div>
@@ -474,9 +474,9 @@
             <h5></h5>
             <div class="text-end me-4 mt-2"><button type="button" class="btn-close removeFocus backgroundNone text-white" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-circle-xmark p-2 borderBg borderRadius50"></i></button></div>
           </div>
-          <div class="modal-body ps-lg-5 pb-5 ps-3 pe-3 pe-lg-5">
+          <div class="modal-body ps-lg-5 pb-5 ps-3 pe-3 pe-lg-5 height50">
             
-            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain cont<span id="dots">...</span><span id="more">ent, which appears on our website, infringes
+            We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain content, which appears on our website, infringes
             upon copyrights that you own or represent, you may send us a written notification at <strong class="text-white">legal.team@mail.oneplay.in</strong> stating the details of the copyrighted work
             claimed to be infringed, in accordance with the provisions of the Copyright Act, 1957. Upon your notification, we may remove or disable access to any such content. To be effective, your notification
             of claimed infringement must be a written communication provided to us that includes substantially the following:
@@ -487,8 +487,23 @@
               <li class="mt-4">A statement that the information in the notification is accurate, and under penalty of perjury, that you are the owner of copyright or authorized to act on behalf of the owner of an exclusive right that is allegedly infringed. </li>
             </ol>
             <p class="mt-4 mb-0">Following receipt of your communication, we may ask you to provide further or supplemental information, prior to removing any content which was displayed on the Service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div id="legalAlert" class="alert alert-warning alertBg alert-dismissible fade show border-0 borderRadius0 fixed-bottom mb-0 d-none pt-2 pb-2" role="alert">
+        <div class="row">
+          <div class="col text-truncate align-self-center pe-0">
+            <span class="font16 font500 text-white text-center align-middle">
+              We at One Play respect the intellectual property rights of others and requests the users of its services to do the same. If you believe that certain content, which appears on our website, infringes
+              upon copyrights that you own or represent, you may send us a written notification at <strong class="text-white">legal.team@mail.oneplay.in</strong> stating the details of the copyrighted work
+              claimed to be infringed, in accordance with the provisions of the Copyright Act, 1957.
             </span>
-            <button onclick="myFunction()" class="btn pt-0 text-white removeButtonFocus" id="myBtn">Read more</button>
+          </div>
+          <div class="col-auto ps-0">
+            <button class="btn text-white removeFocus" data-bs-toggle="modal" data-bs-target="#legalModal">Read More</button>
+            <button type="button" class="btn-close removeFocus removeCrossBg text-white top5" data-bs-dismiss="alert" aria-label="Close"><i class="fas fa-times-circle"></i></button>
           </div>
         </div>
       </div>
@@ -509,40 +524,15 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
 
     <script>
-
-      // $(function() {
-      //   if (sessionStorage.getItem('#legalAlert') !== 'true') {
-      //    $('#legalAlert').removeClass('d-none');
-      //    setTimeout("$('#legalAlert').hide();",10000);
-      //    sessionStorage.setItem('#legalAlert','true');   
-      //   }
-      // });
-
-      
-
       $(function() {
-        if (localStorage.getItem('#legalModal') !== 'true') {
-         $('#legalModal').modal('show');
-         setTimeout("$('#legalModal').modal('hide');",10000);
-         localStorage.setItem('#legalModal','true');     
+        setTimeout("$('#topAlert').hide();",15000);
+
+        if (localStorage.getItem('#legalAlert') !== 'true') {
+         $('#legalAlert').removeClass('d-none');
+         setTimeout("$('#legalAlert').hide();",15000);
+         localStorage.setItem('#legalAlert','true');     
         }
       });
-
-      function myFunction() {
-        var dots = document.getElementById("dots");
-        var moreText = document.getElementById("more");
-        var btnText = document.getElementById("myBtn");
-
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more"; 
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less"; 
-          moreText.style.display = "inline";
-        }
-      }
 
       const defaultLocale = "english";
       let locale;

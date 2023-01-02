@@ -1306,6 +1306,6 @@ input, textarea {
     font-weight: 500 !important;
 }
 
-#more {
-    display: none;
+.height50 {
+    height: 40vh !important;
 }
