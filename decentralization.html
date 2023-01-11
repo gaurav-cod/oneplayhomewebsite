@@ -14,57 +14,75 @@
         <link href="./styles/main.css" rel="stylesheet" />
         <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
 
-        <title>OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+        <title data-i18n-key="titlesection">OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
   
     </head>
     <body>
         <!-- Navbar Section Start -->
-        <nav class="navbar navbar-expand-lg pt-4 pb-4 sticky-top bgBlur">
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 bgBlur sticky-top">
             <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
                 <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
                 </button>
                 <a class="navbar-brand float-left" href="./index.html">
-                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta">BETA</span>
+                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta" data-i18n-key="sublogo">BETA</span>
                 </a>
-                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" id="login" href="">Login</a></span>
-                
+                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-0" id="login" data-i18n-key="nav-login" href="">Login</a></span>
+              
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
+                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
+                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
+                            <a class="nav-link activenav" id="download" onclick="countlyEvent(this)" data-i18n-key="nav-download" href="./download.html">Download</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link activenav" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
+                            <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html" target="_blank">Decentralization</a>
+                        </li>
+                        <li class="nav-item">
+                            <select data-i18n-switcher class="form-select">
+                            <option value="english">English</option>
+                            <option value="hindi">Hindi (हिंदी)</option>
+                            <option value="arabic">Arabic (العربية)</option>
+                            <option value="korean">Korean (한국인)</option>
+                            <option value="malay">Malay (Melayu)</option>
+                            <option value="russian">Russian (Melayu)</option>
+                            <option value="persian">Persian (فارسی)</option>
+                            <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
+                            <option value="urdu">Urdu (اردو)</option>
+                            </select>
                         </li>
                     </ul>
                     <form class="desktopView">
                         <div class="row">
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            <a role="button" class="btn removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid " alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" onclick="countlyEvent(this)" href="">Log in</a>
+                            <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle loginClicked" data-i18n-key="nav-login" id="login" onclick="countlyEvent(this)" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                            <a role="button" class="btn btn-lg border-0 font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
                     <div class="MobileView">
                         <hr class="hrBorderColor mb-4"/>
-                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
-                        <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
-                        <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                        <p>
+                            <span class="offWhiteColor font18 font500">
+                                <span data-i18n-key="nav-needhelp">Need help?</span>
+                                <span class="gradientAnchor"><a href="#" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span>
+                            </span>
+                        </p>
+                        <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                         <p class="font16 font500 gradientAnchor">
-                            <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-                            <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+                            <a href="privacy.html" class="anchor" id="privacy" data-i18n-key="nav-privacypolicy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" id="t&c" data-i18n-key="nav-t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
                         </p>
                     </div>
                 </div>
@@ -74,10 +92,10 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5 align-self-center text-white pt-5 pb-5 order-2 order-lg-1 order-md-1">
-                        <h1 class="font50 font800">
+                        <h1 class="font50 font800" data-i18n-key="heading">
                             Decentralized Cloud Streaming
                         </h1>
-                        <p class="font20 font500 mt-4">
+                        <p class="font20 font500 mt-4" data-i18n-key="subheading">
                             Focusing on streaming games to the end user in 
                             a cross platform and hardware agnostic architecture.
                         </p>
@@ -99,7 +117,7 @@
                         </div>
                         <div class="row pt-5">
                             <div class="col-md-9">
-                                <p class="font38 font700 text-white mb-0">Play games without having to worry about the hardware.</p>
+                                <p class="font38 font700 text-white mb-0" data-i18n-key="sub-headingtext">Play games without having to worry about the hardware.</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +129,7 @@
                         </div>
                         <div class="row pt-5">
                             <div class="col-md-12">
-                                <p class="font38 font700 text-white mb-0">Computing infrastructure network to run technically anything possible.</p>
+                                <p class="font38 font700 text-white mb-0" data-i18n-key="sub-headingtext2">Computing infrastructure network to run technically anything possible.</p>
                             </div>
                         </div>
                     </div>
@@ -121,19 +139,19 @@
         <div class="container custompaddingTop100 centerTextResponsive">
             <div class="row justify-content-center">
                 <div class="col-md-10 text-white text-center">
-                    <h1 class="font50 font800">
+                    <h1 class="font50 font800" data-i18n-key="heading2">
                         Token per Minute Ratio
                     </h1>
                     <div class="row justify-content-center">
                         <div class="col-lg-7 col-md-11">
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading2">
                                 Earn or Spend OnePlay coins. Rent your hardware to run either
                                 the Open Metaverse or any Game.
                             </p>
                         </div>
                     </div>
                     <img src="./assets/decentralization/Group.svg" class="img-fluid mt-5" alt="" />
-                    <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
+                    <a role="button" data-i18n-key="learn-more" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
                 </div>
             </div>
         </div>
@@ -156,10 +174,10 @@
                 <div class="col-md-6 align-self-center custompaddingTop100">
                     <div class="row responsiveContent">
                         <div class="col-lg-8 col-11">
-                            <h1 class="font50 font800 text-white">
+                            <h1 class="font50 font800 text-white" data-i18n-key="heading3">
                                 Hosters
                             </h1>
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading3">
                                 Rent your hardware to run either the Open Metaverse or any Game.
                             </p>
                         </div>
@@ -170,10 +188,10 @@
                 <div class="col-md-6 align-self-center custompaddingTop100 order-2 order-lg-1 order-md-1">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 col-11">
-                            <h1 class="font50 font800 text-white">
+                            <h1 class="font50 font800 text-white" data-i18n-key="heading4">
                                 Developers
                             </h1>
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading4">
                                 Develop Game/VR App/DApp and let us distribute & run it over the decentralized network and 
                                 deliver it to the end user.
                             </p>
@@ -199,10 +217,10 @@
                 <div class="col-md-6 align-self-center custompaddingTop100">
                     <div class="row responsiveContent">
                         <div class="col-lg-10 col-11">
-                            <h1 class="font50 font800 text-white">
+                            <h1 class="font50 font800 text-white" data-i18n-key="heading5">
                                 Consumers
                             </h1>
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading5">
                                 Whether it's a FIFA game with friends or joining a tour of 
                                 7 Worlds in VR or Using the DApp, all running/streaming 
                                 directly from the nearest edge nodes.
@@ -215,10 +233,10 @@
                 <div class="col-md-6 align-self-center custompaddingTop100 order-2 order-lg-1 order-md-1">
                     <div class="row justify-content-center">
                         <div class="col-lg-10 col-11">
-                            <h1 class="font50 font800 text-white">
+                            <h1 class="font50 font800 text-white" data-i18n-key="heading6">
                                 For the chain breakers
                             </h1>
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading6">
                                 Open source OS, Network & Streaming Technology,host 
                                 or run your own node or connect to the network 
                                 to run the next generation internet.
@@ -245,10 +263,10 @@
                 <div class="col-md-6 align-self-center custompaddingTop100">
                     <div class="row responsiveContent">
                         <div class="col-lg-9 col-11">
-                            <h1 class="font50 font800 text-white">
+                            <h1 class="font50 font800 text-white" data-i18n-key="heading7">
                                 Open Gems Behind
                             </h1>
-                            <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                            <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading7">
                                 KVM, CentOS, Ubuntu, Windows 10, Sunshine, 
                                 Moonlight, WebRTC, Angular, Python.
                             </p>
@@ -267,17 +285,17 @@
         <div class="container custompaddingTop100">
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                    <h1 class="font50 font800 text-white">
+                    <h1 class="font50 font800 text-white" data-i18n-key="heading8">
                         Rent Your Server
                     </h1>
-                    <p class="font20 font500 mt-4 offWhiteColor mb-0">
+                    <p class="font20 font500 mt-4 offWhiteColor mb-0" data-i18n-key="sub-heading8">
                         Want to earn OnePlay coins? learn more about
                     </p>
-                    <p class="font20 font500 offWhiteColor">
+                    <p class="font20 font500 offWhiteColor" data-i18n-key="sub-heading8text">
                         renting your own server.
                     </p>
                     <p class="mb-5"><img src="./assets/decentralization/rent 1.svg" class="img-fluid mt-5" alt="" /></p>
-                    <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="signup" onclick="countlyEvent(this)" href="">Get Started</a>
+                    <a role="button" data-i18n-key="getStarted" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="signup" onclick="countlyEvent(this)" href="">Get Started</a>
                 </div>
             </div>
         </div>
@@ -291,7 +309,7 @@
         <div class="container custompaddingTop100">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="font50 font800 text-white">
+                    <h1 class="font50 font800 text-white" data-i18n-key="heading9">
                         Roadmap
                     </h1>
                 </div>
@@ -309,7 +327,7 @@
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter2">Quarter 2</h3>
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
@@ -320,22 +338,22 @@
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter3">Quarter 3</h3>
                             <div class="bordergradient"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Website & Dashboard & Mac/ Windows Application over Moonlight Port</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter3">Website & Dashboard & Mac/ Windows Application over Moonlight Port</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter4">Quarter 4</h3>
                             <div class="bordergradient"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Backend using Proxmox, Python, QTC++, Node, Custom Sunshine Port</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter4">Backend using Proxmox, Python, QTC++, Node, Custom Sunshine Port</p>
                         </div>
                     </div>
                 </div>
@@ -346,44 +364,44 @@
                             <div class="bordergradient"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor mb-4">Android Client based on Moonlight with custom OnePlay Integration - Beta</p>
-                            <p class="font20 font500 offWhiteColor mb-4">Live Streaming Integration for Streaming directly to Youtube/Twitch etc - Beta</p>
-                            <p class="font20 font500 offWhiteColor">Acquire Custom Servers.</p>
+                            <p class="font20 font500 offWhiteColor mb-4" data-i18n-key="2022-1">Android Client based on Moonlight with custom OnePlay Integration - Beta</p>
+                            <p class="font20 font500 offWhiteColor mb-4" data-i18n-key="2022-2">Live Streaming Integration for Streaming directly to Youtube/Twitch etc - Beta</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="2022-3">Acquire Custom Servers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-2">Quarter 2</h3>
                             <div class="bordergradient"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor mb-4">Bug Fixing & End2End Integration</p>
-                            <p class="font20 font500 offWhiteColor mb-4">Going fully open source from server & client side</p>
-                            <p class="font20 font500 offWhiteColor">WebRTC Implementation for Gaming over Browser</p>
+                            <p class="font20 font500 offWhiteColor mb-4" data-i18n-key="sub-quarter-2">Bug Fixing & End2End Integration</p>
+                            <p class="font20 font500 offWhiteColor mb-4" data-i18n-key="sub-quarter-2-1">Going fully open source from server & client side</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-2-2">WebRTC Implementation for Gaming over Browser</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-3">Quarter 3</h3>
                             <div class="bordergradient"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">VR Client for Oculus</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-3">VR Client for Oculus</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-4">Quarter 4</h3>
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Release First OneOS designed for de-centralized cloud gaming - open source</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-4">Release First OneOS designed for de-centralized cloud gaming - open source</p>
                         </div>
                     </div>
                 </div>
@@ -394,40 +412,40 @@
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Run your own node or join the OnePlay Network - completely open source over blockchain for decentralized cloud gaming</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="2023-subtext">Run your own node or join the OnePlay Network - completely open source over blockchain for decentralized cloud gaming</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 2</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-2023">Quarter 2</h3>
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Custom Servers tuned for Cloud Streaming</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-2023">Custom Servers tuned for Cloud Streaming</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 3</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-3-2023">Quarter 3</h3>
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Bring More open nodes to join the decentralized network</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-3-2023">Bring More open nodes to join the decentralized network</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 mt-5">
                     <div class="card bgTransparent border-0">
                         <div class="card-header ps-0 border-0">
-                            <h3 class="text-white font16 customOffWhite pb-3">Quarter 4</h3>
+                            <h3 class="text-white font16 customOffWhite pb-3" data-i18n-key="quarter-4-2023">Quarter 4</h3>
                             <div class="defaultBorder"></div>
                         </div>
                         <div class="card-body ps-0">
-                            <p class="font20 font500 offWhiteColor">Run Custom DApp/Meta-Verse App or 3D application over the decentralized network for Developers</p>
+                            <p class="font20 font500 offWhiteColor" data-i18n-key="sub-quarter-4-2023">Run Custom DApp/Meta-Verse App or 3D application over the decentralized network for Developers</p>
                         </div>
                     </div>
                 </div>
@@ -444,34 +462,33 @@
             <div class="row">
                 <div class="col-md-12">
                     <a class="navbar-brand" href="./index.html">
-                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta">BETA</span>
+                      <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta" data-i18n-key="sublogo">BETA</span>
                     </a>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 col-6 mt-5">
-                            <p class="footerFont font600 text-white">Company</p>
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-company">Company</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none">Home</a></li>
-                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none">About Us</a></li>
-                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
-                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Jobs</a></li>
-                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
-                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
+                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none activenav" data-i18n-key="nav-home">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-contact">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-job">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none activenav" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
-                            <p class="footerFont font600 text-white">Boring Stuff</p>
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-boring">Boring Stuff</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none">Privacy Policy</a></li>
-                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
-                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
+                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
                             </ul>
                         </div>
                         <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
-                            <p class="footerFont font600 text-white">Get Early Access Drops!</p>
-                            
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-accessDrop">Get Early Access Drops!</p>
                             <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                                 <div class="col-12 text-center mb-4">
-                                    <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                                    <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white font500 buttonPB removeFocus linearGradient borderRadius60 buttonPB border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                                 </div>
                                 <div class="col-auto text-center pe-4">
                                     <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
@@ -502,8 +519,8 @@
         <div class="container mb-4 mt-4">
             <div class="row">
                 <div class="col-md-12 p-lg-0">
-                    <p class="font16 font500 footerWhiteColor">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
-                    <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                    <p class="font16 font500 footerWhiteColor" data-i18n-key="nav-reserved">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                    <p class="mt-4 font16 font500 mutedWhiteColor" data-i18n-key="nav-disclaimer">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
                 </div>
             </div>
         </div>
@@ -528,6 +545,62 @@
             }
             gtag("js", new Date());
             gtag("config", "UA-220923953-1");
+
+            const defaultLocale = "english";
+            let locale;
+            let translations = {};
+            // When the page content is ready...
+            async function setLocale(newLocale) {
+                if (newLocale === locale) return;
+                const newTranslations =
+                await fetchTranslationsFor(newLocale);
+                locale = newLocale;
+                translations = newTranslations;
+                // Set <html dir> attribute
+                document.documentElement.dir = dir(newLocale);
+                // Not necessary for direction flow, but for good measure...
+                document.documentElement.lang = newLocale;
+                translatePage();
+            }
+
+            function dir(locale) {
+                return locale === "arabic" ? "rtl" : "ltr";
+            }
+
+            async function fetchTranslationsFor(newLocale) {
+                const response = await fetch(`/lang/decentralization/${newLocale}.json`);
+                return await response.json();
+            }
+
+            function translatePage() {
+                document
+                .querySelectorAll("[data-i18n-key]")
+                .forEach(translateElement);
+            }
+
+            function translateElement(element) {
+                const key = element.getAttribute("data-i18n-key");
+                const translation = translations[key];
+                element.innerText = translation;
+            }
+
+            document.addEventListener("DOMContentLoaded", () => {
+                setLocale(defaultLocale);
+                bindLocaleSwitcher(defaultLocale);
+            });
+
+            // Whenever the user selects a new locale, we
+            // load the locale's translations and update
+            // the page
+
+            function bindLocaleSwitcher(initialValue) {
+                const switcher = document.querySelector("[data-i18n-switcher]");
+                switcher.value = initialValue;
+                switcher.onchange = (e) => {
+                // Set the locale to the selected option[value]
+                setLocale(e.target.value);
+                };
+            }
         </script>
     </body>
 </html>
