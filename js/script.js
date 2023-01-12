@@ -99,16 +99,24 @@ function handleLogout() {
 
 function handleAuth() {
   const session = getCookie("op_session_token");
-  const login = document.querySelector("#login");
-  const signup = document.querySelector("#signup");
+  const login = document.querySelectorAll("#login");
+  const signup = document.querySelectorAll("#signup");
   // const logout = document.querySelector("#logout");
   if (session) {
-    login.style.display = "none";
-    signup.style.display = "none";
+    login.forEach((l) => {
+      l.style.display = "none";
+    });
+    signup.forEach((s) => {
+      s.style.display = "none";
+    });
     // logout.style.display = "block";
   } else {
-    login.style.display = "block";
-    signup.style.display = "block";
+    login.forEach((l) => {
+      l.style.display = "block";
+    });
+    signup.forEach((s) => {
+      s.style.display = "block";
+    });
     // logout.style.display = "none";
   }
 }

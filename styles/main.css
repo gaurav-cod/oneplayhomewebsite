@@ -54,7 +54,11 @@
     }
 
     .padding100 {
-        padding-top: 60px !important;
+        padding-top: 70px !important;
+    }
+
+    .paddingRemove {
+        padding-top: 0px !important;
     }
 
     .font28 {
@@ -96,7 +100,7 @@
     }
 
     .marginTopMobile {
-        margin-top: 40px;
+        margin-top: 40px !important;
     }
 
     .h60 {
@@ -140,7 +144,37 @@
         width: 100px;
         height: 100px;
     }
+
+    .custompaddingTop100 {
+        padding-top: 60px !important;
+    }
+
+    .paddingBottom100 {
+        padding-bottom: 60px !important;
+    }
+
+    .removePaddingBottom {
+        padding-bottom: 60px !important;
+    }
+
+    .responsiveContent {
+        justify-content: center !important;
+    }
+
+    .borderRight {
+        border-right: none!important;
+        border-bottom: 1px solid #3E4246;
+    }
+
+    .contentcenterresponsive {
+        justify-content: center;
+    }
+
+    .paddingtopres100 {
+        padding-top: 10px !important;
+    }
 }
+
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
@@ -157,16 +191,12 @@
         height: auto !important;
     }
 
-    .lineBg {
-        background-image: none !important;
+    body {
+        overflow-x: hidden;
     }
 
     .centerTextResponsiveTab {
         text-align: center;
-    }
-
-    .tabPaddingTop {
-        padding-top: 100px;
     }
 
     .wrapper {
@@ -196,8 +226,8 @@
     }
 
     .font50 {
-        font-size: 35px !important;
-        line-height: 45px !important;
+        font-size: 30px !important;
+        line-height: 40px !important;
     }
     
     table {
@@ -209,6 +239,33 @@
     .mr130 {
         margin-right: -70px !important;
     } 
+
+    .paddingRemove {
+        padding-top: 0px !important;
+    }
+
+    .paddingtopres100 {
+        padding-top: 10px !important;
+    }
+
+    .font20 {
+        font-size: 16px !important;
+        line-height: 24px !important;
+    }
+
+    .wh380 {
+        width: 380px;
+        height: 380px;
+    }
+
+    .lineBg {
+        background-image: url('../assets/home/Group\ 392.svg') !important;
+        
+    }
+
+    .padding200 {
+        padding-top: 150px !important;
+    }
     
 }
 
@@ -479,8 +536,9 @@ body {
     border-radius: 4px;
 }
 
-a:hover {
-    color: inherit !important;
+.buttonPB {
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
 }
 
 .navbarText .navbar-nav .nav-link {
@@ -666,6 +724,10 @@ a:hover {
 .footerWhiteColor a {
     /* color: #E1E1E1; */
     color: #959595;
+}
+
+.footerWhiteColor a:hover {
+    color: #E1E1E1;
 }
 
 .footerWhiteColor {
@@ -1141,7 +1203,7 @@ input, textarea {
 .customCareerTab {
     overflow-x: auto;
     overflow-y:hidden;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
  }
  .customCareerTab .nav-link {
    white-space: nowrap;
@@ -1186,4 +1248,64 @@ input, textarea {
 
 .negativeMargin {
     margin-top: -105px !important;
+}
+
+.scrollTab {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scrollTab > li {
+    float: none;
+    display: inline-block;
+}
+
+.decentralizationBg {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+}
+
+.borderRight {
+    border-right: 1px solid #3E4246;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #3E4246;
+}
+
+.paddingBottom100 {
+    padding-bottom: 100px;
+}
+
+.defaultBorder {
+    height: 2px;
+    background-color: #3E4246;
+}
+
+.bordergradient {
+    height: 2px;
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
+}
+
+.custompaddingTop100 {
+    padding-top: 100px;
+}
+
+.paddingtopres100 {
+    padding-top: 100px;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.fontweight400 {
+    font-weight: 500 !important;
+}
+
+.height50 {
+    height: 40vh !important;
 }

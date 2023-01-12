@@ -18,9 +18,9 @@
   
   </head>
   <body>
-    <!-- Navbar Section Start -->
-    <nav class="navbar navbar-expand-lg pt-4 pb-4 sticky-top bgBlur">
-      <div class="container-fluid ps-5 pe-5 customPadding">
+      <!-- Navbar Section Start -->
+    <nav class="navbar navbar-expand-lg pt-4 pb-4 bgBlur sticky-top">
+      <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
         <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
         </button>
@@ -32,39 +32,39 @@
         <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
             <li class="nav-item me-3">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" href="./index.html">Home</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="./subscription.html">Subscription</a>
+              <a class="nav-link" id="subscription" onclick="countlyEvent(this)" href="./subscription.html">Subscription</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="./download.html">Download</a>
+              <a class="nav-link" id="download" onclick="countlyEvent(this)" href="./download.html">Download</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="./decentralization.html" target="_blank">Decentralization</a>
+              <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" href="./decentralization.html" target="_blank">Decentralization</a>
             </li>
           </ul>
           <form class="desktopView">
             <div class="row">
               <div class="col-auto align-self-center ps-0">
-                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
               </div>
               <div class="col-auto align-self-center ps-0">
-                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" href="">Log in</a>
+                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" onclick="countlyEvent(this)" href="">Log in</a>
               </div>
               <div class="col-auto align-self-center ps-0">
-                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" href="">Sign Up</a>
+                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
               </div>
             </div>
           </form>
           <div class="MobileView">
             <hr class="hrBorderColor mb-4"/>
-            <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" href="">Sign Up</a>
+            <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
             <p><span class="offWhiteColor font18 font500">Need help?<span class="gradientAnchor"><a href="#"> Browse FAQ</a></span></span></p>
             <p class="font16 font500 footerWhiteColor mb-0">© 2022 RainBox Media Pvt Ltd. All Rights Reserved.</p>
             <p class="font16 font500 gradientAnchor">
-              <a href="privacy.html" class="anchor">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-              <a href="./tnc.html" class="anchor">Terms & Conditions</a>
+              <a href="privacy.html" class="anchor" id="privacy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+              <a href="./tnc.html" class="anchor" id="t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
             </p>
           </div>
         </div>
@@ -91,7 +91,9 @@
             We are looking to hire a skilled WordPress developer to design and 
             implement attractive and functional websites for our clients.
           </p>
-          <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 ps-lg-4 pe-lg-4 font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="apply_url" target="_blank">Apply</a>
+          <span class="d-inline-block mt-4" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
+            <a role="button" class="btn disabled font20 btn-lg text-white ps-5 pe-5 ps-lg-5 pe-lg-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60" id="apply_url" onclick="countlyEvent(this)" target="_blank">Apply</a>
+          </span>
         </div>
       </div>
     </div>
@@ -178,8 +180,12 @@
                   </p>
                 </div>
               </div>
-              <a role="button" id="apply_url" target="_blank" class="btn font20 btn-lg text-white ps-4 pe-4 me-4 font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5">Apply</a>
-              <a href="#" class="btn btn-lg font20 mt-5 text-white border-gradient-purple font500 removeFocus gradientBorder align-middle height34"><span class="ps-4 pe-4 lineHeight40">Share this Job</span></a>
+              <span class="d-inline-block mt-5" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
+                <a role="button" class="btn disabled font20 btn-lg text-white ps-4 pe-4 ps-lg-5 pe-lg-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60" id="apply_url" onclick="countlyEvent(this)" target="_blank">Apply</a>
+              </span>
+              <span class="d-inline-block mt-5 ms-4" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
+                <a href="#" id="shareJob" onclick="countlyEvent(this)" class="btn disabled btn-lg font20 text-white border-gradient-purple font500 removeFocus gradientBorder align-middle height34"><span class="ps-4 pe-4 lineHeight40">Share this Job</span></a>
+              </span>
             </div>
           </div>
         </div>
@@ -195,39 +201,39 @@
             <div class="col-md-6 col-lg-4 col-6 mt-5">
               <p class="footerFont font600 text-white">Company</p>
               <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                <li class="mt-2"><a href="./index.html" class="text-decoration-none">Home</a></li>
-                <li class="mt-2"><a href="./about.html" class="text-decoration-none">About Us</a></li>
-                <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us & FAQ's</a></li>
-                <li class="mt-2"><a href="./career.html" class="text-decoration-none activenav">Jobs</a></li>
-                <li class="mt-2"><a href="subscription.html" class="text-decoration-none">Plans & Pricing</a></li>
-                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" class="text-decoration-none">Blog</a></li>
+                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none">Home</a></li>
+                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none">About Us</a></li>
+                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none activenav">Jobs</a></li>
+                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none">Plans & Pricing</a></li>
+                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
               </ul>
             </div>
             <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
               <p class="footerFont font600 text-white">Boring Stuff</p>
               <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                <li class="mt-2"><a href="./privacy.html" class="text-decoration-none">Privacy Policy</a></li>
-                <li class="mt-2"><a href="./tnc.html" class="text-decoration-none">Terms & Conditions</a></li>
-                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none">Cancellation Policy</a></li>
+                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none">Privacy Policy</a></li>
+                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none">Terms & Conditions</a></li>
+                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none">Cancellation Policy</a></li>
               </ul>
             </div>
             <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
               <p class="footerFont font600 text-white">Get Early Access Drops!</p>
               <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                 <div class="col-12 text-center mb-4">
-                    <a href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg text-white font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                  <a href="https://discord.gg/CyNeDNNrZs" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white font500 buttonPB removeFocus linearGradient borderRadius60 buttonPB border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                 </div>
                 <div class="col-auto text-center pe-4">
-                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                  <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
                 </div>
                 <div class="col-auto text-center pe-4">
-                    <a href="https://www.instagram.com/oneplaycloudgaming/" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                  <a href="https://www.instagram.com/oneplaycloudgaming/" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
                 </div>
                 <div class="col-auto text-center pe-4">
-                    <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                  <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
                 </div>
                 <div class="col-auto text-center pe-4">
-                    <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                  <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
                 </div>
               </div>
             </div>
@@ -249,10 +255,21 @@
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/career.js"></script>
+    <script src="./js/download.js"></script>
+    <!--Countly script-->
+    <script type="text/javascript" src="./js/countly.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
 
@@ -266,8 +283,12 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "UA-220923953-1");
+
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
     </script>
   </body>
 </html>
