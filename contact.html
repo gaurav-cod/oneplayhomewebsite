@@ -126,20 +126,20 @@
         <div class="container padding100  customH1 centerTextResponsive">
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-9">
-                    <div class="row text-center justify-content-center">
+                    <div class="row text-center justify-content-center mb-4">
                         <div class="col-12">
                             <h1 class="text-white font50 font800" data-i18n-key="heading2">
                                 Need help with OnePlay?
                             </h1>
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-7 col-md-8">
                             <p class="font20 font500 offWhiteColor mt-4" data-i18n-key="subheading2">
-                                You can contact one of our friendly Customer 
+                                You can contact one of our friendly Customer
                                 Success team members below.
                             </p>
                         </div>
                     </div>
-                    <form>
+                    <!-- <form>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 mt-5 inputMarginTop">
                                 <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="name" placeholder="Name" />
@@ -157,12 +157,13 @@
                                 <input type="submit" class="btn border-0 font18 text-white height48 ps-4 pe-4 font500 removeFocus linearGradient align-middle borderRadius60" value="Send your message" />
                             </div>
                         </div>
-                    </form>
-                    <div class="row mt-5 inputMarginTop">
+                    </form> -->
+                    <div id="zsfeedbackwidgetdiv"></div>
+                    <div class="row mt-4 inputMarginTop">
                         <div class="col mt-5 gradientAnchor inputMarginTop">
                             <h3 class="font28 font700 text-white" data-i18n-key="dropemail">Drop us an email</h3>
-                            <p class="font20 font500 mb-0"><a href="mailto:team@oneplay.in" data-i18n-key="emailaddress">team@oneplay.in</a></p>
-                            <u class="font20 font500 offWhiteColor" data-i18n-key="copyaddress">Copy address</u>
+                            <p class="font20 font500 mb-0"><a href="mailto:team@oneplay.in" id="emailId" data-i18n-key="emailaddress">team@oneplay.in</a></p>
+                            <u class="font20 font500 offWhiteColor cursorPointer" onclick="copyEmail();" data-i18n-key="copyaddress">Copy address</u>
                         </div>
                         <!-- <div class="col-md-7 col-lg-6 mt-5 gradientAnchor inputMarginTop">
                             <h3 class="font28 font700 text-white">Prefer a phone call?</h3>
@@ -531,6 +532,9 @@
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
 
+        <!-- Contact US Form -->
+        <script src="https://desk.zoho.com/portal/api/feedbackwidget/707776000000194129?orgId=773466876&displayType=embeded"></script>
+
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -593,6 +597,14 @@
                 // Set the locale to the selected option[value]
                 setLocale(e.target.value);
                 };
+            }
+
+            function copyEmail(){
+                var temp = $("<input>");
+                $("body").append(temp);
+                temp.val($('#emailId').text()).select();
+                document.execCommand("copy");
+                temp.remove();
             }
         </script>
     </body>

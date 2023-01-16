@@ -1309,3 +1309,27 @@ input, textarea {
 .height50 {
     height: 40vh !important;
 }
+
+#advwebForm {
+    background-color: transparent !important;
+}
+.fbfpoptitle {
+    display: none;
+}
+.zsfeedbkrpanel {
+    background-color: transparent !important;
+    border: none !important;
+}
+.feedbackformmdiv input, .feedbackformmdiv textarea  {
+    border-radius: 10px !important;
+    background-color: transparent !important;
+    border: 2px solid #434343 !important;
+}
+#zsfeedbackwidgetdiv .dt-blue-btn {
+    background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
+    border-radius: 60px !important;
+    height: 40px;
+}
+.cursorPointer {
+    cursor: pointer;
+}
