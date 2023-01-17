@@ -1339,13 +1339,6 @@ input, textarea {
     cursor: pointer;
 }
 
-.downloadVideo{
-    position:relative;
-    width: 100%;
-    overflow: hidden;
-    /* border-radius: 30px; */
-}
-
-.height196 {
-    height: 196px !important;
+.carousel-control-next, .carousel-control-prev {
+    width: 1% !important;
 }
