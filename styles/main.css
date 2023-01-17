@@ -1333,3 +1333,7 @@ input, textarea {
 .cursorPointer {
     cursor: pointer;
 }
+
+.carousel-control-next, .carousel-control-prev {
+    width: 1% !important;
+}
