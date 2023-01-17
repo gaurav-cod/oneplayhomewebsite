@@ -925,6 +925,7 @@ input, textarea {
 .video {
     width: 100%;
 }
+
 .wrapper{
     position:relative;
     width: 100%;
@@ -1070,6 +1071,10 @@ input, textarea {
 }
 
 .mutedColor {
+    color:  #959595;
+}
+
+.mutedColor:hover {
     color:  #959595;
 }
 
@@ -1332,4 +1337,15 @@ input, textarea {
 }
 .cursorPointer {
     cursor: pointer;
+}
+
+.downloadVideo{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    /* border-radius: 30px; */
+}
+
+.height196 {
+    height: 196px !important;
 }
