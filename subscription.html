@@ -364,7 +364,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="./js/config.js"></script>
         <script src="./js/script.js"></script>
-        <script src="./js/download.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
@@ -386,61 +385,12 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
           })
 
-          const defaultLocale = "english";
-          let locale;
-          let translations = {};
-          // When the page content is ready...
-          async function setLocale(newLocale) {
-            if (newLocale === locale) return;
-            const newTranslations =
-            await fetchTranslationsFor(newLocale);
-            locale = newLocale;
-            translations = newTranslations;
-            // Set <html dir> attribute
-            document.documentElement.dir = dir(newLocale);
-            // Not necessary for direction flow, but for good measure...
-            document.documentElement.lang = newLocale;
-            translatePage();
-          }
-
-          function dir(locale) {
-            return locale === "arabic" ? "rtl" : "ltr";
-          }
-
+          // Multiple Language Integration
           async function fetchTranslationsFor(newLocale) {
             const response = await fetch(`/lang/subscription/${newLocale}.json`);
             return await response.json();
           }
 
-          function translatePage() {
-            document
-            .querySelectorAll("[data-i18n-key]")
-            .forEach(translateElement);
-          }
-
-          function translateElement(element) {
-            const key = element.getAttribute("data-i18n-key");
-            const translation = translations[key];
-            element.innerText = translation;
-          }
-
-          document.addEventListener("DOMContentLoaded", () => {
-            setLocale(defaultLocale);
-            bindLocaleSwitcher(defaultLocale);
-          });
-
-          // Whenever the user selects a new locale, we
-          // load the locale's translations and update
-          // the page
-
-          function bindLocaleSwitcher(initialValue) {
-            const switcher = document.querySelector("[data-i18n-switcher]");
-            switcher.value = initialValue;
-            switcher.onchange = (e) => {
-              // Set the locale to the selected option[value]
-              setLocale(e.target.value);
-            };
-          }
         </script>
     </body>
 </html>
