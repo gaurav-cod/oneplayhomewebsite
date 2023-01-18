@@ -59,7 +59,7 @@
                 <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
                 <option value="urdu">Urdu (اردو)</option>
               </select>
-          </li> -->
+            </li> -->
           </ul>
           <form class="desktopView">
             <div class="row">
@@ -109,7 +109,7 @@
             <div class="col mt-3">
               <p class="font20 font500 customOffWhite mb-0">Wait List</p>
               <h1 class="font38 font700 text-white">16K+</h1>
-              <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="signup" href="">Join Today</a>
+              <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 font500 buttonPB removeFocus border-0 linearGradient align-middle borderRadius60 mt-4" id="signup" href="">Join Today</a>
               <a role="button" href="https://discord.gg/CyNeDNNrZs" class="btn font20 btn-lg offWhiteColor font500 removeFocus border-0 ms-3 mt-3 pt-3"><i class="fa-brands fa-discord me-3 font28 customOffWhite align-middle"></i>Join Discord</a>
             </div>
           </div>
@@ -547,62 +547,11 @@
         }
       });
 
-      const defaultLocale = "english";
-      let locale;
-      let translations = {};
-      // When the page content is ready...
-      async function setLocale(newLocale) {
-        if (newLocale === locale) return;
-        const newTranslations =
-        await fetchTranslationsFor(newLocale);
-        locale = newLocale;
-        translations = newTranslations;
-        // Set <html dir> attribute
-        document.documentElement.dir = dir(newLocale);
-        // Not necessary for direction flow, but for good measure...
-        document.documentElement.lang = newLocale;
-        translatePage();
-      }
-
-      function dir(locale) {
-        return locale === "arabic" ? "rtl" : "ltr";
-      }
-
+      // Multiple Language Integration
       async function fetchTranslationsFor(newLocale) {
         const response = await fetch(`/lang/index/${newLocale}.json`);
         return await response.json();
       }
-
-      function translatePage() {
-        document
-        .querySelectorAll("[data-i18n-key]")
-        .forEach(translateElement);
-      }
-
-      function translateElement(element) {
-        const key = element.getAttribute("data-i18n-key");
-        const translation = translations[key];
-        element.innerText = translation;
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        setLocale(defaultLocale);
-        bindLocaleSwitcher(defaultLocale);
-      });
-
-      // Whenever the user selects a new locale, we
-      // load the locale's translations and update
-      // the page
-
-      function bindLocaleSwitcher(initialValue) {
-        const switcher = document.querySelector("[data-i18n-switcher]");
-        switcher.value = initialValue;
-        switcher.onchange = (e) => {
-          // Set the locale to the selected option[value]
-          setLocale(e.target.value);
-        };
-      }
-
     </script>
   </body>
 </html>

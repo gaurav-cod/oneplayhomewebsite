@@ -112,10 +112,10 @@ function handleAuth() {
     // logout.style.display = "block";
   } else {
     login.forEach((l) => {
-      l.style.display = "block";
+      l.style.display = "inline-block";
     });
     signup.forEach((s) => {
-      s.style.display = "block";
+      s.style.display = "inline-block";
     });
     // logout.style.display = "none";
   }
