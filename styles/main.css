@@ -173,6 +173,10 @@
     .paddingtopres100 {
         padding-top: 10px !important;
     }
+
+    .marginrightBtn {
+        margin-right: 0px !important;
+    }
 }
 
 
@@ -266,6 +270,10 @@
     .padding200 {
         padding-top: 150px !important;
     }
+
+    .marginrightBtn {
+        margin-right: 5rem !important;
+    }
     
 }
 
@@ -325,6 +333,10 @@
     .mr130 {
         margin-right: -70px !important;
     } 
+
+    .marginrightBtn {
+        margin-right: 5rem !important;
+    }
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -1352,4 +1364,8 @@ input, textarea {
 
 .height196 {
     height: 196px !important;
+}
+
+.marginrightBtn {
+    margin-right: 6.5rem;
 }
