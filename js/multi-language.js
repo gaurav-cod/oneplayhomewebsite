@@ -16,7 +16,7 @@ async function setLocale(newLocale) {
 }
 
 function dir(locale) {
-    return locale === "arabic" ? "rtl" : "ltr";
+    return locale === "arabic" ? "ltr" : "ltr";
 }
 
 function translatePage() {

@@ -1083,7 +1083,7 @@ input, textarea {
 }
 
 .mutedColor {
-    color:  #959595;
+    color:  #959595 !important;
 }
 
 .mutedColor:hover {
