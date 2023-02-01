@@ -1032,7 +1032,7 @@ input, textarea {
 }
 
 .loginBg {
-    background-color: #212123;
+    background-color: #212123 !important;
 }
 
 .custom-choose input[type='radio']:not(:checked) + label .image {
@@ -1369,4 +1369,8 @@ input, textarea {
 
 .marginrightBtn {
     margin-right: 6.5rem;
+}
+
+.mutedTextColor {
+    color: #959595;
 }
