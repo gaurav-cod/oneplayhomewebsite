@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <img src="./assets/decentralization/Group.svg" class="img-fluid mt-5" alt="" />
-                    <a role="button" data-i18n-key="learn-more" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
+                    <a role="button" id="learnMore" onclick="countlyEvent(this)" data-i18n-key="learn-more" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
                 </div>
             </div>
         </div>
@@ -295,7 +295,7 @@
                         renting your own server.
                     </p>
                     <p class="mb-5"><img src="./assets/decentralization/rent 1.svg" class="img-fluid mt-5" alt="" /></p>
-                    <a role="button" data-i18n-key="getStarted" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="signup" onclick="countlyEvent(this)" href="">Get Started</a>
+                    <a role="button" id="getStarted" onclick="countlyEvent(this)" data-i18n-key="getStarted" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-0 linearGradient align-middle borderRadius60 mt-5" id="signup" onclick="countlyEvent(this)" href="">Get Started</a>
                 </div>
             </div>
         </div>
@@ -546,12 +546,7 @@
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-            crossorigin="anonymous"
-        ></script>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        
         <script src="./js/roadmap.js"></script>
         <script src="./js/decentralized.js"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -559,6 +554,9 @@
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"
         ></script>
+
+        <!-- countly Integrated -->
+        <script src="./js/countly.js"></script>
 
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
