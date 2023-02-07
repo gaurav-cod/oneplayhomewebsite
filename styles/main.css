@@ -1374,3 +1374,8 @@ input, textarea {
 .mutedTextColor {
     color: #959595;
 }
+
+.font14 {
+    font-size: 14px;
+    line-height: 1.5;
+}
