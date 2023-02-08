@@ -1369,3 +1369,8 @@ input, textarea {
 .marginrightBtn {
     margin-right: 6.5rem;
 }
+
+.font14 {
+    font-size: 12px;
+    line-height: 1.5;
+}
