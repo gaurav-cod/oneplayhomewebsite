@@ -1379,3 +1379,12 @@ input, textarea {
     font-size: 12px;
     line-height: 1.5;
 }
+
+.fright {
+    float: none !important;
+    text-align: center !important;
+}
+
+.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput {
+    color: #ffffff !important;
+}
