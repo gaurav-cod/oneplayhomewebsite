@@ -133,7 +133,7 @@
                             </h1>
                         </div>
                         <div class="col-lg-6 col-md-7">
-                            <p class="font20 font500 offWhiteColor mt-4">
+                            <p class="font20 font500 offWhiteColor mt-4 mb-0">
                                 Please provide your information to help us contact you
                             </p>
                         </div>
@@ -157,12 +157,18 @@
                             </div>
                         </div>
                     </form> -->
+                    <div class="row justify-content-center">
+                        <div class="col-auto negativeWidthMargin">
+                            <div class="formLoader mt-5"></div>
+                        </div>
+                    </div>
                     <div id="zsfeedbackwidgetdiv"></div>
-                    <div class="row mt-5">
+                    
+                    <div class="row pt-5">
                         <div class="col align-self-center">
                             <div class="customBorderColor border-bottom"></div>
                         </div>
-                        <div class="col-auto align-self-center p-0">
+                        <div class="col-auto align-self-center px-0">
                             <span class="font16 font500 customOffWhite">OR</span>
                         </div>
                         <div class="col align-self-center">
@@ -444,15 +450,12 @@
                                 <div class="col-12 MobileView">
                                     <img src="./assets/home/laptop 1.svg" class="img-fluid marginTopNegative" alt="laptop" />
                                 </div>
-                                <div class="col-lg-7 col-md-8 ps-lg-5 pt-4 pb-4 align-self-center">
-                                    <h1 class="font50 font800 mb-0">
-                                        Join Discord and
+                                <div class="col-lg-7 col-md-7 px-lg-5 pt-4 pb-4 customPadding5 align-self-center">
+                                    <h1 class="font50 font800">
+                                      Join Discord and Get 7 days free subscription.
                                     </h1>
-                                    <h1 class="font50 font800 mb-0">
-                                        7 days free subscription.
-                                    </h1>
-                                    <a id="joinDiscord" onclick="countlyEvent(this)" href="https://discord.com/invite/Cg4ZskStE2" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 mt-4">Join Discord</a>
-                                    <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-lg-5"><u data-i18n-key="btn-browsePlans">Browse Plans</u></a>
+                                    <a onclick="countlyEvent(this)" id="joinDiscord" href="https://discord.com/invite/Cg4ZskStE2" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-0 mt-5"><i class="fa-brands fa-discord me-2 font20 align-middle"></i>Join Discord</a>
+                                    <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn mt-5 text-white font22 font500 align-middle ms-lg-4"><u data-i18n-key="btn-browsePlans">Browse Plans</u></a>
                                 </div>
                                 <div class="col-lg-5 col-md-4 align-self-center p-0 desktopView">
                                     <div class="mr130">
@@ -577,6 +580,7 @@
                 document.execCommand("copy");
                 temp.remove();
             }
+            
         </script>
     </body>
 </html>
