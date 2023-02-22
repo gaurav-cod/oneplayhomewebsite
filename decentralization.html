@@ -43,7 +43,7 @@
                         <li class="nav-item me-3">
                             <a class="nav-link activenav" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html" target="_blank">Decentralization</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <select data-i18n-switcher class="form-select bgTransparent mutedColor">
                               <option value="english">English</option>
                               <option value="hindi">Hindi (हिंदी)</option>
@@ -55,7 +55,7 @@
                               <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
                               <option value="urdu">Urdu (اردو)</option>
                             </select>
-                        </li>
+                        </li> -->
                     </ul>
                     <form class="desktopView">
                         <div class="row">
@@ -570,7 +570,7 @@
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
 
-        <script src="./js/multi-language.js"></script>
+        <!-- <script src="./js/multi-language.js"></script> -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag() {
@@ -580,10 +580,10 @@
             gtag("config", "UA-220923953-1");
             
             // Multiple Language Integration
-            async function fetchTranslationsFor(newLocale) {
-                const response = await fetch(`/lang/decentralization/${newLocale}.json`);
-                return await response.json();
-            }
+            // async function fetchTranslationsFor(newLocale) {
+            //     const response = await fetch(`/lang/decentralization/${newLocale}.json`);
+            //     return await response.json();
+            // }
         </script>
     </body>
 </html>
