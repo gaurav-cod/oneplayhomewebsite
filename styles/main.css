@@ -1,5 +1,22 @@
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+    .fbfcaptchaDivinput {
+        width: 100%;
+    }
+
+    .FBWordVerify {
+        margin: 0px !important;
+        margin-top: 20px !important;
+    }
+
+    #advwebForm .redtxt {
+        font-size: 12px !important;
+    }
+    
+    .feedbackformmdiv {
+        padding: 0px !important;
+    }
+
     .borderLeftcolor {
         border-left: 0px !important;
     }
@@ -1387,6 +1404,7 @@ input, textarea {
 .fright {
     float: none !important;
     text-align: center !important;
+    margin-top: 20px !important;
 }
 
 .feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput {
@@ -1408,9 +1426,13 @@ input, textarea {
 }
 
 #zsfeedbackwidgetdiv {
-    height: 26.875rem;
+    height: 29.875rem;
 }
 
 .negativeWidthMargin {
     margin-left: -240px;
+}
+
+.zsfeedbkrpanel {
+    z-index: 1 !important;
 }
