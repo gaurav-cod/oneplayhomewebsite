@@ -219,6 +219,10 @@
     .padding70 {
         padding-top: 50px !important;
     }
+
+    .marginNegativeTop {
+        margin-top: -24% !important;
+    }
 }
 
 
@@ -1278,7 +1282,7 @@ input, textarea {
 }
 
 .marginNegativeTop {
-    margin-top: -7% !important;
+    margin-top: -7%;
 }
 
 .marginRightNegative {
