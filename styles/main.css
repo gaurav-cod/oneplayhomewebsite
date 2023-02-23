@@ -1,4 +1,11 @@
 /* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 350px) {
+    .btn {
+        font-size: 12px !important;
+        line-height: 17px;
+    }
+}
+
 @media (max-width: 575.98px) { 
     .fbfcaptchaDivinput {
         width: 100%;
