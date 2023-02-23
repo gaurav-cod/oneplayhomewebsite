@@ -6,7 +6,11 @@
     }
 }
 
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
+    .tableBody th, .tableBody td {
+        font-size: 16px !important;
+        line-height: 26px !important;
+    } 
     .fbfcaptchaDivinput {
         width: 100%;
     }
@@ -204,6 +208,13 @@
 
     .marginrightBtn {
         margin-right: 0px !important;
+    }
+
+    .customCareerTab.nav-pills .nav-link {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        height: 44px !important;
+
     }
 }
 
