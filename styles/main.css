@@ -1,5 +1,9 @@
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
+    .borderLeftcolor {
+        border-left: 0px !important;
+    }
+
     .customPadding {
         padding-left: 15px !important;
         padding-right: 15px !important;
@@ -54,7 +58,7 @@
     }
 
     .padding100 {
-        padding-top: 70px !important;
+        padding-top: 40px !important;
     }
 
     .paddingRemove {
