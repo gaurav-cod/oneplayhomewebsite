@@ -1,0 +1,538 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="cloud gaming, indian cloud gaming, decentralized gaming, cloud gaming india, open source, game streaming, oneplay, gaming">
+        <meta name="description" content="Play Any Game on Any Device with OnePlay. Upto Single Digit Latency and 4K 120 FPS on any possible device. Completely Decentralized and Open Source.">
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        
+        <!-- Custom CSS Link -->
+        <link href="./styles/main.css" rel="stylesheet" />
+        <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
+
+        <title data-i18n-key="titlesection">OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+
+    </head>
+    <body>
+        <!-- Navbar Section Start -->
+        <nav class="navbar navbar-expand-lg pt-4 pb-4 bgBlur sticky-top">
+            <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
+                <button class="navbar-toggler btn-sm p-0 pt-2 mr-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
+                </button>
+                <a class="navbar-brand float-left" href="./index.html">
+                    <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span data-i18n-key="sublogo" class="beta">BETA</span>
+                </a>
+                <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-login" id="login" href="">Login</a></span>
+                
+                <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="download" onclick="countlyEvent(this)" data-i18n-key="nav-download" href="./download.html">Download</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
+                        </li>
+                    </ul>
+                    <form class="desktopView">
+                        <div class="row">
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" onclick="countlyEvent(this)" href="">Log in</a>
+                            </div>
+                            <div class="col-auto align-self-center ps-0">
+                                <a role="button" class="btn border-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="MobileView">
+                        <hr class="hrBorderColor mb-4"/>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                        <p><span class="offWhiteColor font18 font500"><span data-i18n-key="nav-needhelp">Need help?</span><span class="gradientAnchor"><a href="#" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span></span></p>
+                        <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2023 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                        <p class="font16 font500 gradientAnchor">
+                            <a href="privacy.html" class="anchor" id="privacy" data-i18n-key="nav-privacypolicy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" id="t&c" data-i18n-key="nav-t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container paddingtopres100 customH1">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="text-center">
+                        <h1 class="text-white font50 font800 mt-5" data-i18n-key="heading">
+                            Open Source Usage & Contributions
+                        </h1>
+                        <p class="font20 font500 offWhiteColor mt-4" data-i18n-key="subheading">
+                            Last updated: <span class="customOffWhite">20 February 2023</span>
+                        </p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 gradientAnchor">
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4" data-i18n-key="intro">
+                                We at OnePlay believe that Open Source is the future of Transparency of Any Company
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Therefore we do and use lots of open source projects/softwares/solutions/code in the entire chain of end to end solution.
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4 mb-0">Because we love open source so much, we infant have many of our code-base open source and will be making lot of tools open source in the coming days.</p>
+                            <p class="font20 font500 me-lg-4"><a href="https://github.com/OnePlay-Internet"><i class="fa-brands fa-github me-2"></i>https://github.com/OnePlay-Internet</a></p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">Here is a list of declaration of the services, libraries, softwares, platform, libraries, code that we use every day to build the next generation cloud gaming experience.</p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4"><em>NOTE: This list is not always up to date, so we update it time to time as we make our releases.</em></p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">This list might not have all the libraries/solutions we use but we tried to cover as much as we can to bring full transparency and credit to the creators.</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <p class="font20 font600 text-white mt-4">
+                                Proxmox
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                We heavily use Proxmox for our virtualization
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                KVM
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                We are on process in building our custom open KVM Dedicated GPU Virtualization Network
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Apache 
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Apache powers our core API/Frontend Serving Infrastructure
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                NGINIX
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                We use it for faster caching or as a Micro-service proxy internally
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Gitlab/Github
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                For our internal and external repositories
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Zabbix & NewRelic
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Monitoring is everything
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                SonarCube
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Code scanning is automated
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                OpenVPN & Pritunl
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                VPN Infrastructure
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                HaProxy
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Internally for Load-balancing
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Python/Go/PHP/Node/C++/QT C++/Rust/Java
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Ah, the languages we love
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                MySQL/Mongo/Elastic/Redis
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Databases you can never live without
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                AWS 
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We love AWS after all
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                OwnCloud
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Disk/Storage Management
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Redash/Countly/Google Analytics
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Data Analytics we can never miss
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Zoho Desk & Zoho Mail
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 CRM & Organization Mail
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Flutter/Kotlin/Java
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Our Mobile Application
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                OpenSSL/LetsEncrypt/Comodo SSL/Amazon SSL/DigiCERT
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 SSL/Signing our software
+                            </p>
+
+                            <p class="font20 font600 text-white mt-4">
+                                BrowserStack/PostMan/LambdaTest
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 API & Testing
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Electron/QTC++
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Desktop/Mac Application
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Angular/React, Javascript, HTML, CSS
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Website & Other Front-ends
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Express, Nest, Flask
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We love API Building
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                CDN77 & Cloudflare
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 CDN
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                IMGX
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Image re-sizing
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Jenkins, Docker
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 CI/CD & Containers
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Hashicorp Vault & Terraform
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Secret Key & Deployment
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Teleport/NGROK/Forward Proxy
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 For Remote Access
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Centos 7, Ubuntu, Debian
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Cannot live without this
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                TightVNC
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 VNC
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                NMAP, JMETER, BURPSUITE, MOD SECURITY, AWS WAF, SNORT, SURICATA
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Security & Load Testing
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Elastic APM, KIBANA, Fleet & Log-stash
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                Logging & Analytics
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Windows 10 & 11 Home/Pro/Enterprise/Server 2019/Linux Mint
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                For our main cloud gaming desktop experience
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                We use this OS as our main working OS, Dev/QA, Testing or As part of our Production for (BETA)
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                WebRTC, HEVC, H.264, AV1, VP9
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 CODEC & Services
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Windows Optimisations, Tweaks, Performance, Tuning & Debug
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4 mb-0">
+                                MSI AfterBurner, Riva Tuner, GPUOpen, ProcessHacker, ViGEMBus (Controller Support), XBOX Drivers, NEFRAS
+                            </p>
+                            <p class="mb-0 gradientAnchor font20 font500"><a href="https://github.com/DaddyMadu/Windows10GamingFocus"><i class="fa-brands fa-github me-2"></i>https://github.com/DaddyMadu/Windows10GamingFocus</a></p>
+                            <p class="mb-0 gradientAnchor font20 font500"><a href="https://github.com/Atlas-OS/Atlas/tree/main/src"><i class="fa-brands fa-github me-2"></i>https://github.com/Atlas-OS/Atlas/tree/main/src</a></p>
+                            <p class="font20 font600 text-white mb-0 mt-4">
+                                AMD Series GPU - 5700XT, 6800XT, 6800, 6600XT, V520, V620
+                            </p>
+                            <p class="font20 font600 text-white mb-0">
+                                NVIDIA Series GPU - 2060, 2060s, 1080, 1080TI, 3060, 3070, 4080, 4070, A5000, A4000, A6000, RTX 5000, A10, A16, A40, T4
+                            </p>
+                            <p class="font20 font600 text-white">Intel Series GPU - Arc 770</p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We use this GPU for either testing, internal Dev usage, QA, or in Production as of our (beta)
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Sunshine
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4 mb-0">
+                                 At the heart of OnePlay Custom Streaming stack, sunshine is in-build
+                            </p>
+                            <p class="font20 font500 me-lg-4 gradientAnchor">
+                                <a href="https://github.com/LizardByte/Sunshine"><i class="fa-brands fa-github me-2"></i>https://github.com/LizardByte/Sunshine</a>
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Moonlight
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 mb-0 me-lg-4">
+                                 We use Customised Moonlight client as our main client experience
+                            </p>
+                            <p class="font20 font500 me-lg-4 gradientAnchor">
+                                <a href="https://github.com/moonlight-stream"><i class="fa-brands fa-github me-2"></i>https://github.com/moonlight-stream</a>
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Epic Games, Steam, Battle.net, EA Play/Origin, Ubisoft/Uplay, Rockstar Launcher/SocialClub, Riot Client, GOG
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 DRM Stores for Games
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                pfSense, VYOS, OPSense
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We love networking, thats we love to customize things as well to the best of experience.
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Cisco/Juniper/NetGear/LinkSYS/Ubiquiti Switch/Router
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We use them inside our network in office or in the Datacenter
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                PayTM, Rayzorpay, Stripe, Paypal
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Main payment gateway
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Polygon/Solana
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 Blockchain
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Slack & Jira & Discord 
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 You know what you know
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Dell PowerEdge, SuperMicro, Asus, Gigabyte, HP Server Series
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 me-lg-4">
+                                 We use the combination of this in our Dev, QA, Prod, Office Network as per application requirement
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                Custom Hardware:
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 mb-0 me-lg-4">
+                                 We use and will continue to use custom hardware as part of broader customisation, efficiency and cost effectiveness.
+                            </p>
+                            <p class="font20 font500 offWhiteColor me-lg-4">
+                                 That can include custom Chassis, Cooling Strategy, Motherboard/CPU/GPU Combination, Risers etc.
+                            </p>
+                            <p class="font20 font600 text-white mt-4">
+                                We mainly use
+                            </p>
+                            <p class="font20 font500 offWhiteColor mt-4 mb-0 me-lg-4">
+                                 X570, X670, B550/450, WRX80, TRX80 and many more server/workstation grade
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 Samsung, Crucial, Micron SSD
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 WD/Seagate HDD
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 Custom Chassis
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 AMD EPYC, Threadripper or latest Ryzen CPU’s
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 Intel XEON, i5/i7/i9 Series
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 ASUS 10GBE NIC
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                 PCI 3/4 X16 Risers
+                            </p>
+                            <p class="font20 font500 offWhiteColor mb-0 me-lg-4">
+                                And many more to create custom blade/tower/rack servers as per need
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid pt-5">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" />
+                    </a>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4 col-6 mt-5">
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-company">Company</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" data-i18n-key="nav-home" class="text-decoration-none">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" data-i18n-key="nav-about" class="text-decoration-none">About Us</a></li>
+                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" data-i18n-key="nav-contact" class="text-decoration-none">Contact Us & FAQ's</a></li>
+                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" data-i18n-key="nav-job" class="text-decoration-none">Jobs</a></li>
+                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-plan&pricing" class="text-decoration-none">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming/build-your-own-market-in-the-universe-of-nfts-124cfd226dd0" data-i18n-key="nav-blog" id="blog" onclick="countlyEvent(this)" class="text-decoration-none">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4 col-6 mt-5 ps-0">
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-boring">Boring Stuff</p>
+                            <ul class="font500 footerFont footerWhiteColor list-unstyled">
+                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
+                                <li class="mt-2"><a href="./open-source-licensing.html" id="opensource" onclick="countlyEvent(this)" class="text-decoration-none activenav">Open Source Usage & Contributions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-12 col-lg-4 col-12 mt-5 text-center centerTextResponsiveTab">
+                            <p class="footerFont font600 text-white" data-i18n-key="nav-accessDrop">Get Early Access Drops!</p>
+                            
+                            <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                <div class="col-12 text-center mb-4">
+                                    <a href="https://discord.com/invite/Cg4ZskStE2" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://www.instagram.com/oneplaycloudgaming/" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center pe-4">
+                                    <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col p-0">
+                    <hr class="border-bottom customBorderColor"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mb-4 mt-4">
+            <div class="row">
+                <div class="col-md-12 p-lg-0">
+                    <p class="font16 font500 footerWhiteColor">© 2023 RainBox Media Pvt Ltd. All Rights Reserved.</p>
+                    <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
+                    <p class="font14 mb-0 font500 offWhiteColor mt-4 me-lg-4">
+                        OnePlay has a Grievance Officer to address your concerns regarding data safety, privacy, and other Platform usage concerns.
+                        You may contact the, Grievance Officer at any of the following:
+                    </p>
+                    <p class="mb-0 font14 font500 offWhiteColor">Address: <span>247 Embassy Park, Gandhi Nagar, Near Hindustan Company, Vikhroli, Mumbai - 400079, Maharashtra.  Monday to Friday.</span> </p>
+                    <p class="mb-0 font14 font500 offWhiteColor">Email: <span class="gradientAnchor"><a href="mailto:grievance@oneplay.in">grievance@oneplay.in</a></span></p>
+                    <p class="mb-0 font14 font500 offWhiteColor">Note - <span>Kindly send all user related grievances to the above mentioned email ID, in order for us to process and resolve the same in an expeditious manner</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
+
+        <!-- countly Integrated -->
+        <script src="./js/countly.js"></script>
+        
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
+
+        <!-- Spatial Navigation CDN -->
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="./js/spatial-navigation.js"></script>
+
+        <!-- <script src="./js/multi-language.js"></script> -->
+
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "UA-220923953-1");
+
+        </script>
+    </body>
+</html>
