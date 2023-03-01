@@ -2,7 +2,7 @@
 
 function send_payload($payload, $query)
 {
-   $ch = curl_init('https://client-apis.oneplay.in/client/v1/terminate_connections_to_server?'.$query);
+   $ch = curl_init('https://client-apis.oneplay.in/client/v2/terminate_connections_to_server?'.$query);
    curl_setopt($ch, CURLOPT_POST, true);
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true );
    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
