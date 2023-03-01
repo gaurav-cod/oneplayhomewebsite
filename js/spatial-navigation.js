@@ -8,17 +8,22 @@ window.addEventListener('load', function() {
   });
 
   // Make the *currently existing* navigable elements focusable.
-  SpatialNavigation.makeFocusable();
+  // SpatialNavigation.makeFocusable();
 
   // Focus the first navigable element.
   // SpatialNavigation.focus();
 });
 
 $.getScript('https://luke-chang.github.io/js-spatial-navigation/spatial_navigation.js', function() {
-$('a, .btn')
+$('input, select, textarea, a, button')
   .SpatialNavigation()
-  .focus(function() { $(this).css('outline', '2px solid white'); })
-  .blur(function() { $(this).css('outline', ''); })
-  // .first()
+  .focus(function() 
+    { 
+      $(this).css('outline', '2px solid white'); 
+    })
+  .blur(function() { 
+      $(this).css('outline', ''); 
+    })
+  // .first();
   // .focus();
 });

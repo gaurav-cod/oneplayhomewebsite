@@ -1,5 +1,37 @@
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+@media (max-width: 350px) {
+    .btn {
+        font-size: 12px !important;
+        line-height: 17px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .tableBody th, .tableBody td {
+        font-size: 16px !important;
+        line-height: 26px !important;
+    } 
+    .fbfcaptchaDivinput {
+        width: 100%;
+    }
+
+    .FBWordVerify {
+        margin: 0px !important;
+        margin-top: 20px !important;
+    }
+
+    #advwebForm .redtxt {
+        font-size: 12px !important;
+    }
+    
+    .feedbackformmdiv {
+        padding: 0px !important;
+    }
+
+    .borderLeftcolor {
+        border-left: 0px !important;
+    }
+
     .customPadding {
         padding-left: 15px !important;
         padding-right: 15px !important;
@@ -54,7 +86,7 @@
     }
 
     .padding100 {
-        padding-top: 70px !important;
+        padding-top: 40px !important;
     }
 
     .paddingRemove {
@@ -176,6 +208,20 @@
 
     .marginrightBtn {
         margin-right: 0px !important;
+    }
+
+    .customCareerTab.nav-pills .nav-link {
+        font-size: 16px !important;
+        line-height: 20px !important;
+        height: 44px !important;
+    }
+
+    .padding70 {
+        padding-top: 50px !important;
+    }
+
+    .marginNegativeTop {
+        margin-top: -24% !important;
     }
 }
 
@@ -798,6 +844,7 @@ body {
 .bgBlur {
     -webkit-backdrop-filter: blur(6px) !important;
     backdrop-filter: blur(6px) !important;
+    background-color: #151617 !important;
 }
 
 .h56 {
@@ -1031,7 +1078,7 @@ input, textarea {
 }
 
 .loginBg {
-    background-color: #212123;
+    background-color: #212123 !important;
 }
 
 .custom-choose input[type='radio']:not(:checked) + label .image {
@@ -1083,11 +1130,11 @@ input, textarea {
 }
 
 .mutedColor {
-    color:  #959595;
+    color:  #959595 !important;
 }
 
 .mutedColor:hover {
-    color:  #959595;
+    color:  #959595 !important;
 }
 
 .wh230 {
@@ -1235,7 +1282,7 @@ input, textarea {
 }
 
 .marginNegativeTop {
-    margin-top: -7% !important;
+    margin-top: -7%;
 }
 
 .marginRightNegative {
@@ -1370,6 +1417,10 @@ input, textarea {
     margin-right: 6.5rem;
 }
 
+.mutedTextColor {
+    color: #959595;
+}
+
 .font14 {
     font-size: 12px;
     line-height: 1.5;
@@ -1378,9 +1429,10 @@ input, textarea {
 .fright {
     float: none !important;
     text-align: center !important;
+    margin-top: 20px !important;
 }
 
-.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput {
+.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput, .feedtxtarea {
     color: #ffffff !important;
 }
 
@@ -1399,9 +1451,13 @@ input, textarea {
 }
 
 #zsfeedbackwidgetdiv {
-    height: 26.875rem;
+    height: 29.875rem;
 }
 
 .negativeWidthMargin {
     margin-left: -240px;
+}
+
+.zsfeedbkrpanel {
+    z-index: 1 !important;
 }

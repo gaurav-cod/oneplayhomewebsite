@@ -43,16 +43,16 @@
                             <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
                         </li>
                         <!-- <li class="nav-item">
-                            <select data-i18n-switcher class="form-select">
-                                <option value="english">English</option>
-                                <option value="hindi">Hindi (हिंदी)</option>
-                                <option value="arabic">Arabic (العربية)</option>
-                                <option value="korean">Korean (한국인)</option>
-                                <option value="malay">Malay (Melayu)</option>
-                                <option value="russian">Russian (Melayu)</option>
-                                <option value="persian">Persian (فارسی)</option>
-                                <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
-                                <option value="urdu">Urdu (اردو)</option>
+                            <select data-i18n-switcher class="form-select bgTransparent mutedColor">
+                              <option value="english">English</option>
+                              <option value="hindi">Hindi (हिंदी)</option>
+                              <option value="arabic">Arabic (العربية)</option>
+                              <option value="korean">Korean (한국인)</option>
+                              <option value="malay">Malay (Melayu)</option>
+                              <option value="russian">Russian (Melayu)</option>
+                              <option value="persian">Persian (فارسی)</option>
+                              <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
+                              <option value="urdu">Urdu (اردو)</option>
                             </select>
                         </li> -->
                     </ul>
@@ -275,7 +275,7 @@
             </div>
         </div>
 
-        <div class="container-fluid padding150">
+        <div class="container-fluid pt-5">
             <div class="row">
                 <div class="col p-0">
                     <hr class="border-bottom customBorderColor"/>
@@ -283,11 +283,11 @@
             </div>
         </div>
 
-        <div class="container padding150">
+        <div class="container pt-5">
             <div class="row">
                 <div class="col-md-12">
                     <a class="navbar-brand" href="./index.html">
-                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta" data-i18n-key="sublogo">BETA</span>
+                        <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" />
                     </a>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 col-6 mt-5">
@@ -371,6 +371,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="./js/config.js"></script>
         <script src="./js/script.js"></script>
+
+        <!-- countly Integrated -->
+        <script src="./js/countly.js"></script>
         
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -379,6 +382,8 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
+        <!-- <script src="./js/multi-language.js"></script> -->
 
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -389,10 +394,10 @@
             gtag("config", "UA-220923953-1");
             
             // Multiple Language Integration
-            async function fetchTranslationsFor(newLocale) {
-                const response = await fetch(`/lang/privacy/${newLocale}.json`);
-                return await response.json();
-            }
+            // async function fetchTranslationsFor(newLocale) {
+            //     const response = await fetch(`/lang/privacy/${newLocale}.json`);
+            //     return await response.json();
+            // }
 
         </script>
     </body>

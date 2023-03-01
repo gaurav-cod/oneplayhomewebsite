@@ -24,7 +24,7 @@
               <span class="navbar-toggler-icon"><i class="fa-solid fa-bars-staggered text-white align-middle"></i></span>
             </button>
             <a class="navbar-brand float-left" href="./index.html">
-              <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" /><span class="beta" data-i18n-key="sublogo">BETA</span>
+              <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid mobileScreenLogo" />
             </a>
             <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-0" id="login" data-i18n-key="nav-login" href="">Login</a></span>
             
@@ -43,7 +43,7 @@
                   <a class="nav-link" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
                 </li>
                 <!-- <li class="nav-item">
-                  <select data-i18n-switcher class="form-select">
+                  <select data-i18n-switcher class="form-select bgTransparent mutedColor">
                     <option value="english">English</option>
                     <option value="hindi">Hindi (हिंदी)</option>
                     <option value="arabic">Arabic (العربية)</option>
@@ -54,7 +54,7 @@
                     <option value="vietnamese">Vietnamese (Tiếng Việt)</option>
                     <option value="urdu">Urdu (اردو)</option>
                   </select>
-              </li> -->
+                </li> -->
               </ul>
               <form class="desktopView">
                 <div class="row">
@@ -112,7 +112,7 @@
                         <div class="col-lg-8 col-md-6 col-5 text-end align-self-center">
                           <!-- <div class="gradientAnchor"><a href="#" class="text-decoration-none font20 font500">view details > </a></div> -->
                           <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
-                            <a href="#" class="btn disabled font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
+                            <a id="starter" href="#" class="btn font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
                           </span>
                         </div>
                       </div>
@@ -137,7 +137,7 @@
                         <div class="col-lg-4 col-md-4 col-5 text-end align-self-center">
                           <!-- <div class="gradientAnchor"><a href="#" class="text-decoration-none font20 font500">view details > </a></div> -->
                           <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
-                            <a href="#" class="btn disabled font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
+                            <a id="founder" href="#" class="btn font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
                           </span>
                         </div>
                       </div>
@@ -159,7 +159,7 @@
                         <div class="col-lg-8 col-md-6 col-5 text-end align-self-center">
                           <!-- <div class="gradientAnchor"><a href="#" class="text-decoration-none font20 font500">view details > </a></div> -->
                           <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
-                            <a href="#" class="btn disabled font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
+                            <a id="elite" href="#" class="btn font16 text-white font500 ps-3 pe-3 removeFocus linearGradient borderRadius10 border-0 mt-2" data-i18n-key="buyButton">Buy Now</a>
                           </span>
                         </div>
                       </div>
@@ -172,7 +172,7 @@
         </div>
         <div class="container padding100 ">
           <div class="row justify-content-center">
-            <div class="col-12 col-lg-11 text-center mb-5">
+            <div class="col-12 col-lg-11 text-center mb-md-5 mb-3">
               <h1 class="text-white font50 font800" data-i18n-key="BrowseFAQ">
                 Browse FAQs
               </h1>
@@ -181,11 +181,11 @@
               <div class="customAccordion accordion" id="accordionExample">
                 <div class="accordion-item bgTransparent">
                   <h2 class="accordion-header bgTransparent" id="headingOne">
-                    <button data-i18n-key="question1" class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <button data-i18n-key="question1" class="accordion-button font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       How much does the OnePlay subscription cost?
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body ps-0 pe-0 pt-0">
                       <div class="row">
                         <div class="col-lg-9">
@@ -221,11 +221,11 @@
                 </div>
                 <div class="accordion-item bgTransparent">
                   <h2 class="accordion-header bgTransparent" id="headingThree">
-                    <button data-i18n-key="question3" class="accordion-button font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <button data-i18n-key="question3" class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 border-bottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       Does OnePlay have access to my credentials?
                     </button>
                   </h2>
-                  <div id="collapseThree" class="accordion-collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body ps-0 pe-0 pt-0">
                       <div class="row">
                         <div class="col-lg-9">
@@ -291,7 +291,7 @@
           <div class="row padding100">
             <div class="col-md-12">
               <a class="navbar-brand" href="./index.html">
-                <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" /><span class="beta" data-i18n-key="sublogo">BETA</span>
+                <img src="assets/logo 1.svg" alt="brand" width="150px" height="40px" class="img-fluid" />
               </a>
               <div class="row">
                 <div class="col-md-6 col-lg-4 col-6 mt-5">
@@ -318,7 +318,7 @@
                   <p class="footerFont font600 text-white" data-i18n-key="nav-accessDrop">Get Early Access Drops!</p>
                   <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                     <div class="col-12 text-center mb-4">
-                      <a href="https://discord.gg/Cg4ZskStE2" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white font500 buttonPB removeFocus linearGradient borderRadius60 buttonPB border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
+                      <a href="https://discord.com/invite/Cg4ZskStE2" id="discord" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white font500 buttonPB removeFocus linearGradient borderRadius60 buttonPB border-0"><i class="fa-brands fa-discord me-2"></i>Join Discord Channel</a>
                     </div>
                     <div class="col-auto text-center pe-4">
                       <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
@@ -373,12 +373,17 @@
         <script src="./js/config.js"></script>
         <script src="./js/script.js"></script>
 
+        <!-- countly Integrated -->
+        <script src="./js/countly.js"></script>
+
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
 
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
+        <!-- <script src="./js/multi-language.js"></script> -->
 
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -394,10 +399,10 @@
           })
 
           // Multiple Language Integration
-          async function fetchTranslationsFor(newLocale) {
-            const response = await fetch(`/lang/subscription/${newLocale}.json`);
-            return await response.json();
-          }
+          // async function fetchTranslationsFor(newLocale) {
+          //   const response = await fetch(`/lang/subscription/${newLocale}.json`);
+          //   return await response.json();
+          // }
 
         </script>
     </body>
