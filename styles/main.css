@@ -1432,7 +1432,7 @@ input, textarea {
     margin-top: 20px !important;
 }
 
-.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput {
+.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput, .feedtxtarea {
     color: #ffffff !important;
 }
 
