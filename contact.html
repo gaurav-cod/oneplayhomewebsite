@@ -132,10 +132,9 @@
                                 Need help with OnePlay?
                             </h1>
                         </div>
-                        <div class="col-lg-7 col-md-8">
+                        <div class="col-lg-6 col-md-7">
                             <p class="font20 font500 offWhiteColor mt-4" data-i18n-key="subheading2">
-                                You can contact one of our friendly Customer
-                                Success team members below.
+                                Please provide your information to help us contact you
                             </p>
                         </div>
                     </div>
@@ -158,12 +157,31 @@
                             </div>
                         </div>
                     </form> -->
+                    <div class="row justify-content-center">
+                        <div class="col-auto negativeWidthMargin">
+                            <div class="formLoader mt-5"></div>
+                        </div>
+                    </div>
                     <div id="zsfeedbackwidgetdiv"></div>
-                    <div class="row mt-4 inputMarginTop">
-                        <div class="col mt-5 gradientAnchor inputMarginTop">
+                    <div class="row pt-5 justify-content-center">
+                        <div class="col-md-8 col-lg-7">
+                            <div class="row">
+                                <div class="col align-self-center">
+                                    <div class="customBorderColor border-bottom"></div>
+                                </div>
+                                <div class="col-auto align-self-center px-0">
+                                    <span class="font16 font500 customOffWhite">OR</span>
+                                </div>
+                                <div class="col align-self-center">
+                                    <div class="customBorderColor border-bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center inputMarginTop">
+                        <div class="col mt-5 text-center gradientAnchor inputMarginTop">
                             <h3 class="font28 font700 text-white" data-i18n-key="dropemail">Drop us an email</h3>
-                            <p class="font20 font500 mb-0"><a href="mailto:team@oneplay.in" id="emailId" data-i18n-key="emailaddress">team@oneplay.in</a></p>
-                            <u class="font20 font500 offWhiteColor cursorPointer" onclick="copyEmail();" data-i18n-key="copyaddress">Copy address</u>
+                            <p class="font20 font500 mb-0"><a href="mailto:team@oneplay.in" id="emailId" data-i18n-key="emailaddress">team@oneplay.in</a><i class="fa-solid fa-copy cursorPointer font20 font500 text-white ms-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy" onclick="copyEmail();"></i></p>
                         </div>
                         <!-- <div class="col-md-7 col-lg-6 mt-5 gradientAnchor inputMarginTop">
                             <h3 class="font28 font700 text-white">Prefer a phone call?</h3>
@@ -275,7 +293,7 @@
                                     <div class="row">
                                         <div class="col-lg-9">
                                             <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="ansquestion4">
-                                                Our Servers are located in Mumbai. They are powered by 25 GBPS+ internet connectivity for uninterrupted gaming.
+                                                Our Servers are located in Mumbai.
                                             </p>
                                         </div>
                                     </div>
@@ -302,10 +320,8 @@
                                             </p>
                                             <p class="font20 font500 offWhiteColor border-bttom">
                                                 <span data-i18n-key="ansquestion5-4">System requirements</span>
-                                                <ul class="font20 font500 offWhiteColor">
-                                                    <li data-i18n-key="ansquestion5-5">For all devices with Android: (needs to be added)</li>
-                                                    <li data-i18n-key="ansquestion5-6">For Windows: (needs to be added)</li>
-                                                    <li data-i18n-key="ansquestion5-7">For macOS: Your macOS must be 10.11 or higher.</li>
+                                                <ul class="font20 font500 offWhiteColor gradientAnchor">
+                                                    <li>Please <a href="./download.html#Devices" class="text-decoration-none"> click here</a> to read the system requirements for your device.</li>
                                                 </ul>
                                             </p>
                                         </div>
@@ -414,7 +430,7 @@
                                     <div class="row">
                                         <div class="col-lg-9">
                                             <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="ansquestion10">
-                                                For the time being, our mobile application runs on Android 5 and above. We likewise suggest at least 2 GB of RAM.
+                                                For the time being, our mobile application runs on Android 8 and above. We likewise suggest at least 3 GB of RAM.
                                             </p>
                                         </div>
                                     </div>
@@ -435,16 +451,12 @@
                                 <div class="col-12 MobileView">
                                     <img src="./assets/home/laptop 1.svg" class="img-fluid marginTopNegative" alt="laptop" />
                                 </div>
-                                <div class="col-lg-7 col-md-8 ps-lg-5 pt-4 pb-4 align-self-center">
-                                    <h1 class="font50 font800 mb-0" data-i18n-key="heading6">
-                                        Get OnePlay on
+                                <div class="col-lg-7 col-md-7 ps-lg-5 customPadding5 align-self-center">
+                                    <h1 class="font50 font800">
+                                      Join Discord and Get 7 days free subscription.
                                     </h1>
-                                    <h1 class="font50 font800 mb-0" data-i18n-key="heading6-1">
-                                        your favorite device
-                                    </h1>
-                                    <p class="mt-4 font18 font500" data-i18n-key="subheading6">Get 50 FREE OnePlay Coins . 10 hours of gameplay & more</p>
-                                    <a id="login" onclick="countlyEvent(this)" href="" class="btn border-0 btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 mt-4" data-i18n-key="getStarted">Get Started</a>
-                                    <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn border-0 mt-4 text-white font18 font500 align-middle ms-lg-5"><u data-i18n-key="btn-browsePlans">Browse Plans</u></a>
+                                    <a onclick="countlyEvent(this)" id="joinDiscord" href="https://discord.com/invite/Cg4ZskStE2" class="btn btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-0 mt-5"><i class="fa-brands fa-discord me-2 font20 align-middle"></i>Join Discord</a>
+                                    <a href="./subscription.html" id="subscription" onclick="countlyEvent(this)" class="btn mt-5 text-white font22 font500 align-middle ms-lg-4"><u data-i18n-key="btn-browsePlans">Browse Plans</u></a>
                                 </div>
                                 <div class="col-lg-5 col-md-4 align-self-center p-0 desktopView">
                                     <div class="mr130">

@@ -1374,3 +1374,34 @@ input, textarea {
     font-size: 12px;
     line-height: 1.5;
 }
+
+.fright {
+    float: none !important;
+    text-align: center !important;
+}
+
+.feedbtxtfield, .fbtxtnf, .fbfcaptchaDivinput {
+    color: #ffffff !important;
+}
+
+.formLoader {
+    background-image: url('../assets/contactUs/form-gif.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+}
+
+#zsfeedbackwidgetdiv .zsfeedbkrpanel {
+    background-color: #151515 !important;
+}
+
+#zsfeedbackwidgetdiv {
+    height: 26.875rem;
+}
+
+.negativeWidthMargin {
+    margin-left: -240px;
+}
