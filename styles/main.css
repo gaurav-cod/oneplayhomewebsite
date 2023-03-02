@@ -1392,8 +1392,13 @@ input, textarea {
 #zsfeedbackwidgetdiv .dt-blue-btn {
     background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
     border-radius: 60px !important;
-    height: 40px;
+    height: 50px;
+    width: 135px !important;
+    padding: 20px 30px !important;
+    font-size: 18px !important;
+    line-height: 21px !important;
 }
+
 .cursorPointer {
     cursor: pointer;
 }
@@ -1451,7 +1456,7 @@ input, textarea {
 }
 
 #zsfeedbackwidgetdiv {
-    height: 29.875rem;
+    height: 28.875rem;
 }
 
 .negativeWidthMargin {
