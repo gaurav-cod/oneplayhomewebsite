@@ -383,6 +383,10 @@
     .marginrightBtn {
         margin-right: 5rem !important;
     }
+
+    .mobileScreenLogo {
+        width: 100px !important;
+    }
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */
@@ -611,8 +615,8 @@ body {
 }
 
 .wh48 {
-    width: 48px;
-    height: 48px;
+    width: 38px;
+    height: 38px;
 }
 
 .removeFocus:focus {
