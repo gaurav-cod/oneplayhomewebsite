@@ -1486,5 +1486,5 @@ select option {
 }
 
 a {
-    text-decoration: inherit !important;
+    text-decoration: none !important;
 }
