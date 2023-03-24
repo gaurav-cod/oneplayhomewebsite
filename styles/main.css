@@ -1484,3 +1484,7 @@ select option {
     pointer-events: none;
     opacity: 0.8;
 }
+
+a {
+    text-decoration: inherit !important;
+}
