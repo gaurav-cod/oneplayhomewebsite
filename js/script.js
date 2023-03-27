@@ -13,22 +13,6 @@ function check() {
 
 // -------------------------images-Slider---------------
 
-function getCookie(cname) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) == " ") {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
-
 /**
  *
  * @param {HTMLDivElement} el
@@ -92,13 +76,12 @@ function loadLinks() {
 }
 
 function handleLogout() {
-  document.cookie =
-    "op_session_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+  localStorage.removeItem("op_session_token");
   location.reload();
 }
 
 function handleAuth() {
-  const session = getCookie("op_session_token");
+  const session = localStorage.getItem("op_session_token");
   const login = document.querySelectorAll("#login");
   const signup = document.querySelectorAll("#signup");
   // const logout = document.querySelector("#logout");
