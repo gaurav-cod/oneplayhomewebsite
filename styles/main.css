@@ -1491,7 +1491,14 @@ a {
 
 @media (min-width: 1400px) {
     .customPadding {
-        padding-left: 5% !important;
-        padding-right: 5% !important;
+        padding-left: 2% !important;
+        padding-right: 2% !important;
+    }
+}
+
+@media (min-width: 2000px) {
+    .customPadding {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
     }
 }
