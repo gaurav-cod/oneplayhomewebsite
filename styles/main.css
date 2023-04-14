@@ -1514,6 +1514,14 @@ a {
     height: 48px;
 }
 
+@media (max-width: 480px) {
+  .defaultSub {
+    font-size: 16px !important;
+    width: 140px;
+    height: 44px;
+  }  
+}
+
 .activeSub {
     background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%) !important;
     color: #ffffff !important;
