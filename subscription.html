@@ -25,6 +25,22 @@
     </title>
   </head>
   <body>
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+    </div>
     <!-- Navbar Section Start -->
     <nav class="navbar navbar-expand-lg py-2 bgBlur sticky-top">
       <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
@@ -242,15 +258,15 @@
         </div>
         <div class="col-md-12 col-lg-12">
           <div class="row justify-content-center">
-            <div class="col-auto pe-0 mt-4 mt-lg-5">
-              <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
-                <p class="mb-0">Hourly Plan</p>
-              </button>
+            <div class="col-auto pe-0 mt-4 mt-lg-5 hourSub">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
+                  <p class="mb-0">Hourly Plan</p>
+                </button>
             </div>
-            <div class="col-auto mt-4 mt-lg-5">
-              <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
-                <p class="mb-0">Monthly Plan</p>
-              </button>
+            <div class="col-auto mt-4 mt-lg-5 monthSub">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
+                  <p class="mb-0">Monthly Plan</p>
+                </button>
             </div>
           </div>
           <div class="row justify-content-center">
@@ -1047,22 +1063,39 @@
       //   return await response.json();
       // }
 
-      $(function() {
+      $( document ).ready(function() {
+        
         $("#hourlyPlan").addClass("activeSub");
         $("#HourlySub").removeClass("d-none");
+        const url = window.location.href;
+
+        if(url.includes("#Hourly_Plan")) {
+          activehourlyPlan()
+        } else if(url.includes("#Monthly_Plan")) {
+          activeMonthlyPlan();
+        }
 
         $("#hourlyPlan").click(function(){
+          activehourlyPlan()
+        });
+
+        function activehourlyPlan() {
           $("#hourlyPlan").addClass("activeSub");
           $("#HourlySub").removeClass("d-none");
           $("#monthlyPlan").removeClass("activeSub");
           $("#MonthlySub").addClass("d-none");
-        });
+        }
+
         $("#monthlyPlan").click(function(){
+          activeMonthlyPlan();
+        });
+
+        function activeMonthlyPlan() {
           $("#monthlyPlan").addClass("activeSub");
           $("#MonthlySub").removeClass("d-none");
           $("#hourlyPlan").removeClass("activeSub");
           $("#HourlySub").addClass("d-none");
-        });
+        }
       })
     </script>
   </body>
