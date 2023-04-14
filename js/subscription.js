@@ -21,38 +21,26 @@ function loadSubscriptions() {
  */
 function makeElementFromSubscription(sub) {
     return `
-    <div class="col-lg-12 mt-4">
+    <div class="col-12 ${sub['package_type'] == 'base' ? 'col-lg-6' : 'col-lg-3'} col-md-6 mt-4 d-flex align-items-stretch">
         <div
-            class="card border-top-0 border-start-0 border-end-0 lightBlackBg borderRadius30"
+            class="card br30 w-100 ${sub['plan_config']?.is_recommended ? 'activeSubCard' : ''}"
         >
-            <div class="card-body p-4">
-                <div class="row ps-lg-3 pt-lg-2">
-                    <div class="col-lg-4 col-md-6 col-7">
-                        <p class="mb-1 font16 font500 offWhiteColor">
-                            ${sub['plan_name']} (${sub['package_type'] == 'base' ? 'Monthly' : 'Hourly'})
-                        </p>
-                        <p class="mb-1 font38 font700 text-white">
+            <div class="card-body p-4 subCard">
+                <div class="row justify-content-center">
+                    <div class="col-11 col-md-12 text-center py-3">
+                        <p class="font38 font700 text-white mb-2">
                             ₹ ${sub['value']}
                         </p>
-                        <p class="mb-1 font16 font500 offWhiteColor">
-                            <img
-                                src="./assets/subscriptionNew/Alarm.svg"
-                                class="img-fluid me-2"
-                                alt=""
-                            />
-                            <span>${sub['total_offered_tokens']} minutes</span>
+                        <p class="font20 font600 numericLinear mb-0">
+                            ${sub['plan_name']}
                         </p>
-                    </div>
-                    <div
-                        class="col-lg-8 col-md-6 col-5 text-end align-self-center"
-                    >
-                        <span class="d-inline-block">
-                            <a
-                                href="${config.APP_URL + '?subscribe=' + sub['id']}"
-                                class="btn font16 text-white font500 ps-3 pe-3 linearGradient borderRadius10 border-top-0 border-start-0 border-end-0 mt-2"
-                                >Buy Now</a
-                            >
-                        </span>
+                        <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id']}" class="btn removeFocus border-start-0 border-end-0 text-white gradientBtn my-4 my-lg-5 px-4">Get Started Now</a>
+                        <p class="font20 font500 offWhiteColor mb-0">
+                            ${sub['total_offered_tokens']} minutes <br/>
+                            Validity ${sub['plan_duration_in_days']} Days <br/>
+                            ${sub['plan_description']}
+                        </p>
+                        <p class="font20 font500 offWhiteColor mb-0"><span class="align-middle">Play games you own. </span><img src="./assets/subscriptionNew/Warning.svg" class="img-fluid" alt="" data-bs-toggle="tooltip" title="To play a game, you must have ownership of the game, through the available stores." /></p>
                     </div>
                 </div>
             </div>
@@ -62,7 +50,12 @@ function makeElementFromSubscription(sub) {
 }
 
 loadSubscriptions().then((subscriptions) => {
-    const container = document.getElementById('list-subscriptions');
-    const child = subscriptions.map(makeElementFromSubscription).join();
+    const container = document.getElementById('hourly-subscriptions');
+    const container2 = document.getElementById('monthly-subscriptions');
+    const hourlySubs = subscriptions.filter(s => s.package_type === 'topup');
+    const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
+    const child = hourlySubs.map(makeElementFromSubscription).join("");
+    const child2 = monthlySubs.map(makeElementFromSubscription).join("");
     container?.insertAdjacentHTML('afterbegin', child);
+    container2?.insertAdjacentHTML('afterbegin', child2);
 })
