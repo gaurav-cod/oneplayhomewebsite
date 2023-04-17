@@ -66,7 +66,7 @@ function makeElementFromSubscription(sub) {
                                 class="img-fluid"
                                 alt="" 
                                 data-bs-toggle="tooltip" 
-                                title="Daily limit 4 hours" 
+                                title="Your daily playtime is 4 hours. Kindly adhere to this instruction." 
                             /><br/>
                             Validity ${sub['plan_duration_in_days']} Days <br/>
                             ${getResolution(sub)} <br/>
