@@ -1041,6 +1041,19 @@
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
 
+      var body = $('body');
+      body.on('mouseover', '[data-bs-toggle="tooltip"]', function (e) {
+          e.stopPropagation();
+          return new bootstrap.Tooltip(this).show();
+      });
+
+      body.on('mouseleave', '[data-bs-toggle="tooltip"]', function (e) {
+          $('[role="tooltip"]').fadeOut(function () {
+              e.stopPropagation();
+              $(this).remove();
+          });
+      });
+
       // Multiple Language Integration
       // async function fetchTranslationsFor(newLocale) {
       //   const response = await fetch(`/lang/subscription/${newLocale}.json`);
