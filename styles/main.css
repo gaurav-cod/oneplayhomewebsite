@@ -1488,3 +1488,68 @@ select option {
 a {
     text-decoration: none !important;
 }
+
+@media (min-width: 1400px) {
+    .customPadding {
+        padding-left: 2% !important;
+        padding-right: 2% !important;
+    }
+}
+
+@media (min-width: 2000px) {
+    .customPadding {
+        padding-left: 10% !important;
+        padding-right: 10% !important;
+    }
+}
+
+.defaultSub {
+    border-radius: 60px !important;
+    font-weight: 500;
+    font-size: 18px !important;
+    line-height: 20px !important;
+    background: #212123 !important;
+    color: #959595 !important;
+    width: 180px;
+    height: 48px;
+}
+
+@media (max-width: 480px) {
+  .defaultSub {
+    font-size: 16px !important;
+    width: 140px;
+    height: 44px;
+  }  
+}
+
+.activeSub {
+    background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%) !important;
+    color: #ffffff !important;
+}
+
+.subCard {
+    background: #212123 !important;
+    border-radius: 30px;
+}
+
+.br30 {
+    border-radius: 30px !important;
+    padding: 1px;
+    background: #212123 !important;
+}
+
+.gradientBtn {
+    background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%);
+    border-radius: 60px !important;
+    /* height: 48px; */
+}
+
+.activeSubCard {
+    background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .btn {
+        font-size: 0.85rem !important;
+    }
+}

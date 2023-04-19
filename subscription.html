@@ -26,7 +26,7 @@
   </head>
   <body>
     <!-- Navbar Section Start -->
-    <nav class="navbar navbar-expand-lg pt-4 pb-4 bgBlur sticky-top">
+    <nav class="navbar navbar-expand-lg py-2 bgBlur sticky-top">
       <div class="container-fluid ps-lg-5 pe-lg-5 customPadding">
         <button
           class="navbar-toggler btn-sm p-0 pt-2 mr-2"
@@ -141,7 +141,7 @@
                   onclick="countlyEvent(this)"
                   ><img
                     src="./assets/home/Group 56.svg"
-                    class="img-fluid"
+                    class="img-fluid wh48"
                     alt="dashboard"
                 /></a>
               </div>
@@ -227,7 +227,7 @@
             class="text-white font50 customfont50 font800 mt-5"
             data-i18n-key="heading1"
           >
-            High Strung Gaming At Affordable Prices
+            Experience the Thrill of High Graphics at Low Prices!
           </h2>
           <p class="font20 font500 offWhiteColor mt-4 gradientAnchor">
             * Join our
@@ -240,56 +240,40 @@
             and get 1 week free subscription.
           </p>
         </div>
-
-        <!-- <div class="col-lg-8 col-md-10 text-center padding100">
-          <h2 class="text-white font50 customfont50 font800">Coming Soon</h2>
-          <p class="font20 font500 offWhiteColor mt-4 gradientAnchor">
-            Don't miss out on the opportunity to be part of the future of
-            gaming. Follow us on social media to stay updated.
-          </p>
-          <img
-            src="./assets/subscription/pricing_coming_soon 1.svg"
-            width="60%"
-            class="img-fluid"
-            alt=""
-          />
-          <div class="mt-5">
-            <a
-              href="https://www.facebook.com/ONEPLAYIN"
-              target="_blank"
-              class="me-3"
-              ><img
-                src="./assets/subscription/Vector.svg"
-                class="img-fluid"
-                alt=""
-            /></a>
-            <a
-              href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y="
-              target="_blank"
-              class="me-3"
-              ><img
-                src="./assets/subscription/icons8-instagram.svg"
-                class="img-fluid"
-                alt=""
-            /></a>
-            <a
-              href="https://twitter.com/CloudOneplay"
-              target="_blank"
-              class="me-3"
-              ><img
-                src="./assets/subscription/icons8-twitter.svg"
-                class="img-fluid"
-                alt=""
-            /></a>
-            <a href="https://discord.com/invite/Cg4ZskStE2" target="_blank"
-              ><img
-                src="./assets/subscription/icons8-discord.svg"
-                class="img-fluid"
-                alt=""
-            /></a>
+        <div class="col-md-12 col-lg-12">
+          <div class="row justify-content-center">
+            <div class="col-auto pe-0 mt-4 mt-lg-5 hourSub">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
+                  <p class="mb-0">Hourly Plan</p>
+                </button>
+            </div>
+            <div class="col-auto mt-4 mt-lg-5 monthSub">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
+                  <p class="mb-0">Monthly Plan</p>
+                </button>
+            </div>
           </div>
-        </div> -->
-
+          <div class="row justify-content-center">
+            <div class="col-10 col-md-12">
+              <div class="row d-none" id="HourlySub">
+                <div class="col-md-12">
+                  <div class="row pt-4 justify-content-center" id="hourly-subscriptions">
+                  </div>
+                </div>
+              </div>
+              <div class="row d-none" id="MonthlySub">
+                <div class="col-md-12">
+                  <div class="row justify-content-center">
+                    <div class="col-md-9 col-lg-7">
+                      <div class="row pt-4" id="monthly-subscriptions">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col-lg-9 col-md-11 padding50">
           <div id="list-subscriptions" class="row"></div>
         </div>
@@ -1057,11 +1041,59 @@
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
 
+      var body = $('body');
+      body.on('mouseover', '[data-bs-toggle="tooltip"]', function (e) {
+          e.stopPropagation();
+          return new bootstrap.Tooltip(this).show();
+      });
+
+      body.on('mouseleave', '[data-bs-toggle="tooltip"]', function (e) {
+          $('[role="tooltip"]').fadeOut(function () {
+              e.stopPropagation();
+              $(this).remove();
+          });
+      });
+
       // Multiple Language Integration
       // async function fetchTranslationsFor(newLocale) {
       //   const response = await fetch(`/lang/subscription/${newLocale}.json`);
       //   return await response.json();
       // }
+
+      $( document ).ready(function() {
+
+        $("#hourlyPlan").addClass("activeSub");
+        $("#HourlySub").removeClass("d-none");
+        const url = window.location.href;
+
+        if(url.includes("#Hourly_Plan")) {
+          activehourlyPlan()
+        } else if(url.includes("#Monthly_Plan")) {
+          activeMonthlyPlan();
+        }
+
+        $("#hourlyPlan").click(function(){
+          activehourlyPlan()
+        });
+
+        function activehourlyPlan() {
+          $("#hourlyPlan").addClass("activeSub");
+          $("#HourlySub").removeClass("d-none");
+          $("#monthlyPlan").removeClass("activeSub");
+          $("#MonthlySub").addClass("d-none");
+        }
+
+        $("#monthlyPlan").click(function(){
+          activeMonthlyPlan();
+        });
+
+        function activeMonthlyPlan() {
+          $("#monthlyPlan").addClass("activeSub");
+          $("#MonthlySub").removeClass("d-none");
+          $("#hourlyPlan").removeClass("activeSub");
+          $("#HourlySub").addClass("d-none");
+        }
+      })
     </script>
   </body>
 </html>
