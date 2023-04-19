@@ -62,12 +62,15 @@ function makeElementFromSubscription(sub) {
                         <p class="font20 font500 offWhiteColor mb-0">
                             <span class="align-middle"
                                 >${sub['total_offered_tokens'] / 60} hour${sub['total_offered_tokens'] > 60 ? 's' : ''}${sub['package_type'] == 'base' ? '/month' : ''}
-                            </span><img src="./assets/subscriptionNew/Warning.svg" 
-                                class="img-fluid"
+                            </span>
+                            
+                            <img src="./assets/subscriptionNew/Warning.svg" 
+                                class="img-fluid ${sub['total_offered_tokens'] < 240 ? 'd-none' : ''}"
                                 alt="" 
                                 data-bs-toggle="tooltip" 
                                 title="Your daily playtime is 4 hours. Kindly adhere to this instruction." 
-                            /><br/>
+                            />
+                            <br/>
                             Validity ${sub['plan_duration_in_days']} Days <br/>
                             ${getResolution(sub)} <br/>
                             ${sub['plan_config']?.is_queue ? 'Queue basis <br/>' : ''}
