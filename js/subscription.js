@@ -53,19 +53,19 @@ function makeElementFromSubscription(sub) {
                         <p class="font38 font700 text-white mb-2">
                             ${currencyMap[sub['currency']] || sub['currency']} ${sub['value']}
                         </p>
-                        <p class="font20 font600 numericLinear mb-0">
-                            ${sub['plan_name']}
+                        <p class="font20 font600 offWhiteColor mb-0">
+                            ${sub['package_type'] == 'topup' ? sub['plan_name'] : 'Per Month'}
                         </p>
                         <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id']}"
                            class="btn removeFocus border-start-0 border-end-0 text-white gradientBtn my-4 my-lg-5 px-4"
                         >Get Started Now</a>
                         <p class="font20 font500 offWhiteColor mb-0">
-                            <span class="align-middle"
-                                >${sub['total_offered_tokens'] / 60} hour${sub['total_offered_tokens'] > 60 ? 's' : ''}${sub['package_type'] == 'base' ? '/month' : ''}
+                            <span class="align-middle ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
+                                >${sub['total_offered_tokens'] / 60 + ' hours/month'}
                             </span>
                             
                             <img src="./assets/subscriptionNew/Warning.svg" 
-                                class="img-fluid ${sub['total_offered_tokens'] < 240 ? 'd-none' : ''}"
+                                class="img-fluid ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
                                 alt="" 
                                 data-bs-toggle="tooltip" 
                                 title="Your daily playtime is 4 hours. Kindly adhere to this instruction." 
