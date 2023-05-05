@@ -50,6 +50,7 @@ function makeElementFromSubscription(sub) {
             <div class="card-body p-4 subCard">
                 <div class="row justify-content-center">
                     <div class="col-11 col-md-12 text-center py-3">
+                        <p class="mb-2 font20 font500 offWhiteColor ${sub['plan_config']?.actual_price ? '' : 'invisible'}"><del>${sub['plan_config']?.actual_price}</del></p>
                         <p class="font38 font700 text-white mb-2">
                             ${currencyMap[sub['currency']] || sub['currency']} ${sub['value']}
                         </p>
@@ -59,6 +60,7 @@ function makeElementFromSubscription(sub) {
                         <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id']}"
                            class="btn removeFocus border-start-0 border-end-0 text-white gradientBtn my-4 my-lg-5 px-4"
                         >Get Started Now</a>
+                        <p class="font20 font500 offWhiteColor mb-0 ${sub['plan_config']?.actual_price == '599' ? '' : 'd-none'}">Offer valid for 1st 500 users</p>
                         <p class="font20 font500 offWhiteColor mb-0">
                             <span class="align-middle ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
                                 >${sub['total_offered_tokens'] / 60 + ' hours/month'}
@@ -70,7 +72,7 @@ function makeElementFromSubscription(sub) {
                                 data-bs-toggle="tooltip" 
                                 title="Your daily playtime is 4 hours. Kindly adhere to this instruction." 
                             />
-                            <br/>
+                            <br class="${sub['package_type'] == 'topup' ? 'd-none' : ''}"/>
                             Validity ${sub['plan_duration_in_days']} Days <br/>
                             ${getResolution(sub)} <br/>
                             ${sub['plan_config']?.is_queue ? 'Queue basis <br/>' : ''}
