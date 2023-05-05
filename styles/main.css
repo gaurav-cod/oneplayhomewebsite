@@ -13,11 +13,13 @@
     } 
     .fbfcaptchaDivinput {
         width: 100%;
+        height: 40px;
+        margin-top: -30px !important;
     }
 
     .FBWordVerify {
         margin: 0px !important;
-        margin-top: 20px !important;
+        margin-top: 25px !important;
     }
 
     #advwebForm .redtxt {
@@ -225,6 +227,19 @@
     }
 }
 
+.FBWordVerify, .FBWordVerify input {
+    width: 97% !important;
+}
+
+.FBWordVerify {
+    width: 40% !important;
+}
+
+@media (max-width: 476px) {
+    .FBWordVerify {
+        width: 33% !important;
+    }
+}
 
 /* // Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
@@ -1552,4 +1567,13 @@ a {
     .btn {
         font-size: 0.85rem !important;
     }
+}
+
+.fbfcaptchaDivinput {
+    height: 41px;
+    margin-top: -30px !important;
+}
+
+.FBWordVerify {
+    margin: 0px !important;
 }
