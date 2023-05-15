@@ -98,6 +98,14 @@ function makeElementFromSubscription(sub) {
 }
 
 loadSubscriptions().then((subscriptions) => {
+    if (subscriptions.length > 0) {
+        const pricings = document.querySelectorAll('#pricings');
+        pricings.forEach(el => el.removeAttribute('hidden'));
+    } else {
+        const comingSoon = document.getElementById('coming-soon');
+        comingSoon?.removeAttribute('hidden');
+    }
+
     const container = document.getElementById('hourly-subscriptions');
     const container2 = document.getElementById('monthly-subscriptions');
     const hourlySubs = subscriptions.filter(s => s.package_type === 'topup');
