@@ -1418,6 +1418,10 @@ input, textarea {
     line-height: 21px !important;
 }
 
+#zsfeedbackwidgetdiv .dt-blue-btn:focus {
+    border: 2px solid #ffffff !important;
+}
+
 .cursorPointer {
     cursor: pointer;
 }
@@ -1475,7 +1479,7 @@ input, textarea {
 }
 
 #zsfeedbackwidgetdiv {
-    height: 28.875rem;
+    height: 30.875rem;
 }
 
 .negativeWidthMargin {
