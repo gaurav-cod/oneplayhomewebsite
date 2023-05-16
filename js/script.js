@@ -11,20 +11,6 @@ function check() {
   }
 }
 
-function getSession() {
-  const cookies = document.cookie.split(';');
-
-  for (let i = 0; i < cookies.length; i++) {
-    const [name, value] = cookies[i].trim().split('=');
-
-    if (name === 'op_session_token') {
-      return value;
-    }
-  }
-
-  return null;
-}
-
 // -------------------------images-Slider---------------
 
 /**
@@ -90,9 +76,10 @@ function loadLinks() {
 }
 
 function handleAuth() {
-  const session = getSession();
+  const session = document.cookie.match(/op_session_token=(.*?);/);
   const login = document.querySelectorAll("#login");
   const signup = document.querySelectorAll("#signup");
+  const home = document.querySelectorAll('#home');
   // const logout = document.querySelector("#logout");
   if (session) {
     login.forEach((l) => {
@@ -100,6 +87,9 @@ function handleAuth() {
     });
     signup.forEach((s) => {
       s.style.display = "none";
+    });
+    home.forEach((h) => {
+      h.setAttribute('href', '/dashboard/');
     });
     // logout.style.display = "block";
   } else {
