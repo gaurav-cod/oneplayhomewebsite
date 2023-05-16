@@ -225,6 +225,10 @@
     .marginNegativeTop {
         margin-top: -24% !important;
     }
+
+    .fbfcaptchaDiv.w240 {
+        width: 177px !important;
+    }
 }
 
 .FBWordVerify, .FBWordVerify input {
