@@ -11,6 +11,20 @@ function check() {
   }
 }
 
+function getSession() {
+  const cookies = document.cookie.split(';');
+
+  for (let i = 0; i < cookies.length; i++) {
+    const [name, value] = cookies[i].trim().split('=');
+
+    if (name === 'op_session_token') {
+      return value;
+    }
+  }
+
+  return null;
+}
+
 // -------------------------images-Slider---------------
 
 /**
@@ -75,13 +89,8 @@ function loadLinks() {
   });
 }
 
-function handleLogout() {
-  localStorage.removeItem("op_session_token");
-  location.reload();
-}
-
 function handleAuth() {
-  const session = localStorage.getItem("op_session_token");
+  const session = getSession();
   const login = document.querySelectorAll("#login");
   const signup = document.querySelectorAll("#signup");
   // const logout = document.querySelector("#logout");
