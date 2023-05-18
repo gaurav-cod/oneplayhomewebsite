@@ -75,15 +75,11 @@ function loadLinks() {
   });
 }
 
-function handleLogout() {
-  localStorage.removeItem("op_session_token");
-  location.reload();
-}
-
 function handleAuth() {
-  const session = localStorage.getItem("op_session_token");
+  const session = document.cookie.match(/op_session_token=(.*?);/);
   const login = document.querySelectorAll("#login");
   const signup = document.querySelectorAll("#signup");
+  const home = document.querySelectorAll('#home');
   // const logout = document.querySelector("#logout");
   if (session) {
     login.forEach((l) => {
@@ -91,6 +87,9 @@ function handleAuth() {
     });
     signup.forEach((s) => {
       s.style.display = "none";
+    });
+    home.forEach((h) => {
+      h.setAttribute('href', '/dashboard/');
     });
     // logout.style.display = "block";
   } else {
