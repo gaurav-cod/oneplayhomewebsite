@@ -12,7 +12,7 @@ Plugin being used - RT, AutoXHR, Continuity, NavigationTiming, ResourceTiming
         return Countly.onload.push(function() {
             cly_load_track_performance();
             if (!Countly.track_performance) {
-                Countly.track_performance = Countly.i[Countly.app_key].track_performance;
+                Countly.track_performance = config.COUNTLY_APP_KEY.track_performance;
             }
         });
     }
