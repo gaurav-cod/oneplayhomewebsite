@@ -98,6 +98,18 @@ function makeElementFromSubscription(sub) {
 }
 
 loadSubscriptions().then((subscriptions) => {
+    const heading1 = document.getElementById('heading1');
+
+    if (subscriptions.length > 0) {
+        const pricings = document.querySelectorAll('#pricings');
+        pricings.forEach(el => el.removeAttribute('hidden'));
+        heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
+    } else {
+        const comingSoon = document.getElementById('coming-soon');
+        comingSoon?.removeAttribute('hidden');
+        heading1.innerText = 'Coming Soon';
+    }
+
     const container = document.getElementById('hourly-subscriptions');
     const container2 = document.getElementById('monthly-subscriptions');
     const hourlySubs = subscriptions.filter(s => s.package_type === 'topup');

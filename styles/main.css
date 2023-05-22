@@ -225,6 +225,10 @@
     .marginNegativeTop {
         margin-top: -24% !important;
     }
+
+    .fbfcaptchaDiv.w240 {
+        width: 177px !important;
+    }
 }
 
 .FBWordVerify, .FBWordVerify input {
@@ -1418,6 +1422,10 @@ input, textarea {
     line-height: 21px !important;
 }
 
+#zsfeedbackwidgetdiv .dt-blue-btn:focus {
+    border: 2px solid #ffffff !important;
+}
+
 .cursorPointer {
     cursor: pointer;
 }
@@ -1475,7 +1483,7 @@ input, textarea {
 }
 
 #zsfeedbackwidgetdiv {
-    height: 28.875rem;
+    height: 30.875rem;
 }
 
 .negativeWidthMargin {
