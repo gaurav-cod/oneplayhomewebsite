@@ -1585,3 +1585,8 @@ a {
 .FBWordVerify {
     margin: 0px !important;
 }
+
+.hidenNegativeMargin {
+    overflow-x: hidden;
+    padding: 0px !important;
+}
