@@ -12,7 +12,7 @@ if(config.HAS_COUNTLY === "true") {
   Countly.remote_config = true;
   // Countly.app_version = "1.2";
 
-  // Countly.q.push(['track_sessions']);
+  Countly.q.push(['track_sessions']);
   Countly.q.push(['track_pageview',location.pathname+location.hash]);
   Countly.q.push(['track_clicks']);
   Countly.q.push(['track_scrolls']);
@@ -24,29 +24,6 @@ if(config.HAS_COUNTLY === "true") {
 
   //will collect hidden inputs
   Countly.q.push(['track_forms', null, true]);
-
-  //automatically report traces
-  Countly.q.push(["track_performance", {
-    //page load timing
-    RT:{},
-    //required for automated networking traces
-    instrument_xhr: true,
-    captureXhrRequestResponse: true,
-    AutoXHR: {
-        alwaysSendXhr: true,
-        monitorFetch: true,
-        captureXhrRequestResponse: true
-    },
-    //required for screen freeze traces
-    Continuity: {
-        enabled: true,
-        monitorLongTasks: true,
-        monitorPageBusy: true,
-        monitorFrameRate: true,
-        monitorInteractions: true,
-        afterOnload: true
-    }
-  }]);
 
   function countlyEvent(ob){
     Countly.add_event({
