@@ -225,7 +225,9 @@
     .marginNegativeTop {
         margin-top: -24% !important;
     }
+}
 
+@media (max-width: 430px) {
     .fbfcaptchaDiv.w240 {
         width: 177px !important;
     }
