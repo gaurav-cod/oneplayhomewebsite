@@ -245,12 +245,12 @@
         <div id="pricings" class="col-md-12 col-lg-12" hidden>
           <div class="row justify-content-center">
             <div class="col-auto pe-0 mt-4 mt-lg-5 hourSub">
-                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan" onclick="countlyEvent(this)">
                   <p class="mb-0">Hourly Plan</p>
                 </button>
             </div>
             <div class="col-auto mt-4 mt-lg-5 monthSub">
-                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
+                <button class="btn removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan" onclick="countlyEvent(this)">
                   <p class="mb-0">Monthly Plan</p>
                 </button>
             </div>
@@ -378,11 +378,11 @@
                     <div class="col-lg-9">
                       <p
                         class="font20 font500 offWhiteColor border-bttom"
-                        data-i18n-key="asnquestion3"
                       >
-                        OnePlay does not store your credentials on their
-                        servers. Each session is purged after your use. Only
-                        your Login ID is temporarily stored as a cache.
+                        OnePlay uses a auto-login feature, which securely 
+                        stores your login credentials on their servers. Rest assured, 
+                        this implementation ensures the safety and security of your 
+                        information within the server environment.
                       </p>
                     </div>
                   </div>
@@ -682,59 +682,61 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 mt-4 text-center centerTextResponsiveTab">
-            <p class="footerFont font600 text-white">Get Free 7 Days Access</p>
-
-            <div
-              class="row mt-4 justify-content-center font500 footerFont footerWhiteColor"
-            >
-              <div class="col-12 text-center mb-4 d-grid">
-                <a
-                  href="https://discord.com/invite/Cg4ZskStE2"
-                  id="discord"
-                  onclick="countlyEvent(this)"
-                  class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"
-                  ><i class="fa-brands fa-discord me-2"></i
-                  ><span data-i18n-key="nav-joindiscord"
-                    >Join Discord Channel</span
-                  ></a
-                >
-              </div>
-              <div class="col-auto text-center pe-4">
-                <a
-                  href="https://www.facebook.com/ONEPLAYIN"
-                  id="facebook"
-                  onclick="countlyEvent(this)"
-                  target="_blank"
-                  ><i class="fa-brands fa-facebook wh28"></i
-                ></a>
-              </div>
-              <div class="col-auto text-center pe-4">
-                <a
-                  href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y="
-                  id="instagram"
-                  onclick="countlyEvent(this)"
-                  target="_blank"
-                  ><i class="fa-brands fa-instagram wh28"></i
-                ></a>
-              </div>
-              <div class="col-auto text-center pe-4">
-                <a
-                  href="https://twitter.com/CloudOneplay"
-                  id="twitter"
-                  onclick="countlyEvent(this)"
-                  target="_blank"
-                  ><i class="fa-brands fa-twitter wh28"></i
-                ></a>
-              </div>
-              <div class="col-auto text-center pe-4">
-                <a
-                  href="https://medium.com/@oneplay_gaming"
-                  id="medium"
-                  onclick="countlyEvent(this)"
-                  target="_blank"
-                  ><i class="fab fa-medium facebook-icon wh28"></i
-                ></a>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-9 mt-4 text-center centerTextResponsiveTab">
+              <p class="footerFont font600 text-white">Stay Updated</p>
+  
+              <div
+                class="row mt-4 justify-content-center font500 footerFont footerWhiteColor"
+              >
+                <div class="col-12 text-center mb-4 d-grid">
+                  <a
+                    href="https://discord.com/invite/Cg4ZskStE2"
+                    id="discord"
+                    onclick="countlyEvent(this)"
+                    class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"
+                    ><i class="fa-brands fa-discord me-2"></i
+                    ><span data-i18n-key="nav-joindiscord"
+                      >Join Discord Channel</span
+                    ></a
+                  >
+                </div>
+                <div class="col-auto text-center pe-4">
+                  <a
+                    href="https://www.facebook.com/ONEPLAYIN"
+                    id="facebook"
+                    onclick="countlyEvent(this)"
+                    target="_blank"
+                    ><i class="fa-brands fa-facebook wh28"></i
+                  ></a>
+                </div>
+                <div class="col-auto text-center pe-4">
+                  <a
+                    href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y="
+                    id="instagram"
+                    onclick="countlyEvent(this)"
+                    target="_blank"
+                    ><i class="fa-brands fa-instagram wh28"></i
+                  ></a>
+                </div>
+                <div class="col-auto text-center pe-4">
+                  <a
+                    href="https://twitter.com/CloudOneplay"
+                    id="twitter"
+                    onclick="countlyEvent(this)"
+                    target="_blank"
+                    ><i class="fa-brands fa-twitter wh28"></i
+                  ></a>
+                </div>
+                <div class="col-auto text-center pe-4">
+                  <a
+                    href="https://medium.com/@oneplay_gaming"
+                    id="medium"
+                    onclick="countlyEvent(this)"
+                    target="_blank"
+                    ><i class="fab fa-medium facebook-icon wh28"></i
+                  ></a>
+                </div>
               </div>
             </div>
           </div>
@@ -749,7 +751,7 @@
               class="img-fluid"
             />
           </a>
-          <div class="row">
+          <div class="row justify-content-center">
             <div class="col-md-4 col-lg-3 col-6 mt-5">
               <p
                 class="footerFont font600 text-white"
@@ -882,10 +884,10 @@
               </ul>
             </div>
             <div
-              class="col-md-12 col-lg-3 col-12 mt-5 text-center centerTextResponsiveTab px-0"
+              class="col-md-6 col-lg-3 col-12 mt-5 text-center centerTextResponsiveTab px-0"
             >
               <p class="footerFont font600 text-white">
-                Get Free 7 Days Access
+                Stay Updated
               </p>
 
               <div class="row mt-4 justify-content-center font500 footerFont">
