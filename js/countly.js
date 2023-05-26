@@ -8,9 +8,8 @@ if(config.HAS_COUNTLY === "true") {
   Countly.url = config.COUNTLY_URL;
   Countly.heatmap_whitelist = config.BASE_URL;
   Countly.debug = true;
-  Countly.offline_mode = true;
   Countly.remote_config = true;
-  // Countly.app_version = "1.2";
+  Countly.app_version = config.APP_VERSION;
 
   Countly.q.push(['track_sessions']);
   Countly.q.push(['track_pageview',location.pathname+location.hash]);
@@ -19,9 +18,7 @@ if(config.HAS_COUNTLY === "true") {
   Countly.q.push(['track_errors']);
   Countly.q.push(['track_links']);
   Countly.q.push(['collect_from_forms']);
-  //Fetch user's NPS and Survey feedbacks from the server
-
-
+ 
   //will collect hidden inputs
   Countly.q.push(['track_forms', null, true]);
 
