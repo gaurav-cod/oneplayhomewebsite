@@ -1586,6 +1586,7 @@ a {
 .fbfcaptchaDivinput {
     height: 41px;
     margin-top: -30px !important;
+    padding-left: 10px;
 }
 
 .FBWordVerify {
