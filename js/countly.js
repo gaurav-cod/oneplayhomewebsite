@@ -7,8 +7,6 @@ if(config.HAS_COUNTLY === "true") {
   Countly.app_key = config.COUNTLY_APP_KEY;
   Countly.url = config.COUNTLY_URL;
   Countly.heatmap_whitelist = config.BASE_URL;
-  Countly.debug = true;
-  Countly.remote_config = true;
   Countly.app_version = config.APP_VERSION;
 
   Countly.q.push(['track_sessions']);
