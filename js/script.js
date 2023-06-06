@@ -116,7 +116,7 @@ function loadSeriousNotification() {
     .then((data) => {
       if (!!data.text) {
         const html = `
-          <div id="serious" class="row alertBg font16 py-2 text-center">
+          <div id="serious" class="row alertCookieBg font16 py-2 text-center">
             <div class="col align-self-center pr-0">
               <p class="text-white mb-0">
                 ${data.text}
