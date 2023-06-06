@@ -32,19 +32,19 @@
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="home" onclick="countlyEvent(this)" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
+                            <a class="nav-link" id="home" onclick="countlyEvent('home_header:click')" aria-current="page" data-i18n-key="nav-home" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="aboutus" onclick="countlyEvent(this)" aria-current="page" href="./about.html">About Us</a>
+                            <a class="nav-link" onclick="countlyEvent('aboutus_header:click')" aria-current="page" href="./about.html">About Us</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="subscription" onclick="countlyEvent(this)" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
+                            <a class="nav-link" onclick="countlyEvent('subscription_header:click')" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link" id="download" onclick="countlyEvent(this)" data-i18n-key="nav-download" href="./download.html">Download</a>
+                            <a class="nav-link" onclick="countlyEvent('download_header:click')" data-i18n-key="nav-download" href="./download.html">Download</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link activenav" id="decentralization" onclick="countlyEvent(this)" data-i18n-key="nav-decentralization" href="./decentralization.html" target="_blank">Decentralization</a>
+                            <a class="nav-link activenav" onclick="countlyEvent('decentralization_header:click')" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
                         </li>
                         <!-- <li class="nav-item">
                             <select data-i18n-switcher class="form-select bgTransparent mutedColor">
@@ -63,29 +63,24 @@
                     <form class="desktopView">
                         <div class="row">
                             <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn removeFocus p-0" id="speed-test" onclick="countlyEvent(this)"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
+                                <a role="button" class="btn border-top-0 border-start-0 border-end-0 removeFocus p-0" id="speed-test" onclick="countlyEvent('speedTest:click')"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle loginClicked" data-i18n-key="nav-login" id="login" onclick="countlyEvent(this)" href="">Log in</a>
+                                <a role="button" class="btn border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" onclick="countlyEvent('login_header:click')" href="">Log in</a>
                             </div>
                             <div class="col-auto align-self-center ps-0">
-                            <a role="button" class="btn btn-lg border-top-0 border-start-0 border-end-0 font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
+                                <a role="button" class="btn border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent('sign-up_create:click')" href="">Sign Up</a>
                             </div>
                         </div>
                     </form>
                     <div class="MobileView">
                         <hr class="hrBorderColor mb-4"/>
-                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent(this)" href="">Sign Up</a>
-                        <p>
-                            <span class="offWhiteColor font18 font500">
-                                <span data-i18n-key="nav-needhelp">Need help?</span>
-                                <span class="gradientAnchor"><a href="#" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span>
-                            </span>
-                        </p>
+                        <a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" data-i18n-key="nav-signup" onclick="countlyEvent('sign-up_create:click')" href="">Sign Up</a>
+                        <p><span class="offWhiteColor font18 font500"><span data-i18n-key="nav-needhelp">Need help?</span><span class="gradientAnchor"><a href="./FAQs.html" onclick="countlyEvent('aboutus_browse_faq:click')" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span></span></p>
                         <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2023 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                         <p class="font16 font500 gradientAnchor">
-                            <a href="privacy.html" class="anchor" id="privacy" data-i18n-key="nav-privacypolicy" onclick="countlyEvent(this)">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-                            <a href="./tnc.html" class="anchor" id="t&c" data-i18n-key="nav-t&c" onclick="countlyEvent(this)">Terms & Conditions</a>
+                            <a href="privacy.html" class="anchor" data-i18n-key="nav-privacypolicy" id="privacy" onclick="countlyEvent('privacy_policy_header:click')">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                            <a href="./tnc.html" class="anchor" data-i18n-key="nav-t&c" id="t&c" onclick="countlyEvent('terms_and_condition_header:click')">Terms & Conditions</a>
                         </p>
                     </div>
                 </div>
@@ -155,7 +150,7 @@
                     </div>
                     <img src="./assets/decentralization/Group.svg" class="img-fluid mt-5" alt="" />
                     <span class="d-inline-block mt-5" tabindex="0" data-bs-toggle="tooltip" title="Coming Soon">
-                        <a role="button" id="learnMore" onclick="countlyEvent(this)" data-i18n-key="learn-more" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 disabledAnchor" id="learnMore" onclick="countlyEvent(this)" href="">Learn more</a>
+                        <a role="button" data-i18n-key="learn-more" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 disabledAnchor" onclick="countlyEvent('decentralization_learnmore:click')" href="">Learn more</a>
                     </span>
                 </div>
             </div>
@@ -300,7 +295,7 @@
                         renting your own server.
                     </p>
                     <p class="mb-5"><img src="./assets/decentralization/rent 1.svg" class="img-fluid mt-5" alt="" /></p>
-                    <a role="button" id="getStarted" onclick="countlyEvent(this)" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 mt-5" onclick="countlyEvent(this)" href="mailto:team@oneplay.in">Connect with us</a>
+                    <a role="button" class="btn font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 mt-5" onclick="countlyEvent('decentralization_connect_with_us:click')" href="mailto:team@oneplay.in">Connect with us</a>
                 </div>
             </div>
         </div>
@@ -491,11 +486,11 @@
                             <div id="collapsecompany" class="accordion-collapse collapse show" aria-labelledby="headingcompany" data-bs-parent="#accordionExample">
                                 <div class="accordion-body ps-0 pe-0 pt-0">
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                        <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
-                                        <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
-                                        <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Career</a></li>
-                                        <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
-                                        <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" id="blog" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
+                                        <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent('home_footer:click')" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
+                                        <li class="mt-2"><a href="./about.html" onclick="countlyEvent('aboutus_footer:click')" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                                        <li class="mt-2"><a href="./career.html" onclick="countlyEvent('career_footer:click')" class="text-decoration-none">Career</a></li>
+                                        <li class="mt-2"><a href="subscription.html" onclick="countlyEvent('plans_pricing_footer:click')" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                                        <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('blog_footer:click')" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                                     </ul>
                                     <div class="gradientBorderbottom mt-2"></div>
                                 </div>
@@ -510,8 +505,8 @@
                             <div id="collapsehelp" class="accordion-collapse collapse" aria-labelledby="headinghelp" data-bs-parent="#accordionExample">
                                 <div class="accordion-body ps-0 pe-0 pt-0">
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                        <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us</a></li>
-                                        <li class="mt-2"><a href="./FAQs.html" id="faqs" onclick="countlyEvent(this)" class="text-decoration-none">FAQ's</a></li>
+                                        <li class="mt-2"><a href="./contact.html" onclick="countlyEvent('contactus_footer:click')" class="text-decoration-none">Contact Us</a></li>
+                                        <li class="mt-2"><a href="./FAQs.html" onclick="countlyEvent('faqs_footer:click')" class="text-decoration-none">FAQ's</a></li>
                                     </ul>
                                     <div class="gradientBorderbottom mt-2"></div>
                                 </div>
@@ -526,10 +521,10 @@
                             <div id="collapseboring" class="accordion-collapse collapse" aria-labelledby="headingboring" data-bs-parent="#accordionExample">
                                 <div class="accordion-body ps-0 pe-0 pt-0">
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                        <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
-                                        <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
-                                        <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
-                                        <li class="mt-2"><a href="./open-source-licensing.html" id="opensource" onclick="countlyEvent(this)" class="text-decoration-none">Open Source Usage & Contributions</a></li>
+                                        <li class="mt-2"><a href="./privacy.html" onclick="countlyEvent('privacy_policy_footer:click')" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                                        <li class="mt-2"><a href="./tnc.html" onclick="countlyEvent('terms_and_condition_footer:click')" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                                        <li class="mt-2"><a href="./tnc.html#cancellationPolicy" onclick="countlyEvent('cancellation_policy_footer:click')" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
+                                        <li class="mt-2"><a href="./open-source-licensing.html" onclick="countlyEvent('open_source_usage_and_contributions:click')" class="text-decoration-none">Open Source Usage & Contributions</a></li>
                                     </ul>
                                     <div class="gradientBorderbottom mt-2"></div>
                                 </div>
@@ -542,19 +537,19 @@
                             
                             <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                                 <div class="col-12 text-center mb-4 d-grid">
-                                    <a href="https://discord.com/invite/Cg4ZskStE2" id="joinDiscord"onclick="countlyEvent(this)" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                                    <a href="https://discord.com/invite/Cg4ZskStE2" onclick="countlyEvent('joinDiscord_footer:click')" class="btn font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                    <a href="https://www.facebook.com/ONEPLAYIN" onclick="countlyEvent('facebook_footer:click')" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" onclick="countlyEvent('instagram_footer:click')" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                    <a href="https://twitter.com/CloudOneplay" onclick="countlyEvent('twitter_footer:click')" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                    <a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('medium_footer:click')" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -568,27 +563,27 @@
                         <div class="col-md-4 col-lg-3 col-6 mt-5">
                             <p class="footerFont font600 text-white" data-i18n-key="nav-company">Company</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
-                                <li class="mt-2"><a href="./about.html" id="aboutus" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
-                                <li class="mt-2"><a href="./career.html" id="job" onclick="countlyEvent(this)" class="text-decoration-none">Career</a></li>
-                                <li class="mt-2"><a href="subscription.html" id="subscription" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
-                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" id="blog" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
+                                <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent('home_footer:click')" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
+                                <li class="mt-2"><a href="./about.html" onclick="countlyEvent('aboutus_footer:click')" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                                <li class="mt-2"><a href="./career.html" onclick="countlyEvent('career_footer:click')" class="text-decoration-none">Career</a></li>
+                                <li class="mt-2"><a href="subscription.html" onclick="countlyEvent('plans_and_pricing_footer:click')" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                                <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('blog_footer:click')" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-lg-3 col-6 mt-5 ps-0">
                             <p class="footerFont font600 text-white">Get Help</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./contact.html" id="contactus" onclick="countlyEvent(this)" class="text-decoration-none">Contact Us</a></li>
-                                <li class="mt-2"><a href="./FAQs.html" id="faqs" onclick="countlyEvent(this)" class="text-decoration-none">FAQ's</a></li>
+                                <li class="mt-2"><a href="./contact.html" onclick="countlyEvent('contactus_footer:click')" class="text-decoration-none">Contact Us</a></li>
+                                <li class="mt-2"><a href="./FAQs.html" onclick="countlyEvent('faqs_footer:click')" class="text-decoration-none">FAQ's</a></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-lg-3 col-6 mt-5 ps-0">
                             <p class="footerFont font600 text-white" data-i18n-key="nav-boring">Boring Stuff</p>
                             <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                <li class="mt-2"><a href="./privacy.html" id="privacy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
-                                <li class="mt-2"><a href="./tnc.html" id="t&c" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
-                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" id="cancellationPolicy" onclick="countlyEvent(this)" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
-                                <li class="mt-2"><a href="./open-source-licensing.html" id="opensource" onclick="countlyEvent(this)" class="text-decoration-none">Open Source Usage & Contributions</a></li>
+                                <li class="mt-2"><a href="./privacy.html" onclick="countlyEvent('privacy_policy_footer:click')" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                                <li class="mt-2"><a href="./tnc.html" onclick="countlyEvent('terms_and_conditions_footer:click')" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                                <li class="mt-2"><a href="./tnc.html#cancellationPolicy" onclick="countlyEvent('cancellationPolicy_footer:click')" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
+                                <li class="mt-2"><a href="./open-source-licensing.html" onclick="countlyEvent('open_source_usage_and_contributions_footer:click')" class="text-decoration-none">Open Source Usage & Contributions</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-lg-3 col-12 mt-5 text-center centerTextResponsiveTab px-0">
@@ -596,19 +591,19 @@
                             
                             <div class="row mt-4 justify-content-center font500 footerFont">
                                 <div class="col-12 text-center mb-4 d-grid">
-                                    <a href="https://discord.com/invite/Cg4ZskStE2" id="joinDiscord"onclick="countlyEvent(this)" class="btn font20 text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0 px-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                                    <a href="https://discord.com/invite/Cg4ZskStE2" onclick="countlyEvent('joinDiscord_footer:click')" class="btn font20 text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0 px-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://www.facebook.com/ONEPLAYIN" id="facebook" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-facebook wh28 customOffWhite"></i></a>
+                                    <a href="https://www.facebook.com/ONEPLAYIN" onclick="countlyEvent('facbook_footer:click')" target="_blank"><i class="fa-brands fa-facebook wh28 customOffWhite"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" id="instagram" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-instagram wh28 customOffWhite"></i></a>
+                                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" onclick="countlyEvent('instagram_footer:click')" target="_blank"><i class="fa-brands fa-instagram wh28 customOffWhite"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://twitter.com/CloudOneplay" id="twitter" onclick="countlyEvent(this)" target="_blank"><i class="fa-brands fa-twitter wh28 customOffWhite"></i></a>
+                                    <a href="https://twitter.com/CloudOneplay" onclick="countlyEvent('twitter_footer:click')" target="_blank"><i class="fa-brands fa-twitter wh28 customOffWhite"></i></a>
                                 </div>
                                 <div class="col-auto text-center">
-                                    <a href="https://medium.com/@oneplay_gaming" id="medium" onclick="countlyEvent(this)" target="_blank"><i class="fab fa-medium facebook-icon wh28 customOffWhite"></i></a>
+                                    <a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('medium_footer:click')" target="_blank"><i class="fab fa-medium facebook-icon wh28 customOffWhite"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -652,8 +647,9 @@
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
         
-        <script src="./js/roadmap.js"></script>
-        <script src="./js/decentralized.js"></script>
+        <!-- <script src="./js/roadmap.js"></script> -->
+        <!-- <script src="./js/decentralized.js"></script> -->
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script
         async
