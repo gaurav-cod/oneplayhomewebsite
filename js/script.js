@@ -116,17 +116,21 @@ function loadSeriousNotification() {
     .then((data) => {
       if (!!data.text) {
         const html = `
-          <div id="serious" class="bg-danger p-3 text-center">
-            <span class="text-white">
-              ${data.text}
-            </span>
-            <button 
-              class="btn btn-sm btn-danger"
-              style="float: right"
-              onclick="closeSeriousNotification()"
-            >
-              <i class="fas fa-times"></i>
-            </button>
+          <div id="serious" class="row alertBg font16 py-2 text-center">
+            <div class="col align-self-center pr-0">
+              <p class="text-white mb-0">
+                ${data.text}
+              </p>
+            </div>
+            <div class="col-auto align-self-center pl-1">
+              <button 
+                class="btn borderRadius50 pl-0 text-white"
+                style="float: right"
+                onclick="closeSeriousNotification()"
+              >
+                <i class="fas fa-times-circle"></i>
+              </button>
+            </div>
           </div>
         `;
         document.body.insertAdjacentHTML("afterbegin", html);
