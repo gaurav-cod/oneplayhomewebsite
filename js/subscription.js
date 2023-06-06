@@ -77,7 +77,7 @@ function makeElementFromSubscription(sub) {
                             ${getResolution(sub)} <br/>
                             ${sub['plan_config']?.is_queue ? 'Queue basis <br/>' : ''}
                             ${!sub['plan_config']?.is_refundable ? 'Non-Refundable <br/>' : ''}
-                            ${sub['plan_description'].replace(/\.\s/g, '<br/>')}
+                            ${sub['plan_description']?.replace(/\.\s/g, '<br/>')}
                         </p>
                         <p class="font20 font500 offWhiteColor mb-0">
                             <span class="align-middle"
