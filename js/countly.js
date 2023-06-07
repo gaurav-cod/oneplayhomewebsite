@@ -46,6 +46,7 @@ function countlyEvent(ob){
     key: ob, 
     "count": 1,
     "sum": 1.5,
+    "dur": 30,
     segmentation: {
       "click_event": ob
     }
@@ -66,5 +67,4 @@ function countlyEvent(ob){
     Countly.init()   
   };
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
-
 })();
