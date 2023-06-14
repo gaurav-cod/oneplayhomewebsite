@@ -1,28 +1,28 @@
 // Track Performance Countly Code Start
-syncScripts();
-function syncScripts() {
-  // please provide the correct path to these files according to your project structure
-  var scripts = ['./js/countly_boomerang.js', 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
-  var i = 0;
-  function loopScriptList(scripts) {
-      recursiveScriptMaker(scripts[i], function() {
-          i++;
-          if(i < scripts.length) {
-              loopScriptList(scripts);   
-          }
-      }); 
-  }
-  loopScriptList(scripts);      
-}
-function recursiveScriptMaker(source, callback ) {
-  var script = document.createElement('script');
-  script.onload = function() {
-      console.log('Successfully loaded the source: ' + source)
-      callback();
-  }
-  script.src = source;
-  document.getElementsByTagName('head')[0].appendChild(script);
-}
+// syncScripts();
+// function syncScripts() {
+//   // please provide the correct path to these files according to your project structure
+//   var scripts = ['./js/countly_boomerang.js', 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
+//   var i = 0;
+//   function loopScriptList(scripts) {
+//       recursiveScriptMaker(scripts[i], function() {
+//           i++;
+//           if(i < scripts.length) {
+//               loopScriptList(scripts);   
+//           }
+//       }); 
+//   }
+//   loopScriptList(scripts);      
+// }
+// function recursiveScriptMaker(source, callback ) {
+//   var script = document.createElement('script');
+//   script.onload = function() {
+//       console.log('Successfully loaded the source: ' + source)
+//       callback();
+//   }
+//   script.src = source;
+//   document.getElementsByTagName('head')[0].appendChild(script);
+// }
 
 //Countly Device_id Code Start
 function uuidv4() {
@@ -43,13 +43,6 @@ let device_id = document.cookie.match(/countly_device_id=(.*?);/)?.[1];
 let user_id = undefined;
 const session = document.cookie.match(/op_session_token=(.*?);/)?.[1];
 if(session) {
-
-  // User Data tracking
-  // Countly.q.push(['user_details',{
-  //   "name": "Anjali",
-  //   "username": "anjali",
-  //   "picture": "https://wallpapers.com/images/hd/cute-profile-picture-jeik5d6qizh6dxxr.jpg",
-  // }]);
 
   // get user id from session
   const str = atob(session);
@@ -95,6 +88,7 @@ if(new_device_id) {
   Countly.q.push(['change_id', new_device_id]);
 }
 
+// Track User Details
 if(session) {
   function loadProfile() {
     return fetch(config.BASE_API + "/accounts/profile", {
@@ -110,7 +104,6 @@ if(session) {
         .then((data) => data);
   }
   loadProfile().then((user) => {
-    // User Data tracking
       Countly.q.push(['user_details',{
         "name": user.first_name + ' ' + user.last_name,
         "username": user.username,
@@ -119,33 +112,31 @@ if(session) {
   })
 }
 
-// Countly.q.push(['change_id', Countly._internals.generateUUID()]);
-
 //will collect hidden inputs
 Countly.q.push(['track_forms', null, true]);
 
 //automatically report traces
-Countly.q.push(["track_performance", {
-  //page load timing
-  RT:{},
-  //required for automated networking traces
-  instrument_xhr: true,
-  captureXhrRequestResponse: true,
-  AutoXHR: {
-      alwaysSendXhr: true,
-      monitorFetch: true,
-      captureXhrRequestResponse: true
-  },
-  //required for screen freeze traces
-  Continuity: {
-      enabled: true,
-      monitorLongTasks: true,
-      monitorPageBusy: true,
-      monitorFrameRate: true,
-      monitorInteractions: true,
-      afterOnload: true
-  }
-}]);
+// Countly.q.push(["track_performance", {
+//   //page load timing
+//   RT:{},
+//   //required for automated networking traces
+//   instrument_xhr: true,
+//   captureXhrRequestResponse: true,
+//   AutoXHR: {
+//       alwaysSendXhr: true,
+//       monitorFetch: true,
+//       captureXhrRequestResponse: true
+//   },
+//   //required for screen freeze traces
+//   Continuity: {
+//       enabled: true,
+//       monitorLongTasks: true,
+//       monitorPageBusy: true,
+//       monitorFrameRate: true,
+//       monitorInteractions: true,
+//       afterOnload: true
+//   }
+// }]);
 
 function countlyEvent(ob){
   Countly.add_event({
