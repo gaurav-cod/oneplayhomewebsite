@@ -1,7 +1,8 @@
+// Track Performance Countly Code Start
 syncScripts();
 function syncScripts() {
   // please provide the correct path to these files according to your project structure
-  var scripts = ['./js/countly_boomerang.js', 'https://cdn.jsdelivr.net/npm/boomerangjs@1.0.1/boomerang.min.js'];
+  var scripts = ['./js/countly_boomerang.js', 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
   var i = 0;
   function loopScriptList(scripts) {
       recursiveScriptMaker(scripts[i], function() {
@@ -23,6 +24,53 @@ function recursiveScriptMaker(source, callback ) {
   document.getElementsByTagName('head')[0].appendChild(script);
 }
 
+//Countly Device_id Code Start
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+let new_device_id = undefined;
+let device_id = document.cookie.match(/countly_device_id=(.*?);/)?.[1];
+let user_id = undefined;
+const session = document.cookie.match(/op_session_token=(.*?);/)?.[1];
+if(session) {
+
+  // User Data tracking
+  // Countly.q.push(['user_details',{
+  //   "name": "Anjali",
+  //   "username": "anjali",
+  //   "picture": "https://wallpapers.com/images/hd/cute-profile-picture-jeik5d6qizh6dxxr.jpg",
+  // }]);
+
+  // get user id from session
+  const str = atob(session);
+  const [userid, token] = str.split(":");
+  user_id = userid;
+  
+  // if device id not present
+  if(!device_id) {
+    setCookie("countly_device_id", user_id, 90);
+    device_id = user_id;
+  } else if(device_id != user_id) {
+    // device id is not equal to user id:
+    setCookie("countly_device_id", user_id, 90);
+    new_device_id = user_id;
+  }
+}else if(!device_id) {
+  // both device id and session not present
+  device_id = uuidv4();
+  setCookie("countly_device_id", device_id, 90);
+}
+
 //some default pre init
 var Countly = Countly || {};
 Countly.q = Countly.q || [];
@@ -32,7 +80,8 @@ Countly.app_key = config.COUNTLY_APP_KEY;
 Countly.url = config.COUNTLY_URL;
 Countly.heatmap_whitelist = config.BASE_URL;
 Countly.app_version = config.APP_VERSION;
-Countly.debug = true;
+Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
+Countly.device_id = device_id;
 
 Countly.q.push(['track_sessions']);
 // Countly.q.push(['track_pageview',location.pathname+location.hash]);
@@ -41,6 +90,36 @@ Countly.q.push(['track_scrolls']);
 Countly.q.push(['track_errors']);
 Countly.q.push(['track_links']);
 Countly.q.push(['collect_from_forms']);
+
+if(new_device_id) {
+  Countly.q.push(['change_id', new_device_id]);
+}
+
+if(session) {
+  function loadProfile() {
+    return fetch(config.BASE_API + "/accounts/profile", {
+        headers: {
+          "content-type": "application/json",
+          "Session_token": session,
+        },
+        referrerPolicy: "strict-origin-when-cross-origin",
+        mode: "cors",
+        credentials: "omit",
+      })
+        .then((res) => res.json())
+        .then((data) => data);
+  }
+  loadProfile().then((user) => {
+    // User Data tracking
+      Countly.q.push(['user_details',{
+        "name": user.first_name + ' ' + user.last_name,
+        "username": user.username,
+        "picture": user.profile_image,
+      }]);
+  })
+}
+
+// Countly.q.push(['change_id', Countly._internals.generateUUID()]);
 
 //will collect hidden inputs
 Countly.q.push(['track_forms', null, true]);
