@@ -1,28 +1,4 @@
 // Track Performance Countly Code Start
-// syncScripts();
-// function syncScripts() {
-//   // please provide the correct path to these files according to your project structure
-//   var scripts = ['./js/countly_boomerang.js', 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
-//   var i = 0;
-//   function loopScriptList(scripts) {
-//       recursiveScriptMaker(scripts[i], function() {
-//           i++;
-//           if(i < scripts.length) {
-//               loopScriptList(scripts);   
-//           }
-//       }); 
-//   }
-//   loopScriptList(scripts);      
-// }
-// function recursiveScriptMaker(source, callback ) {
-//   var script = document.createElement('script');
-//   script.onload = function() {
-//       console.log('Successfully loaded the source: ' + source)
-//       callback();
-//   }
-//   script.src = source;
-//   document.getElementsByTagName('head')[0].appendChild(script);
-// }
 
 //Countly Device_id Code Start
 function uuidv4() {
@@ -116,27 +92,7 @@ if(session) {
 Countly.q.push(['track_forms', null, true]);
 
 //automatically report traces
-// Countly.q.push(["track_performance", {
-//   //page load timing
-//   RT:{},
-//   //required for automated networking traces
-//   instrument_xhr: true,
-//   captureXhrRequestResponse: true,
-//   AutoXHR: {
-//       alwaysSendXhr: true,
-//       monitorFetch: true,
-//       captureXhrRequestResponse: true
-//   },
-//   //required for screen freeze traces
-//   Continuity: {
-//       enabled: true,
-//       monitorLongTasks: true,
-//       monitorPageBusy: true,
-//       monitorFrameRate: true,
-//       monitorInteractions: true,
-//       afterOnload: true
-//   }
-// }]);
+// 
 
 function countlyEvent(ob){
   Countly.add_event({
@@ -164,6 +120,52 @@ function countlyEvent(ob){
   cly.src = config.COUNTLY_SRC;
   cly.onload = function(){
     Countly.init();
+    syncScripts();
+    function syncScripts() {
+      // please provide the correct path to these files according to your project structure
+      var scripts = ['https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/countly_boomerang.js','https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
+      var i = 0;
+      function loopScriptList(scripts) {
+          recursiveScriptMaker(scripts[i], function() {
+              i++;
+              if(i < scripts.length) {
+                  loopScriptList(scripts);   
+              }
+          }); 
+      }
+      loopScriptList(scripts);      
+    }
+    function recursiveScriptMaker(source, callback ) {
+      var script = document.createElement('script');
+      script.onload = function() {
+          console.log('Successfully loaded the source: ' + source)
+          callback();
+      }
+      script.src = source;
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+    Countly.q.push(["track_performance", {
+      //page load timing
+      RT:{},
+      //required for automated networking traces
+      instrument_xhr: true,
+      captureXhrRequestResponse: true,
+      AutoXHR: {
+          alwaysSendXhr: true,
+          monitorFetch: true,
+          captureXhrRequestResponse: true
+      },
+      //required for screen freeze traces
+      Continuity: {
+          enabled: true,
+          monitorLongTasks: true,
+          monitorPageBusy: true,
+          monitorFrameRate: true,
+          monitorInteractions: true,
+          afterOnload: true
+      }
+    }]);
   };
   var s = document.getElementsByTagName('script')[0]; 
   s.parentNode.insertBefore(cly, s);
