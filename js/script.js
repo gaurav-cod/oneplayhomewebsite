@@ -116,20 +116,22 @@ function loadSeriousNotification() {
     .then((data) => {
       if (!!data.text) {
         const html = `
-          <div id="serious" class="row alertCookieBg font16 py-2 text-center">
-            <div class="col align-self-center pr-0">
-              <p class="text-white mb-0">
-                ${data.text}
-              </p>
-            </div>
-            <div class="col-auto align-self-center pl-1">
-              <button 
-                class="btn borderRadius50 pl-0 text-white"
-                style="float: right"
-                onclick="closeSeriousNotification()"
-              >
-                <i class="fas fa-times-circle"></i>
-              </button>
+          <div class="container-fluid">
+            <div id="serious" class="row alertCookieBg font16 py-3 text-center">
+              <div class="col align-self-center pe-0">
+                <p class="text-white mb-0">
+                  ${data.text}
+                </p>
+              </div>
+              <div class="col-auto">
+                <button 
+                  class="btn borderRadius50 p-0 text-white pe-lg-3"
+                  style="float: right"
+                  onclick="closeSeriousNotification()"
+                >
+                  <i class="fas fa-times-circle font16"></i>
+                </button>
+              </div>
             </div>
           </div>
         `;

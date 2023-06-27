@@ -51,9 +51,10 @@ function makeElementFromSubscription(sub) {
                 <div class="row justify-content-center">
                     <div class="col-11 col-md-12 text-center py-3">
                         <p class="mb-2 font20 font500 offWhiteColor ${sub['plan_config']?.actual_price ? '' : 'invisible'}"><del>${sub['plan_config']?.actual_price}</del></p>
-                        <p class="font38 font700 text-white mb-2">
-                            ${currencyMap[sub['currency']] || sub['currency']} ${sub['value']}
-                        </p>
+                        <span class="font38 font700 text-white mb-2 align-middle">
+                            ${currencyMap[sub['currency']] || sub['currency']}
+                        </span>
+                        <span class="font38 font700 text-white mb-2 ms-1 align-middle">${sub['value']}</span>
                         <p class="font20 font600 offWhiteColor mb-0">
                             ${sub['package_type'] == 'topup' ? sub['plan_name'] : 'Per Month'}
                         </p>
