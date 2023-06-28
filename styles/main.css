@@ -1606,3 +1606,19 @@ a {
     background: linear-gradient(270deg, #8A54D0 -1.64%, #D71F7B 100%);
     font-weight: 500;
 }
+
+.wordBreak {
+    word-break: break-all;
+}
+
+.height100 {
+    height: 100vh;
+    align-items: center;
+    padding-top: 40px;
+}
+
+@media (max-width: 900px) {
+    .height100{
+        padding-top: 80px !important;
+    }
+}
