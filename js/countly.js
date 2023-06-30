@@ -70,7 +70,7 @@ Countly.app_key = config.COUNTLY_APP_KEY;
 Countly.url = config.COUNTLY_URL;
 Countly.heatmap_whitelist = config.BASE_URL;
 Countly.app_version = config.APP_VERSION;
-// Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
+Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
 Countly.device_id = device_id;
 
 Countly.q.push(['track_sessions']);
