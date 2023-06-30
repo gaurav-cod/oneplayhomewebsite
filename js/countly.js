@@ -1,5 +1,3 @@
-// Track Performance Countly Code Start
-
 //Countly Device_id Code Start
 function uuidv4() {
   return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
@@ -72,7 +70,7 @@ Countly.app_key = config.COUNTLY_APP_KEY;
 Countly.url = config.COUNTLY_URL;
 Countly.heatmap_whitelist = config.BASE_URL;
 Countly.app_version = config.APP_VERSION;
-Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
+// Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
 Countly.device_id = device_id;
 
 Countly.q.push(['track_sessions']);
@@ -89,7 +87,10 @@ if(new_device_id) {
 //will collect hidden inputs
 Countly.q.push(['track_forms', null, true]);
 
-function countlyEvent(item,ob){
+//automatically report traces
+// 
+
+function countlyEvent(ob){
   Countly.add_event({
     key: ob, 
     "count": 1,
@@ -97,6 +98,7 @@ function countlyEvent(item,ob){
       'click_event': ob
     }
   });
+  console.log('You clicked OneplayEvent',ob);
 }
 
 //load countly script asynchronously
@@ -108,7 +110,7 @@ function countlyEvent(item,ob){
   
   var cly = document.createElement('script'); cly.type = 'text/javascript';
   cly.async = true;
-
+  
   //enter url of script here
   cly.src = config.COUNTLY_SRC;
   cly.onload = function(){
