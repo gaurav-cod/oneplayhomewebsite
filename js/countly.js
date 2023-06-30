@@ -20,6 +20,29 @@ let user_id = undefined;
 const session = document.cookie.match(/op_session_token=(.*?);/)?.[1];
 if(session) {
 
+  function loadProfile() {
+    return fetch(config.BASE_API + "/accounts/profile", {
+        headers: {
+          "content-type": "application/json",
+          "Session_token": session,
+        },
+        referrerPolicy: "strict-origin-when-cross-origin",
+        mode: "cors",
+        credentials: "omit",
+      })
+        .then((res) => res.json())
+        .then((data) => data);
+  }
+  loadProfile().then((user) => {
+      Countly.q.push(['user_details',{
+        "name": user.first_name + ' ' + user.last_name,
+        "username": user.username,
+        "picture": user.profile_image,
+        "age": user.age,
+        "gender": user.gender,
+      }]);
+  })
+
   // get user id from session
   const str = atob(session);
   const [userid, token] = str.split(":");
@@ -53,7 +76,6 @@ Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
 Countly.device_id = device_id;
 
 Countly.q.push(['track_sessions']);
-// Countly.q.push(['track_pageview',location.pathname+location.hash]);
 Countly.q.push(['track_clicks']);
 Countly.q.push(['track_scrolls']);
 Countly.q.push(['track_errors']);
@@ -64,47 +86,17 @@ if(new_device_id) {
   Countly.q.push(['change_id', new_device_id]);
 }
 
-// Track User Details
-if(session) {
-  function loadProfile() {
-    return fetch(config.BASE_API + "/accounts/profile", {
-        headers: {
-          "content-type": "application/json",
-          "Session_token": session,
-        },
-        referrerPolicy: "strict-origin-when-cross-origin",
-        mode: "cors",
-        credentials: "omit",
-      })
-        .then((res) => res.json())
-        .then((data) => data);
-  }
-  loadProfile().then((user) => {
-      Countly.q.push(['user_details',{
-        "name": user.first_name + ' ' + user.last_name,
-        "username": user.username,
-        "picture": user.profile_image,
-      }]);
-  })
-}
-
 //will collect hidden inputs
 Countly.q.push(['track_forms', null, true]);
 
-//automatically report traces
-// 
-
-function countlyEvent(ob){
+function countlyEvent(item,ob){
   Countly.add_event({
     key: ob, 
     "count": 1,
-    "sum": 1.5,
-    "dur": 30,
     segmentation: {
-      "click_event": ob
+      'click_event': ob
     }
   });
-  console.log('You clicked OneplayEvent',ob);
 }
 
 //load countly script asynchronously
@@ -116,35 +108,34 @@ function countlyEvent(ob){
   
   var cly = document.createElement('script'); cly.type = 'text/javascript';
   cly.async = true;
+
   //enter url of script here
   cly.src = config.COUNTLY_SRC;
   cly.onload = function(){
-    Countly.init();
-    syncScripts();
-    function syncScripts() {
-      // please provide the correct path to these files according to your project structure
-      var scripts = ['https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/countly_boomerang.js','https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js'];
-      var i = 0;
-      function loopScriptList(scripts) {
-          recursiveScriptMaker(scripts[i], function() {
-              i++;
-              if(i < scripts.length) {
-                  loopScriptList(scripts);   
-              }
-          }); 
-      }
-      loopScriptList(scripts);      
-    }
-    function recursiveScriptMaker(source, callback ) {
-      var script = document.createElement('script');
-      script.onload = function() {
-          console.log('Successfully loaded the source: ' + source)
-          callback();
-      }
-      script.src = source;
-      document.getElementsByTagName('head')[0].appendChild(script);
-    }
 
+    // Boomerang related configuration
+    // Create boomerang script
+    var boomerangScript = document.createElement('script');
+    var countlyBoomerangScript =
+    document.createElement('script');
+    // Set boomerang script attributes
+    boomerangScript.async = true;
+    countlyBoomerangScript.async = true;
+
+    // Set boomerang script source either locally or from CDN
+    boomerangScript.src =
+    'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/boomerang.min.js';
+    countlyBoomerangScript.src =
+    'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/plugin/boomerang/countly_boomerang.js';
+
+    // Append boomerang script to the head
+    document.getElementsByTagName('head')[0].appendChild(boomerangScript);
+    document.getElementsByTagName('head')[0].appendChild(countlyBoomerangScript);
+    countlyBoomerangScript.onload = function () {
+      // init Countly only after boomerang is loaded
+      Countly.init();
+    };
+    
     Countly.q.push(["track_performance", {
       //page load timing
       RT:{},
@@ -152,18 +143,18 @@ function countlyEvent(ob){
       instrument_xhr: true,
       captureXhrRequestResponse: true,
       AutoXHR: {
-          alwaysSendXhr: true,
-          monitorFetch: true,
-          captureXhrRequestResponse: true
+        alwaysSendXhr: true,
+        monitorFetch: true,
+        captureXhrRequestResponse: true
       },
       //required for screen freeze traces
       Continuity: {
-          enabled: true,
-          monitorLongTasks: true,
-          monitorPageBusy: true,
-          monitorFrameRate: true,
-          monitorInteractions: true,
-          afterOnload: true
+        enabled: true,
+        monitorLongTasks: true,
+        monitorPageBusy: true,
+        monitorFrameRate: true,
+        monitorInteractions: true,
+        afterOnload: true
       }
     }]);
   };

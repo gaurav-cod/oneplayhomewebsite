@@ -31,7 +31,7 @@
         <a class="navbar-brand float-left" href="./index.html">
           <img src="assets/logo 1.svg" alt="brand" width="140px" height="40px" class="img-fluid mobileScreenLogo" />
         </a>
-        <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0" id="login" data-i18n-key="nav-login" href="">Login</a></span>
+        <span class="MobileView"><a role="button" class="btn btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0" id="login" onclick="countlyEvent('signUPButtonClick','login_header:click')" data-i18n-key="nav-login" href="">Login</a></span>
         
         <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
@@ -70,10 +70,10 @@
                       <a role="button" class="btn border-top-0 border-start-0 border-end-0 removeFocus p-0" id="speed-test" onclick="countlyEvent('speedTest:click')"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                   </div>
                   <div class="col-auto align-self-center ps-0">
-                      <a role="button" class="btn border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" onclick="countlyEvent('login_header:click')" href="">Log in</a>
+                      <a role="button" class="btn border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" event="signINButtonClick" onclick="countlyEvent('login_header:click')" href="">Log in</a>
                   </div>
                   <div class="col-auto align-self-center ps-0">
-                      <a role="button" class="btn border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent('sign-up_create:click')" href="">Sign Up</a>
+                      <a role="button" class="btn border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" onclick="countlyEvent('signUPButtonClick','sign-up_create:click')" href="">Sign Up</a>
                   </div>
               </div>
           </form>
@@ -643,9 +643,6 @@
     <script src="./js/spatial-navigation.js"></script>
 
     <!-- Counlty Integration CNDs -->
-    <!-- <script src="https://dev.countly.oneream.com/sdk/web/countly.min.js"></script> -->
-    <!-- <script src="./js/countly_boomerang.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/boomerangjs@1.0.1/boomerang.min.js"></script> -->
     <script src="./js/countly.js"></script>
 
     <!-- <script src="./js/multi-language.js"></script> -->
