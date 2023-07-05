@@ -1617,7 +1617,6 @@ a {
 
 .borderBottomCustom:focus {
     border-bottom: 1px solid #ffffff !important;
-    margin-bottom: 10px;
 }
 
 .wordBreak {
