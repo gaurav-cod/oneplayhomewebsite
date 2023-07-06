@@ -83,7 +83,7 @@ function getDownloadLink() {
     os.setAttribute("href", config.MACOS_DOWNLOAD_URL);
     osMob.setAttribute("href", config.MACOS_DOWNLOAD_URL);
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    os.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
+    os?.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
     osMob.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
   } else if (/Android/.test(userAgent)) {
     os.setAttribute("href", config.ANDROID_DOWNLOAD_URL);
