@@ -8,54 +8,14 @@ function uuidv4() {
 function setCookie(cname, cvalue, exdays) {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  const expires = "expires=" + d.toUTCString();
+  const domain = "domain=" + config.COOKIE_DOMAIN;
+  document.cookie = cname + "=" + cvalue + ";" + domain + ";" + expires + ";path=/";
 }
 
-let new_device_id = undefined;
 let device_id = document.cookie.match(/countly_device_id=(.*?);/)?.[1];
-let user_id = undefined;
-const session = document.cookie.match(/op_session_token=(.*?);/)?.[1];
-if(session) {
 
-  function loadProfile() {
-    return fetch(config.BASE_API + "/accounts/profile", {
-        headers: {
-          "content-type": "application/json",
-          "Session_token": session,
-        },
-        referrerPolicy: "strict-origin-when-cross-origin",
-        mode: "cors",
-        credentials: "omit",
-      })
-        .then((res) => res.json())
-        .then((data) => data);
-  }
-  loadProfile().then((user) => {
-      Countly.q.push(['user_details',{
-        "name": user.first_name + ' ' + user.last_name,
-        "username": user.username,
-        "picture": user.profile_image,
-        "age": user.age,
-        "gender": user.gender,
-      }]);
-  })
-
-  // get user id from session
-  const str = atob(session);
-  const [userid, token] = str.split(":");
-  user_id = userid;
-  
-  // if device id not present
-  if(!device_id) {
-    setCookie("countly_device_id", user_id, 90);
-    device_id = user_id;
-  } else if(device_id != user_id) {
-    // device id is not equal to user id:
-    setCookie("countly_device_id", user_id, 90);
-    new_device_id = user_id;
-  }
-}else if(!device_id) {
+if (!device_id) {
   // both device id and session not present
   device_id = uuidv4();
   setCookie("countly_device_id", device_id, 90);
@@ -79,10 +39,6 @@ Countly.q.push(['track_scrolls']);
 Countly.q.push(['track_errors']);
 Countly.q.push(['track_links']);
 Countly.q.push(['collect_from_forms']);
-
-if(new_device_id) {
-  Countly.q.push(['change_id', new_device_id]);
-}
 
 //will collect hidden inputs
 Countly.q.push(['track_forms', null, true]);
