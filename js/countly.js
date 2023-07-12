@@ -5,22 +5,6 @@ function uuidv4() {
   );
 }
 
-function setCookie(cname, cvalue, exdays) {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  const expires = "expires=" + d.toUTCString();
-  const domain = "domain=" + config.COOKIE_DOMAIN;
-  document.cookie = cname + "=" + cvalue + ";" + domain + ";" + expires + ";path=/";
-}
-
-let device_id = document.cookie.match(/countly_device_id=(.*?);/)?.[1];
-
-if (!device_id) {
-  // both device id and session not present
-  device_id = uuidv4();
-  setCookie("countly_device_id", device_id, 90);
-}
-
 //some default pre init
 var Countly = Countly || {};
 Countly.q = Countly.q || [];
@@ -31,7 +15,6 @@ Countly.url = config.COUNTLY_URL;
 Countly.heatmap_whitelist = config.BASE_URL;
 Countly.app_version = config.APP_VERSION;
 Countly.debug = config.COUNTLY_DEBUG_MODE ?? false;
-Countly.device_id = device_id;
 
 Countly.q.push(['track_sessions']);
 Countly.q.push(['track_clicks']);
