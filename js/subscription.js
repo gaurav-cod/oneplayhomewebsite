@@ -60,8 +60,8 @@ function makeElementFromSubscription(sub) {
                         </p>
                         <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}"
                            class="btn removeFocus border-start-0 border-end-0 text-white gradientBtn my-4 my-lg-5 px-4"
+                           onclick="countlyEvent('${sub['package_type'] == 'topup' ? 'hourly_plan' : 'monthly_plan'}_${sub['value']}:click')"
                         >Get Started Now</a>
-                        <p class="font20 font500 offWhiteColor mb-0 ${sub['plan_config']?.actual_price == '599' ? '' : 'd-none'}">Offer valid for 1st 500 users</p>
                         <p class="font20 font500 offWhiteColor mb-0">
                             <span class="align-middle ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
                                 >${sub['total_offered_tokens'] / 60 + ' hours/month'}
