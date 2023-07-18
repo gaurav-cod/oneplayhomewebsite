@@ -73,21 +73,16 @@ function getDownloadLink() {
     windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
     iosPlatforms = ["iPhone", "iPad", "iPod"],
     os = document.getElementById("download"),
-    osMob = document.getElementById("download_mob"),
     target = getQueryJSON().target;
 
   if (target) {
     os.setAttribute("href", getLinkByTarget(target));
-    osMob.setAttribute("href", getLinkByTarget(target));
   } else if (macosPlatforms.indexOf(platform) !== -1) {
     os.setAttribute("href", config.MACOS_DOWNLOAD_URL);
-    osMob.setAttribute("href", config.MACOS_DOWNLOAD_URL);
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
     os?.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
-    osMob.setAttribute("href", config.WINDOWS_DOWNLOAD_URL);
   } else if (/Android/.test(userAgent)) {
     os.setAttribute("href", config.ANDROID_DOWNLOAD_URL);
-    osMob.setAttribute("href", config.ANDROID_DOWNLOAD_URL);
   }
 }
 
