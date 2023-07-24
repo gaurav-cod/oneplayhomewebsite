@@ -14,6 +14,7 @@
         <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
 
         <title data-i18n-key="titlesection">OnePlay Cloud Platform | India's first Open Source Decentralized Cloud Gaming Platform </title>
+    
     </head>
     <body>
         <!-- Navbar Section Start -->
@@ -25,8 +26,8 @@
                 <a class="navbar-brand float-left" href="./index.html">
                     <img src="assets/logo 1.svg" alt="brand" width="140px" height="40px" class="img-fluid mobileScreenLogo" />
                 </a>
-                <span class="MobileView"><a role="button" class="btn text-nowrap  btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0" onclick="countlyEvent('login_header:click')" id="login" data-i18n-key="nav-login" href="">Login</a></span>
-              
+                <span class="MobileView"><a role="button" class="btn text-nowrap  btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60" onclick="countlyEvent('login_header:click')" id="login" href="" data-i18n-key="nav-login">Login</a></span>
+                
                 <div class="collapse navbar-collapse navbarText" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto">
                         <li class="nav-item me-3">
@@ -39,7 +40,7 @@
                             <a class="nav-link" onclick="countlyEvent('subscription_header:click')" data-i18n-key="nav-subscription" href="./subscription.html">Subscription</a>
                         </li>
                         <li class="nav-item me-3">
-                            <a class="nav-link activenav" onclick="countlyEvent('download_header:click')" data-i18n-key="nav-download" href="./download.html">Download</a>
+                            <a class="nav-link" onclick="countlyEvent('download_header:click')" data-i18n-key="nav-download" href="./download.html">Download</a>
                         </li>
                         <li class="nav-item me-3">
                             <a class="nav-link" onclick="countlyEvent('decentralization_header:click')" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
@@ -85,188 +86,29 @@
             </div>
         </nav>
 
-        <div class="container customH1 centerTextResponsive">
-            <div class="row pt-lg-5 pt-md-5 justify-content-center">
-                <div class="col-md-6 col-10 text-end MobileView paddingTop50">
-                    <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
+        <div class="container  customH1" id="FAQs">
+            <div class="row padding100 justify-content-center">
+                <div class="col-12 col-lg-10 text-center mb-4 mb-md-5">
+                    <h1 class="text-white font50 font800" data-i18n-key="browseFAQ">
+                        Browse FAQs
+                    </h1>
                 </div>
-                <div class="col-md-6 align-self-center marginTopMobile">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <h1 class="text-white font50 font800 pe-lg-5" data-i18n-key="heading">
-                                Get OnePlay for 
-                                any device
-                            </h1>
-                            <p class="font20 font500 offWhiteColor mt-4 me-lg-5" data-i18n-key="subheading">
-                                Choose from a collection of Games At Your Fingertips
-                            </p>
-                        </div>
-                    </div>
-                    <a id="download" onclick="countlyEvent('download_for:click')" href="" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4"><span data-i18n-key="downloadbtn">Download for </span><span id="os"></span></a>
-                </div>
-                <div class="col-md-6 text-end desktopView p-4">
-                    <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
+                <div class="col-lg-10">
+                    
                 </div>
             </div>
         </div>
-        <div class="container-fluid padding100">
+
+        <div class="container-fluid">
             <div class="row">
                 <div class="col p-0">
-                    <hr class="border-bottom customBorderColor"/>
+                    <hr class="borderBottom mt-0"/>
                 </div>
             </div>
         </div>
-        <div class="container-fluid padding100  customH1 centerTextResponsive" id="Devices">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12" id="macBlock">
-                        <div class="card lightBlackBg borderRadius20">
-                            <div class="card-body">
-                                <div class="row mt-4 mb-4 justify-content-center">
-                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
-                                        <h1 class="text-white font38 font700 MobileView" data-i18n-key="macText">Mac</h1>
-                                        <div class="ps-3 pe-3">
-                                            <img src="./assets/download/mac 2.svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 align-self-center margintopDownload tabViewHide">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-subText">Mac OS X or above Macbook 2015 or above Supports Keyboard/Mouse Controller - XBOX ONE, XBOX SERIES X/S, PS4/PS5</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font38 font700 desktopView" data-i18n-key="macText">Mac</h1>
-                                        <a href="./download.html?target=macos" onclick="countlyEvent('download_macclient:click')" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/21E3wwl8-UU" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Mac client Demo</span></a></p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-subText">Mac OS X or above Macbook 2015 or above Supports Keyboard/Mouse Controller - XBOX ONE, XBOX SERIES X/S, PS4/PS5</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 pt-5" id="windowBlock">
-                        <div class="card lightBlackBg borderRadius20">
-                            <div class="card-body">
-                                <div class="row mt-4 mb-4 justify-content-center">
-                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
-                                        <h1 class="text-white font38 font700 MobileView" data-i18n-key="windowText">Windows</h1>
-                                        <div class="ps-3 pe-3">
-                                            <img src="./assets/download/mac 2 (4).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-4 align-self-center margintopDownload tabViewHide">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-ram">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-storage">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="windowText-subText">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font38 font700 desktopView" data-i18n-key="windowText">Windows</h1>
-                                        <a href="./download.html?target=windows" data-i18n-key="downloadText" onclick="countlyEvent('download_windowclient:click')" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/4_wFbSKNQhs" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Windows client Demo</span></a></p>
-                                    </div>
-                                    <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-ram">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-storage">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="windowText-subText">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 pt-5" id="androidBlock">
-                        <div class="card lightBlackBg borderRadius20">
-                            <div class="card-body">
-                                <div class="row mt-4 mb-4 justify-content-center">
-                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
-                                        <h1 class="text-white font38 font700 MobileView" data-i18n-key="android-Text">Android</h1>
-                                        <div class="ps-3 pe-3">
-                                            <img src="./assets/download/mac 2 (1).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-4 align-self-center margintopDownload tabViewHide">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-ram">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-storage">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="windowText-subText">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font38 font700 desktopView" data-i18n-key="android-Text">Android</h1>
-                                        <a data-i18n-key="downloadText" href="https://play.google.com/store/apps/details?id=in.oneplay" data-i18n-key="downloadText" target="_blank" id="androidDownload" onclick="countlyEvent('download_androidclient:click')" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/5wgAkahWM5k" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Android App Demo</span></a></p>
-                                    </div>
-                                    <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
-                                        <div class="ps-md-4 pe-md-4">
-                                            <p class="mb-0 font20 font600 text-white" data-i18n-key="macText-minimum">Minimum Requirements </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-ram">3GB Ram </p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="macText-storage">512MB Storage</p>
-                                            <p class="mb-0 font20 font500 offWhiteColor" data-i18n-key="windowText-subText">Bluetooth 4/WIFI-5 Supported CPU/Phone - From 2017 Or Above</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mt-5">
-                        <div class="card lightBlackBg borderRadius20">
-                            <div class="card-body">
-                                <div class="row mt-4 mb-4">
-                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
-                                        <h1 class="text-white font38 font700 text-center MobileView" data-i18n-key="android-Tv">Android TV</h1>
-                                        <div class="ps-3 pe-3">
-                                            <img src="./assets/download/mac 2 (2).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-4 align-self-center tabViewHide">
-                                        <h1 class="text-white font38 font700 text-center desktopView tabViewHide" data-i18n-key="android-Tv">Android TV</h1>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font38 font700 tabViewShow" data-i18n-key="android-Tv">Android TV</h1>
-                                        <a href="javascript:void(0)" data-i18n-key="Comingsoon" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus disabledBtnGradient borderRadius60 mt-4 margintopDownload disabledAnchor">Coming Soon</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mt-5">
-                        <div class="card lightBlackBg borderRadius20">
-                            <div class="card-body">
-                                <div class="row mt-4 mb-4">
-                                    <div class="col-lg-3 col-md-6 text-center align-self-center">
-                                        <h1 class="text-white font38 font700 text-center MobileView" data-i18n-key="web-browser-Text">Web Browser</h1>
-                                        <div class="ps-3 pe-3">
-                                            <img src="./assets/download/mac 2 (3).svg" class="img-fluid ps-4 pe-4 margintopDownload" alt="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-5 col-md-4 align-self-center tabViewHide">
-                                        <h1 class="text-white font38 font700 text-center desktopView" data-i18n-key="web-browser-Text">Web Browser</h1>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
-                                        <h1 class="text-white font38 font700 tabViewShow" data-i18n-key="web-browser-Text">Web Browser</h1>
-                                        <a href="javascript:void(0)" data-i18n-key="Comingsoon" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus disabledBtnGradient borderRadius60 mt-4 margintopDownload disabledAnchor">Coming Soon</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container padding150">
-            <div class="row justify-content-center">
+
+        <div class="container customH1">
+            <div class="row padding100">
                 <div class="col-md-12 d-md-none">
                     <div class="mb-3">
                         <a class="navbar-brand" href="./index.html">
@@ -274,13 +116,13 @@
                         </a>
                     </div>
                     <div class="customAccordion accordion" id="accordioncompany">
-                        <div class="accordion-item bgTransparent">
+                        <div class="accordion-item bgTransparent border-0">
                             <h2 class="accordion-header bgTransparent" id="headingcompany">
                                 <button class="accordion-button font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 borderBottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecompany" aria-expanded="true" aria-controls="collapsecompany">
                                     Company
                                 </button>
                             </h2>
-                            <div id="collapsecompany" class="accordion-collapse collapse show" aria-labelledby="headingcompany" data-bs-parent="#accordionExample">
+                            <div id="collapsecompany" class="accordion-collapse collapse" aria-labelledby="headingcompany" data-bs-parent="#accordionExample">
                                 <div class="accordion-body ps-0 pe-0 pt-0">
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
                                         <li class="mt-2"><a href="./index.html" id="home" onclick="countlyEvent('home_footer:click')" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
@@ -293,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bgTransparent">
+                        <div class="accordion-item bgTransparent border-0">
                             <h2 class="accordion-header bgTransparent" id="headinghelp">
                                 <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 borderBottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapsehelp" aria-expanded="false" aria-controls="collapsehelp">
                                     Get Help
@@ -315,17 +157,17 @@
                                     Partner with Us
                                 </button>
                             </h2>
-                            <div id="collapsePartner" class="accordion-collapse collapse" aria-labelledby="headingPartner" data-bs-parent="#accordionExample">
+                            <div id="collapsePartner" class="accordion-collapse collapse show" aria-labelledby="headingPartner" data-bs-parent="#accordionExample">
                                 <div class="accordion-body ps-0 pe-0 pt-0">
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                        <li class="mt-2"><a href="./content-creators.html" onclick="countlyEvent('content_reators_footer:click')" class="text-decoration-none">Content Creators </a></li>
+                                        <li class="mt-2"><a href="./content-creators.html" onclick="countlyEvent('content_reators_footer:click')" class="text-decoration-none activenav">Content Creators </a></li>
                                         <li class="mt-2"><a href="./businesses.html" onclick="countlyEvent('businesses_footer:click')" class="text-decoration-none">Businesses</a></li>
                                     </ul>
                                     <div class="gradientBorderbottom mt-2"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-item bgTransparent">
+                        <div class="accordion-item bgTransparent border-0">
                             <h2 class="accordion-header bgTransparent" id="headingboring">
                                 <button class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 borderBottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseboring" aria-expanded="false" aria-controls="collapseboring">
                                     Boring Stuff
@@ -344,31 +186,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-9 col-9 mt-4 text-center centerTextResponsiveTab">
-                        <p class="footerFont font600 text-white">Stay Updated</p>
-                        
-                        <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
-                            <div class="col-12 text-center mb-4 d-grid">
-                                <a href="https://discord.com/invite/Cg4ZskStE2" onclick="countlyEvent('joinDiscord_footer:click')" class="btn text-nowrap  font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="https://www.facebook.com/ONEPLAYIN" onclick="countlyEvent('facebook_footer:click')" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" onclick="countlyEvent('instagram_footer:click')" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="https://twitter.com/CloudOneplay" onclick="countlyEvent('twitter_footer:click')" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
-                            </div>
-                            <div class="col-auto text-center">
-                                <a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('medium_footer:click')" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 col-sm-9 col-lg-3 col-9 mt-5 text-center centerTextResponsiveTab px-0">
+                            <p class="footerFont font600 text-white">Stay Updated</p>
+                            
+                            <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
+                                <div class="col-12 text-center mb-4 d-grid">
+                                    <a href="https://discord.com/invite/Cg4ZskStE2" onclick="countlyEvent('joinDiscord_footer:click')" class="btn text-nowrap  font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <a href="https://www.facebook.com/ONEPLAYIN" onclick="countlyEvent('facebook_footer:click')" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" onclick="countlyEvent('instagram_footer:click')" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <a href="https://twitter.com/CloudOneplay" onclick="countlyEvent('twitter_footer:click')" target="_blank"><i class="fa-brands fa-twitter wh28"></i></a>
+                                </div>
+                                <div class="col-auto text-center">
+                                    <a href="https://medium.com/@oneplay_gaming" onclick="countlyEvent('medium_footer:click')" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12 d-none d-md-inline">
                     <a class="navbar-brand" href="./index.html">
-                      <img src="assets/logo 1.svg" alt="brand" width="140px" height="40px" class="img-fluid" />
+                        <img src="assets/logo 1.svg" alt="brand" width="140px" height="40px" class="img-fluid" />
                     </a>
                     <div class="row justify-content-center">
                         <div class="col-lg-9">
@@ -393,7 +237,7 @@
                                 <div class="col-md-3 mt-5">
                                     <p class="footerFont font600 text-white">Partner with Us</p>
                                     <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                                        <li class="mt-2"><a href="./content-creators.html" onclick="countlyEvent('content_reators_footer:click')" class="text-decoration-none">Content Creators </a></li>
+                                        <li class="mt-2"><a href="./content-creators.html" onclick="countlyEvent('content_reators_footer:click')" class="text-decoration-none activenav">Content Creators </a></li>
                                         <li class="mt-2"><a href="./businesses.html" onclick="countlyEvent('businesses_footer:click')" class="text-decoration-none">Businesses</a></li>
                                     </ul>
                                 </div>
@@ -408,7 +252,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 mt-5 mt-md-4 text-center centerTextResponsiveTab px-0">
+                        <div class="col-md-6 col-lg-3 mt-5 mt-md-4 text-center centerTextResponsiveTab">
                             <p class="footerFont font600 text-white">Stay Updated</p>
                             
                             <div class="row mt-4 justify-content-center font500 footerFont">
@@ -432,17 +276,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container-fluid mt-4">
-            <div class="row">
-                <div class="col p-0">
-                    <hr class="border-bottom customBorderColor"/>
+            <div class="row mt-4">
+                <div class="col-12 p-0">
+                  <hr class="borderBottom" />
                 </div>
             </div>
-        </div>
-        
-        <div class="container mb-4 mt-4">
-            <div class="row">
+            <div class="row pb-4">
                 <div class="col-md-12 p-lg-0">
                     <p class="font16 font500 footerWhiteColor">© 2023 RainBox Media Pvt Ltd. All Rights Reserved.</p>
                     <p class="mt-4 font16 font500 mutedWhiteColor">Disclaimer: Steam©, Valve & Steam software are all property of the Valve Corporation.Steam & Steam logo are trademarks and/or registered trademarks of Valve Corporation. Origin©,Origin software are all the property of Electronic Arts Inc. Ubisoft©, Ubisoft Connect software are all the property of Ubisoft Entertainment SA. All trademarks are property of their respective owners in the US and other countries.</p>
@@ -456,19 +295,17 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="./js/config.js"></script>
+        <script src="./js/script.js"></script>
 
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="./js/config.js"></script>
-        <script src="./js/script.js"></script>
-        <script src="./js/download.js"></script>
 
         <!-- countly Integrated -->
         <script src="./js/countly.js"></script>
@@ -479,6 +316,7 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
 
         <!-- <script src="./js/multi-language.js"></script> -->
 
@@ -492,7 +330,7 @@
 
             // Multiple Language Integration
             // async function fetchTranslationsFor(newLocale) {
-            //     const response = await fetch(`/lang/download-page/${newLocale}.json`);
+            //     const response = await fetch(`/lang/contact-us/${newLocale}.json`);
             //     return await response.json();
             // }
 

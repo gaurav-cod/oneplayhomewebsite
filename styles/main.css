@@ -266,6 +266,10 @@ html {
 
 /* // Medium devices (tablets, less than 992px) */
 @media (min-width: 768px) and (max-width: 991.98px) { 
+    .footerFont {
+        font-size: 18px !important;
+        line-height: 30px !important;
+    }
     .height100vh {
         height: auto !important;
     }
@@ -1581,7 +1585,7 @@ a {
     background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1300px) {
     .btn {
         font-size: 0.85rem !important;
     }
@@ -1633,4 +1637,10 @@ a {
     .height100{
         padding-top: 80px !important;
     }
+}
+
+@media (max-width: 1400px) {
+    .container {
+        max-width: 95% !important;
+    }   
 }
