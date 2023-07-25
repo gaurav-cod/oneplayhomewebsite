@@ -1644,3 +1644,32 @@ a {
         max-width: 95% !important;
     }   
 }
+
+.backgroundBg {
+    background-image: url('../assets/partner/Group\ 605.svg');
+}
+
+.cardBG {
+    background-color: #110D0D !important;
+}
+
+@media (min-width: 1300px) {
+    .paddingX {
+        padding: 0px 30px;
+    }
+}
+
+.w30 {
+    width: 30%;
+}
+
+.cardBlackBg {
+    background-color: #110D0D !important;
+    border-radius: 20px !important;
+}
+
+.negativeMarginIcon {
+    margin-top: -30px;
+    margin-left: -30px;
+    overflow-x: hidden;
+}
