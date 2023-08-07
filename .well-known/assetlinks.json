@@ -2,8 +2,33 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "in.oneplay.root.debug",
+    "package_name": "in.oneplay.debug",
     "sha256_cert_fingerprints":
-    ["A2:1B:09:A5:4A:E6:F1:17:CB:6B:A6:B2:29:28:46:91:6B:EB:DE:69:36:0F:16:66:2F:18:3B:3A:E6:B9:A0:3E"]
+    ["E9:6F:B5:B3:8F:30:35:7D:81:CF:EF:4A:A7:E5:78:43:8B:5C:AE:13:60:15:E4:B1:37:E8:94:9E:30:68:5E:75"]
   }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "in.oneplay.dev",
+    "sha256_cert_fingerprints":
+    ["E9:6F:B5:B3:8F:30:35:7D:81:CF:EF:4A:A7:E5:78:43:8B:5C:AE:13:60:15:E4:B1:37:E8:94:9E:30:68:5E:75"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { 
+        "namespace": "android_app", 
+        "package_name": "in.oneplay.qa",
+    "sha256_cert_fingerprints":
+        ["45:F9:02:A7:D9:6B:BE:28:27:46:CA:B2:F7:56:FD:AB:EA:E8:03:52:D1:FD:D7:D2:94:1C:5B:30:79:81:EB:F7"] }
+},
+{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { 
+        "namespace": "android_app", 
+        "package_name": "in.oneplay",
+    "sha256_cert_fingerprints":
+        ["45:F9:02:A7:D9:6B:BE:28:27:46:CA:B2:F7:56:FD:AB:EA:E8:03:52:D1:FD:D7:D2:94:1C:5B:30:79:81:EB:F7"] }
 }]
