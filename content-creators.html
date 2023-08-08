@@ -339,7 +339,7 @@
             </div>
         </div>
         <div class="container padding100" id="become-our-partner">
-            <div class="row justify-content-center">
+            <div id="defaultForm" class="row justify-content-center">
                 <div class="col-12 text-center">
                     <h1 class="font50 font800 text-white mb-0">
                         Intrested?
@@ -349,28 +349,34 @@
                     </p>
                 </div>
                 <div class="col-lg-9">
-                    <form>
+                    <form id="partnerData" method="post">
                         <div class="row">
                             <div class="col-md-6 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Name*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="name" placeholder="Name*" />
+                                <span id="invalidName" class="d-none cancelgradientText font500">*invalid name</span>
                             </div>
                             <div class="col-md-6 mt-4">
-                                <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Phone number*" />
+                                <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="phone_number" placeholder="Phone number*"/>
+                                <span id="invalidPhone" class="d-none cancelgradientText font500">*invalid phone number</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Discord server*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="discord_server" placeholder="Discord server"/>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Email linked to OnePlay account*" />
+                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="oneplay_email" placeholder="Email linked to OnePlay account*"/>
+                                <span id="invalidEmail" class="d-none cancelgradientText font500">*invalid email</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Link to social media page/channel*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="social_link" placeholder="Link to social media page/channel*"/>
+                                <span id="invalidLink" class="d-none cancelgradientText font500">*invalid social link</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Email linked to social media account*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="media_account" placeholder="Email linked to social media account*"/>
+                                <span id="invalidMediaAccount" class="d-none cancelgradientText font500">*invalid email</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="would you like to share something..."></textarea>
+                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="suggestion" placeholder="would you like to share something..."></textarea>
+                                <span id="invalidsuggestion" class="d-none cancelgradientText font500">*Character limit exceeded</span>
                             </div>
                             <div class="col-lg-12 mt-5 text-center">
                                 <input type="submit" class="btn text-nowrap border-top-0 border-start-0 border-end-0 font18 text-white height48 px-5 font500 removeFocus linearGradient align-middle borderRadius60" value="Submit" />
@@ -379,7 +385,7 @@
                     </form>
                 </div>
             </div>
-            <div class="row justify-content-center d-none">
+            <div id="successResponse" class="row justify-content-center d-none">
                 <div class="col-lg-9 col-md-10 col-11 text-center">
                     <img src="./assets/partner/success.svg" class="img-fluid w-10 mb-3" alt="" />
                     <p><img src="./assets/partner/Thank You!.svg" class="img-fluid w-25 mt-4" alt="" /></p>
@@ -598,7 +604,7 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
-
+        <script src="./js/partnerForm.js"></script>
 
         <!-- <script src="./js/multi-language.js"></script> -->
 

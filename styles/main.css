@@ -1673,3 +1673,11 @@ a {
     margin-left: -30px;
     overflow-x: hidden;
 }
+
+.cancelgradientText {
+    background: linear-gradient(270deg, #8a54d0 -1.64%, #d71f7b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
