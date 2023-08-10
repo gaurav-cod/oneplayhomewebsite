@@ -75,17 +75,15 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-lg-7 pt-5 align-self-center">
-                    <div class="w-75">
-                        <h1 class="text-white font50 font800">
-                            Join our Business Partnership Program
-                        </h1>
-                    </div>
+                <div class="col-md-7 pt-5 align-self-center">
+                    <h1 class="text-white font50 font800">
+                        Join our Business <br/> Partnership Program
+                    </h1>
                     <p class="font20 font500 offWhiteColor mt-4">
                         collaborate, Innovate, and Thrive together
                     </p>
                 </div>
-                <div class="col-lg-5 pt-5">
+                <div class="col-md-5 pt-5">
                     <img src="assets/partner/Group 605 (3).svg" class="img-fluid" alt="" />
                 </div>
             </div>
@@ -98,7 +96,7 @@
             </div>
         </div>
         <div class="container padding100">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center" id="defaultForm">
                 <div class="col-12 text-center">
                     <h1 class="font50 font800 text-white mb-0">
                         Intrested?
@@ -107,29 +105,32 @@
                         please submit your channel information for review
                     </p>
                 </div>
-                <div class="col-lg-9">
-                    <form>
+                <div class="col-lg-9 col-md-10">
+                    <form id="businessData" method="post">
                         <div class="row">
                             <div class="col-md-6 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Name*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="name" placeholder="Name*" />
+                                <span id="invalidName" class="d-none cancelgradientText font500">*invalid name</span>
                             </div>
                             <div class="col-md-6 mt-4">
-                                <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Phone number*" />
+                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="email" placeholder="Email*" />
+                                <span id="invalidEmail" class="d-none cancelgradientText font500">*invalid email</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Discord server*" />
+                                <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="phone" placeholder="Phone number*" />
+                                <span id="invalidPhone" class="d-none cancelgradientText font500">*invalid phone number</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Email linked to OnePlay account*" />
+                                <input type="url" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="website" placeholder="Website*" />
+                                <span id="invalidWebsite" class="d-none cancelgradientText font500">*invalid website</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Link to social media page/channel*" />
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="company_detail" placeholder="Company detail*" />
+                                <span id="invalidCompanyDetail" class="d-none cancelgradientText font500">*invalid company detail</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="Email linked to social media account*" />
-                            </div>
-                            <div class="col-md-12 mt-4">
-                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" placeholder="would you like to share something..."></textarea>
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="partnership" placeholder="What do you expect from this partnership*" />
+                                <span id="invalidPartnership" class="d-none cancelgradientText font500">*invalid patnership</span>
                             </div>
                             <div class="col-lg-12 mt-5 text-center">
                                 <input type="submit" class="btn text-nowrap border-top-0 border-start-0 border-end-0 font18 text-white height48 px-5 font500 removeFocus linearGradient align-middle borderRadius60" value="Submit" />
@@ -138,7 +139,7 @@
                     </form>
                 </div>
             </div>
-            <div class="row justify-content-center d-none">
+            <div id="successResponse" class="row justify-content-center d-none">
                 <div class="col-lg-9 col-md-10 col-11 text-center">
                     <img src="./assets/partner/success.svg" class="img-fluid w-10 mb-3" alt="" />
                     <p><img src="./assets/partner/Thank You!.svg" class="img-fluid w-25 mt-4" alt="" /></p>
@@ -293,7 +294,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 mt-5 mt-md-4 text-center centerTextResponsiveTab">
+                        <div class="col-md-6 col-lg-3 mt-5 text-center centerTextResponsiveTab">
                             <p class="footerFont font600 text-white">Stay Updated</p>
                             
                             <div class="row mt-4 justify-content-center font500 footerFont">
@@ -357,6 +358,8 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
+        <script src="./js/businessForm.js"></script>
 
 
         <!-- <script src="./js/multi-language.js"></script> -->

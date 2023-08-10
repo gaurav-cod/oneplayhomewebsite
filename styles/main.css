@@ -10,6 +10,13 @@ html {
     }
 }
 
+@media (max-width: 768px) {
+    .btn.btn-lg {
+        font-size: 12px !important;
+    }
+    
+}
+
 @media (max-width: 575.98px) {
     .tableBody th, .tableBody td {
         font-size: 16px !important;
@@ -1672,6 +1679,24 @@ a {
     margin-top: -30px;
     margin-left: -30px;
     overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+    .negativeMarginIcon {
+        margin-left: -75px !important;
+    }  
+}
+
+.instaMarginIcon {
+    margin-top: -30px;
+    margin-left: -30px;
+    overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+    .instaMarginIcon {
+        margin-left: -0px !important;
+    }  
 }
 
 .cancelgradientText {
