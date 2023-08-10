@@ -8,8 +8,8 @@ thisForm.addEventListener('submit', async function (e) {
     let companyDetailError = document.forms["businessData"]["company_detail"].value;
     let partnershipError = document.forms["businessData"]["partnership"].value;
     
-    const namePattern = /^[A-Za-z ]+$/;
-    const phonePattern = /^\d+$/;
+    const namePattern = /^[a-zA-Z\s]*$/;
+    const phonePattern = /^[0-9]{10}$/;
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     let isValid = true;

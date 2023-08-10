@@ -7,8 +7,8 @@ thisForm.addEventListener('submit', async function (e) {
     let socialLinkError = document.forms["partnerData"]["social_link"].value;
     let mediaError = document.forms["partnerData"]["media_account"].value;
     let suggestionError = document.forms["partnerData"]["suggestion"].value;
-    const namePattern = /^[A-Za-z ]+$/;
-    const phonePattern = /^\d{10}$/;
+    const namePattern = /^[a-zA-Z\s]*$/;
+    const phonePattern = /^[0-9]{10}$/;
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     let isValid = true;
