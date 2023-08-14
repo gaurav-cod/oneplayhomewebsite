@@ -1,80 +1,102 @@
-const thisForm = document.getElementById('partnerData');
+const thisForm = document.getElementById("partnerData");
 
-thisForm.addEventListener('submit', async function (e) {
-    let nameError = document.forms["partnerData"]["name"].value;
-    let phoneError = document.forms["partnerData"]["phone_number"].value;
-    let emailError = document.forms["partnerData"]["oneplay_email"].value;
-    let socialLinkError = document.forms["partnerData"]["social_link"].value;
-    let mediaError = document.forms["partnerData"]["media_account"].value;
-    let suggestionError = document.forms["partnerData"]["suggestion"].value;
-    const namePattern = /^[a-zA-Z\s]*$/;
-    const phonePattern = /^[0-9]{10}$/;
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+thisForm.addEventListener("submit", async function (e) {
+  e.preventDefault();
 
-    let isValid = true;
-    if (!nameError.match(namePattern)) 
-        {
-            document.getElementById("invalidName").classList.remove("d-none");
-            isValid = false;
-        }
-    else document.getElementById("invalidName").classList.add("d-none"); 
-    
-    if (!phoneError.match(phonePattern)) {
-        document.getElementById("invalidPhone").classList.remove("d-none"); 
-        isValid = false;
-    }
-        
-    else  document.getElementById("invalidPhone").classList.add("d-none"); 
+  let name = document.forms["partnerData"]["name"].value;
+  let phone = document.forms["partnerData"]["phone_number"].value;
+  let discord = document.forms["partnerData"]["discord_server"].value;
+  let email = document.forms["partnerData"]["oneplay_email"].value;
+  let socialLink = document.forms["partnerData"]["social_link"].value;
+  let media = document.forms["partnerData"]["media_account"].value;
+  let suggestion = document.forms["partnerData"]["suggestion"].value;
 
-    if (!emailError.match(emailPattern)) {
-        document.getElementById("invalidEmail").classList.remove("d-none"); 
-        isValid = false;
-    }
-    else document.getElementById("invalidEmail").classList.add("d-none"); 
+  const namePattern = /^[a-zA-Z\s]*$/;
+  const phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  const linkPattern =
+    /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
 
-    // const socialLinks = socialLinkError.split(",");
-    // for (const link of socialLinks) {
-    //     if (!link.trim()) {
-    //         document.getElementById("invalidLink").classList.remove("d-none");
-    //         isValid = false;
-    //         return;
-    //     }
-    //     else document.getElementById("invalidLink").classList.add("d-none"); 
-    // }
-    if(socialLinkError === "") {
-        document.getElementById("invalidLink").classList.remove("d-none");
-        isValid = false;
-    }
-    
-    if (mediaError === "") {
-        document.getElementById("invalidMediaAccount").classList.remove("d-none");
-        isValid = false;
-    }
-    else document.getElementById("invalidMediaAccount").classList.add("d-none");
+  let isValid = true;
 
-    if(suggestionError.length > 1000) {
-        document.getElementById("invalidsuggestion").classList.remove("d-none");
-        isValid = false;
-    }
-    else document.getElementById("invalidsuggestion").classList.add("d-none");
-    
-    if(isValid) {
-        e.preventDefault();
-        const formData = new FormData(document.querySelector('#partnerData'))
-        var requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(Object.fromEntries(formData)),
-            redirect: 'follow'
-        };
-    
-        document.getElementById("successResponse").classList.remove("d-none");
-        document.getElementById("defaultForm").classList.add("d-none");
-    
-        const response = await fetch('https://forms.zohopublic.com/rainboxmediapvtltd/form/CreatorsRegistrationForm/formperma/pKRX39-lhNR4xFrXupkWe9R_VgSsUK0SP0ffGGBp-yU/htmlRecords/submit', requestOptions);
-        const result = await response.json(); 
-    }
-    
+  if (!name.match(namePattern)) {
+    document.getElementById("invalidName").classList.remove("d-none");
+    isValid = false;
+  } else document.getElementById("invalidName").classList.add("d-none");
+
+  if (!phone.match(phonePattern)) {
+    document.getElementById("invalidPhone").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidPhone").classList.add("d-none");
+  }
+
+  if (!discord.match(linkPattern)) {
+    document.getElementById("invalidDiscord").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidPhone").classList.add("d-none");
+  }
+
+  if (!email.match(emailPattern)) {
+    document.getElementById("invalidEmail").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidEmail").classList.add("d-none");
+  }
+
+  if (!socialLink.match(linkPattern)) {
+    document.getElementById("invalidLink").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidLink").classList.add("d-none");
+  }
+
+  if (!media.match(emailPattern)) {
+    document.getElementById("invalidMediaAccount").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidMediaAccount").classList.add("d-none");
+  }
+
+  if (suggestion.length > 1000) {
+    document.getElementById("invalidsuggestion").classList.remove("d-none");
+    isValid = false;
+  } else {
+    document.getElementById("invalidsuggestion").classList.add("d-none");
+  }
+
+  if (isValid) {
     e.preventDefault();
-    return false;
+    const formData = new FormData();
+
+    const [fisrtName, ...lastName] = name.trim().split(" ");
+
+    formData.append("Name_First", fisrtName);
+    formData.append("Name_Last", lastName?.join(" ") || "");
+    formData.append("Website", socialLink);
+    formData.append("Website1", discord);
+    formData.append("Email", email);
+    formData.append("Email1", media);
+    formData.append("PhoneNumber_countrycode", phone);
+    if (suggestion.length) {
+      formData.append("MultiLine", suggestion);
+    }
+
+    var requestOptions = {
+      method: "POST",
+      body: formData,
+    };
+
+    document.getElementById("successResponse").classList.remove("d-none");
+    document.getElementById("defaultForm").classList.add("d-none");
+
+    try {
+      await fetch(window.config.CONTENT_CREATOR_FORM, requestOptions);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  return false;
 });
