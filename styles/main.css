@@ -1712,3 +1712,25 @@ a {
     background-clip: text;
     text-fill-color: transparent;
 }
+
+.lineBgLeft {
+    background-image: url('../assets/partner/Vector\ 126.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media (max-width: 575.9px) {
+    .lineBgLeft {
+        background-image: none !important;
+    }
+
+    .starBG {
+        background-image: none !important;
+    }
+}
+
+.starBG {
+    background-image: url('../assets/partner/STAR\ BACKGROUND.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
