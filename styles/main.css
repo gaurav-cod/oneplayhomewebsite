@@ -1717,6 +1717,10 @@ a {
     .lineBgLeft {
         background-image: none !important;
     }
+
+    .starBG {
+        background-image: none !important;
+    }
 }
 
 .starBG {
