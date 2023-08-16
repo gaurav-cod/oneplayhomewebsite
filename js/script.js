@@ -125,7 +125,7 @@ function loadSeriousNotification() {
               </div>
               <div class="col-auto">
                 <button 
-                  class="btn borderRadius50 p-0 text-white pe-lg-3"
+                  class="btn text-nowrap borderRadius50 p-0 text-white pe-lg-3"
                   style="float: right"
                   onclick="closeSeriousNotification()"
                 >
