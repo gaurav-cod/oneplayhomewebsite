@@ -1684,7 +1684,13 @@ a {
 @media (max-width: 991px) {
     .negativeMarginIcon {
         margin-left: -75px !important;
-    }  
+    } 
+}
+
+@media (max-width: 575.9px) {
+    .mobileLeft {
+        left: 80px;
+    }
 }
 
 .instaMarginIcon {
