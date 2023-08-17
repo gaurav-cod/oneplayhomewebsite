@@ -147,7 +147,7 @@ thisForm.addEventListener("submit", function (e) {
     formData.append("Email", emailField.value);
     formData.append("Email1", mediaField.value);
     formData.append("PhoneNumber_countrycode", phoneField.value);
-    if (suggestionField.length) {
+    if (suggestionField.value.length) {
       formData.append("MultiLine", suggestionField.value);
     }
 
