@@ -143,8 +143,8 @@ thisForm.addEventListener("submit", function (e) {
     formData.append("Name_First", fisrtName);
     formData.append("Name_Last", lastName?.join(" ") || "");
     formData.append("Website", discordField.value);
-    formData.append("Website1", emailField.value);
-    formData.append("Email", socialLinkField.value);
+    formData.append("Website1", socialLinkField.value);
+    formData.append("Email", emailField.value);
     formData.append("Email1", mediaField.value);
     formData.append("PhoneNumber_countrycode", phoneField.value);
     if (suggestionField.length) {
