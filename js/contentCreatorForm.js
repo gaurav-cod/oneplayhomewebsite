@@ -1,89 +1,155 @@
 const thisForm = document.getElementById("partnerData");
+document.getElementById("submitBtn").classList.add("disabled");
 
-thisForm.addEventListener("submit", async function (e) {
-  e.preventDefault();
+const nameField = document.forms["partnerData"]["name"];
+const phoneField = document.forms["partnerData"]["phone_number"];
+const discordField = document.forms["partnerData"]["discord_server"];
+const emailField = document.forms["partnerData"]["oneplay_email"];
+const socialLinkField = document.forms["partnerData"]["social_link"];
+const mediaField = document.forms["partnerData"]["media_account"];
+const suggestionField = document.forms["partnerData"]["suggestion"];
 
-  let name = document.forms["partnerData"]["name"].value;
-  let phone = document.forms["partnerData"]["phone_number"].value;
-  let discord = document.forms["partnerData"]["discord_server"].value;
-  let email = document.forms["partnerData"]["oneplay_email"].value;
-  let socialLink = document.forms["partnerData"]["social_link"].value;
-  let media = document.forms["partnerData"]["media_account"].value;
-  let suggestion = document.forms["partnerData"]["suggestion"].value;
+const namePattern = /^([a-zA-Z]+\s?[a-zA-Z]+)+$/i;
+const phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const linkPattern = /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
 
-  const namePattern = /^[a-zA-Z\s]*$/;
-  const phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-  const linkPattern =
-    /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
-
-  let isValid = true;
-
-  if (!name.match(namePattern)) {
+const isNameValid = () => {
+  if (!nameField.value.trim().match(namePattern)) {
     document.getElementById("invalidName").classList.remove("d-none");
-    isValid = false;
-  } else document.getElementById("invalidName").classList.add("d-none");
-
-  if (!phone.match(phonePattern)) {
-    document.getElementById("invalidPhone").classList.remove("d-none");
-    isValid = false;
+    return false;
   } else {
-    document.getElementById("invalidPhone").classList.add("d-none");
+    document.getElementById("invalidName").classList.add("d-none");
+    return true;
   }
+}
 
-  if (!discord.match(linkPattern)) {
-    document.getElementById("invalidDiscord").classList.remove("d-none");
-    isValid = false;
-  } else {
-    document.getElementById("invalidPhone").classList.add("d-none");
-  }
-
-  if (!email.match(emailPattern)) {
+const isEmailValid = () => {
+  if (!emailField.value.match(emailPattern)) {
     document.getElementById("invalidEmail").classList.remove("d-none");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("invalidEmail").classList.add("d-none");
+    return true;
   }
+}
 
-  if (!socialLink.match(linkPattern)) {
+const isPhoneValid = () => {
+  if (!phoneField.value.match(phonePattern)) {
+    document.getElementById("invalidPhone").classList.remove("d-none");
+    return false;
+  } else {
+    document.getElementById("invalidPhone").classList.add("d-none");
+    return true;
+  }
+}
+
+// const isDiscordValid = () => {
+//   var regex = /(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+//   if (!discordField.value.match(regex)) {
+//     document.getElementById("invalidDiscord").classList.remove("d-none");
+//     return false;
+//   } else {
+//     document.getElementById("invalidDiscord").classList.add("d-none");
+//     return true;
+//   }
+// }
+
+const isSocialValid = () => {
+  if (!socialLinkField.value.match(linkPattern)) {
     document.getElementById("invalidLink").classList.remove("d-none");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("invalidLink").classList.add("d-none");
+    return true;
   }
+}
 
-  if (!media.match(emailPattern)) {
+const isMediaEmailValid = () => {
+  if (!mediaField.value.match(emailPattern)) {
     document.getElementById("invalidMediaAccount").classList.remove("d-none");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("invalidMediaAccount").classList.add("d-none");
+    return true;
   }
+}
 
-  if (suggestion.length > 1000) {
+const isSuggestionValid = () => {
+  if (suggestionField.value.length > 1000) {
     document.getElementById("invalidsuggestion").classList.remove("d-none");
-    isValid = false;
+    return false;
   } else {
     document.getElementById("invalidsuggestion").classList.add("d-none");
+    return true;
+  }
+}
+
+const validateFields = () => {
+  let isValid = true;
+  
+  isValid = isValid && isNameValid();
+  isValid = isValid && isEmailValid();
+  isValid = isValid && isPhoneValid();
+  // isValid = isValid && isDiscordValid();
+  isValid = isValid && isSocialValid();
+  isValid = isValid && isMediaEmailValid();
+  isValid = isValid && isSuggestionValid();
+
+  console.warn(isValid, 'sbt btn')
+  if (!isValid) {
+    document.getElementById("submitBtn").classList.add("disabled");
+  } else {
+    document.getElementById("submitBtn").classList.remove("disabled");
   }
 
-  if (isValid) {
+  return isValid;
+}
+
+nameField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+phoneField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+  // discordField.addEventListener("input", (e) => {
+  //   validateFields();
+  //   console.warn(e.target.value)
+  // })
+emailField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+socialLinkField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+mediaField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+suggestionField.addEventListener("input", (e) => {
+  validateFields();
+  console.warn(e.target.value)
+})
+
+thisForm.addEventListener("submit", function (e) {
+  if (validateFields()) {
     e.preventDefault();
     const formData = new FormData();
-
-    const [fisrtName, ...lastName] = name.trim().split(" ");
-
-    formData.append("Name_First", fisrtName);
-    formData.append("Name_Last", lastName?.join(" ") || "");
-    formData.append("Website", socialLink);
-    formData.append("Website1", discord);
-    formData.append("Email", email);
-    formData.append("Email1", media);
-    formData.append("PhoneNumber_countrycode", phone);
-    if (suggestion.length) {
-      formData.append("MultiLine", suggestion);
+    formData.append("Name_First", nameField);
+    formData.append("Website", discordField);
+    formData.append("Website1", emailField);
+    formData.append("Email", socialLinkField);
+    formData.append("Email1", mediaField);
+    formData.append("PhoneNumber_countrycode", phoneField);
+    if (suggestionField.length) {
+      formData.append("MultiLine", suggestionField);
     }
 
-    var requestOptions = {
+    let requestOptions = {
       method: "POST",
       body: formData,
     };
@@ -91,11 +157,7 @@ thisForm.addEventListener("submit", async function (e) {
     document.getElementById("successResponse").classList.remove("d-none");
     document.getElementById("defaultForm").classList.add("d-none");
 
-    try {
-      await fetch(window.config.CONTENT_CREATOR_FORM, requestOptions);
-    } catch (e) {
-      console.log(e);
-    }
+    fetch(window.config.CONTENT_CREATOR_FORM, requestOptions).catch(console.log)
   }
 
   return false;
