@@ -139,14 +139,16 @@ thisForm.addEventListener("submit", function (e) {
   if (validateFields()) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("Name_First", nameField);
-    formData.append("Website", discordField);
-    formData.append("Website1", emailField);
-    formData.append("Email", socialLinkField);
-    formData.append("Email1", mediaField);
-    formData.append("PhoneNumber_countrycode", phoneField);
-    if (suggestionField.length) {
-      formData.append("MultiLine", suggestionField);
+    const [fisrtName, ...lastName] = nameField.value.split(" ");
+    formData.append("Name_First", fisrtName);
+    formData.append("Name_Last", lastName?.join(" ") || "");
+    formData.append("Website", discordField.value);
+    formData.append("Website1", socialLinkField.value);
+    formData.append("Email", emailField.value);
+    formData.append("Email1", mediaField.value);
+    formData.append("PhoneNumber_countrycode", phoneField.value);
+    if (suggestionField.value.length) {
+      formData.append("MultiLine", suggestionField.value);
     }
 
     let requestOptions = {
