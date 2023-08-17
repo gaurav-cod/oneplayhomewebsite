@@ -117,12 +117,14 @@ thisForm.addEventListener("submit", function (e) {
   if (validateFields()) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("Name_First", nameField);
-    formData.append("Email", emailField);
-    formData.append("PhoneNumber_countrycode", phoneField);
-    formData.append("Website", websiteField);
-    formData.append("SingleLine", companyDetailField);
-    formData.append("MultiLine", partnershipField);
+    const [fisrtName, ...lastName] = nameField.value.split(" ");
+    formData.append("Name_First", fisrtName);
+    formData.append("Name_Last", lastName?.join(" ") || "");
+    formData.append("Email", emailField.value);
+    formData.append("PhoneNumber_countrycode", phoneField.value);
+    formData.append("Website", websiteField.value);
+    formData.append("SingleLine", companyDetailField.value);
+    formData.append("MultiLine", partnershipField.value);
 
     let requestOptions = {
       method: "POST",
