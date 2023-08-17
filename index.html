@@ -24,7 +24,7 @@
           <p class="mb-0 font16 font500 text-white text-center"><span data-i18n-key="alertText">OnePlay uses cookies to ensure the best experience. By continuing to use this website, you agree to OnePlay’s</span> <a href="./privacy.html" onclick="countlyEvent('home_privacy_policy_topalert:click')" data-i18n-key="nav-privacypolicy" class="text-white"><u>Privacy policy</u></a> & <a href="./tnc.html" data-i18n-key="nav-t&c" onclick="countlyEvent('home_terms_and_conditions_topalert:click')" class="text-white"><u>Cookie policy</u></a>.</p>
         </div>
         <div class="col-auto">
-          <button type="button" class="btn text-nowrap -close removeFocus removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close" id="cookieAlert"><i class="fas fa-times-circle"></i></button>
+          <button type="button" class="btn text-nowrap -close removeFocus removeCrossBg text-white" data-bs-dismiss="alert" aria-label="Close" id="hideTopAlert"><i class="fas fa-times-circle"></i></button>
         </div>
       </div>
     </div>
@@ -693,10 +693,10 @@
       $(function() {
         // setTimeout("$('#topAlert').hide();",15000);
 
-        if(localStorage.getItem('#cookieAlert') !== 'true') {
+        if(localStorage.getItem('hideTopAlert') !== 'true') {
           $('#topAlert').removeClass('d-none');
-          $('#cookieAlert').click(function() {
-            localStorage.setItem('#cookieAlert','true');  
+          $('#hideTopAlert').click(function() {
+            localStorage.setItem('hideTopAlert','true');  
           })
         }
 
