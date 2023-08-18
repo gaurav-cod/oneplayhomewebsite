@@ -1,3 +1,8 @@
+// import { CountlyService } from "./countly.service";
+// const countlyService = new CountlyService();
+// console.warn('heeh', countlyService)
+// console.warn('huhuhuh')
+
 //Countly Device_id Code Start
 function uuidv4() {
   return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
@@ -45,6 +50,27 @@ function countlyEvent(ob){
   
   $(window).on('hashchange', function() {
     Countly.q.push(['track_pageview',location.pathname+location.hash]);
+  });
+  $(window).on('unload', function(e) {
+    e.preventDefault();
+    const page = window.location.pathname.split("/").pop().split(".")[0];
+    console.warn('changeetondee', page)
+    switch (page) {
+      case "about":
+        countlyService.endEvent("websiteAboutUsView");
+        break;
+      case "download":
+        countlyService.endEvent("websiteDownloadView");
+        break;
+      case "subscription":
+        countlyService.endEvent("websiteSubscriptionView");
+        break;
+      case "decentralization":
+        countlyService.endEvent("websiteDecentralizationView");
+        break;
+      default:
+        break;
+    }
   });
   
   var cly = document.createElement('script'); cly.type = 'text/javascript';

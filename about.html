@@ -103,7 +103,7 @@
                             Stream your favorite games, anytime & on any device 
                             with your progress being saved in the cloud!
                         </p>
-                        <a role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" onclick="countlyEvent('aboutus_getStarted:click')" href="" data-i18n-key="getStarted">Get Started</a>
+                        <a role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 buttonPB font500 removeFocus linearGradient align-middle borderRadius60 mt-4" id="login" onclick="clickGetStarted()" href="" data-i18n-key="getStarted">Get Started</a>
                     </div>
                     <div class="col-md-6 align-self-center desktopView">
                         <div class="marginRightNegative">
@@ -400,7 +400,7 @@
                     </h1>
                 </div>
                 <div class="col-lg-auto col-md-auto col-12 mt-4 mt-lg-5 align-self-center borderRadius60">
-                    <a href="https://medium.com/@oneplay_gaming" target="_blank" class="btn text-nowrap  btn-lg font20 text-white font500 removeFocus gradientBorder align-middle" id="browseArticles" onclick="countlyEvent('aboutus_browseArticles:click')"><span class="ps-4 pe-4 lineHeight40" data-i18n-key="btn text-nowrap -browseArticles">Browse Articles</span></a>
+                    <a href="https://medium.com/@oneplay_gaming" target="_blank" class="btn text-nowrap  btn-lg font20 text-white font500 removeFocus gradientBorder align-middle" id="browseArticles" onclick="clickBrowseArticles()"><span class="ps-4 pe-4 lineHeight40" data-i18n-key="btn text-nowrap -browseArticles">Browse Articles</span></a>
                 </div>
             </div>
             <div class="row centerTextResponsive">
@@ -460,8 +460,8 @@
                                     <h1 class="font50 font800">
                                         Be part of the Revolution by joining Discord channel and stay updated.
                                     </h1>
-                                    <a onclick="countlyEvent('aboutus_joinDiscord:click')" href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-top-0 border-start-0 border-end-0 mt-md-5 mt-4"><i class="fa-brands fa-discord me-2 font20 align-middle"></i>Join Discord</a>
-                                    <a href="./subscription.html" onclick="countlyEvent('aboutus_browsePlans:click')" class="btn text-nowrap  mt-md-5 mt-4 text-white font22 removeFocus font500 align-middle ms-lg-4"><u data-i18n-key="btn text-nowrap -browsePlans">Browse Plans</u></a>
+                                    <a onclick="clickJoinDiscord()" href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  btn-lg align-middle font20 text-white ps-5 pe-5 buttonPB font500 removeFocus buttonLinear align-middle borderRadius60 border-top-0 border-start-0 border-end-0 mt-md-5 mt-4"><i class="fa-brands fa-discord me-2 font20 align-middle"></i>Join Discord</a>
+                                    <a href="./subscription.html" onclick="clickBrowsePlans()" class="btn text-nowrap  mt-md-5 mt-4 text-white font22 removeFocus font500 align-middle ms-lg-4"><u data-i18n-key="btn text-nowrap -browsePlans">Browse Plans</u></a>
                                 </div>
                                 <div class="col-lg-5 col-md-4 align-self-center p-0 desktopView hidenNegativeMargin">
                                     <div class="mr130">
@@ -675,6 +675,7 @@
         <script src="./js/script.js"></script>
         <!-- countly Integrated -->
         <script src="./js/countly.js"></script>
+        <script src="./js/countly.service.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
@@ -686,6 +687,28 @@
         <!-- <script src="./js/multi-language.js"></script> -->
 
         <script>
+            const _event = countlyService.startEvent("websiteAboutUsView")
+
+            const clickGetStarted = () => {
+              _event.update({
+                getStartedClicked: "yes",
+              })
+            }
+            const clickBrowseArticles = () => {
+              _event.update({
+                browseArticlesClicked: "yes",
+              })
+            }
+            const clickJoinDiscord = () => {
+              _event.update({
+                joinDiscordClicked: "yes",
+              })
+            }
+            const clickBrowsePlans = () => {
+              _event.update({
+                browsePlansClicked: "yes",
+              })
+            }
 
             window.dataLayer = window.dataLayer || [];
             function gtag() {
