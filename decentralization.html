@@ -296,7 +296,7 @@
                         renting your own server.
                     </p>
                     <p class="mb-5"><img src="./assets/decentralization/rent 1.svg" class="img-fluid mt-5" alt="" /></p>
-                    <a role="button" class="btn text-nowrap  font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 mt-5" href="mailto:team@oneplay.in">Connect with us</a>
+                    <a onclick="updateEvent('connectWithUsClicked')" role="button" class="btn text-nowrap  font20 btn-lg text-white ps-5 pe-5 buttonPB font500 removeFocus border-top-0 border-start-0 border-end-0 linearGradient align-middle borderRadius60 mt-5" href="mailto:team@oneplay.in">Connect with us</a>
                 </div>
             </div>
         </div>
@@ -693,6 +693,12 @@
 
         <!-- <script src="./js/multi-language.js"></script> -->
         <script>
+            const _event = countlyService.startEvent("websiteDecentralizationView")
+            const updateEvent = (segment) => {
+              _event.update({
+                [segment]: "yes",
+              })
+            }
             window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);

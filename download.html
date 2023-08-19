@@ -138,8 +138,8 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font38 font700 desktopView" data-i18n-key="macText">Mac</h1>
-                                        <a href="./download.html?target=macos" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/21E3wwl8-UU" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Mac client Demo</span></a></p>
+                                        <a onclick="updateEvent('downloadMacClicked')" href="./download.html?target=macos" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                        <p class="mt-4 mb-0"><a onclick="updateEvent('macDemoClicked')" href="https://youtu.be/21E3wwl8-UU" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Mac client Demo</span></a></p>
                                     </div>
                                     <div class="col-lg-4 col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-md-4 pe-md-4">
@@ -171,8 +171,8 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font38 font700 desktopView" data-i18n-key="windowText">Windows</h1>
-                                        <a href="./download.html?target=windows" data-i18n-key="downloadText" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/4_wFbSKNQhs" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Windows client Demo</span></a></p>
+                                        <a onclick="updateEvent('downloadWindowsClicked')" href="./download.html?target=windows" data-i18n-key="downloadText" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                        <p class="mt-4 mb-0"><a onclick="updateEvent('windowDemoClicked')" href="https://youtu.be/4_wFbSKNQhs" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Windows client Demo</span></a></p>
                                     </div>
                                     <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-md-4 pe-md-4">
@@ -206,8 +206,8 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font38 font700 desktopView" data-i18n-key="android-Text">Android</h1>
-                                        <a data-i18n-key="downloadText" href="https://play.google.com/store/apps/details?id=in.oneplay" data-i18n-key="downloadText" target="_blank" id="androidDownload" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://youtu.be/5wgAkahWM5k" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Android App Demo</span></a></p>
+                                        <a onclick="updateEvent('downloadAndroidClicked')" data-i18n-key="downloadText" href="https://play.google.com/store/apps/details?id=in.oneplay" data-i18n-key="downloadText" target="_blank" id="androidDownload" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                        <p class="mt-4 mb-0"><a onclick="updateEvent('androidDemoClicked')" href="https://youtu.be/5wgAkahWM5k" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Android App Demo</span></a></p>
                                     </div>
                                     <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-md-4 pe-md-4">
@@ -241,8 +241,8 @@
                                     </div>
                                     <div class="col-lg-4 col-md-6 text-center align-self-center borderLeftcolor">
                                         <h1 class="text-white font38 font700 desktopView">Android TV</h1>
-                                        <a href="https://play.google.com/store/apps/details?id=in.oneplay" target="_blank" id="androidTVDownload" class="btn border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
-                                        <p class="mt-4 mb-0"><a href="https://www.youtube.com/watch?v=1D8L41mJSe4" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Android TV App Demo</span></a></p>
+                                        <a onclick="updateEvent('downloadAndroidTVClicked')" href="https://play.google.com/store/apps/details?id=in.oneplay" target="_blank" id="androidTVDownload" class="btn border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-5 pe-5 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 margintopDownload">Download</a>
+                                        <p class="mt-4 mb-0"><a onclick="updateEvent('androidTvDemoClicked')" href="https://www.youtube.com/watch?v=1D8L41mJSe4" target="_blank" class="text-decoration-none mutedColor"><img src="./assets/download/Play.svg" width="20px" height="20px" alt="" /> <span class="align-middle ps-2">Watch Android TV App Demo</span></a></p>
                                     </div>
                                     <div class="col-md-9 align-self-center margintopDownload tabViewShow mt-4 text-center">
                                         <div class="ps-md-4 pe-md-4">
@@ -498,6 +498,12 @@
         <!-- <script src="./js/multi-language.js"></script> -->
 
         <script>
+            const _event = countlyService.startEvent("websiteDownloadView")
+            const updateEvent = (segment) => {
+              _event.update({
+                [segment]: "yes",
+              })
+            }
             window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);

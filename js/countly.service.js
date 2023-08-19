@@ -1,3 +1,4 @@
+const XCountlySUM = 'XCountlySUM';
 class CountlyService {
   countly_prefix_key = "x_countly_event_key"
   data_postfix = " - data"

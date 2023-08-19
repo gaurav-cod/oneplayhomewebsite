@@ -667,6 +667,7 @@
 
     <!-- countly Integrated -->
     <script src="./js/countly.js"></script>
+    <script src="./js/countly.service.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -681,6 +682,77 @@
     <!-- <script src="./js/multi-language.js"></script> -->
 
     <script>
+      const _event = countlyService.startEvent("websiteSubscriptionView")
+      const updateEvent = (segment) => {
+        _event.update({
+          [segment]: "yes",
+        })
+      }
+      const subscriptionCardClick = (value) => {
+        const defaultVals = {
+          hourlyCardOneClicked: "no",
+          hourlyCardTwoClicked: "no",
+          hourlyCardThreeClicked: "no",
+          hourlyCardFourClicked: "no",
+          monthlyCardOneClIcked: "no",
+          monthlyCardTwoClicked: "no",
+          source: "subscriptionPage",
+          cta: "getStartedNow",
+        };
+        switch (value) {
+          case 39:
+            updateEvent('hourlyCardOneClicked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              hourlyCardOneClicked: "yes",
+            })
+            break;
+          case 89:
+            updateEvent('hourlyCardTwoClicked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              hourlyCardTwoClicked: "yes",
+            })
+            break;
+          case 149:
+            updateEvent('hourlyCardThreeClicked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              hourlyCardThreeClicked: "yes",
+            })
+            break;
+          case 249:
+            updateEvent('hourlyCardFourClicked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              hourlyCardFourClicked: "yes",
+            })
+            break;
+          case 499:
+            updateEvent('monthlyCardOneClIcked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              monthlyCardOneClIcked: "yes",
+            })
+            break;
+          case 599:
+            updateEvent('monthlyCardTwoClicked')
+            countlyService.addEvent('subscriptionCardClick', {
+              ...defaultVals,
+              [XCountlySUM]: value,
+              monthlyCardTwoClicked: "yes",
+            })
+            break;
+          default:
+            break;
+        }
+      }
+
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
