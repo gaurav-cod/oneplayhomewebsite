@@ -105,6 +105,7 @@ loadSubscriptions().then((subscriptions) => {
         const pricings = document.querySelectorAll('#pricings');
         pricings.forEach(el => el.removeAttribute('hidden'));
         heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
+        subscriptions = subscriptions.filter(sub => sub.partner_id === config.PARTNER_ID);
     } else {
         const comingSoon = document.getElementById('coming-soon');
         comingSoon?.removeAttribute('hidden');
