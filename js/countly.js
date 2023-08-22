@@ -1,8 +1,3 @@
-// import { CountlyService } from "./countly.service";
-// const countlyService = new CountlyService();
-// console.warn('heeh', countlyService)
-// console.warn('huhuhuh')
-
 //Countly Device_id Code Start
 function uuidv4() {
   return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
@@ -54,7 +49,6 @@ function countlyEvent(ob){
   $(window).on('unload', function(e) {
     e.preventDefault();
     const page = window.location.pathname.split("/").pop().split(".")[0];
-    console.warn('changeetondee', page)
     switch (page) {
       case "about":
         countlyService.endEvent("websiteAboutUsView");

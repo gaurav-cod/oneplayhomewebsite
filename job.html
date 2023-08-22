@@ -53,21 +53,21 @@
                     <a role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 removeFocus p-0" id="speed-test"><img src="./assets/home/Group 56.svg" class="img-fluid wh48" alt="dashboard" /></a>
                 </div>
                 <div class="col-auto align-self-center ps-0">
-                    <a role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" href="">Log in</a>
+                    <a onclick="startSignInEvent()" role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 font18 lightWhite font500 removeFocus align-middle" id="login" data-i18n-key="nav-login" href="">Log in</a>
                 </div>
                 <div class="col-auto align-self-center ps-0">
-                    <a role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" href="">Sign Up</a>
+                    <a onclick="startSignUpEvent()" role="button" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60" data-i18n-key="nav-signup" id="signup" href="">Sign Up</a>
                 </div>
             </div>
           </form>
           <div class="MobileView">
             <hr class="hrBorderColor mb-4"/>
-            <a role="button" class="btn text-nowrap  btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" data-i18n-key="nav-signup" href="">Sign Up</a>
+            <a onclick="startSignUpEvent()" role="button" class="btn text-nowrap  btn-lg font20 text-white ps-4 pe-4 font500 removeFocus linearGradient borderRadius60 mb-3" id="signup" data-i18n-key="nav-signup" href="">Sign Up</a>
             <p><span class="offWhiteColor font18 font500"><span data-i18n-key="nav-needhelp">Need help?</span><span class="gradientAnchor"><a href="./FAQs.html" data-i18n-key="nav-browseFAQ"> Browse FAQ</a></span></span></p>
             <p class="font16 font500 footerWhiteColor mb-0" data-i18n-key="nav-reserved">© 2023 RainBox Media Pvt Ltd. All Rights Reserved.</p>
             <p class="font16 font500 gradientAnchor">
-                <a href="privacy.html" class="anchor" data-i18n-key="nav-privacypolicy" id="privacy">Privacy Policy</a> <span class="footerWhiteColor">.</span>
-                <a href="./tnc.html" class="anchor" data-i18n-key="nav-t&c" id="t&c">Terms & Conditions</a>
+                <a onclick="logFooterEvent('privacyPolicyClicked')" href="privacy.html" class="anchor" data-i18n-key="nav-privacypolicy" id="privacy">Privacy Policy</a> <span class="footerWhiteColor">.</span>
+                <a onclick="logFooterEvent('termsClicked')" href="./tnc.html" class="anchor" data-i18n-key="nav-t&c" id="t&c">Terms & Conditions</a>
             </p>
           </div>
         </div>
@@ -212,11 +212,11 @@
                   <div id="collapsecompany" class="accordion-collapse collapse show" aria-labelledby="headingcompany" data-bs-parent="#accordionExample">
                       <div class="accordion-body ps-0 pe-0 pt-0">
                         <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                          <li class="mt-2"><a href="./index.html" id="home" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
-                          <li class="mt-2"><a href="./about.html" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
-                          <li class="mt-2"><a href="./career.html" class="text-decoration-none">Career</a></li>
-                          <li class="mt-2"><a href="subscription.html" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
-                          <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('homeClicked')" href="./index.html" id="home" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('aboutUsClicked')" href="./about.html" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('careerClicked')" href="./career.html" class="text-decoration-none">Career</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('plansPricingClicked')" href="subscription.html" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('blogClicked')" href="https://medium.com/@oneplay_gaming" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                         </ul>
                         <div class="gradientBorderbottom mt-2"></div>
                       </div>
@@ -231,8 +231,8 @@
                   <div id="collapsehelp" class="accordion-collapse collapse" aria-labelledby="headinghelp" data-bs-parent="#accordionExample">
                       <div class="accordion-body ps-0 pe-0 pt-0">
                           <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                            <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
-                            <li class="mt-2"><a href="./FAQs.html" class="text-decoration-none">FAQ's</a></li>
+                            <li class="mt-2"><a onclick="logFooterEvent('contactUsClicked')" href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                            <li class="mt-2"><a onclick="logFooterEvent('faqClicked')" href="./FAQs.html" class="text-decoration-none">FAQ's</a></li>
                           </ul>
                           <div class="gradientBorderbottom mt-2"></div>
                       </div>
@@ -247,8 +247,8 @@
                 <div id="collapsePartner" class="accordion-collapse collapse" aria-labelledby="headingPartner" data-bs-parent="#accordionExample">
                     <div class="accordion-body ps-0 pe-0 pt-0">
                         <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                            <li class="mt-2"><a href="./content-creators.html" class="text-decoration-none">Content Creators </a></li>
-                            <li class="mt-2"><a href="./businesses.html" class="text-decoration-none">Businesses</a></li>
+                            <li class="mt-2"><a onclick="logFooterEvent('contentCreatorsClicked')" href="./content-creators.html" class="text-decoration-none">Content Creators </a></li>
+                            <li class="mt-2"><a onclick="logFooterEvent('businessesClicked')" href="./businesses.html" class="text-decoration-none">Businesses</a></li>
                         </ul>
                         <div class="gradientBorderbottom mt-2"></div>
                     </div>
@@ -263,10 +263,10 @@
                   <div id="collapseboring" class="accordion-collapse collapse" aria-labelledby="headingboring" data-bs-parent="#accordionExample">
                       <div class="accordion-body ps-0 pe-0 pt-0">
                         <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                          <li class="mt-2"><a href="./privacy.html" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
-                          <li class="mt-2"><a href="./tnc.html" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
-                          <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
-                          <li class="mt-2"><a href="./open-source-licensing.html" class="text-decoration-none">Open Source Usage & Contributions</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('privacyPolicyClicked')" href="./privacy.html" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('termsClicked')" href="./tnc.html" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('cancellationClicked')" href="./tnc.html#cancellationPolicy" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
+                          <li class="mt-2"><a onclick="logFooterEvent('opensourceClicked')" href="./open-source-licensing.html" class="text-decoration-none">Open Source Usage & Contributions</a></li>
                         </ul>
                         <div class="gradientBorderbottom mt-2"></div>
                       </div>
@@ -279,19 +279,19 @@
               
               <div class="row mt-4 justify-content-center font500 footerFont footerWhiteColor">
                 <div class="col-12 text-center mb-4 d-grid">
-                    <a href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                    <a onclick="logFooterEvent('joinDiscordClicked')" href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  font20 btn-lg text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
+                    <a onclick="logFooterEvent('facebookClicked')" href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
+                    <a onclick="logFooterEvent('instagramClicked')" href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram wh28"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-x-twitter wh28"></i></a>
+                    <a onclick="logFooterEvent('twitterClicked')" href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-x-twitter wh28"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
+                    <a onclick="logFooterEvent('mediumClicked')" href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28"></i></a>
                 </div>
               </div>
           </div>
@@ -307,35 +307,35 @@
                 <div class="col-md-3 mt-5">
                   <p class="footerFont font600 text-white">Company</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                    <li class="mt-2"><a href="./index.html" id="home" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
-                    <li class="mt-2"><a href="./about.html" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
-                    <li class="mt-2"><a href="./career.html" class="text-decoration-none">Career</a></li>
-                    <li class="mt-2"><a href="subscription.html" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
-                    <li class="mt-2"><a href="https://medium.com/@oneplay_gaming" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('homeClicked')" href="./index.html" id="home" class="text-decoration-none" data-i18n-key="nav-home">Home</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('aboutUsClicked')" href="./about.html" class="text-decoration-none" data-i18n-key="nav-about">About Us</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('careerClicked')" href="./career.html" class="text-decoration-none">Career</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('plansPricingClicked')" href="subscription.html" class="text-decoration-none" data-i18n-key="nav-plan&pricing">Plans & Pricing</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('blogClicked')" href="https://medium.com/@oneplay_gaming" class="text-decoration-none" data-i18n-key="nav-blog">Blog</a></li>
                   </ul>
                 </div>
                 <div class="col-md-3 mt-5">
                   <p class="footerFont font600 text-white">Get Help</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                    <li class="mt-2"><a href="./contact.html" class="text-decoration-none">Contact Us</a></li>
-                    <li class="mt-2"><a href="./FAQs.html" class="text-decoration-none">FAQ's</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('contactUsClicked')" href="./contact.html" class="text-decoration-none">Contact Us</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('faqClicked')" href="./FAQs.html" class="text-decoration-none">FAQ's</a></li>
                   </ul>
                 </div>
                 
                 <div class="col-md-3 mt-5">
                   <p class="footerFont font600 text-white">Partner with Us</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                      <li class="mt-2"><a href="./content-creators.html" class="text-decoration-none">Content Creators </a></li>
-                      <li class="mt-2"><a href="./businesses.html" class="text-decoration-none">Businesses</a></li>
+                      <li class="mt-2"><a onclick="logFooterEvent('contentCreatorsClicked')" href="./content-creators.html" class="text-decoration-none">Content Creators </a></li>
+                      <li class="mt-2"><a onclick="logFooterEvent('businessesClicked')" href="./businesses.html" class="text-decoration-none">Businesses</a></li>
                   </ul>
                 </div>
                 <div class="col-md-3 mt-5">
                   <p class="footerFont font600 text-white">Boring Stuff</p>
                   <ul class="font500 footerFont footerWhiteColor list-unstyled">
-                    <li class="mt-2"><a href="./privacy.html" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
-                    <li class="mt-2"><a href="./tnc.html" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
-                    <li class="mt-2"><a href="./tnc.html#cancellationPolicy" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
-                    <li class="mt-2"><a href="./open-source-licensing.html" class="text-decoration-none">Open Source Usage & Contributions</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('privacyPolicyClicked')" href="./privacy.html" class="text-decoration-none" data-i18n-key="nav-privacypolicy">Privacy Policy</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('termsClicked')" href="./tnc.html" class="text-decoration-none" data-i18n-key="nav-t&c">Terms & Conditions</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('cancellationClicked')" href="./tnc.html#cancellationPolicy" class="text-decoration-none" data-i18n-key="nav-cancellationPolicy">Cancellation Policy</a></li>
+                    <li class="mt-2"><a onclick="logFooterEvent('opensourceClicked')" href="./open-source-licensing.html" class="text-decoration-none">Open Source Usage & Contributions</a></li>
                   </ul>
                 </div>
               </div>
@@ -345,19 +345,19 @@
               
               <div class="row mt-4 justify-content-center font500 footerFont">
                 <div class="col-12 text-center mb-4 d-grid">
-                    <a href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  font20 text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0 px-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
+                    <a onclick="logFooterEvent('joinDiscordClicked')" href="https://discord.com/invite/Cg4ZskStE2" class="btn text-nowrap  font20 text-white buttonPB font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0 px-0"><i class="fa-brands fa-discord me-2"></i><span data-i18n-key="nav-joindiscord">Join Discord Channel</span></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28 customOffWhite"></i></a>
+                    <a onclick="logFooterEvent('facebookClicked')" href="https://www.facebook.com/ONEPLAYIN" target="_blank"><i class="fa-brands fa-facebook wh28 customOffWhite"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram wh28 customOffWhite"></i></a>
+                    <a onclick="logFooterEvent('instagramClicked')" href="https://instagram.com/oneplay.in?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram wh28 customOffWhite"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-x-twitter wh28 customOffWhite"></i></a>
+                    <a onclick="logFooterEvent('twitterClicked')" href="https://twitter.com/CloudOneplay" target="_blank"><i class="fa-brands fa-x-twitter wh28 customOffWhite"></i></a>
                 </div>
                 <div class="col-auto text-center">
-                    <a href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28 customOffWhite"></i></a>
+                    <a onclick="logFooterEvent('mediumClicked')" href="https://medium.com/@oneplay_gaming" target="_blank"><i class="fab fa-medium facebook-icon wh28 customOffWhite"></i></a>
                 </div>
               </div>
             </div>
@@ -401,6 +401,7 @@
 
     <!-- countly Integrated -->
     <script src="./js/countly.js"></script>
+        <script src="./js/countly.service.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
@@ -421,6 +422,41 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
+
+            const startSignUpEvent = () => {
+              countlyService.startEvent("signUpFormSubmitted", {
+                data: { signUpFromPage: "websiteHeader" },
+                discardOldData: true,
+              })
+            }
+            const startSignInEvent = () => {
+              countlyService.startEvent("signIn", {
+                data: { signInFromPage: "aboutUs" },
+                discardOldData: true,
+              })
+            }
+
+            const logFooterEvent = (segment) => {
+              countlyService.addEvent("websiteFooterView", {
+                homeClicked: "no",
+                aboutUsClicked: "no",
+                careerClicked: "no",
+                plansPricingClicked: "no",
+                contactUsClicked: "no",
+                blogClicked: "no",
+                faqClicked: "no",
+                termsClicked: "no",
+                privacyPolicyClicked: "no",
+                cancellationClicked: "no",
+                opensourceClicked: "no",
+                joinDiscordClicked: "no",
+                facebookClicked: "no",
+                instagramClicked: "no",
+                twitterClicked: "no",
+                mediumClicked: "no",
+                [segment]: "yes",
+              })
+            }
     </script>
   </body>
 </html>

@@ -97,11 +97,7 @@ class CountlyService {
 
   keyOfKey = k => `${this.countly_prefix_key} - ${k}`
 
-  // _addEvent = data => Countly.add_event(data)
-  _addEvent = data => {
-    console.warn('ctly add_event:', data, typeof Countly)
-    Countly.add_event(data)
-  }
+  _addEvent = data => Countly.add_event(data)
 
   // async initCountly() {
   //   Countly.init({
