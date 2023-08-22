@@ -688,7 +688,18 @@
           [segment]: "yes",
         })
       }
-      const subscriptionCardClick = (value) => {
+
+      const subscriptionCardClick = (type, name, value) => {
+        const key = `${type} ${name} ${value} Clicked`;
+        countlyService.addEvent('subscriptionCardClick', {
+          source: "subscriptionPage",
+          cta: "getStartedNow",
+          [XCountlySUM]: value,
+          [key]: "yes",
+        })
+        updateEvent(key);
+      }
+      const _subscriptionCardClick = (value) => {
         const defaultVals = {
           hourlyCardOneClicked: "no",
           hourlyCardTwoClicked: "no",

@@ -15,8 +15,8 @@ class CountlyService {
       sum = segments[XCountlySUM]
       delete segments[XCountlySUM]
     }
-    segments["channel"] = "web"
-    segments["partner"] = "partnerId"
+    segments["channel"] = "web";
+    segments["partner"] = config.BRAND_NAME;
     this._addEvent({ key: event, sum, segmentation: segments })
   }
 
@@ -75,7 +75,7 @@ class CountlyService {
       delete segments[XCountlySUM]
     }
     segments["channel"] = "web"
-    segments["partner"] = "partnerId"
+    segments["partner"] = config.BRAND_NAME;
     this._addEvent({
       sum,
       key: event,
