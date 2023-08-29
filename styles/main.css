@@ -1738,3 +1738,8 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.objectFitClass {
+    object-fit: cover;
+    object-position: top;
+}
