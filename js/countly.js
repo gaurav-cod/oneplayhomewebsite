@@ -62,6 +62,10 @@ function countlyEvent(ob){
       case "decentralization":
         countlyService.endEvent("websiteDecentralizationView");
         break;
+      case "index":
+      case "":
+        countlyService.endEvent("websiteHomeView");
+        break;
       default:
         break;
     }

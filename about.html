@@ -680,9 +680,6 @@
         <script src="./js/countly.js"></script>
         <script src="./js/countly.service.js"></script>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-220923953-1"></script>
-
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
@@ -735,38 +732,6 @@
                 [segment]: "yes",
               })
             }
-
-            // (() => {
-            //   const defaultSegments = {
-            //     homeClicked: "no",
-            //     aboutUsClicked: "no",
-            //     careerClicked: "no",
-            //     plansPricingClicked: "no",
-            //     contactUsClicked: "no",
-            //     blogClicked: "no",
-            //     faqClicked: "no",
-            //     termsClicked: "no",
-            //     privacyPolicyClicked: "no",
-            //     cancellationClicked: "no",
-            //     opensourceClicked: "no",
-            //     joinDiscordClicked: "no",
-            //     facebookClicked: "no",
-            //     instagramClicked: "no",
-            //     twitterClicked: "no",
-            //     mediumClicked: "no",
-            //   }
-            //   $('a:contains("Blog")').click(countlyService.addEvent("websiteFooterView", {
-            //     ...defaultSegments,
-            //     blogClicked: "yes",
-            //   }))
-            // })()
-
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-            gtag("config", "UA-220923953-1");
             
             $(function() {
                 $('.videoControl').parent().click(function () {
