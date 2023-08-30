@@ -104,6 +104,7 @@
                         </div>
                     </div>
                     <a id="download" href="" class="btn text-nowrap  border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4"><span data-i18n-key="downloadbtn">Download for </span><span id="os"></span></a>
+                    <a id="macdDownload" data-bs-toggle="modal" data-bs-target="#macDownloadModal" href="javascript:void(0)" class="btn text-nowrap border-top-0 border-start-0 border-end-0 btn-lg font20 text-white ps-4 pe-4 pt-3 pb-3 font500 align-middle removeFocus linearGradient borderRadius60 mt-4 d-none"><span data-i18n-key="downloadbtn">Download for </span><span id="os"></span></a>
                 </div>
                 <div class="col-md-6 text-end desktopView p-4">
                     <img src="./assets/download/Windows_PC 1.svg" class="img-fluid" alt="vector" />
@@ -468,6 +469,41 @@
                     <p class="mb-0 font14 font500 offWhiteColor">Address: <span>14th Floor, Hindustan C, Bus Stop, 247 Park, Lal Bahadur Shastri Marg, Gandhi Nagar, Vikhroli West, Mumbai, Maharashtra 400079</span> </p>
                     <p class="mb-0 font14 font500 offWhiteColor">Email: <span class="gradientAnchor"><a href="mailto:grievance@oneplay.in">grievance@oneplay.in</a></span></p>
                     <p class="mb-0 font14 font500 offWhiteColor">Note - <span>Kindly send all user related grievances to the above mentioned email ID, in order for us to process and resolve the same in an expeditious manner</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mac Download Modal -->
+        <div class="modal fade" id="macDownloadModal" tabindex="-1" aria-labelledby="macDownloadModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content lightBlackBg">
+                    <div class="modal-body">
+                        <button type="button" class="btn-close removeFocus removeCrossBg text-white position-absolute end-0 top-0" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times-circle"></i></button>
+                        <h5 class="modal-title font20 font600 text-white text-center mt-3" id="macDownloadModalLabel">Select the version of OnePlay application that’s right for your Mac</h5>
+                        <div class="row">
+                            <div class="col-lg-6 text-center mt-4">
+                                <a href="https://cdn.edge-net.co/clients/latest/mac_client_intel.dmg">
+                                    <div class="card blackDarkBg border-0 py-lg-3 py-2">
+                                        <p class="mb-0 font28 font700 text-white">
+                                            Mac with Intel
+                                            <img src="./assets/download/layer1.svg" width="28px" class="img-fluid ms-2" alt="" />
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6 text-center mt-4 ps-lg-0">
+                                <a href="https://cdn.edge-net.co/clients/latest/mac_client_apple.dmg">
+                                    <div class="card blackDarkBg border-0 py-lg-3 py-2">
+                                        <p class="mb-0 font28 font700 text-white">
+                                             Mac with M1 & above
+                                             <img src="./assets/download/Group 2.svg" width="42px" class="img-fluid" alt="" />
+                                        </p>
+                                    </div>
+                                </a>
+                                <p class="font16 offWhiteColor mb-0 mt-1">Nov 2020 & Later</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
