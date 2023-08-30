@@ -1743,3 +1743,12 @@ a {
     object-fit: cover;
     object-position: top;
 }
+
+.blackDarkBg {
+    background-color: #0E0E0E !important;
+    border-radius: 12px !important;
+}
+
+.blackDarkBg:hover {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%)!important;
+}

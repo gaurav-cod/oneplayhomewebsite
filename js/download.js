@@ -54,6 +54,8 @@ function getOS() {
   if (target) {
     os.innerHTML = getOsByTarget(target);
   } else if (macosPlatforms.indexOf(platform) !== -1) {
+    document.getElementById("macdDownload").classList.remove('d-none');
+    document.getElementById("download").classList.add('d-none');
     os.innerText = "Mac OS";
   } else if (iosPlatforms.indexOf(platform) !== -1) {
     os.innerText = "iOS";
