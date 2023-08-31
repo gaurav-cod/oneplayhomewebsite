@@ -683,8 +683,8 @@
         })
       }
 
-      const subscriptionCardClick = (type, value) => {
-        const key = `${type === 'topup' ? 'hourly' : 'monthly'}Card${value}Clicked`;
+      const subscriptionCardClick = (name, value) => {
+        const key = `${name.replace(/\s/g, '')}${value}Clicked`;
         countlyService.addEvent('subscriptionCardClick', {
           source: "subscriptionPage",
           cta: "getStartedNow",
