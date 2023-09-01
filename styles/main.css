@@ -1752,3 +1752,24 @@ a {
 .blackDarkBg:hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%)!important;
 }
+
+.width1200 {
+    width: 1200px !important;
+}
+
+.rightLine {
+    margin-left: -15px;
+    width: 324px;
+    margin-top: -100px;
+}
+
+.leftLine {
+    margin-top: -200px !important;
+    margin-left: -200px;
+    width: 350px;
+    margin-top: -100px;
+}
+
+.zindex2 {
+    z-index: 1;
+}
