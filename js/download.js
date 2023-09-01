@@ -15,7 +15,9 @@ function getQueryJSON() {
 function getOsByTarget(target) {
   switch (target) {
     case "macos":
-      return "Mac OS";
+      document.getElementById("macdDownload").classList.remove('d-none');
+      document.getElementById("download").classList.add('d-none');
+      return;
     case "windows":
       return "Windows";
     case "ios":
@@ -31,8 +33,8 @@ function getOsByTarget(target) {
 
 function getLinkByTarget(target) {
   switch (target) {
-    case "macos":
-      return config.MACOS_DOWNLOAD_URL;
+    // case "macos":
+    //   return config.MACOS_DOWNLOAD_URL;
     case "windows":
       return config.WINDOWS_DOWNLOAD_URL;
     case "android":
@@ -56,7 +58,7 @@ function getOS() {
   } else if (macosPlatforms.indexOf(platform) !== -1) {
     document.getElementById("macdDownload").classList.remove('d-none');
     document.getElementById("download").classList.add('d-none');
-    os.innerText = "Mac OS";
+    // os.innerText = "Mac OS";
   } else if (iosPlatforms.indexOf(platform) !== -1) {
     os.innerText = "iOS";
   } else if (windowsPlatforms.indexOf(platform) !== -1) {
