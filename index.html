@@ -681,7 +681,15 @@
 
     <script>
       
-      const _event = countlyService.startEvent("websiteHomeView")
+      const _event = countlyService.startEvent("websiteHomeView", {
+        data: {
+          joinTodayClicked: "no",
+          joinDiscordClicked: "no",
+          getStartedClicked: "no",
+          browseGamesClicked: "no",
+          browseArticlesClicked: "no",
+        }
+      })
       const updateEvent = (segment) => {
         _event.update({
           [segment]: "yes",

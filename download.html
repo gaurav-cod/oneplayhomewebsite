@@ -496,7 +496,18 @@
         <!-- <script src="./js/multi-language.js"></script> -->
 
         <script>
-            const _event = countlyService.startEvent("websiteDownloadView")
+            const _event = countlyService.startEvent("websiteDownloadView", {
+              data: {
+                downloadWindowsClicked: "no",
+                downloadMacClicked: "no",
+                downloadAndroidClicked: "no",
+                downloadAndroidTVClicked: "no",
+                windowDemoClicked: "no",
+                macDemoClicked: "no",
+                androidDemoClicked: "no",
+                androidTvDemoClicked: "no",
+              }
+            })
             const updateEvent = (segment) => {
               _event.update({
                 [segment]: "yes",

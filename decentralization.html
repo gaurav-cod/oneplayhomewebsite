@@ -688,7 +688,9 @@
 
         <!-- <script src="./js/multi-language.js"></script> -->
         <script>
-            const _event = countlyService.startEvent("websiteDecentralizationView")
+            const _event = countlyService.startEvent("websiteDecentralizationView", {
+              data: { connectWithUsClicked: "no", }
+            })
             const updateEvent = (segment) => {
               _event.update({
                 [segment]: "yes",
