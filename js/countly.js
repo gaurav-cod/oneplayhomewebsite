@@ -37,7 +37,6 @@ function countlyEvent(ob){
       'click_event': ob
     }
   });
-  console.log('You clicked OneplayEvent',ob);
 }
 
 //load countly script asynchronously
@@ -45,6 +44,30 @@ function countlyEvent(ob){
   
   $(window).on('hashchange', function() {
     Countly.q.push(['track_pageview',location.pathname+location.hash]);
+  });
+  $(window).on('unload', function(e) {
+    e.preventDefault();
+    const page = window.location.pathname.split("/").pop().split(".")[0];
+    switch (page) {
+      case "about":
+        countlyService.endEvent("websiteAboutUsView");
+        break;
+      case "download":
+        countlyService.endEvent("websiteDownloadView");
+        break;
+      case "subscription":
+        countlyService.endEvent("websiteSubscriptionView");
+        break;
+      case "decentralization":
+        countlyService.endEvent("websiteDecentralizationView");
+        break;
+      case "index":
+      case "":
+        countlyService.endEvent("websiteHomeView");
+        break;
+      default:
+        break;
+    }
   });
   
   var cly = document.createElement('script'); cly.type = 'text/javascript';
