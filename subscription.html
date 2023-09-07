@@ -48,6 +48,7 @@
         <span class="MobileView"
           ><a
             role="button"
+            onclick="startSignInEvent()"
             class="btn text-nowrap  btn-lg font20 text-white ps-4 pe-4 customPadding font500 removeFocus linearGradient borderRadius60 border-top-0 border-start-0 border-end-0"
             id="login"
             data-i18n-key="nav-login"
@@ -763,7 +764,7 @@
             }
             const startSignInEvent = () => {
               countlyService.startEvent("signIn", {
-                data: { signInFromPage: "aboutUs" },
+                data: { signInFromPage: "websiteHeader" },
                 discardOldData: true,
               })
             }
@@ -786,6 +787,8 @@
                 instagramClicked: "no",
                 twitterClicked: "no",
                 mediumClicked: "no",
+                contentCreatorsClicked: "no",
+                businessesClicked: "no",
                 [segment]: "yes",
               })
             }

@@ -37,7 +37,6 @@ function countlyEvent(ob){
       'click_event': ob
     }
   });
-  console.log('You clicked OneplayEvent',ob);
 }
 
 //load countly script asynchronously
