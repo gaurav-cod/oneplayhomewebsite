@@ -157,8 +157,8 @@ html {
     }
 
     .font38 {
-        font-size: 24px !important;
-        line-height: 34px !important;
+        font-size: 20px !important;
+        line-height: 30px !important;
     }
 
     .customPadding5 {
@@ -1114,12 +1114,12 @@ input, textarea {
     align-items: center;
 }
 
-.signupBg {
+/* .signupBg {
     background-image: url('../assets/signup/login_signup_Illustration.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+} */
 
 .loginBg {
     background-color: #212123 !important;
@@ -1317,13 +1317,13 @@ input, textarea {
    white-space: nowrap;
  }
 
-.heroSectionBg {
+/* .heroSectionBg {
     background-image: url('/assets/Group\ 364.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
-}
+} */
 
 .marginNegativeTop {
     margin-top: -7%;
@@ -1592,13 +1592,6 @@ a {
     background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
 }
 
-.foundationSubCard {
-    background: linear-gradient(180deg, #3BEEFF 20.72%, rgba(62, 66, 70, 0) 97.79%) !important;
-
-
-    /* background: linear-gradient(180deg, #3AA0FE 0%, #3AF2FE 100%) !important; */
-}
-
 @media (min-width: 992px) and (max-width: 1300px) {
     .btn {
         font-size: 0.85rem !important;
@@ -1658,10 +1651,10 @@ a {
         max-width: 95% !important;
     }   
 }
-
+/* 
 .backgroundBg {
     background-image: url('../assets/partner/Group\ 605.svg');
-}
+} */
 
 .cardBG {
     background-color: #110D0D !important;
