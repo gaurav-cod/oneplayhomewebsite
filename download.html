@@ -551,6 +551,19 @@
               })
             }
 
+            document.getElementById('macdDownload').onclick = () => {
+              updateEvent('downloadMacClicked');
+            }
+            document.getElementById('download').onclick = (e) => {
+              switch (document.getElementById("download").href) {
+                case config.WINDOWS_DOWNLOAD_URL:
+                    updateEvent('downloadWindowsClicked');
+                  break;
+                default:
+                  break;
+              }
+            }
+
             document.getElementById('downloadIntel').href= `${config.MACOS_WITH_INTEL_DOWNLOAD_URL}`;
             document.getElementById('downloadM1').href= `${config.MACOS_WITH_M1_AND_ABOVE_DOWNLOAD_URL}`;
 
