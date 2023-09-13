@@ -705,8 +705,8 @@
                 [segment]: "yes",
               })
               if (segment === "getStartedClicked") {
-                countlyService.startEvent("signUpFormSubmitted", {
-                  data: { signUpFromPage: "aboutUs" },
+                countlyService.startEvent("signIn", {
+                  data: { signInFromPage: "aboutUs" },
                   discardOldData: true,
                 })
               }
