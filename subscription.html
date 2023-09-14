@@ -121,7 +121,7 @@
     <div class="container padding50 paddingRemove customH1">
       
       <div class="row justify-content-center">
-        <div class="col-lg-7 col-md-8 text-center">
+        <div class="col-lg-7 col-md-8 text-center mb-4">
           <h2
             id="heading1"
             class="text-white font50 customfont50 font800 mt-5"
@@ -142,80 +142,83 @@
           </div>
         </div>
 
-        <div class="row mt-md-5 mt-4">
-          <div class="col-12 p-0">
-            <div class="row h-100 align-items-end">
-              <!-- <div class="col-md-1 col p-0">
-                <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width: 55px; height: 30px;" class="flipImage" loop autoplay></lottie-player>
-              </div> -->
-              <div class="col-md-1 col p-0">
-                <!-- <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json" background="transparent" style="width: 60px; height: 40px;" class="flipImage" loop autoplay></lottie-player> -->
+        <div class="row padding100 justify-content-center" id="pricings" hidden>
+          <div class="col-12 col-lg-9 p-0 mt-5">
+            <div class="row sliderTrack mx-md-3 mx-1">
+              <div class="col-auto p-0">
+                <div class="hrDot" style="margin-left: 0%"></div>
               </div>
-              <div class="col-md-2 col p-0">
-                <!-- <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 50px; height: 45px;" class="flipImage" loop autoplay></lottie-player> -->
+              <div class="col-auto marginLeft5P p-0">
+                <div class="hrDot"></div>
               </div>
-              <div class="col-md-2 col p-0">
-                <!-- <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json" background="transparent" style="width: 50px; height: 50px; margin-left: -10px" class="flipImage" loop autoplay></lottie-player> -->
+              <div class="col-auto marginLeft5P p-0">
+                <div class="hrDot"></div>
               </div>
-              <div class="col-md-2 col p-0">
-                <!-- <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json" background="transparent" style="width: 50px; height: 55px; margin-left: -20px" class="flipImage" loop autoplay></lottie-player> -->
+              <div class="col-auto marginLeft15P p-0">
+                <div class="hrDot"></div>
               </div>
-              <div class="col-md-4 col p-0">
-                <div class="flipImage">
-                  <!-- <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" background="transparent" style="width: 80px; height: 60px;" loop autoplay></lottie-player> -->
+              <div class="col-auto marginLeft15P p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col text-end">
+                <div class="row justify-content-end">
+                  <div class="hrDot p-0"></div>
                 </div>
               </div>
             </div>
-            <div class="card border-0 bgTransparent">
-              <div class="row sliderTrack mx-md-3 mx-1">
-                <div class="col-md-1 col p-0">
-                  <div class="hrDot"></div>
+            <div class="slidecontainer">
+              <div class="position-absolute marginTop-45 userUnderstandingSlider">
+                <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
+              </div>
+              <div class="position-absolute" id="range-thumb">
+                <div class="row marginTop80" id="1monsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">1 hr</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px;" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                 </div>
-                <div class="col-md-1 col p-0">
-                  <div class="hrDot"></div>
+                <div class="row d-none marginTop130" id="3monsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">3 hrs</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:50px; height: 40px;" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                 </div>
-                <div class="col-md-2 col p-0">
-                  <div class="hrDot"></div>
+                <div class="row d-none marginTop130" id="5monsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">5 hrs</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 90px; height: 45px;" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                 </div>
-                <div class="col-md-2 col p-0">
-                  <div class="hrDot"></div>
+                <div class="row d-none marginTop140" id="10monsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">10 hrs</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; margin-left: -10px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                 </div>
-                <div class="col-md-2 col p-0">
-                  <div class="hrDot" ></div>
+                <div class="row d-none marginTop140" id="20monsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">20 hrs</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; margin-left: -5px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                 </div>
-                <div class="col-md-4 col p-0">
-                  <div class="row justify-content-end pe-3">
-                    <div class="col-auto hrDot p-0"></div>
+                <div class="row d-none marginTop150" id="UnmonsterImg">
+                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">Unlimited</div>
+                  <div class="col-12">
+                    <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 60px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
               </div>
-              <div class="card-img-overlay px-0">
-                <div class="position-absolute marginTop-20 userUnderstandingSlider">
-                  <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
-                </div>
-                <div class="position-absolute" id="range-thumb">
-                  <div class="marginTop80">
-                    <div class="row">
-                      <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">1 hr</div>
-                    </div>
-                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width: 40px; height: 30px;" class="flipImage" loop autoplay></lottie-player>
-                    <!-- <span class="range__value-number" id="range-number">50</span> -->
-                  </div>
-                </div>
-                <div class="slidecontainer">
-                  <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider">
-                </div>
-              </div>
+              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="logSliderVal(this.value)">
             </div>
           </div>
         </div>
-        <div class="row justify-content-center mt-5">
-          <div class="col-auto mt-5 p-0">
+        <div class="row justify-content-center pt-md-5" id="pricings" hidden>
+          <div class="col-auto p-0">
             <div class="d-none d-md-block">
-              <div class="row justify-content-center mt-5 overflow-hidden">
-                <div class="col-auto font20 font500 p-0 text-truncate">
+              <div class="row overflow-hidden defaultHeight">
+                <div class="col-auto font20 font500 p-0 text-truncate h-100">
                   <div class="position-absolute marginTopCustom text-end">
-                    <div class="py-3 px-md-3 px-2 lightBlackBg">
+                    <div class="py-3 px-md-3 px-2 lightBlackBg mt-5">
                       <p class="mb-0 offWhiteColor">Resolution</p>
                     </div>
                     <div class="py-3 px-md-3 px-2"><p class="mb-0 offWhiteColor">Validity</p></div>
@@ -229,88 +232,35 @@
                     <div class="py-3 px-md-3 px-2"><p class="mb-0 offWhiteColor">Non-Refundable</p></div>
                   </div>
                 </div>
-                <div class="col-auto p-0" id="subDiv">
-                  <div class="testimonial-group">
-                    <div class="row">
-                      <div class="col p-0 text-center font20 font500">
-                        <div class="brTop30 foundationSubCard py-3 px-md-3 px-2 w218">
-                          <p class="font24 font500 fountGradientText">Foundation</p> 
-                          <p class="font38 font700 text-white">₹39</p> 
-                          <div class="d-grid">
-                            <button class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</button>
-                          </div>
+                <div class="col-auto p-0">
+                  <div class="testimonial-group" id="subDiv">
+                    <div class="row pt-5" id="1hours-plan"></div>
+                    <div class="row pt-5 d-none" id="3hours-plan"></div>
+                    <div class="row pt-5 d-none" id="5hours-plan"></div>
+                    <div class="row pt-5 d-none" id="10hours-plan"></div>
+                    <div class="row pt-5 d-none" id="20hours-plan"></div>
+                    <div class="row pt-5 d-none" id="UnlimitedHours-plan"></div>
+                  </div>
+                  <div class="row px-3">
+                    <div class="col-12 tipBg">
+                      <div class="row my-1">
+                        <div class="col-auto">
+                          <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
                         </div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg"><p class="mb-0 text-white">720p</p></div>
-                        <div class="py-3 px-md-3 px-2"><p class="mb-0 mutedColor">30 Days</p></div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg"><p class="mb-0 mutedColor">20</p></div>
-                        <div class="py-3 px-md-3 px-2">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                        </div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                        </div>
-                        <div class="py-3 px-md-3 px-2">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
+                        <div class="col p-0">
+                          <p class="mb-0 font20 font500 text-white">
+                            4 hours per day is the daily limit for gameplay.
+                          </p>
                         </div>
                       </div>
-                      <div class="col p-0 text-center font20 font500">
-                        <div class="row justify-content-center">
-                          <div class="col-auto position-absolute marginTop-20">
-                            <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
-                            <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-md-4 px-2">Recommended</button>
-                          </div>
+                      <div class="row my-1">
+                        <div class="col-auto">
+                          <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
                         </div>
-                        <div class="brTop30 recommendSubCard py-3 px-md-3 px-2 w218">
-                          <p class="font24 font500 orangeGradientText">Enhanced</p> 
-                          <p class="font38 font700 text-white">₹49</p> 
-                          <div class="d-grid">
-                            <button class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</button>
-                          </div>
-                        </div>
-                        <div class="lightBlackBg">
-                          <div class="w218 recommendBorder">
-                            <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">1080p</p>
-                          </div>
-                        </div>
-                        <div class="w218 recommendBorder">
-                          <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">30 Days</p>
-                        </div>
-                        <div class="lightBlackBg">
-                          <div class="w218 recommendBorder">
-                            <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">20</p>
-                          </div>
-                        </div>
-                        <div class="w218 recommendBorder">
-                          <p class="mb-0 mutedColor py-3 px-md-3 px-2 "><img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" /></p>
-                        </div>
-                        <div class="lightBlackBg">
-                          <div class="w218 recommendBorder">
-                            <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg"><img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" /></p>
-                          </div>
-                        </div>
-                        <div class="w218 recommendBorder">
-                          <p class="mb-0 mutedColor py-3 px-md-3 px-2 "><img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" /></p>
-                        </div>
-                      </div>
-                      <div class="col p-0 text-center font20 font500">
-                        <div class="brTop30 unlimitedSubCard py-3 px-md-3 px-2 w218">
-                          <p class="font24 font500 unlimitedGradientText">Ultimate</p> 
-                          <p class="font38 font700 text-white">₹599</p> 
-                          <div class="d-grid">
-                            <button class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</button>
-                          </div>
-                        </div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg"><p class="mb-0 text-white">4K</p></div>
-                        <div class="py-3 px-md-3 px-2"><p class="mb-0 mutedColor">30 Days</p></div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg"><p class="mb-0 mutedColor">20</p></div>
-                        <div class="py-3 px-md-3 px-2">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                        </div>
-                        <div class="py-3 px-md-3 px-2 lightBlackBg">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                        </div>
-                        <div class="py-3 px-md-3 px-2">
-                          <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
+                        <div class="col p-0">
+                          <p class="mb-0 font20 font500 text-white">
+                            To play a game, you must have ownership of the game through the available stores.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -319,276 +269,75 @@
               </div>
             </div>
             <div class="d-md-none">
-              <div class="row justify-content-center">
-                <div class="col">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="brTop20 w100 foundationSubCard py-3 px-2">
-                        <p class="font24 font500 fountGradientText mb-3">Foundation</p> 
-                        <p class="font38 font700 text-white mb-3">₹39</p> 
-                        <div class="d-grid">
-                          <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
+              <div class="card bgTransparent border-0" id="subDiv">
+                <div class="row h-100 align-items-end">
+                  <div class="col text-center p-0 pt-4">
+                      <div class="opacity0">
+                        <div class="brTop20 w100 foundationSubCard py-3">
+                          <p class="font24 font500 fountGradientText mb-3">Foundation</p> 
+                          <p class="font38 font700 text-white mb-3">₹39</p> 
+                          <div class="d-grid">
+                            <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Resolution</p></div>
+                      <div class="height45 invisible">Resolution</div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Validity(Days)</p></div>
+                      <div class="height45 invisible">Resolution</div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Gaming Hours </p></div>
+                      <div class="height45 invisible">Resolution</div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Queue basis</p></div>
+                      <div class="height45 invisible">Resolution</div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Play games you Own*</p></div>
+                      <div class="height45 invisible">Resolution</div>
+                      <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Non-Refundable</p></div>
+                      <div class="height45 invisible">Resolution</div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="row justify-content-center">
-                    <div class="row justify-content-center ">
-                      <div class="col-auto position-absolute marginTop-20">
-                        <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: 100px; height: auto;" loop autoplay></lottie-player>
-                        <button class="btn recommendedBg text-white btn-sm customBorder0 font12 marginTop-67 px-md-4 px-2">Recommended</button>
-                      </div>
-                    </div>
-                    <div class="col-auto text-center px-1">
-                      <div class="brTop20 w100 recommendSubCard py-3 px-2">
-                        <p class="font24 font500 orangeGradientText mb-3">Enhanced</p> 
-                        <p class="font38 font700 text-white mb-3">₹39</p> 
-                        <div class="d-grid">
-                          <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="brTop20 w100 unlimitedSubCard py-3 px-2">
-                        <p class="font24 font500 unlimitedGradientText mb-3">Ultimate</p> 
-                        <p class="font38 font700 text-white mb-3">₹39</p> 
-                        <div class="d-grid">
-                          <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
-                        </div>
-                      </div>
-                    </div>
+                <div class="card-img-overlay p-0">
+                  <div class="testimonial-group">
+                    <!-- <div class="row pt-4" id="1hours-plan"></div>
+                    <div class="row pt-4 d-none" id="3hours-plan"></div>
+                    <div class="row pt-4 d-none" id="5hours-plan"></div>
+                    <div class="row pt-4 d-none" id="10hours-plan"></div>
+                    <div class="row pt-4 d-none" id="20hours-plan"></div>
+                    <div class="row pt-4 d-none" id="UnlimitedHours-plan"></div> -->
                   </div>
                 </div>
               </div>
-              <div class="row text-center font20 fonr500 ">
-                <div class="col-12 lightBlackBg">
-                  <div class="p-2">
-                    <p class="mb-0 offWhiteColor">Resolution</p>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">720p</p></div>
+              <div class="row tipBg p-2">
+                <div class="col-12">
+                  <div class="row my-1">
+                    <div class="col-auto">
+                      <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
+                    </div>
+                    <div class="col p-0">
+                      <p class="mb-0 font20 font500 text-white">
+                        4 hours per day is the daily limit for gameplay.
+                      </p>
                     </div>
                   </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2 recommendBorder"><p class="mb-0 text-white">1080p</p></div>
+                  <div class="row my-1">
+                    <div class="col-auto">
+                      <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
                     </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">4k</p></div>
+                    <div class="col p-0">
+                      <p class="mb-0 font20 font500 text-white">
+                        To play a game, you must have ownership of the game through the available stores.
+                      </p>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row text-center font20 fonr500 ">
-                <div class="col-12 lightBlackBg">
-                  <div class="p-2">
-                    <p class="mb-0 offWhiteColor">Validity(Days)</p>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">30</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2 recommendBorder"><p class="mb-0 text-white">30</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">30</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="row text-center font20 fonr500 ">
-                <div class="col-12 lightBlackBg">
-                  <div class="p-2">
-                    <p class="mb-0 offWhiteColor">Gaming Hours</p>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">20</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2 recommendBorder"><p class="mb-0 text-white">20</p></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2"><p class="mb-0 text-white">20</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row text-center font20 fonr500 ">
-                <div class="col-12 lightBlackBg">
-                  <div class="p-2">
-                    <p class="mb-0 offWhiteColor">Queue basis</p>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2 recommendBorder">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row text-center font20 fonr500 ">
-                <div class="col-12 lightBlackBg">
-                  <div class="p-2">
-                    <p class="mb-0 offWhiteColor">Play games you Own*</p>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2 recommendBorder">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col align-self-center p-0">
-                  <div class="row justify-content-center">
-                    <div class="col-auto text-center px-1">
-                      <div class="w100 p-2">
-                        <img src="./assets/subscriptionNew/Tick.svg" width="24px" class="img-fluid" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row tipBg p-2">
-              <div class="col-12">
-                <div class="row my-1">
-                  <div class="col-auto">
-                    <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
-                  </div>
-                  <div class="col p-0">
-                    <p class="mb-0 font20 font500 text-white">
-                      4 hours per day is the daily limit for gameplay.
-                    </p>
-                  </div>
-                </div>
-                <div class="row my-1">
-                  <div class="col-auto">
-                    <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
-                  </div>
-                  <div class="col p-0">
-                    <p class="mb-0 font20 font500 text-white">
-                      To play a game, you must have ownership of the game through the available stores.
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row mt-5 justify-content-center">
+        <div class="row mt-5 justify-content-center" id="pricings" hidden>
           <div class="col-lg-9 col-md-11 text-center">
             <img src="./assets/subscriptionNew/happy-pack.svg" class="img-fluid d-none d-md-block" alt="" />
             <img src="./assets/subscriptionNew/happy-for-mobile.svg" class="img-fluid d-md-none w-100" alt="" />
           </div>
-        </div>
-
-        <div id="pricings" class="col-md-12 col-lg-12" hidden>
-          <div class="row justify-content-center">
-            <div class="col-auto pe-0 mt-4 mt-lg-5 hourSub">
-                <button class="btn text-nowrap  removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
-                  <p class="mb-0">Hourly Plan</p>
-                </button>
-            </div>
-            <div class="col-auto mt-4 mt-lg-5 monthSub">
-                <button class="btn text-nowrap  removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
-                  <p class="mb-0">Monthly Plan</p>
-                </button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-10 col-md-12">
-              <div class="row d-none" id="HourlySub">
-                <div class="col-md-12">
-                  <div class="row pt-4 justify-content-center" id="hourly-subscriptions">
-                  </div>
-                </div>
-              </div>
-              <div class="row d-none" id="MonthlySub">
-                <div class="col-md-12">
-                  <div class="row justify-content-center">
-                    <div class="col-md-9 col-lg-7">
-                      <div class="row pt-4" id="monthly-subscriptions">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="pricings" class="col-lg-9 col-md-11 padding50" hidden>
-          <div id="list-subscriptions" class="row"></div>
         </div>
       </div>
     </div>
@@ -601,27 +350,6 @@
         </div>
         <div class="col-md-12 col-lg-11">
           <div class="customAccordion accordion" id="accordionExample">
-            <!-- <div class="accordion-item bgTransparent">
-                  <h2 class="accordion-header bgTransparent" id="headingOne">
-                    <button data-i18n-key="question1" class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 borderBottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      How much does the OnePlay subscription cost?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body ps-0 pe-0 pt-0">
-                      <div class="row">
-                        <div class="col-lg-9">
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1">
-                            OnePlay is a subscription service. We offer you three amazing subscription plans that will fit all your needs. We have a Hourly plan for Rs. 35, Weekly plan for Rs. 150 and Monthly plan for Rs. 300. The higher the plan you choose, the more games you have access to. You will also gain more features such as HD quality and 4K streaming.
-                          </p>
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1-1">You can pay via Debit Card, Credit Card or UPI.</p>
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1-2">Once subscribed you can cancel your subscription at any point.</p>
-                        </div>
-                      </div>
-                      <div class="gradientBorderbottom mt-2"></div>
-                    </div>
-                  </div>
-                </div> -->
             <div class="accordion-item bgTransparent">
               <h2 class="accordion-header bgTransparent" id="headingTwo">
                 <button
@@ -1105,21 +833,125 @@
         $('.userUnderstandingSlider').hide();
       });
 
-      // input range Animation with monster
-      const rangeThumb = document.getElementById("range-thumb");
-      const rangeInput = document.getElementById("slider");
-      const updateRangeVisuals = () => {
-        const thumbPosition = rangeInput.value / rangeInput.max;
-        const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
-        rangeThumb.style.left = thumbPosition * space + "px";
-      };
-      rangeInput.addEventListener("input", () => {
-        updateRangeVisuals();
-      });
-      const initializeRangeSlider = () => {
-        updateRangeVisuals();
-      };
-      initializeRangeSlider();
+      const logSliderVal = (value) => {
+        const dot_pos = [0, 10, 20, 40, 60, 100];
+        let nearest_dot = 0;
+        let difference = Math.abs(dot_pos[0] - value);
+        // first find nearest black dot
+        for (let i = 0; i < dot_pos.length; i++) {
+          let new_differnce = Math.abs(dot_pos[i] - value)
+          // console.warn(dot_pos, nearest_dot, new_differnce, difference)
+          if (new_differnce < difference) {
+            difference = new_differnce;
+            nearest_dot = i;
+          }
+        }
+        document.getElementById('slider').value = dot_pos[nearest_dot];
+        // input range Animation with monster
+        const rangeThumb = document.getElementById("range-thumb");
+        const rangeInput = document.getElementById("slider");
+        const updateRangeVisuals = () => {
+          const thumbPosition = rangeInput.value / rangeInput.max;
+          const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
+          rangeThumb.style.marginLeft = thumbPosition * space + "px";
+        };
+        rangeInput.addEventListener("input", () => {
+          updateRangeVisuals();
+        });
+        const initializeRangeSlider = () => {
+          updateRangeVisuals();
+        };
+        initializeRangeSlider();
+        
+        // console.warn(dot_pos, nearest_dot, new_differnce, difference)
+        if(dot_pos[nearest_dot] === 0) {
+          document.getElementById("1monsterImg").classList.remove("d-none");
+          document.getElementById("3monsterImg").classList.add("d-none");
+          document.getElementById("5monsterImg").classList.add("d-none");
+          document.getElementById("10monsterImg").classList.add("d-none");
+          document.getElementById("20monsterImg").classList.add("d-none");
+          document.getElementById("UnmonsterImg").classList.add("d-none");
+          
+          document.getElementById("1hours-plan").classList.remove("d-none");
+          document.getElementById("3hours-plan").classList.add("d-none");
+          document.getElementById("5hours-plan").classList.add("d-none");
+          document.getElementById("10hours-plan").classList.add("d-none");
+          document.getElementById("20hours-plan").classList.add("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
+        } else if(dot_pos[nearest_dot] === 10 ) {
+          document.getElementById("1monsterImg").classList.add("d-none");
+          document.getElementById("3monsterImg").classList.remove("d-none");
+          document.getElementById("5monsterImg").classList.add("d-none");
+          document.getElementById("10monsterImg").classList.add("d-none");
+          document.getElementById("20monsterImg").classList.add("d-none");
+          document.getElementById("UnmonsterImg").classList.add("d-none");
+          
+          document.getElementById("1hours-plan").classList.add("d-none");
+          document.getElementById("3hours-plan").classList.remove("d-none");
+          document.getElementById("5hours-plan").classList.add("d-none");
+          document.getElementById("10hours-plan").classList.add("d-none");
+          document.getElementById("20hours-plan").classList.add("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
+        }
+        else if(dot_pos[nearest_dot] === 20 ) {
+          document.getElementById("1monsterImg").classList.add("d-none");
+          document.getElementById("3monsterImg").classList.add("d-none");
+          document.getElementById("5monsterImg").classList.remove("d-none");
+          document.getElementById("10monsterImg").classList.add("d-none");
+          document.getElementById("20monsterImg").classList.add("d-none");
+          document.getElementById("UnmonsterImg").classList.add("d-none");
+
+          document.getElementById("1hours-plan").classList.add("d-none");
+          document.getElementById("3hours-plan").classList.add("d-none");
+          document.getElementById("5hours-plan").classList.remove("d-none");
+          document.getElementById("10hours-plan").classList.add("d-none");
+          document.getElementById("20hours-plan").classList.add("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
+        }else if(dot_pos[nearest_dot] === 40 ) {
+          document.getElementById("1monsterImg").classList.add("d-none");
+          document.getElementById("3monsterImg").classList.add("d-none");
+          document.getElementById("5monsterImg").classList.add("d-none");
+          document.getElementById("10monsterImg").classList.remove("d-none");
+          document.getElementById("20monsterImg").classList.add("d-none");
+          document.getElementById("UnmonsterImg").classList.add("d-none");
+
+          document.getElementById("1hours-plan").classList.add("d-none");
+          document.getElementById("3hours-plan").classList.add("d-none");
+          document.getElementById("5hours-plan").classList.add("d-none");
+          document.getElementById("10hours-plan").classList.remove("d-none");
+          document.getElementById("20hours-plan").classList.add("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
+        }
+        else if(dot_pos[nearest_dot] === 60 ) {
+          document.getElementById("1monsterImg").classList.add("d-none");
+          document.getElementById("3monsterImg").classList.add("d-none");
+          document.getElementById("5monsterImg").classList.add("d-none");
+          document.getElementById("10monsterImg").classList.add("d-none");
+          document.getElementById("20monsterImg").classList.remove("d-none");
+          document.getElementById("UnmonsterImg").classList.add("d-none");
+
+          document.getElementById("1hours-plan").classList.add("d-none");
+          document.getElementById("3hours-plan").classList.add("d-none");
+          document.getElementById("5hours-plan").classList.add("d-none");
+          document.getElementById("10hours-plan").classList.add("d-none");
+          document.getElementById("20hours-plan").classList.remove("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
+        }else if(dot_pos[nearest_dot] === 100 ) {
+          document.getElementById("1monsterImg").classList.add("d-none");
+          document.getElementById("3monsterImg").classList.add("d-none");
+          document.getElementById("5monsterImg").classList.add("d-none");
+          document.getElementById("10monsterImg").classList.add("d-none");
+          document.getElementById("20monsterImg").classList.add("d-none");
+          document.getElementById("UnmonsterImg").classList.remove("d-none");
+
+          document.getElementById("1hours-plan").classList.add("d-none");
+          document.getElementById("3hours-plan").classList.add("d-none");
+          document.getElementById("5hours-plan").classList.add("d-none");
+          document.getElementById("10hours-plan").classList.add("d-none");
+          document.getElementById("20hours-plan").classList.add("d-none");
+          document.getElementById("UnlimitedHours-plan").classList.remove("d-none");
+        }
+      }
 
       // Subscription Card Animation 
       const div = document.querySelector('#subDiv');
@@ -1129,7 +961,7 @@
       });
       button.addEventListener('click', function() {
         div.classList.add('move');
-      });
+      });   
 
       const _event = countlyService.startEvent("websiteSubscriptionView")
       const updateEvent = (segment) => {

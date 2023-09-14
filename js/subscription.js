@@ -21,15 +21,15 @@ function loadSubscriptions() {
  */
 function getResolution(sub) {
     if (sub['can_run_4k'] == 'true') {
-        return 'Up to 4K';
+        return '4K';
     } else if (sub['can_run_hd'] == 'true') {
         if (sub['package_type'] == 'topup') {
-            return 'Up to 1080p';
+            return '1080p';
         } else {
             return 'Up to Full HD Resolution';
         }
     } else {
-        return 'Up to 720p';
+        return '720p';
     }
 }
 
@@ -42,59 +42,104 @@ const currencyMap = {
  * @param {object} sub 
  */
 function makeElementFromSubscription(sub) {
-    return `
-    <div class="col-12 ${sub['package_type'] == 'base' ? 'col-lg-6' : 'col-lg-3'} col-md-6 mt-4 d-flex align-items-stretch">
-        <div
-            class="card br30 w-100 ${sub['plan_config']?.is_recommended ? 'activeSubCard' : ''}"
-        >
-            <div class="card-body p-4 subCard">
-                <div class="row justify-content-center">
-                    <div class="col-11 col-md-12 text-center py-3">
-                        <p class="mb-2 font20 font500 offWhiteColor ${sub['plan_config']?.actual_price ? '' : 'invisible'}"><del>${sub['plan_config']?.actual_price}</del></p>
-                        <span class="font38 font700 text-white mb-2 align-middle">
-                            ${currencyMap[sub['currency']] || sub['currency']}
-                        </span>
-                        <span class="font38 font700 text-white mb-2 ms-1 align-middle">${sub['value']}</span>
-                        <p class="font20 font600 offWhiteColor mb-0">
-                            ${sub['package_type'] == 'topup' ? sub['plan_name'] : 'Per Month'}
+    return ` 
+        <div class="col d-md-none">
+            ${sub['plan_config']?.is_recommended ? 
+                `<div class="row justify-content-center position-relative">
+                    <div class="col-auto position-absolute marginTop-20">
+                        <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: 100px; height: auto;" loop autoplay></lottie-player>
+                        <button class="btn recommendedBg text-white btn-sm customBorder0 font12 marginTop-67 px-md-4 px-2">Recommended</button>
+                    </div>
+                </div>`
+            : ''}
+            <div class="row justify-content-center">
+                <div class="col-auto text-center p-0">
+                    <div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
+                        <p class="font24 font500 mb-3 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                        <p class="font38 font700 text-white mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
+                        <div class="d-grid">
+                            <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
+                        </div>
+                    </div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${getResolution(sub)}</p></div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_duration_in_days']}</p></div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['total_offered_tokens'] / 60}</p></div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                        <p class="mb-0 text-white">
+                            ${sub['plan_config']?.is_queue ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                         </p>
-                        <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}"
-                           class="btn text-nowrap removeFocus border-start-0 border-end-0 text-white gradientBtn my-4 my-lg-5 px-4"
-                           onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')"
-                        >Get Started Now</a>
-                        <p class="font20 font500 offWhiteColor mb-0">
-                            <span class="align-middle ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
-                                >${sub['total_offered_tokens'] / 60 + ' hours/month'}
-                            </span>
-                            
-                            <img src="./assets/subscriptionNew/Warning.svg" 
-                                class="img-fluid ${sub['package_type'] == 'topup' ? 'd-none' : ''}"
-                                alt="" 
-                                data-bs-toggle="tooltip" 
-                                title="Your daily playtime is 4 hours. Kindly adhere to this instruction." 
-                            />
-                            <br class="${sub['package_type'] == 'topup' ? 'd-none' : ''}"/>
-                            Validity ${sub['plan_duration_in_days']} Days <br/>
-                            ${getResolution(sub)} <br/>
-                            ${sub['plan_config']?.is_queue ? 'Queue basis <br/>' : ''}
-                            ${!sub['plan_config']?.is_refundable ? 'Non-Refundable <br/>' : ''}
-                            ${sub['plan_description']?.replace(/\.\s/g, '<br/>')}
-                        </p>
-                        <p class="font20 font500 offWhiteColor mb-0">
-                            <span class="align-middle"
-                                >Play games you own. 
-                            </span><img src="./assets/subscriptionNew/Warning.svg" 
-                                class="img-fluid"
-                                alt="" 
-                                data-bs-toggle="tooltip" 
-                                title="To play a game, you must have ownership of the game, through the available stores." 
-                            />
-                        </p>
+                    </div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                        <p class="mb-0 text-white"><img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" /></p>
+                    </div>
+                    <div class="height40"></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                        <p class="mb-0 text-white">${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col p-0 text-center font20 font500 d-none d-md-block">
+            
+            <div class="row">
+                <div class="col-auto brTop30 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : '' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-md-3 px-2 w218 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
+                    ${sub['plan_config']?.is_recommended ? 
+                        `<div class="row justify-content-center position-relative">
+                            <div class="col-auto position-absolute marginTop-20">
+                            <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
+                            <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
+                            </div>
+                        </div>`
+                    : ''}
+                    <p class="font24 font500 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                    <p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
+                    <div class="d-grid">
+                        <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row lightBlackBg">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">${getResolution(sub)}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>
+                </div>
+            </div>
+            <div class="row lightBlackBg">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">${sub['total_offered_tokens'] / 60}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
+                        ${sub['plan_config']?.is_queue ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                    </p>
+                </div>
+            </div>
+            <div class="row lightBlackBg">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">
+                        ${sub['plan_config']?.play_games_you_own ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
+                        ${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                    </p>
+                </div>
+            </div>
+        </div>
     `
 }
 
@@ -113,12 +158,30 @@ loadSubscriptions().then((allSubscriptions) => {
         heading1.innerText = 'Coming Soon';
     }
 
-    const container = document.getElementById('hourly-subscriptions');
-    const container2 = document.getElementById('monthly-subscriptions');
-    const hourlySubs = subscriptions.filter(s => s.package_type === 'topup');
-    const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
-    const child = hourlySubs.map(makeElementFromSubscription).join("");
-    const child2 = monthlySubs.map(makeElementFromSubscription).join("");
-    container?.insertAdjacentHTML('afterbegin', child);
-    container2?.insertAdjacentHTML('afterbegin', child2);
+    const container1 = document.getElementById('1hours-plan');
+    const container3 = document.getElementById('3hours-plan');
+    const container5 = document.getElementById('5hours-plan');
+    const container10 = document.getElementById('10hours-plan');
+    const container20 = document.getElementById('20hours-plan');
+    const containerUnlimited = document.getElementById('UnlimitedHours-plan');
+    // const container2 = document.getElementById('monthly-subscriptions');
+    const hourlyPlan1 = subscriptions.filter(s => s.total_offered_tokens <= 60);
+    const hourlyPlan3 = subscriptions.filter(s => s.total_offered_tokens > 60 && s.total_offered_tokens <=180);
+    const hourlyPlan5 = subscriptions.filter(s => s.total_offered_tokens > 180 && s.total_offered_tokens <= 300);
+    const hourlyPlan10 = subscriptions.filter(s => s.total_offered_tokens > 300 && s.total_offered_tokens <= 600);
+    const hourlyPlan20 = subscriptions.filter(s => s.total_offered_tokens > 600 && s.total_offered_tokens <= 1200);
+    const hourlyPlanUnlimited = subscriptions.filter(s => s.total_offered_tokens > 1200);
+    // const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
+    const child1 = hourlyPlan1.map(makeElementFromSubscription).join("");
+    const child3 = hourlyPlan3.map(makeElementFromSubscription).join("");
+    const child5 = hourlyPlan5.map(makeElementFromSubscription).join("");
+    const child10 = hourlyPlan10.map(makeElementFromSubscription).join("");
+    const child20 = hourlyPlan20.map(makeElementFromSubscription).join("");
+    const childUnlimited = hourlyPlanUnlimited.map(makeElementFromSubscription).join("");
+    container1?.insertAdjacentHTML('afterbegin', child1);
+    container3?.insertAdjacentHTML('afterbegin', child3);
+    container5?.insertAdjacentHTML('afterbegin', child5);
+    container10?.insertAdjacentHTML('afterbegin', child10);
+    container20?.insertAdjacentHTML('afterbegin', child20);
+    containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
 })
