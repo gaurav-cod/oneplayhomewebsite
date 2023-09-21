@@ -142,11 +142,53 @@
           </div>
         </div>
 
-        <div class="row padding100 justify-content-center" id="pricings" hidden>
-          <div class="col-12 col-lg-9 p-0 mt-5">
-            <div class="row sliderTrack mx-md-3 mx-1">
+        <div class="row justify-content-center" id="pricings" hidden>
+          <div class="col-12 col-lg-9 p-0" id="range-thumb">
+            <div class="row height130px align-items-end">
+              <div class="col-12">
+                <div class="row translateX20" id="1monsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">1 hr</div>
+                  <div class="col-12 mt-2 px-2">
+                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row d-none" id="3monsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">3 hrs</div>
+                  <div class="col-12 px-1 mt-2">
+                    <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:40px; height: 40px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row d-none" id="5monsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">5 hrs</div>
+                  <div class="col-12 mt-2 p-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 45px; height: 45px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row d-none" id="10monsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">10 hrs</div>
+                  <div class="col-12 mt-2 p-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; width:50px; margin-left: -10px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row d-none" id="20monsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">20 hrs</div>
+                  <div class="col-12 mt-2 p-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; width: 55px; margin-left: -20px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row d-none" id="UnmonsterImg">
+                  <div class="col-auto font30 font700 text-white gradientBorder text-center px-4 py-1">Unlimited</div>
+                  <div class="col-12 mt-2 p-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 70px; width: 70px; margin-left: -33px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-9 p-0">
+            <div class="row sliderTrack mx-md-3 mx-1 px-2">
               <div class="col-auto p-0">
-                <div class="hrDot" style="margin-left: 0%"></div>
+                <div class="hrDot"></div>
               </div>
               <div class="col-auto marginLeft5P p-0">
                 <div class="hrDot"></div>
@@ -170,49 +212,11 @@
               <div class="position-absolute marginTop-45 userUnderstandingSlider">
                 <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
               </div>
-              <div class="position-absolute" id="range-thumb">
-                <div class="row marginTop80" id="1monsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">1 hr</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row d-none marginTop130" id="3monsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">3 hrs</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:50px; height: 40px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row d-none marginTop130" id="5monsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">5 hrs</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 90px; height: 45px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row d-none marginTop140" id="10monsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">10 hrs</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; margin-left: -10px" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row d-none marginTop140" id="20monsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">20 hrs</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; margin-left: -5px" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row d-none marginTop150" id="UnmonsterImg">
-                  <div class="col-auto font38 font700 text-white gradientBorder text-center px-3">Unlimited</div>
-                  <div class="col-12">
-                    <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 60px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-              </div>
-              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="logSliderVal(this.value)">
+              <input type="range" min="0" max="100" value="2" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)">
             </div>
           </div>
         </div>
-        <div class="row justify-content-center pt-md-5" id="pricings" hidden>
+        <div class="row justify-content-center pt-md-2" id="pricings" hidden>
           <div class="col-auto p-0">
             <div class="d-none d-md-block">
               <div class="row overflow-hidden defaultHeight">
@@ -234,27 +238,27 @@
                 </div>
                 <div class="col-auto p-0">
                   <div class="testimonial-group" id="subDiv">
-                    <div class="row pt-5" id="1hours-plan"></div>
-                    <div class="row pt-5 d-none" id="3hours-plan"></div>
-                    <div class="row pt-5 d-none" id="5hours-plan"></div>
-                    <div class="row pt-5 d-none" id="10hours-plan"></div>
-                    <div class="row pt-5 d-none" id="20hours-plan"></div>
-                    <div class="row pt-5 d-none" id="UnlimitedHours-plan"></div>
+                    <div class="row pt-5 plan1Hour"></div>
+                    <div class="row pt-5 d-none plan3Hour"></div>
+                    <div class="row pt-5 d-none plan5Hour"></div>
+                    <div class="row pt-5 d-none plan10Hour"></div>
+                    <div class="row pt-5 d-none plan20Hour"></div>
+                    <div class="row pt-5 d-none UnlimitedHours-plan"></div>
                   </div>
                   <div class="row px-3">
-                    <div class="col-12 tipBg">
-                      <div class="row my-1">
-                        <div class="col-auto">
+                    <div class="col-12 tipBg py-2">
+                      <div class="row my-1 mx-3">
+                        <div class="col-auto ps-0">
                           <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
                         </div>
                         <div class="col p-0">
                           <p class="mb-0 font20 font500 text-white">
-                            4 hours per day is the daily limit for gameplay.
+                            <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
                           </p>
                         </div>
                       </div>
-                      <div class="row my-1">
-                        <div class="col-auto">
+                      <div class="row my-1 mx-3">
+                        <div class="col-auto ps-0">
                           <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
                         </div>
                         <div class="col p-0">
@@ -275,7 +279,7 @@
                       <div class="opacity0">
                         <div class="brTop20 w100 foundationSubCard py-3">
                           <p class="font24 font500 fountGradientText mb-3">Foundation</p> 
-                          <p class="font38 font700 text-white mb-3">₹39</p> 
+                          <p class="font30 font700 text-white mb-3">₹39</p> 
                           <div class="d-grid">
                             <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
                           </div>
@@ -297,12 +301,12 @@
                 </div>
                 <div class="card-img-overlay p-0">
                   <div class="testimonial-group">
-                    <!-- <div class="row pt-4" id="1hours-plan"></div>
-                    <div class="row pt-4 d-none" id="3hours-plan"></div>
-                    <div class="row pt-4 d-none" id="5hours-plan"></div>
-                    <div class="row pt-4 d-none" id="10hours-plan"></div>
-                    <div class="row pt-4 d-none" id="20hours-plan"></div>
-                    <div class="row pt-4 d-none" id="UnlimitedHours-plan"></div> -->
+                    <div class="row pt-4 plan1Hour"></div>
+                    <div class="row pt-4 d-none plan3Hour"></div>
+                    <div class="row pt-4 d-none plan5Hour"></div>
+                    <div class="row pt-4 d-none plan10Hour"></div>
+                    <div class="row pt-4 d-none plan20Hour"></div>
+                    <div class="row pt-4 d-none UnlimitedHours-plan"></div>
                   </div>
                 </div>
               </div>
@@ -820,7 +824,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
     <script>
-
+      document.getElementById("hoursPerDay").innerHTML = "4";
       // User Slider Animation
       $('.userUnderstandingSlider').hide();
       window.onload = function ()
@@ -833,124 +837,97 @@
         $('.userUnderstandingSlider').hide();
       });
 
-      const logSliderVal = (value) => {
+      // init
+        const moveCharacter = () => {
+          const rangeThumb = document.getElementById("range-thumb");
+          const rangeInput = document.getElementById("slider");
+          const rangeValue = parseInt(rangeInput.value);
+          const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
+          const thumbWidth = 20;
+          const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
+          rangeThumb.style.transform = `translateX(${newPosition}px)`;
+          
+        };
+        document.getElementById("slider").addEventListener("input", () => {
+          moveCharacter();
+        });
+
+      // calc nearest dot
+      const calculateNearestDot = (value) => {
         const dot_pos = [0, 10, 20, 40, 60, 100];
         let nearest_dot = 0;
         let difference = Math.abs(dot_pos[0] - value);
-        // first find nearest black dot
         for (let i = 0; i < dot_pos.length; i++) {
           let new_differnce = Math.abs(dot_pos[i] - value)
-          // console.warn(dot_pos, nearest_dot, new_differnce, difference)
           if (new_differnce < difference) {
             difference = new_differnce;
             nearest_dot = i;
           }
         }
-        document.getElementById('slider').value = dot_pos[nearest_dot];
-        // input range Animation with monster
-        const rangeThumb = document.getElementById("range-thumb");
-        const rangeInput = document.getElementById("slider");
-        const updateRangeVisuals = () => {
-          const thumbPosition = rangeInput.value / rangeInput.max;
-          const space = rangeInput.offsetWidth - rangeThumb.offsetWidth;
-          rangeThumb.style.marginLeft = thumbPosition * space + "px";
-        };
-        rangeInput.addEventListener("input", () => {
-          updateRangeVisuals();
-        });
-        const initializeRangeSlider = () => {
-          updateRangeVisuals();
-        };
-        initializeRangeSlider();
-        
-        // console.warn(dot_pos, nearest_dot, new_differnce, difference)
-        if(dot_pos[nearest_dot] === 0) {
-          document.getElementById("1monsterImg").classList.remove("d-none");
-          document.getElementById("3monsterImg").classList.add("d-none");
-          document.getElementById("5monsterImg").classList.add("d-none");
-          document.getElementById("10monsterImg").classList.add("d-none");
-          document.getElementById("20monsterImg").classList.add("d-none");
-          document.getElementById("UnmonsterImg").classList.add("d-none");
+        return dot_pos[nearest_dot]
+      }
+
+      // movemoster
+      const changeCharacter = (pos) => {
+          const pos_map= {
+            0: {
+              perday: "4",
+              id: "1monsterImg",
+              subCard: "plan1Hour",
+            },
+            10: {
+              perday: "4",
+              id: "3monsterImg",
+              subCard: "plan3Hour",
+            },
+            20: {
+              perday: "4",
+              id: "5monsterImg",
+              subCard: "plan5Hour",
+            },
+            40: {
+              perday: "4",
+              id: "10monsterImg",
+              subCard: "plan10Hour",
+            },
+            60: {
+              perday: "6",
+              id: "20monsterImg",
+              subCard: "plan20Hour",
+            },
+            100: {
+              perday: "6",
+              id: "UnmonsterImg",
+              subCard: "UnlimitedHours-plan",
+            },
+          };
+          [
+            "plan1Hour",
+            "plan3Hour",
+            "plan5Hour",
+            "plan10Hour",
+            "plan20Hour",
+            "UnlimitedHours-plan",
+          ].map(e =>document.querySelectorAll('.'+e).forEach(e => e.classList.add("d-none")));
+          [
+            "1monsterImg",
+            "3monsterImg",
+            "5monsterImg",
+            "10monsterImg",
+            "20monsterImg",
+            "UnmonsterImg",
+          ].map(e => document.getElementById(e).classList.add("d-none"));
+          document.getElementById(pos_map[pos].id).classList.remove("d-none")
+          document.getElementById("hoursPerDay").innerHTML = pos_map[pos].perday;
+          document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => e.classList.remove("d-none"));
           
-          document.getElementById("1hours-plan").classList.remove("d-none");
-          document.getElementById("3hours-plan").classList.add("d-none");
-          document.getElementById("5hours-plan").classList.add("d-none");
-          document.getElementById("10hours-plan").classList.add("d-none");
-          document.getElementById("20hours-plan").classList.add("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
-        } else if(dot_pos[nearest_dot] === 10 ) {
-          document.getElementById("1monsterImg").classList.add("d-none");
-          document.getElementById("3monsterImg").classList.remove("d-none");
-          document.getElementById("5monsterImg").classList.add("d-none");
-          document.getElementById("10monsterImg").classList.add("d-none");
-          document.getElementById("20monsterImg").classList.add("d-none");
-          document.getElementById("UnmonsterImg").classList.add("d-none");
-          
-          document.getElementById("1hours-plan").classList.add("d-none");
-          document.getElementById("3hours-plan").classList.remove("d-none");
-          document.getElementById("5hours-plan").classList.add("d-none");
-          document.getElementById("10hours-plan").classList.add("d-none");
-          document.getElementById("20hours-plan").classList.add("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
         }
-        else if(dot_pos[nearest_dot] === 20 ) {
-          document.getElementById("1monsterImg").classList.add("d-none");
-          document.getElementById("3monsterImg").classList.add("d-none");
-          document.getElementById("5monsterImg").classList.remove("d-none");
-          document.getElementById("10monsterImg").classList.add("d-none");
-          document.getElementById("20monsterImg").classList.add("d-none");
-          document.getElementById("UnmonsterImg").classList.add("d-none");
 
-          document.getElementById("1hours-plan").classList.add("d-none");
-          document.getElementById("3hours-plan").classList.add("d-none");
-          document.getElementById("5hours-plan").classList.remove("d-none");
-          document.getElementById("10hours-plan").classList.add("d-none");
-          document.getElementById("20hours-plan").classList.add("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
-        }else if(dot_pos[nearest_dot] === 40 ) {
-          document.getElementById("1monsterImg").classList.add("d-none");
-          document.getElementById("3monsterImg").classList.add("d-none");
-          document.getElementById("5monsterImg").classList.add("d-none");
-          document.getElementById("10monsterImg").classList.remove("d-none");
-          document.getElementById("20monsterImg").classList.add("d-none");
-          document.getElementById("UnmonsterImg").classList.add("d-none");
-
-          document.getElementById("1hours-plan").classList.add("d-none");
-          document.getElementById("3hours-plan").classList.add("d-none");
-          document.getElementById("5hours-plan").classList.add("d-none");
-          document.getElementById("10hours-plan").classList.remove("d-none");
-          document.getElementById("20hours-plan").classList.add("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
-        }
-        else if(dot_pos[nearest_dot] === 60 ) {
-          document.getElementById("1monsterImg").classList.add("d-none");
-          document.getElementById("3monsterImg").classList.add("d-none");
-          document.getElementById("5monsterImg").classList.add("d-none");
-          document.getElementById("10monsterImg").classList.add("d-none");
-          document.getElementById("20monsterImg").classList.remove("d-none");
-          document.getElementById("UnmonsterImg").classList.add("d-none");
-
-          document.getElementById("1hours-plan").classList.add("d-none");
-          document.getElementById("3hours-plan").classList.add("d-none");
-          document.getElementById("5hours-plan").classList.add("d-none");
-          document.getElementById("10hours-plan").classList.add("d-none");
-          document.getElementById("20hours-plan").classList.remove("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.add("d-none");
-        }else if(dot_pos[nearest_dot] === 100 ) {
-          document.getElementById("1monsterImg").classList.add("d-none");
-          document.getElementById("3monsterImg").classList.add("d-none");
-          document.getElementById("5monsterImg").classList.add("d-none");
-          document.getElementById("10monsterImg").classList.add("d-none");
-          document.getElementById("20monsterImg").classList.add("d-none");
-          document.getElementById("UnmonsterImg").classList.remove("d-none");
-
-          document.getElementById("1hours-plan").classList.add("d-none");
-          document.getElementById("3hours-plan").classList.add("d-none");
-          document.getElementById("5hours-plan").classList.add("d-none");
-          document.getElementById("10hours-plan").classList.add("d-none");
-          document.getElementById("20hours-plan").classList.add("d-none");
-          document.getElementById("UnlimitedHours-plan").classList.remove("d-none");
-        }
+      const updateSlider = (value) => {
+        const nearest_dot = calculateNearestDot(value)
+        document.getElementById('slider').value = nearest_dot;
+        changeCharacter(nearest_dot);
+        moveCharacter();
       }
 
       // Subscription Card Animation 
@@ -1007,7 +984,7 @@
       //   return await response.json();
       // }
 
-      $( document ).ready(function() {
+      $( window ).load(function() {
 
         $("#hourlyPlan").addClass("activeSub");
         $("#HourlySub").removeClass("d-none");
@@ -1015,7 +992,7 @@
 
         if(url.includes("#Hourly_Plan")) {
           activehourlyPlan()
-        } else if(url.includes("#Monthly_Plan")) {
+        } else if(url.includes("#Premium_Plan")) {
           activeMonthlyPlan();
         }
 
@@ -1028,6 +1005,9 @@
           $("#HourlySub").removeClass("d-none");
           $("#monthlyPlan").removeClass("activeSub");
           $("#MonthlySub").addClass("d-none");
+          $('#slider').val(0);
+          changeCharacter(0);
+          moveCharacter();
         }
 
         $("#monthlyPlan").click(function(){
@@ -1039,6 +1019,9 @@
           $("#MonthlySub").removeClass("d-none");
           $("#hourlyPlan").removeClass("activeSub");
           $("#HourlySub").addClass("d-none");
+          $('#slider').val(60);
+          changeCharacter(60);
+          moveCharacter();
         }
       })
 

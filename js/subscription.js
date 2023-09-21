@@ -158,19 +158,20 @@ loadSubscriptions().then((allSubscriptions) => {
         heading1.innerText = 'Coming Soon';
     }
 
-    const container1 = document.getElementById('1hours-plan');
-    const container3 = document.getElementById('3hours-plan');
-    const container5 = document.getElementById('5hours-plan');
-    const container10 = document.getElementById('10hours-plan');
-    const container20 = document.getElementById('20hours-plan');
-    const containerUnlimited = document.getElementById('UnlimitedHours-plan');
+    const container1 = document.getElementsByClassName('plan1Hour');
+    // const container1 = console.warn('kjsdahfkjsd', document.getElementsByClassName('plan1Hour'));
+    const container3 = document.getElementsByClassName('plan3Hour');
+    const container5 = document.getElementsByClassName('plan5Hour');
+    const container10 = document.getElementsByClassName('plan10Hour');
+    const container20 = document.getElementsByClassName('plan20Hour');
+    const containerUnlimited = document.getElementsByClassName('UnlimitedHours-plan');
     // const container2 = document.getElementById('monthly-subscriptions');
     const hourlyPlan1 = subscriptions.filter(s => s.total_offered_tokens <= 60);
     const hourlyPlan3 = subscriptions.filter(s => s.total_offered_tokens > 60 && s.total_offered_tokens <=180);
     const hourlyPlan5 = subscriptions.filter(s => s.total_offered_tokens > 180 && s.total_offered_tokens <= 300);
     const hourlyPlan10 = subscriptions.filter(s => s.total_offered_tokens > 300 && s.total_offered_tokens <= 600);
     const hourlyPlan20 = subscriptions.filter(s => s.total_offered_tokens > 600 && s.total_offered_tokens <= 1200);
-    const hourlyPlanUnlimited = subscriptions.filter(s => s.total_offered_tokens > 1200);
+    const hourlyPlanUnlimited = subscriptions.filter(s => s.total_offered_tokens/60 >= 1200 || s.plan_config.is_unlimited == true);
     // const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
     const child1 = hourlyPlan1.map(makeElementFromSubscription).join("");
     const child3 = hourlyPlan3.map(makeElementFromSubscription).join("");
@@ -178,10 +179,17 @@ loadSubscriptions().then((allSubscriptions) => {
     const child10 = hourlyPlan10.map(makeElementFromSubscription).join("");
     const child20 = hourlyPlan20.map(makeElementFromSubscription).join("");
     const childUnlimited = hourlyPlanUnlimited.map(makeElementFromSubscription).join("");
-    container1?.insertAdjacentHTML('afterbegin', child1);
-    container3?.insertAdjacentHTML('afterbegin', child3);
-    container5?.insertAdjacentHTML('afterbegin', child5);
-    container10?.insertAdjacentHTML('afterbegin', child10);
-    container20?.insertAdjacentHTML('afterbegin', child20);
-    containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
+    container1[0]?.insertAdjacentHTML('afterbegin', child1);
+    container1[1]?.insertAdjacentHTML('afterbegin', child1);
+    // console.warn(container1?.insertAdjacentHTML('afterbegin', child1));
+    container3[0]?.insertAdjacentHTML('afterbegin', child3);
+    container3[1]?.insertAdjacentHTML('afterbegin', child3);
+    container5[0]?.insertAdjacentHTML('afterbegin', child5);
+    container5[1]?.insertAdjacentHTML('afterbegin', child5);
+    container10[0]?.insertAdjacentHTML('afterbegin', child10);
+    container10[1]?.insertAdjacentHTML('afterbegin', child10);
+    container20[0]?.insertAdjacentHTML('afterbegin', child20);
+    container20[1]?.insertAdjacentHTML('afterbegin', child20);
+    containerUnlimited[0]?.insertAdjacentHTML('afterbegin', childUnlimited);
+    containerUnlimited[1]?.insertAdjacentHTML('afterbegin', childUnlimited);
 })
