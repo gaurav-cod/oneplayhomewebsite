@@ -998,40 +998,25 @@
       // }
 
       $( window ).load(function() {
-
-        $("#hourlyPlan").addClass("activeSub");
-        $("#HourlySub").removeClass("d-none");
         const url = window.location.href;
+        const urlObj = new URL(url);
 
-        if(url.includes("#Hourly_Plan")) {
-          activehourlyPlan()
-        } else if(url.includes("#Premium_Plan")) {
-          activeMonthlyPlan();
+        const tokensParam = +(urlObj.searchParams.get('plan'));
+        if (tokensParam) {
+          if(tokensParam > 600 && tokensParam <= 1200) {
+            premiumPlan();
+          } else if(tokensParam > 1200){
+            unlimitedPlan();
+          }
         }
 
-        $("#hourlyPlan").click(function(){
-          activehourlyPlan()
-        });
-
-        function activehourlyPlan() {
-          $("#hourlyPlan").addClass("activeSub");
-          $("#HourlySub").removeClass("d-none");
-          $("#monthlyPlan").removeClass("activeSub");
-          $("#MonthlySub").addClass("d-none");
-          $('#slider').val(0);
-          changeCharacter(0);
+        function unlimitedPlan() {
+          $('#slider').val(100);
+          changeCharacter(100);
           moveCharacter();
         }
 
-        $("#monthlyPlan").click(function(){
-          activeMonthlyPlan();
-        });
-
-        function activeMonthlyPlan() {
-          $("#monthlyPlan").addClass("activeSub");
-          $("#MonthlySub").removeClass("d-none");
-          $("#hourlyPlan").removeClass("activeSub");
-          $("#HourlySub").addClass("d-none");
+        function premiumPlan() {
           $('#slider').val(60);
           changeCharacter(60);
           moveCharacter();
