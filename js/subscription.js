@@ -169,12 +169,12 @@ loadSubscriptions().then((allSubscriptions) => {
     const container20 = document.getElementsByClassName('plan20Hour');
     const containerUnlimited = document.getElementsByClassName('UnlimitedHours-plan');
     // const container2 = document.getElementById('monthly-subscriptions');
-    const hourlyPlan1 = subscriptions.filter(s => s.total_offered_tokens <= 60);
-    const hourlyPlan3 = subscriptions.filter(s => s.total_offered_tokens > 60 && s.total_offered_tokens <=180);
-    const hourlyPlan5 = subscriptions.filter(s => s.total_offered_tokens > 180 && s.total_offered_tokens <= 300);
-    const hourlyPlan10 = subscriptions.filter(s => s.total_offered_tokens > 300 && s.total_offered_tokens <= 600);
-    const hourlyPlan20 = subscriptions.filter(s => s.total_offered_tokens > 600 && s.total_offered_tokens <= 1200);
-    const hourlyPlanUnlimited = subscriptions.filter(s => s.total_offered_tokens/60 >= 1200 || s.plan_config.is_unlimited == true);
+    const hourlyPlan1 = subscriptions.filter(s => s?.total_offered_tokens <= 60);
+    const hourlyPlan3 = subscriptions.filter(s => s?.total_offered_tokens > 60 && s?.total_offered_tokens <=180);
+    const hourlyPlan5 = subscriptions.filter(s => s?.total_offered_tokens > 180 && s?.total_offered_tokens <= 300);
+    const hourlyPlan10 = subscriptions.filter(s => s?.total_offered_tokens > 300 && s?.total_offered_tokens <= 600);
+    const hourlyPlan20 = subscriptions.filter(s => s?.total_offered_tokens > 600 && s?.total_offered_tokens <= 1200);
+    const hourlyPlanUnlimited = subscriptions.filter(s => s?.total_offered_tokens > 1200 || s.plan_config?.is_unlimited == true);
     // const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
     const child1 = hourlyPlan1.map(makeElementFromSubscription).join("");
     const child3 = hourlyPlan3.map(makeElementFromSubscription).join("");

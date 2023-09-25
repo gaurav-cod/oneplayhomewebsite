@@ -141,6 +141,11 @@
     z-index: 2;
 }
 
+.textHour {
+    font-size: 30px;
+    line-height: 40px;
+}
+
 @media (max-width: 991px) and (min-width: 767px) {
     .font24 {
         font-size: 20px !important;
@@ -159,9 +164,22 @@
     .marginTopCustom{
         width: 215px !important;
     }
+
+    .textHour {
+        font-size: 24px !important;
+        line-height: 34px !important;
+        font-weight: 600 !important;
+    }
 }
 
-@media (max-width: 768.9px) and (min-width: 400px) {
+.font30 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+
+
+@media (max-width: 767.9px) and (min-width: 400px) {
     .font24 {
         font-size: 14px !important;
         line-height: 18px !important;
@@ -176,11 +194,12 @@
         font-size: 24px !important;
         line-height: 24px !important;
     }
-}
 
-.font30 {
-    font-size: 30px;
-    line-height: 40px;
+    .textHour {
+        font-size: 20px !important;
+        line-height: 30px !important;
+        font-weight: 500 !important;
+    }
 }
 
 @media (max-width: 399.9px) {
@@ -192,6 +211,12 @@
     .w218 {
         width: 100px !important;
         margin: 0px 5px !important;
+    }
+
+    .textHour {
+        font-size: 20px !important;
+        line-height: 30px !important;
+        font-weight: 500 !important;
     }
 }
 
@@ -312,6 +337,15 @@
     z-index: 2;
 }
 
+.monterRange {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    padding: 5px 20px !important;
+    margin-top: -50px !important;
+    white-space: nowrap;
+}
+
 @media (max-width: 990.9px) {
     .marginTopCustom {
         padding-top: 163px !important;
@@ -418,6 +452,11 @@
         width: 35px;
         height: 90px;
     }
+
+    .monterRange {
+        padding: 0px 10px !important;
+        margin-top: -30px !important;
+    }
     
 }
 
@@ -447,6 +486,6 @@ lottie-player {
     height: 130px;
 }
 
-.translateX20 {
-    transform: translateX(20px);
+.overflowXHidden {
+    overflow-x: hidden;
 }
