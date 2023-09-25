@@ -146,7 +146,7 @@ function makeElementFromSubscription(sub) {
 loadSubscriptions().then((allSubscriptions) => {
     const heading1 = document.getElementById('heading1');
     const subscriptions = allSubscriptions
-        .filter(sub => sub.partner_id === config.PARTNER_ID || !sub.partner_id);
+        .filter(sub => sub?.partner_id === config.PARTNER_ID || !sub?.partner_id);
 
     if (subscriptions.length > 0) {
         const pricings = document.querySelectorAll('#pricings');
