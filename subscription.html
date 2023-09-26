@@ -254,7 +254,7 @@
                         </div>
                         <div class="col p-0">
                           <p class="mb-0 font20 font500 text-white">
-                            <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
+                            <span class="hoursPerDay"></span> hours per day is the daily limit for gameplay.
                           </p>
                         </div>
                       </div>
@@ -319,7 +319,7 @@
                     </div>
                     <div class="col p-0">
                       <p class="mb-0 font20 font500 text-white">
-                        4 hours per day is the daily limit for gameplay.
+                        <span class="hoursPerDay"></span> hours per day is the daily limit for gameplay.
                       </p>
                     </div>
                   </div>
@@ -825,7 +825,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
     <script>
-      document.getElementById("hoursPerDay").innerHTML = "4";
+      document.querySelectorAll(".hoursPerDay").innerHTML = "4";
       // User Slider Animation
       $('.userUnderstandingSlider').hide();
       window.onload = function ()
@@ -919,7 +919,7 @@
             "UnmonsterImg",
           ].map(e => document.getElementById(e).classList.add("d-none"));
           document.getElementById(pos_map[pos].id).classList.remove("d-none")
-          document.getElementById("hoursPerDay").innerHTML = pos_map[pos].perday;
+          document.querySelectorAll(".hoursPerDay").innerHTML = pos_map[pos].perday;
           document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => e.classList.remove("d-none"));
           
         }
@@ -930,17 +930,6 @@
         changeCharacter(nearest_dot);
         moveCharacter();
       }
-
-      // Subscription Card Animation 
-      // const div = document.querySelectorAll('.subDiv')[0];
-      // const div2 = document.querySelectorAll('.subDiv')[1];
-      // const button = document.querySelector('#slider');
-      // div.addEventListener('animationend', function() {
-      //   div.classList.remove('move');
-      // });
-      // button.addEventListener('click', function() {
-      //   div.classList.add('move');
-      // });
       
       const divs = document.querySelectorAll('.subDiv');
       const button = document.querySelector('#slider');
