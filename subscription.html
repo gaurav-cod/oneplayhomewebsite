@@ -825,7 +825,6 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
     <script>
-      // document.querySelector(".hoursPerDay").innerHTML = "4";
       document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = "4")
       // User Slider Animation
       $('.userUnderstandingSlider').hide();
@@ -920,7 +919,6 @@
             "UnmonsterImg",
           ].map(e => document.getElementById(e).classList.add("d-none"));
           document.getElementById(pos_map[pos].id).classList.remove("d-none")
-          // document.querySelectorAll(".hoursPerDay").innerHTML = pos_map[pos].perday;
           document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = `${pos_map[pos].perday}`);
           document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => e.classList.remove("d-none"));
           
