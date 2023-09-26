@@ -62,7 +62,7 @@ function makeElementFromSubscription(sub) {
                         </div>
                     </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${getResolution(sub)}</p></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white text-truncate">${getResolution(sub)}</p></div>
                     <div class="height40"></div>
                     <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_duration_in_days']}</p></div>
                     <div class="height40"></div>
@@ -105,7 +105,7 @@ function makeElementFromSubscription(sub) {
             </div>
             <div class="row lightBlackBg">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">${getResolution(sub)}</p>
+                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>
                 </div>
             </div>
             <div class="row">
