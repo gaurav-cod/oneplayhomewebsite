@@ -55,7 +55,8 @@ function makeElementFromSubscription(sub) {
             <div class="row justify-content-center">
                 <div class="col-auto text-center p-0">
                     <div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
-                        <p class="font24 font500 mb-3 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                        <p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                        <p class="mutedColor my-2 ${sub['plan_config']?.actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                         <p class="font38 font700 text-white mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                         <div class="d-grid">
                             <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
@@ -96,7 +97,8 @@ function makeElementFromSubscription(sub) {
                             </div>
                         </div>`
                     : ''}
-                    <p class="font24 font500 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                    <p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
+                    <p class="mutedColor my-2"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                     <p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                     <div class="d-grid">
                         <a href="${config.APP_URL + '/settings/subscription' + '?subscribe=' + sub['id'] + '&plan=' + sub['package_type']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>
