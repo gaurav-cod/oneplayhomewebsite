@@ -115,7 +115,10 @@ function makeElementFromSubscription(sub) {
             </div>
             <div class="row lightBlackBg">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">${sub['total_offered_tokens'] / 60}</p>
+                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
+                        
+                        ${sub['plan_config']?.is_unlimited ? 'Unlimited*' : `${sub['total_offered_tokens'] / 60}`}
+                    </p>
                 </div>
             </div>
             <div class="row">
