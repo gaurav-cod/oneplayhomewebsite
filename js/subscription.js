@@ -67,7 +67,7 @@ function makeElementFromSubscription(sub) {
                     <div class="height40"></div>
                     <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_duration_in_days']}</p></div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['total_offered_tokens'] / 60}</p></div>
+                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited.svg" width="28px" class="img-fluid" alt="" />' : `${sub['total_offered_tokens'] / 60}`}</p></div>
                     <div class="height40"></div>
                     <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                         <p class="mb-0 text-white">
@@ -118,7 +118,6 @@ function makeElementFromSubscription(sub) {
             <div class="row lightBlackBg">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
-                        
                         ${sub['plan_config']?.is_unlimited ? 'Unlimited*' : `${sub['total_offered_tokens'] / 60}`}
                     </p>
                 </div>
