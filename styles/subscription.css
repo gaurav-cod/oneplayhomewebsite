@@ -352,7 +352,7 @@
 }
 
 .marginTopCustom {
-    padding-top: 186px;
+    padding-top: 216px;
     width: 280px;
     background-color: #151617;
     z-index: 2;
@@ -369,7 +369,7 @@
 
 @media (max-width: 990.9px) {
     .marginTopCustom {
-        padding-top: 163px !important;
+        padding-top: 187px !important;
     }
 
     .marginTop-20 {
@@ -378,9 +378,15 @@
 }
 
 
-@media (min-width: 991px) and (max-width: 1300px) {
+@media (min-width: 991px) and (max-width: 1196px) {
     .marginTopCustom {
-        padding-top: 183px !important;
+        padding-top: 208px !important;
+    }
+}
+
+@media (min-width: 1196.1px) and (max-width: 1300px) {
+    .marginTopCustom {
+        padding-top: 213px !important;
     }
 }
 
