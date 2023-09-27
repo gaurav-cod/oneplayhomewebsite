@@ -46,8 +46,8 @@ function makeElementFromSubscription(sub) {
         <div class="col d-md-none">
             ${sub['plan_config']?.is_recommended ? 
                 `<div class="row justify-content-center position-relative">
-                    <div class="col-auto position-absolute marginTop-20">
-                        <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: 100px; height: auto;" loop autoplay></lottie-player>
+                    <div class="col-auto position-absolute marginTop-20 text-center p-0">
+                        <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1" class="width100" style="height: auto;" loop autoplay></lottie-player>
                         <button class="btn recommendedBg text-white btn-sm customBorder0 font12 marginTop-67 px-md-4 px-2">Recommended</button>
                     </div>
                 </div>`
