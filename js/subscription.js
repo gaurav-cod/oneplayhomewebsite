@@ -23,11 +23,7 @@ function getResolution(sub) {
     if (sub['can_run_4k'] == 'true') {
         return '4K';
     } else if (sub['can_run_hd'] == 'true') {
-        if (sub['package_type'] == 'topup') {
-            return '1080p';
-        } else {
-            return 'Up to Full HD Resolution';
-        }
+        return '1080p';
     } else {
         return '720p';
     }
