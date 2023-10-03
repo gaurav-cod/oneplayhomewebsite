@@ -136,7 +136,7 @@ function makeElementFromSubscription(sub) {
             <div class="row">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                        ${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
