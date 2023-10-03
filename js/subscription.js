@@ -44,6 +44,7 @@ const currencyMap = {
 function makeElementFromSubscription(sub) {
     return ` 
         <div class="col d-md-none">
+            <span class="data-span" data-hrs-per-day="${sub['gameplay_limit_hrs_per_day']}" ></span>
             ${sub['plan_config']?.is_recommended ? 
                 `<div class="row justify-content-center position-relative">
                     <div class="col-auto position-absolute marginTop-20 text-center p-0">

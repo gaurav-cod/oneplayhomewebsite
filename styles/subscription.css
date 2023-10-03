@@ -543,7 +543,7 @@ lottie-player {
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 767.9px) {
     .visibleHideInDesktop {
         visibility: hidden;
     } 
