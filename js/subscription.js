@@ -186,4 +186,6 @@ loadSubscriptions().then((allSubscriptions) => {
     container10?.insertAdjacentHTML('afterbegin', child10);
     container20?.insertAdjacentHTML('afterbegin', child20);
     containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
+
+    document.querySelector('#hoursPerDay').innerText = hourlyPlan1[0]?.gameplay_limit_hrs_per_day;
 })
