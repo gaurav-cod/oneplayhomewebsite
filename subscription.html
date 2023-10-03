@@ -219,7 +219,7 @@
         </div>
         <div class="row justify-content-center pt-md-2" id="pricings" hidden>
           <div class="col-12 p-0">
-            <div class="card bgTransparent border-0" id="">
+            <div class="card bgTransparent border-0">
               <div class="row h-100 align-items-end visibleHideInDesktop">
                 <div class="col text-center p-0 pt-5 pt-md-0">
                   <div class="opacity0">
@@ -265,34 +265,36 @@
                     </div>
                   </div>
                   <div class="col-auto p-0">
-                    <div class="subCard1 subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="plan1Hour"></div>
+                    <div class="position-relative sliderDefaultHeight">
+                      <div class="subCard1 moveleft">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan1Hour"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="subCard2 d-none subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="plan3Hour"></div>
+                      <div class="subCard2 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan3Hour"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="subCard3 d-none subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="plan5Hour"></div>
+                      <div class="subCard3 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan5Hour"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="subCard4 d-none subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="plan10Hour"></div>
+                      <div class="subCard4 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan10Hour"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="subCard5 d-none subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="plan20Hour"></div>
+                      <div class="subCard5 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan20Hour"></div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="subCard6 d-none subDiv">
-                      <div class="testimonial-group" id="">
-                        <div class="row pt-5" id="UnlimitedHours-plan"></div>
+                      <div class="subCard6 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="UnlimitedHours-plan"></div>
+                        </div>
                       </div>
                     </div>
                     <div class="row px-3">
@@ -882,21 +884,6 @@
             subCard: "subCard6",
           },
         };
-        
-        [
-          "subCard1",
-          "subCard2",
-          "subCard3",
-          "subCard4",
-          "subCard5",
-          "subCard6",
-        ].map(e =>document.querySelectorAll('.'+e).forEach(
-          e => 
-            {
-              e.classList.add('d-none');
-            }
-          )
-          );
         [
           "1monsterImg",
           "3monsterImg",
@@ -905,13 +892,17 @@
           "20monsterImg",
           "UnmonsterImg",
         ].map(e => document.getElementById(e).classList.add("d-none"));
-        document.getElementById(pos_map[pos].id).classList.remove("d-none")
-
-        const myCarousel = new bootstrap.Carousel(document.getElementById('demo'));
-        document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => {e.classList.remove("d-none");});
-
+        document.getElementById(pos_map[pos].id).classList.remove("d-none");
         document.querySelector('#hoursPerDay').innerText = document.querySelector(`.${pos_map[pos].subCard} .data-span`).dataset.hrsPerDay;
-        
+        [
+          "subCard1",
+          "subCard2",
+          "subCard3",
+          "subCard4",
+          "subCard5",
+          "subCard6",
+        ].map(e =>document.querySelectorAll('.'+e).forEach(e => { e.classList.remove('moveleft'); e.classList.add('moveright');}));
+        document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
       }
 
       const updateSlider = (value) => {
@@ -921,18 +912,6 @@
         changeCharacter(nearest_dot);
         moveCharacter();
       }
-
-      const divs = document.querySelectorAll('.subDiv');
-      const button = document.querySelector('#slider');
-      divs.forEach((e) => {
-        e.addEventListener('animationend', function() {
-          e.classList.remove('move');
-        });
-      });
-      button.addEventListener('click', function() {
-        divs.forEach(e => e.classList.add('move'))
-      });
-
 
       const _event = countlyService.startEvent("websiteSubscriptionView")
       const updateEvent = (segment) => {

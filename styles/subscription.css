@@ -367,7 +367,7 @@
     white-space: nowrap;
 }
 
-@media (max-width: 990.9px) {
+@media (max-width: 991.9px) {
     .marginTopCustom {
         padding-top: 187px !important;
     }
@@ -400,35 +400,47 @@
     }
 }
 
-.hideDiv {
-    display: none;
-    animation-name: slide-out;
-    animation-duration: 1s;
+.moveright {
+    animation-name: moveright;
+    animation-duration: 0.3s;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards ;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes moveright {
+    0% {  
+        transform: translateX(0%);
+        position: absolute; 
+    }
+    100% { 
+        transform: translateX(100%); 
+        position: absolute;
+        display: none;
+    }
+}
+
+.moveleft {
+    animation-name: moveleft;
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes slide-out {
-    0% {  transform: translateX(0%); }
-   100% { transform: translateX(-100%); }
+@keyframes moveleft {
+    0% {  
+        transform: translateX(-100%); 
+        position: absolute;
+    }
+    100% { 
+        transform: translateX(0%);
+    }
 }
 
-@-webkit-keyframes slide-out {
-   0% { -webkit-transform: translateX(0%); }
-   100% { -webkit-transform: translateX(-100%); }
-}
 
-.move {
-    animation-name: move;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards ;
-}
-
-@keyframes move {
-    0% {  transform: translateX(100%); }
-   100% { transform: translateX(0%); }
-}
 
 .height25px {
     height: 0px;
@@ -547,4 +559,39 @@ lottie-player {
     .visibleHideInDesktop {
         visibility: hidden;
     } 
+}
+
+.sliderDefaultHeight {
+    height: 640px; 
+    overflow: hidden
+}
+
+@media (max-width: 1198.9px) {
+    .sliderDefaultHeight {
+        height: 600px !important; 
+    }
+}
+
+@media (max-width: 991.9px) {
+    .sliderDefaultHeight {
+        height: 580px !important; 
+    }
+}
+
+@media (max-width: 767.9px) {
+    .sliderDefaultHeight {
+        height: 785px !important;
+    }
+}
+
+@media (max-width: 575.9px) {
+    .sliderDefaultHeight {
+        height: 765px !important;
+    }
+}
+
+@media (max-width: 349.9px) {
+    .sliderDefaultHeight {
+        height: 750px !important;
+    }
 }
