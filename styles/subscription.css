@@ -439,7 +439,8 @@
 }
 
 .height40 {
-    height: 35px;
+    height: 45px;
+    padding-top: 6px;
 }
 
 .height45 {
@@ -530,4 +531,20 @@ lottie-player {
     .marginTop-20 {
         margin-top: -3px !important;
     }
+}
+
+.w1000 {
+    width: 1000px;
+}
+
+@media (max-width: 1000px) {
+    .w1000 {
+        width: 100% !important;
+    }
+}
+
+@media (min-width: 767px) {
+    .visibleHideInDesktop {
+        visibility: hidden;
+    } 
 }
