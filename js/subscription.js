@@ -40,6 +40,7 @@ const currencyMap = {
 function makeElementFromSubscription(sub) {
     return ` 
         <div class="col d-md-none">
+            <span class="data-span" data-hrs-per-day="${sub['gameplay_limit_hrs_per_day']}" ></span>
             ${sub['plan_config']?.is_recommended ? 
                 `<div class="row justify-content-center position-relative">
                     <div class="col-auto position-absolute marginTop-20 text-center p-0">
@@ -135,7 +136,7 @@ function makeElementFromSubscription(sub) {
             <div class="row">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                        ${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
@@ -161,38 +162,28 @@ loadSubscriptions().then((allSubscriptions) => {
         heading1.innerText = 'Coming Soon';
     }
 
-    const container1 = document.getElementsByClassName('plan1Hour');
-    // const container1 = console.warn('kjsdahfkjsd', document.getElementsByClassName('plan1Hour'));
-    const container3 = document.getElementsByClassName('plan3Hour');
-    const container5 = document.getElementsByClassName('plan5Hour');
-    const container10 = document.getElementsByClassName('plan10Hour');
-    const container20 = document.getElementsByClassName('plan20Hour');
-    const containerUnlimited = document.getElementsByClassName('UnlimitedHours-plan');
-    // const container2 = document.getElementById('monthly-subscriptions');
+    const container1 = document.getElementById('plan1Hour');
+    const container3 = document.getElementById('plan3Hour');
+    const container5 = document.getElementById('plan5Hour');
+    const container10 = document.getElementById('plan10Hour');
+    const container20 = document.getElementById('plan20Hour');
+    const containerUnlimited = document.getElementById('UnlimitedHours-plan');
     const hourlyPlan1 = subscriptions.filter(s => s?.total_offered_tokens <= 60);
     const hourlyPlan3 = subscriptions.filter(s => s?.total_offered_tokens > 60 && s?.total_offered_tokens <=180);
     const hourlyPlan5 = subscriptions.filter(s => s?.total_offered_tokens > 180 && s?.total_offered_tokens <= 300);
     const hourlyPlan10 = subscriptions.filter(s => s?.total_offered_tokens > 300 && s?.total_offered_tokens <= 600);
     const hourlyPlan20 = subscriptions.filter(s => s?.total_offered_tokens > 600 && s?.total_offered_tokens <= 1200);
     const hourlyPlanUnlimited = subscriptions.filter(s => s?.total_offered_tokens > 1200 || s.plan_config?.is_unlimited == true);
-    // const monthlySubs = subscriptions.filter(s => s.package_type === 'base');
     const child1 = hourlyPlan1.map(makeElementFromSubscription).join("");
     const child3 = hourlyPlan3.map(makeElementFromSubscription).join("");
     const child5 = hourlyPlan5.map(makeElementFromSubscription).join("");
     const child10 = hourlyPlan10.map(makeElementFromSubscription).join("");
     const child20 = hourlyPlan20.map(makeElementFromSubscription).join("");
     const childUnlimited = hourlyPlanUnlimited.map(makeElementFromSubscription).join("");
-    container1[0]?.insertAdjacentHTML('afterbegin', child1);
-    container1[1]?.insertAdjacentHTML('afterbegin', child1);
-    // console.warn(container1?.insertAdjacentHTML('afterbegin', child1));
-    container3[0]?.insertAdjacentHTML('afterbegin', child3);
-    container3[1]?.insertAdjacentHTML('afterbegin', child3);
-    container5[0]?.insertAdjacentHTML('afterbegin', child5);
-    container5[1]?.insertAdjacentHTML('afterbegin', child5);
-    container10[0]?.insertAdjacentHTML('afterbegin', child10);
-    container10[1]?.insertAdjacentHTML('afterbegin', child10);
-    container20[0]?.insertAdjacentHTML('afterbegin', child20);
-    container20[1]?.insertAdjacentHTML('afterbegin', child20);
-    containerUnlimited[0]?.insertAdjacentHTML('afterbegin', childUnlimited);
-    containerUnlimited[1]?.insertAdjacentHTML('afterbegin', childUnlimited);
+    container1?.insertAdjacentHTML('afterbegin', child1);
+    container3?.insertAdjacentHTML('afterbegin', child3);
+    container5?.insertAdjacentHTML('afterbegin', child5);
+    container10?.insertAdjacentHTML('afterbegin', child10);
+    container20?.insertAdjacentHTML('afterbegin', child20);
+    containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
 })
