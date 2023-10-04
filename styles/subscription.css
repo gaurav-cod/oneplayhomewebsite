@@ -473,7 +473,7 @@
     }
 }
 
-@media (max-width: 531.1px) {
+@media (max-width: 631.1px) {
     
     .marginLeft15P {
         margin-left: 15%;
@@ -498,6 +498,12 @@
         margin-top: -30px !important;
     }
     
+}
+
+@media (max-width: 460px) {
+    .marginLeft5P {
+        margin-left: 5%;
+    }
 }
 
 @media (max-width: 400px) {
