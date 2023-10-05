@@ -16,6 +16,7 @@
     <!-- Custom CSS Link -->
     <link href="./styles/main.css" rel="stylesheet" />
     <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
+    <link href="./styles/subscription.css" rel="stylesheet" />
 
     <title data-i18n-key="titlesection">Avail The Best Subscription Plans & Offers | OnePlay</title>
   </head>
@@ -117,10 +118,11 @@
         </div>
       </div>
     </nav>
-
-    <div class="container padding100 paddingRemove customH1">
+    
+    <div class="container padding50 paddingRemove customH1 overflowXHidden">
+      
       <div class="row justify-content-center">
-        <div class="col-lg-7 text-center">
+        <div class="col-lg-7 col-md-8 text-center">
           <h2
             id="heading1"
             class="text-white font50 customfont50 font800 mt-5"
@@ -140,32 +142,183 @@
             <a href="https://discord.com/invite/Cg4ZskStE2" target="_blank"><img src="./assets/subscription/icons8-discord.svg" class="img-fluid" alt="" /></a>
           </div>
         </div>
-        <div id="pricings" class="col-md-12 col-lg-12" hidden>
-          <div class="row justify-content-center">
-            <div class="col-auto pe-0 mt-4 mt-lg-5 hourSub">
-                <button class="btn text-nowrap  removeFocus defaultSub border-start-0 border-end-0" id="hourlyPlan">
-                  <p class="mb-0">Hourly Plan</p>
-                </button>
-            </div>
-            <div class="col-auto mt-4 mt-lg-5 monthSub">
-                <button class="btn text-nowrap  removeFocus defaultSub border-start-0 border-end-0" id="monthlyPlan">
-                  <p class="mb-0">Monthly Plan</p>
-                </button>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-10 col-md-12">
-              <div class="row d-none" id="HourlySub">
-                <div class="col-md-12">
-                  <div class="row pt-4 justify-content-center" id="hourly-subscriptions">
+
+        <div class="row justify-content-center" id="pricings" hidden>
+          <div class="col-11 col-md-11 col-lg-9 p-0" id="range-thumb">
+            <div class="row height130px align-items-end">
+              <div class="col-auto px-3">
+                <div class="row justify-content-center" id="1monsterImg">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">1 hr</div>
+                  <div class="col-auto mt-2 px-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row justify-content-center d-none" id="3monsterImg">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">3 hrs</div>
+                  <div class="col-auto px-0 mt-2">
+                    <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:40px; height: 40px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row justify-content-center d-none" id="5monsterImg">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">5 hrs</div>
+                  <div class="col-auto mt-2 px-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 45px; height: 45px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row justify-content-center d-none" style="margin-left: -25px;" id="10monsterImg">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">10 hrs</div>
+                  <div class="col-auto mt-2 px-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; width:50px;" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row justify-content-center d-none" style="margin-left: -35px;" id="20monsterImg">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">20 hrs</div>
+                  <div class="col-auto mt-2 px-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; width: 55px;" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                </div>
+                <div class="row justify-content-center d-none" id="UnmonsterImg" style="margin-left: -55px;">
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center">Unlimited</div>
+                  <div class="col-auto mt-2 px-0">
+                    <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 70px; width: 70px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
               </div>
-              <div class="row d-none" id="MonthlySub">
-                <div class="col-md-12">
-                  <div class="row justify-content-center">
-                    <div class="col-md-9 col-lg-7">
-                      <div class="row pt-4" id="monthly-subscriptions">
+            </div>
+          </div>
+          <div class="col-11 col-md-11 col-lg-9 p-0">
+            <div class="row sliderTrack mx-md-3 mx-1 px-md-2">
+              <div class="col-auto p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col-auto marginLeft5P p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col-auto marginLeft5P p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col-auto marginLeft15P p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col-auto marginLeft15P p-0">
+                <div class="hrDot"></div>
+              </div>
+              <div class="col text-end">
+                <div class="row justify-content-end">
+                  <div class="hrDot p-0 me-3 me-md-0"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slidecontainer">
+              <div class="position-absolute marginTop-45 userUnderstandingSlider">
+                <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
+              </div>
+              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)">
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center pt-md-2" id="pricings" hidden>
+          <div class="col-12 p-0">
+            <div class="card bgTransparent border-0">
+              <div class="row h-100 align-items-end visibleHideInDesktop">
+                <div class="col text-center p-0 pt-5 pt-md-0">
+                  <div class="opacity0">
+                    <div class="brTop20 w100 foundationSubCard py-3">
+                      <p class="font24 font500 fountGradientText mb-2">Foundation</p> 
+                      <p class="mutedColor my-2"><del>23</del></p>
+                      <p class="font38 font700 text-white mb-3">₹39</p> 
+                      <div class="d-grid">
+                        <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Resolution</p></div>
+                  <div class="height45 invisible">Resolution</div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Validity(Days)</p></div>
+                  <div class="height45 invisible">Resolution</div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Gaming Hours </p></div>
+                  <div class="height45 invisible">Resolution</div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Queue basis</p></div>
+                  <div class="height45 invisible">Resolution</div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Play games you own*</p></div>
+                  <div class="height45 invisible">Resolution</div>
+                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Refundable</p></div>
+                  <div class="height45 invisible">Resolution</div>
+                </div>
+              </div>
+              <div class="card-img-overlay p-0">
+                <div class="row justify-content-center">
+                  <div class="col-auto font20 font500 p-0 text-truncate h-100 d-none d-md-block">
+                    <div class="position-absolute marginTopCustom text-end">
+                      <div class="py-3 px-3 lightBlackBg mt-5 pe-lg-5">
+                        <p class="mb-0 offWhiteColor">Resolution</p>
+                      </div>
+                      <div class="py-3 px-3 pe-lg-5"><p class="mb-0 offWhiteColor">Validity</p></div>
+                      <div class="py-3 px-3 lightBlackBg pe-lg-5"><p class="mb-0 offWhiteColor">Gaming Hours</p></div>
+                      <div class="py-3 px-3 pe-lg-5">
+                        <p class="mb-0 offWhiteColor">Queue basis</p>
+                      </div>
+                      <div class="py-3 px-3 lightBlackBg pe-lg-5">
+                        <p class="mb-0 offWhiteColor">Play games you Own*</p>
+                      </div>
+                      <div class="py-3 px-3 pe-lg-5"><p class="mb-0 offWhiteColor">Refundable</p></div>
+                    </div>
+                  </div>
+                  <div class="col-auto p-0">
+                    <div class="position-relative sliderDefaultHeight">
+                      <div class="subCard1 moveleft">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan1Hour"></div>
+                        </div>
+                      </div>
+                      <div class="subCard2 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan3Hour"></div>
+                        </div>
+                      </div>
+                      <div class="subCard3 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan5Hour"></div>
+                        </div>
+                      </div>
+                      <div class="subCard4 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan10Hour"></div>
+                        </div>
+                      </div>
+                      <div class="subCard5 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="plan20Hour"></div>
+                        </div>
+                      </div>
+                      <div class="subCard6 d-none">
+                        <div class="testimonial-group">
+                          <div class="row pt-5" id="UnlimitedHours-plan"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row px-3">
+                      <div class="col-12 tipBg py-2">
+                        <div class="row my-1 mx-3">
+                          <div class="col-auto ps-0">
+                            <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
+                          </div>
+                          <div class="col p-0">
+                            <p class="mb-0 font20 font500 text-white">
+                              <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row my-1 mx-3">
+                          <div class="col-auto ps-0">
+                            <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
+                          </div>
+                          <div class="col p-0">
+                            <p class="mb-0 font20 font500 text-white">
+                              To play a game, you must have ownership of the game through the available stores.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -174,8 +327,11 @@
             </div>
           </div>
         </div>
-        <div id="pricings" class="col-lg-9 col-md-11 padding50" hidden>
-          <div id="list-subscriptions" class="row"></div>
+        <div class="row justify-content-center" id="pricings" hidden>
+          <div class="col-lg-10 col-md-12 text-center p-0">
+            <img src="./assets/subscriptionNew/happy-pack.svg" class="img-fluid d-none d-md-block" alt="" />
+            <img src="./assets/subscriptionNew/happy-for-mobile.svg" class="img-fluid d-md-none w-100" style="margin-top: 150px;" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -188,27 +344,6 @@
         </div>
         <div class="col-md-12 col-lg-11">
           <div class="customAccordion accordion" id="accordionExample">
-            <!-- <div class="accordion-item bgTransparent">
-                  <h2 class="accordion-header bgTransparent" id="headingOne">
-                    <button data-i18n-key="question1" class="accordion-button collapsed font20 text-white removeButtonFocus bgTransparent font600 ps-0 pe-0 borderBottom customBorder" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      How much does the OnePlay subscription cost?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body ps-0 pe-0 pt-0">
-                      <div class="row">
-                        <div class="col-lg-9">
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1">
-                            OnePlay is a subscription service. We offer you three amazing subscription plans that will fit all your needs. We have a Hourly plan for Rs. 35, Weekly plan for Rs. 150 and Monthly plan for Rs. 300. The higher the plan you choose, the more games you have access to. You will also gain more features such as HD quality and 4K streaming.
-                          </p>
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1-1">You can pay via Debit Card, Credit Card or UPI.</p>
-                          <p class="font20 font500 offWhiteColor border-bttom" data-i18n-key="asnquestion1-2">Once subscribed you can cancel your subscription at any point.</p>
-                        </div>
-                      </div>
-                      <div class="gradientBorderbottom mt-2"></div>
-                    </div>
-                  </div>
-                </div> -->
             <div class="accordion-item bgTransparent">
               <h2 class="accordion-header bgTransparent" id="headingTwo">
                 <button
@@ -308,10 +443,10 @@
                       <p
                         class="font20 font500 offWhiteColor border-bttom gradientAnchor"
                       >
-                      When it comes to an Active Monthly Plan on OnePlay, it's important to note the refund policy. OnePlay offers a refund option within 24 hours from the completion of the payment transaction, provided no gaming hours have been utilized during this period. However, once this 24-hour window has passed, you will not be eligible for a refund of a purchased subscription. OnePlay also allows customers to apply for a cancel/refund for an upcoming monthly plan. If you have a subscription plan with OnePlay and you wish to cancel it, you can do so up to 5 days prior to the start date of the next billing cycle.
+                      When it comes to OnePlay's Active 20 hrs or Unlimited plans, it's important to understand the refund policy. OnePlay provides a refund option within 24 hours of the payment transaction's completion, provided less than or equal to 1 hour of gaming hours have been used during this period. However, after this 24-hour period has passed, you will be ineligible for a refund on a purchased subscription. Customers can also apply for a cancellation/refund for an upcoming monthly plan through OnePlay. If you have a subscription plan with OnePlay and want to cancel it, you can do so up to 5 days before the next billing cycle begins.
                       </p>
                       <p class="font20 font500 offWhiteColor border-bttom gradientAnchor">
-                        For hourly plans on OnePlay, it's important to note that there is no option available for cancellation and refund. For seeking cancellation and/or refund, please reach out to us at <a href="mailto:support@oneplay.in">support@oneplay.in</a>.
+                        It is important to note that there is no cancellation or refund option available for other OnePlay plans. Please contact us at <a href="mailto:support@oneplay.in">support@oneplay.in</a> if you want to cancel or get a refund.
                       </p>
                     </div>
                   </div>
@@ -676,7 +811,108 @@
 
     <!-- <script src="./js/multi-language.js"></script> -->
 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
     <script>
+      // document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = "4")
+      // User Slider Animation
+      $('.userUnderstandingSlider').hide();
+      window.onload = function ()
+      {
+        setTimeout(function(){ 
+          $('.userUnderstandingSlider').show();
+        }, 4000);
+      };
+      $(document).click(function() {
+        $('.userUnderstandingSlider').hide();
+      });
+
+      // init
+        const moveCharacter = () => {
+          const rangeThumb = document.getElementById("range-thumb");
+          const rangeInput = document.getElementById("slider");
+          const rangeValue = parseInt(rangeInput.value);
+          const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
+          const thumbWidth = 20;
+          const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
+          rangeThumb.style.transform = `translateX(${newPosition}px)`;
+          
+        };
+        document.getElementById("slider").addEventListener("input", () => {
+          moveCharacter();
+        });
+
+      // calc nearest dot
+      const calculateNearestDot = (value) => {
+        const dot_pos = [0, 10, 20, 40, 60, 100];
+        let nearest_dot = 0;
+        let difference = Math.abs(dot_pos[0] - value);
+        for (let i = 0; i < dot_pos.length; i++) {
+          let new_differnce = Math.abs(dot_pos[i] - value)
+          if (new_differnce < difference) {
+            difference = new_differnce;
+            nearest_dot = i;
+          }
+        }
+        return dot_pos[nearest_dot]
+      }
+      // movemoster
+      const changeCharacter = (pos) => {
+        const pos_map= {
+          0: {
+            id: "1monsterImg",
+            subCard: "subCard1",
+          },
+          10: {
+            id: "3monsterImg",
+            subCard: "subCard2",
+          },
+          20: {
+            id: "5monsterImg",
+            subCard: "subCard3",
+          },
+          40: {
+            id: "10monsterImg",
+            subCard: "subCard4",
+          },
+          60: {
+            id: "20monsterImg",
+            subCard: "subCard5",
+          },
+          100: {
+            id: "UnmonsterImg",
+            subCard: "subCard6",
+          },
+        };
+        [
+          "1monsterImg",
+          "3monsterImg",
+          "5monsterImg",
+          "10monsterImg",
+          "20monsterImg",
+          "UnmonsterImg",
+        ].map(e => document.getElementById(e).classList.add("d-none"));
+        document.getElementById(pos_map[pos].id).classList.remove("d-none");
+        document.querySelector('#hoursPerDay').innerText = document.querySelector(`.${pos_map[pos].subCard} .data-span`).dataset.hrsPerDay;
+        [
+          "subCard1",
+          "subCard2",
+          "subCard3",
+          "subCard4",
+          "subCard5",
+          "subCard6",
+        ].map(e =>document.querySelectorAll('.'+e).forEach(e => { e.classList.remove('moveleft'); e.classList.add('moveright');}));
+        document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
+      }
+
+      const updateSlider = (value) => {
+        const nearest_dot = calculateNearestDot(value)
+        console.warn(nearest_dot)
+        document.getElementById('slider').value = nearest_dot;
+        changeCharacter(nearest_dot);
+        moveCharacter();
+      }
+
       const _event = countlyService.startEvent("websiteSubscriptionView")
       const updateEvent = (segment) => {
         _event.update({
@@ -721,38 +957,29 @@
       //   return await response.json();
       // }
 
-      $( document ).ready(function() {
-
-        $("#hourlyPlan").addClass("activeSub");
-        $("#HourlySub").removeClass("d-none");
+      $( window ).load(function() {
         const url = window.location.href;
+        const urlObj = new URL(url);
 
-        if(url.includes("#Hourly_Plan")) {
-          activehourlyPlan()
-        } else if(url.includes("#Monthly_Plan")) {
-          activeMonthlyPlan();
+        const tokensParam = +(urlObj.searchParams.get('plan'));
+        if (tokensParam) {
+          if(tokensParam > 600 && tokensParam <= 1200) {
+            premiumPlan();
+          } else if(tokensParam > 1200){
+            unlimitedPlan();
+          }
         }
 
-        $("#hourlyPlan").click(function(){
-          activehourlyPlan()
-        });
-
-        function activehourlyPlan() {
-          $("#hourlyPlan").addClass("activeSub");
-          $("#HourlySub").removeClass("d-none");
-          $("#monthlyPlan").removeClass("activeSub");
-          $("#MonthlySub").addClass("d-none");
+        function unlimitedPlan() {
+          $('#slider').val(100);
+          changeCharacter(100);
+          moveCharacter();
         }
 
-        $("#monthlyPlan").click(function(){
-          activeMonthlyPlan();
-        });
-
-        function activeMonthlyPlan() {
-          $("#monthlyPlan").addClass("activeSub");
-          $("#MonthlySub").removeClass("d-none");
-          $("#hourlyPlan").removeClass("activeSub");
-          $("#HourlySub").addClass("d-none");
+        function premiumPlan() {
+          $('#slider').val(60);
+          changeCharacter(60);
+          moveCharacter();
         }
       })
 

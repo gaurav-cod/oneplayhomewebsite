@@ -157,8 +157,8 @@ html {
     }
 
     .font38 {
-        font-size: 24px !important;
-        line-height: 34px !important;
+        font-size: 20px !important;
+        line-height: 30px !important;
     }
 
     .customPadding5 {
@@ -1114,12 +1114,12 @@ input, textarea {
     align-items: center;
 }
 
-.signupBg {
+/* .signupBg {
     background-image: url('../assets/signup/login_signup_Illustration.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
+} */
 
 .loginBg {
     background-color: #212123 !important;
@@ -1317,13 +1317,13 @@ input, textarea {
    white-space: nowrap;
  }
 
-.heroSectionBg {
+/* .heroSectionBg {
     background-image: url('/assets/Group\ 364.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 100%;
-}
+} */
 
 .marginNegativeTop {
     margin-top: -7%;
@@ -1651,10 +1651,10 @@ a {
         max-width: 95% !important;
     }   
 }
-
+/* 
 .backgroundBg {
     background-image: url('../assets/partner/Group\ 605.svg');
-}
+} */
 
 .cardBG {
     background-color: #110D0D !important;
