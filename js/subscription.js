@@ -41,6 +41,13 @@ function makeElementFromSubscription(sub) {
     return ` 
         <div class="col d-md-none">
             <span class="data-span" data-hrs-per-day="${sub['gameplay_limit_hrs_per_day']}" ></span>
+            <div class="row justify-content-center">
+                <div class="col-auto p-0">
+                    <div class="w100">
+                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />  
+                    </div>
+                </div>
+            </div>
             ${sub['plan_config']?.is_recommended ? 
                 `<div class="row justify-content-center position-relative">
                     <div class="col-auto position-absolute marginTop-20 text-center p-0">
@@ -83,8 +90,12 @@ function makeElementFromSubscription(sub) {
             </div>
         </div>
         <div class="col p-0 text-center font20 font500 d-none d-md-block">
-            
             <div class="row">
+                <div class="col-12 p-0">
+                    <div class="w218">
+                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />  
+                    </div>
+                </div>
                 <div class="col-auto brTop30 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : '' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-md-3 px-2 w218 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
                     ${sub['plan_config']?.is_recommended ? 
                         `<div class="row justify-content-center position-relative">
