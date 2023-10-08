@@ -77,7 +77,7 @@ function makeElementFromSubscription(sub) {
                     </div>
                     <div class="height40"></div>
                     <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
+                        <p class="mb-0 text-white">${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
                     </div>
                 </div>
             </div>
