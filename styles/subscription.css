@@ -421,6 +421,18 @@
     }
 }
 
+@-webkit-keyframes moveright {
+    0% {  
+        -webkit-transform: translateX(0%);
+        position: absolute; 
+    }
+    100% { 
+        -webkit-transform: translateX(100%); 
+        position: absolute;
+        display: none;
+    }
+}
+
 .moveleft {
     animation-name: moveleft;
     animation-duration: 0.5s;
