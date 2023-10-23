@@ -333,6 +333,14 @@
     margin-top: -50px !important;
     white-space: nowrap;
 }
+.discountGif {
+    position: absolute;
+    width: auto !important;
+    height: auto !important;
+    padding: 5px 20px !important;
+    margin-top: -50px !important;
+    white-space: nowrap;
+}
 
 @media (max-width: 991.9px) {
     .marginTop-20 {
@@ -428,6 +436,11 @@
     }
 
     .monterRange {
+        padding: 0px 10px !important;
+        margin-top: -30px !important;
+    }
+
+    .discountGif {
         padding: 0px 10px !important;
         margin-top: -30px !important;
     }
