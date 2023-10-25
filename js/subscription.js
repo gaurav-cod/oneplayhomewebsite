@@ -169,11 +169,8 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             </div>
             
         </div>
-        <!--div class="position-absolute">
+        <div class="position-absolute justify-content-center text-center">
             <img src="./assets/subscriptionNew/offer-for-all.svg" class="${all_offer_flag ? '' : 'invisible'} img-fluid" alt="" />
-        </div-->
-        <div class="position-absolute" style="margin: auto;">
-            <img src="./assets/subscriptionNew/offer-for-two.svg" class="${all_offer_flag ? '' : 'invisible'} img-fluid" alt="" />
         </div>
     `
 }

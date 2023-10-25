@@ -147,7 +147,7 @@
           <div class="col-11 col-md-11 col-lg-9 p-0" id="range-thumb">
             <div class="row height130px align-items-end">
               <div class="col-auto px-3">
-                <div class="row justify-content-center" id="1monsterImg">
+                <div class="row justify-content-center sliderText" id="1monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">1 hr</div>
                   <div class="col-auto discountGif" style="margin-left:66px" id="discountGif1hrs">
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
@@ -158,7 +158,7 @@
                   
                 </div>
                 
-                <div class="row justify-content-center d-none" id="3monsterImg">
+                <div class="row justify-content-center d-none sliderText" id="3monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">3 hrs</div>
                   <div class="col-auto discountGif" style="margin-left:85px" id="discountGif3hrs">
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
@@ -167,7 +167,7 @@
                     <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:40px; height: 40px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" id="5monsterImg">
+                <div class="row justify-content-center d-none sliderText" id="5monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">5 hrs</div>
                   <div class="col-auto discountGif" style="margin-left:85px" id="discountGif5hrs">
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
@@ -176,7 +176,7 @@
                     <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 45px; height: 45px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" style="margin-left: -25px;" id="10monsterImg">
+                <div class="row justify-content-center d-none sliderText" style="margin-left: -25px;" id="10monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">10 hrs</div>
                   <div class="col-auto discountGif" style="margin-left:95px" id="discountGif10hrs">
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
@@ -185,7 +185,7 @@
                     <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; width:50px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" style="margin-left: -35px;" id="20monsterImg">
+                <div class="row justify-content-center d-none sliderText" style="margin-left: -35px;" id="20monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">20 hrs</div>
                   <div class="col-auto discountGif" style="margin-left:100px" id="discountGif20hrs"> 
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
@@ -194,7 +194,7 @@
                     <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; width: 55px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" id="UnmonsterImg" style="margin-left: -55px;">
+                <div class="row justify-content-center d-none sliderText" id="UnmonsterImg" style="margin-left: -55px;">
                   <div class="col-auto discountGif" style="margin-left:-320px" id="discountGifunlimited">
                     <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
                   </div>
@@ -233,7 +233,7 @@
               <div class="position-absolute marginTop-45 userUnderstandingSlider">
                 <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
               </div>
-              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)">
+              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)" onmousedown="updateSliderText(this.value)">
             </div>
           </div>
         </div>
@@ -292,11 +292,8 @@
                     </div>
                   </div>
                   <div class="col-md-8 col-lg-9 p-0">
-                    <!-- <div class="position-absolute" >
-                      <img src="./assets/subscriptionNew/offer-for-all.svg" id="offer-for-all" class="img-fluid pt-3 invisible" alt="" />
-                    </div> -->
                     <div class="position-absolute" >
-                      <img src="./assets/subscriptionNew/offer-for-two.svg" id="offer-for-two" class="img-fluid pt-3 invisible" alt="" />
+                      <img src="./assets/subscriptionNew/offer-for-all.svg" id="offer-for-all" class="img-fluid pt-3 invisible" alt="" />
                     </div>
                     <div class="position-relative">
                       <div class="subCard1 moveleft">
@@ -959,17 +956,24 @@
       }
 
       const updateSlider = (value) => {
+
+        document.querySelectorAll('.sliderText').hidden = true;          
         document.getElementById('tipBg').hidden = true;
         const nearest_dot = calculateNearestDot(value)
         console.warn(nearest_dot)
         document.getElementById('slider').value = nearest_dot;
         changeCharacter(nearest_dot);
         moveCharacter();
-        // setTimeout(, 5000);
         setTimeout(function () {
           document.getElementById('tipBg').hidden = false
         }, 300);
-        // ;
+      }
+
+      const updateSliderText = (value) => {
+        document.querySelectorAll('.sliderText').forEach(e => { 
+          e.classList.add("d-none");
+        }); 
+
       }
 
       const _event = countlyService.startEvent("websiteSubscriptionView")
