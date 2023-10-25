@@ -277,7 +277,7 @@ loadSubscriptions().then((allSubscriptions) => {
     {
         hourlyPlanUnlimited_flag = true;
     }
-    if(Object.keys(hourlyPlan20.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
+    if(Object.keys(hourlyPlanUnlimited.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
     {
         document.getElementById('discountGifunlimited').hidden = false;
     }
