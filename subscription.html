@@ -330,7 +330,7 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="row tipBg py-2">
+                    <div class="row tipBg py-2" id="tipBg">
                       <div class="row my-1 mx-3">
                         <div class="col-auto ps-0">
                           <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
@@ -888,30 +888,43 @@
       }
       // movemoster
       const changeCharacter = (pos) => {
+
         const pos_map= {
           0: {
             id: "1monsterImg",
             subCard: "subCard1",
+            hrs: 1,
+            gameplay_hrs: 4,
           },
           10: {
             id: "3monsterImg",
             subCard: "subCard2",
+            hrs: 3,
+            gameplay_hrs: 4,
           },
           20: {
             id: "5monsterImg",
             subCard: "subCard3",
+            hrs: 5,
+            gameplay_hrs: 4,
           },
           40: {
             id: "10monsterImg",
             subCard: "subCard4",
+            hrs: 10,
+            gameplay_hrs: 4,
           },
           60: {
             id: "20monsterImg",
             subCard: "subCard5",
+            hrs: 20,
+            gameplay_hrs: 6,
           },
           100: {
             id: "UnmonsterImg",
             subCard: "subCard6",
+            hrs: 'unlimited',
+            gameplay_hrs: 6,
           },
         };
         [
@@ -923,7 +936,8 @@
           "UnmonsterImg",
         ].map(e => document.getElementById(e).classList.add("d-none"));
         document.getElementById(pos_map[pos].id).classList.remove("d-none");
-        document.querySelector('#hoursPerDay').innerText = document.querySelector(`.${pos_map[pos].subCard} .data-span`).dataset.hrsPerDay;
+        document.querySelector('#hoursPerDay').innerText = pos_map[pos].gameplay_hrs;
+        
         [
           "subCard1",
           "subCard2",
@@ -931,16 +945,28 @@
           "subCard4",
           "subCard5",
           "subCard6",
-        ].map(e =>document.querySelectorAll('.'+e).forEach(e => { e.classList.remove('moveleft'); e.classList.add('moveright');}));
+        ].map(e => document.querySelectorAll('.'+e).forEach(e => { 
+            e.classList.remove('moveleft'); 
+            e.classList.add('moveright');
+            e.classList.add('d-none');
+          })
+        );
         document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
+        
       }
 
       const updateSlider = (value) => {
+        document.getElementById('tipBg').hidden = true;
         const nearest_dot = calculateNearestDot(value)
         console.warn(nearest_dot)
         document.getElementById('slider').value = nearest_dot;
         changeCharacter(nearest_dot);
         moveCharacter();
+        // setTimeout(, 5000);
+        setTimeout(function () {
+          document.getElementById('tipBg').hidden = false
+        }, 300);
+        // ;
       }
 
       const _event = countlyService.startEvent("websiteSubscriptionView")
