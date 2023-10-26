@@ -343,38 +343,83 @@
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .discountGif {
         margin-top: -40px !important;
         margin-left: 20px !important;
     }
+    #discountGifunlimited {
+        margin-left:-250px !important;
+        position: absolute;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px !important;
+        margin-top: -40px !important;
+        white-space: nowrap;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media (min-width: 600px) {
     .discountGif {
         margin-top: -40px !important;
+    }
+    #discountGifunlimited {
+        margin-left:-270px !important;
+        position: absolute;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px !important;
+        margin-top: -55px !important;
+        white-space: nowrap;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .discountGif {
         margin-top: -55px !important;
+    }
+    #discountGifunlimited {
+        margin-left:-300px !important;
+        position: absolute;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px !important;
+        margin-top: -50px !important;
+        white-space: nowrap;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media (min-width: 992px) {
     .discountGif {
         margin-top: -50px !important;
+    }
+    #discountGifunlimited {
+        margin-left:-330px !important;
+        position: absolute;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px !important;
+        margin-top: -40px !important;
+        white-space: nowrap;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
     .discountGif {
         margin-top: -50px !important;
+    }
+    #discountGifunlimited {
+        margin-left:-330px !important;
+        position: absolute;
+        width: auto !important;
+        height: auto !important;
+        padding: 5px 20px !important;
+        margin-top: -50px !important;
+        white-space: nowrap;
     }
 }
 
