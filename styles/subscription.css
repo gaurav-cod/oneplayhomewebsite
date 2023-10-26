@@ -51,7 +51,7 @@
 
 .w218 {
     width: 200px !important;
-    margin: 0px 25px;
+    margin: auto;
 }
 
 .fountGradientText {
@@ -157,7 +157,7 @@
 
     .w218 {
         width: 155px !important;
-        margin: 0px 20px !important;
+        margin: auto !important;
     }
 
     .textHour {
@@ -180,7 +180,7 @@
 
     .w218 {
         width: 108px !important;
-        margin: 0px 15px !important;
+        margin: auto !important;
     }
 
     .font30 {
@@ -217,7 +217,7 @@
 
     .w218 {
         width: 100px !important;
-        margin: 0px 5px !important;
+        margin: auto !important;
     }
 
     .textHour {
