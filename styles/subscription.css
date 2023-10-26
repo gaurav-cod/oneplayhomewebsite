@@ -505,9 +505,15 @@
     margin-top: -67px !important;
 }
 
+@media (max-width: 1000px) {
+    .marginTop-20 {
+        margin-top: -20px !important;
+    }
+}
+
 @media (max-width: 767.9px) {
     .marginTop-20 {
-        margin-top: -10px !important;
+        margin-top: -15px !important;
     }
 
     .marginTop-67 {
