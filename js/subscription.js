@@ -106,7 +106,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             </div>
         </div>
         <div class="col p-0 text-center font20 font500 d-none d-md-block">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-12 p-0">
                     <div class="w218">
                         <img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" /> 
@@ -129,38 +129,38 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     </div>
                 </div>
             </div>
-            <div class="row lightBlackBg">
+            <div class="row lightBlackBg justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>
                 </div>
             </div>
-            <div class="row lightBlackBg">
+            <div class="row lightBlackBg justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
                         ${sub['plan_config']?.is_unlimited ? 'Unlimited*' : `${sub['total_offered_tokens'] / 60}`}
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
                         ${sub['plan_config']?.is_queue ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
-            <div class="row lightBlackBg">
+            <div class="row lightBlackBg justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">
                         ${sub['plan_config']?.play_games_you_own ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
                         ${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
@@ -169,11 +169,8 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             </div>
             
         </div>
-        <!--div class="position-absolute">
-            <img src="./assets/subscriptionNew/offer-for-all.svg" class="${all_offer_flag ? '' : 'invisible'} img-fluid" alt="" />
-        </div-->
-        <div class="position-absolute" style="margin: auto;">
-            <img src="./assets/subscriptionNew/offer-for-two.svg" class="${all_offer_flag ? '' : 'invisible'} img-fluid" alt="" />
+        <div class="position-absolute justify-content-center text-center">
+            <img src="./assets/subscriptionNew/offer-for-all.svg" class="${all_offer_flag ? '' : ''} img-fluid" alt="" />
         </div>
     `
 }
