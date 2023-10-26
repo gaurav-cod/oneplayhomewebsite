@@ -346,7 +346,7 @@
 @media (max-width: 600px) {
     .discountGif {
         margin-top: -40px !important;
-        margin-left: 20px !important;
+        margin-left: 40px !important;
     }
     #discountGifunlimited {
         margin-left:-250px !important;
@@ -362,7 +362,7 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 600px) {
     .discountGif {
-        margin-top: -40px !important;
+        margin-top: -55px !important;
     }
     #discountGifunlimited {
         margin-left:-270px !important;
@@ -402,7 +402,7 @@
         width: auto !important;
         height: auto !important;
         padding: 5px 20px !important;
-        margin-top: -40px !important;
+        margin-top: -50px !important;
         white-space: nowrap;
     }
 }
