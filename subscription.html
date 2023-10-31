@@ -147,43 +147,63 @@
           <div class="col-11 col-md-11 col-lg-9 p-0" id="range-thumb">
             <div class="row height130px align-items-end">
               <div class="col-auto px-3">
-                <div class="row justify-content-center" id="1monsterImg">
+                <div class="row justify-content-center sliderText" id="1monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">1 hr</div>
+                  <div class="col-auto discountGif" style="margin-left:66px" id="discountGif1hrs">
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                   <div class="col-auto mt-2 px-0">
                     <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
                   </div>
+                  
                 </div>
-                <div class="row justify-content-center d-none" id="3monsterImg">
+                
+                <div class="row justify-content-center d-none sliderText" id="3monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">3 hrs</div>
+                  <div class="col-auto discountGif" style="margin-left:85px" id="discountGif3hrs">
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                   <div class="col-auto px-0 mt-2">
                     <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:40px; height: 40px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" id="5monsterImg">
+                <div class="row justify-content-center d-none sliderText" id="5monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">5 hrs</div>
+                  <div class="col-auto discountGif" style="margin-left:85px" id="discountGif5hrs">
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                   <div class="col-auto mt-2 px-0">
                     <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 45px; height: 45px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" style="margin-left: -25px;" id="10monsterImg">
+                <div class="row justify-content-center d-none sliderText" style="margin-left: -25px;" id="10monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">10 hrs</div>
+                  <div class="col-auto discountGif" style="margin-left:95px" id="discountGif10hrs">
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                   <div class="col-auto mt-2 px-0">
                     <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; width:50px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" style="margin-left: -35px;" id="20monsterImg">
+                <div class="row justify-content-center d-none sliderText" style="margin-left: -35px;" id="20monsterImg">
                   <div class="monterRange textHour font700 text-white gradientBorder text-center">20 hrs</div>
+                  <div class="col-auto discountGif" style="margin-left:100px" id="discountGif20hrs"> 
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
                   <div class="col-auto mt-2 px-0">
                     <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; width: 55px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-                <div class="row justify-content-center d-none" id="UnmonsterImg" style="margin-left: -55px;">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">Unlimited</div>
+                <div class="row justify-content-center d-none sliderText" id="UnmonsterImg" style="margin-left: -55px;">
+                  <div class="col-auto" id="discountGifunlimited">
+                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
+                  </div>
+                  <div class="monterRange textHour font700 text-white gradientBorder text-center" style="margin-right: 10px;">Unlimited</div>
                   <div class="col-auto mt-2 px-0">
                     <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 70px; width: 70px;" class="flipImage" loop autoplay></lottie-player>
                   </div>
                 </div>
-              </div>
+              </div>       
             </div>
           </div>
           <div class="col-11 col-md-11 col-lg-9 p-0">
@@ -213,15 +233,22 @@
               <div class="position-absolute marginTop-45 userUnderstandingSlider">
                 <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
               </div>
-              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)">
+              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)" onmousedown="updateSliderText(this.value)" ontouchstart="updateSliderText(this.value)">
             </div>
           </div>
         </div>
         <div class="row justify-content-center pt-md-2" id="pricings" hidden>
-          <div class="col-12 p-0">
+          <div class="col-12 col-md-12 col-lg-11 col-xl-10 p-0">
             <div class="card bgTransparent border-0">
               <div class="row h-100 align-items-end visibleHideInDesktop">
-                <div class="col text-center p-0 pt-5 pt-md-0">
+                <div class="col text-center p-0">
+                  <div class="row justify-content-center opacity0">
+                    <div class="col-auto p-0">
+                      <div class="w100">
+                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />  
+                      </div>
+                    </div>
+                  </div>
                   <div class="opacity0">
                     <div class="brTop20 w100 foundationSubCard py-3">
                       <p class="font24 font500 fountGradientText mb-2">Foundation</p> 
@@ -248,8 +275,8 @@
               </div>
               <div class="card-img-overlay p-0">
                 <div class="row justify-content-center">
-                  <div class="col-auto font20 font500 p-0 text-truncate h-100 d-none d-md-block">
-                    <div class="position-absolute marginTopCustom text-end">
+                  <div class="col-md-4 col-lg-3 font20 font500 p-0 text-truncate h-100 d-none d-md-block align-self-end">
+                    <div class="text-end">
                       <div class="py-3 px-3 lightBlackBg mt-5 pe-lg-5">
                         <p class="mb-0 offWhiteColor">Resolution</p>
                       </div>
@@ -264,66 +291,69 @@
                       <div class="py-3 px-3 pe-lg-5"><p class="mb-0 offWhiteColor">Refundable</p></div>
                     </div>
                   </div>
-                  <div class="col-auto p-0">
-                    <div class="position-relative sliderDefaultHeight">
+                  <div class="col-md-8 col-lg-9 p-0">
+                    <div class="position-absolute" >
+                      <img src="./assets/subscriptionNew/offer-for-all.svg" id="offer-for-all" class="img-fluid pt-3 invisible" alt="" />
+                    </div>
+                    <div class="position-relative">
                       <div class="subCard1 moveleft">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="plan1Hour"></div>
+                          <div class="row" id="plan1Hour"></div>
                         </div>
                       </div>
                       <div class="subCard2 d-none">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="plan3Hour"></div>
+                          <div class="row" id="plan3Hour"></div>
                         </div>
                       </div>
                       <div class="subCard3 d-none">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="plan5Hour"></div>
+                          <div class="row" id="plan5Hour"></div>
                         </div>
                       </div>
                       <div class="subCard4 d-none">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="plan10Hour"></div>
+                          <div class="row" id="plan10Hour"></div>
                         </div>
                       </div>
                       <div class="subCard5 d-none">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="plan20Hour"></div>
+                          <div class="row" id="plan20Hour"></div>
                         </div>
                       </div>
                       <div class="subCard6 d-none">
                         <div class="testimonial-group">
-                          <div class="row pt-5" id="UnlimitedHours-plan"></div>
+                          <div class="row" id="UnlimitedHours-plan"></div>
                         </div>
                       </div>
                     </div>
-                    <div class="row px-3">
-                      <div class="col-12 tipBg py-2">
-                        <div class="row my-1 mx-3">
-                          <div class="col-auto ps-0">
-                            <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
-                          </div>
-                          <div class="col p-0">
-                            <p class="mb-0 font20 font500 text-white">
-                              <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
-                            </p>
-                          </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="row tipBg py-2" id="tipBg">
+                      <div class="row my-1 mx-3">
+                        <div class="col-auto ps-0">
+                          <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
                         </div>
-                        <div class="row my-1 mx-3">
-                          <div class="col-auto ps-0">
-                            <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
-                          </div>
-                          <div class="col p-0">
-                            <p class="mb-0 font20 font500 text-white">
-                              To play a game, you must have ownership of the game through the available stores.
-                            </p>
-                          </div>
+                        <div class="col p-0">
+                          <p class="mb-0 font20 font500 text-white">
+                            <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="row my-1 mx-3">
+                        <div class="col-auto ps-0">
+                          <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
+                        </div>
+                        <div class="col p-0">
+                          <p class="mb-0 font20 font500 text-white">
+                            To play a game, you must have ownership of the game through the available stores.
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -858,30 +888,43 @@
       }
       // movemoster
       const changeCharacter = (pos) => {
+
         const pos_map= {
           0: {
             id: "1monsterImg",
             subCard: "subCard1",
+            hrs: 1,
+            gameplay_hrs: 4,
           },
           10: {
             id: "3monsterImg",
             subCard: "subCard2",
+            hrs: 3,
+            gameplay_hrs: 4,
           },
           20: {
             id: "5monsterImg",
             subCard: "subCard3",
+            hrs: 5,
+            gameplay_hrs: 4,
           },
           40: {
             id: "10monsterImg",
             subCard: "subCard4",
+            hrs: 10,
+            gameplay_hrs: 4,
           },
           60: {
             id: "20monsterImg",
             subCard: "subCard5",
+            hrs: 20,
+            gameplay_hrs: 6,
           },
           100: {
             id: "UnmonsterImg",
             subCard: "subCard6",
+            hrs: 'unlimited',
+            gameplay_hrs: 6,
           },
         };
         [
@@ -893,7 +936,8 @@
           "UnmonsterImg",
         ].map(e => document.getElementById(e).classList.add("d-none"));
         document.getElementById(pos_map[pos].id).classList.remove("d-none");
-        document.querySelector('#hoursPerDay').innerText = document.querySelector(`.${pos_map[pos].subCard} .data-span`).dataset.hrsPerDay;
+        document.querySelector('#hoursPerDay').innerText = pos_map[pos].gameplay_hrs;
+        
         [
           "subCard1",
           "subCard2",
@@ -901,16 +945,35 @@
           "subCard4",
           "subCard5",
           "subCard6",
-        ].map(e =>document.querySelectorAll('.'+e).forEach(e => { e.classList.remove('moveleft'); e.classList.add('moveright');}));
+        ].map(e => document.querySelectorAll('.'+e).forEach(e => { 
+            e.classList.remove('moveleft'); 
+            e.classList.add('moveright');
+            e.classList.add('d-none');
+          })
+        );
         document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
+        
       }
 
       const updateSlider = (value) => {
+
+        document.querySelectorAll('.sliderText').hidden = true;          
+        document.getElementById('tipBg').hidden = true;
         const nearest_dot = calculateNearestDot(value)
         console.warn(nearest_dot)
         document.getElementById('slider').value = nearest_dot;
         changeCharacter(nearest_dot);
         moveCharacter();
+        setTimeout(function () {
+          document.getElementById('tipBg').hidden = false
+        }, 300);
+      }
+
+      const updateSliderText = (value) => {
+        document.querySelectorAll('.sliderText').forEach(e => { 
+          e.classList.add("d-none");
+        }); 
+
       }
 
       const _event = countlyService.startEvent("websiteSubscriptionView")
