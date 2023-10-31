@@ -621,3 +621,7 @@ lottie-player {
         height: 750px !important;
     }
 }
+
+.unlimited-star {
+    color: red;
+}
