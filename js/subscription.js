@@ -21,9 +21,9 @@ function loadSubscriptions() {
  */
 function getResolution(sub) {
     if (sub['can_run_4k'] == 'true') {
-        return '4K';
+        return '<span class="font8">Upto</span> 4K';
     } else if (sub['can_run_hd'] == 'true') {
-        return '1080p';
+        return '<span class="font8">Upto</span> 1080p';
     } else {
         return '720p';
     }
