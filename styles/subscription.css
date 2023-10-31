@@ -581,9 +581,9 @@ lottie-player {
 }
 
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
     .font8 {
-        font-size: 5px !important;
+        font-size: 6px !important;
         line-height: 5px !important;  
     }
 }
