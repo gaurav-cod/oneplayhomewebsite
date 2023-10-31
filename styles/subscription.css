@@ -596,3 +596,7 @@
         visibility: hidden;
     } 
 }
+
+.unlimited-star {
+    color: red;
+}
