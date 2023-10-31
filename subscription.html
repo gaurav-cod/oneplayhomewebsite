@@ -911,6 +911,10 @@
         document.getElementById('slider').value = nearest_dot;
         changeCharacter(nearest_dot);
         moveCharacter();
+        if(nearest_dot == 100)
+        {
+          document.querySelector('#hoursPerDay').innerHTML = '<span class="unlimited-star">*</span>6';
+        }
       }
 
       const _event = countlyService.startEvent("websiteSubscriptionView")

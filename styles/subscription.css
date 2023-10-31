@@ -640,3 +640,7 @@ lottie-player {
         line-height: 5px !important;  
     }
 }
+
+.unlimited-star {
+    color: red;
+}
