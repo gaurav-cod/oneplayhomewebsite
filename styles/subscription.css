@@ -294,6 +294,19 @@
     line-height: 14px !important;
 }
 
+.font8 {
+    font-size: 10px !important;
+    line-height: 9px !important;
+}
+/* 
+.slidecontainer input[type=range] {
+    pointer-events: none;
+} */
+
+/* .slidecontainer input[type=range]::-webkit-slider-thumb {
+    pointer-events:auto;
+} */
+
 .testimonial-group > .row {
     overflow-x: auto;
     white-space: nowrap;
@@ -591,6 +604,10 @@
         font-size: 8px !important;
         line-height: 8px !important;  
     }
+    .font8 {
+        font-size: 6px !important;
+        line-height: 5px !important;  
+    }
 
     .width100 {
         width: 80px !important;
@@ -598,6 +615,14 @@
 
     .marginTop-20 {
         margin-top: -3px !important;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .font8 {
+        font-size: 4.25px !important;
+        line-height: 5px !important;  
     }
 }
 
