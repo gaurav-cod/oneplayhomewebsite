@@ -21,9 +21,9 @@ function loadSubscriptions() {
  */
 function getResolution(sub) {
     if (sub['can_run_4k'] == 'true') {
-        return '4K';
+        return '<span class="font8">Upto</span> 4K';
     } else if (sub['can_run_hd'] == 'true') {
-        return '1080p';
+        return '<span class="font8">Upto</span> 1080p';
     } else {
         return '720p';
     }
@@ -100,7 +100,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     </div>
                     <div class="height40"></div>
                     <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">${!sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
+                        <p class="mb-0 text-white">${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
                     </div>
                 </div>
             </div>
