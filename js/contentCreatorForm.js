@@ -35,15 +35,17 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
-  var regex = /^(\+?\d{1,3}|\d{1,4})$/gm
-  var match = phoneField.value.match(regex);
+
+  var regex = /^(\+\d.*)$/gm
+  var match = phoneField.value.substring(0, 4).match(regex);
+  console.log(match);
   if(!match)
   {
-    document.getElementById("missingCountryCode").classList.remove("d-none");
     document.getElementById("invalidPhone").classList.add("d-none");
+    document.getElementById("missingCountryCode").classList.remove("d-none");
     return false;
   }
-  if (!phoneField.value.match(phonePattern)) {
+  else if (!phoneField.value.match(phonePattern)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
     document.getElementById("missingCountryCode").classList.add("d-none");
     return false;
