@@ -35,11 +35,21 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
+  var regex = /^(\+?\d{1,3}|\d{1,4})$/gm
+  var match = phoneField.value.match(regex);
+  if(!match)
+  {
+    document.getElementById("missingCountryCode").classList.remove("d-none");
+    document.getElementById("invalidPhone").classList.add("d-none");
+    return false;
+  }
   if (!phoneField.value.match(phonePattern)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
+    document.getElementById("missingCountryCode").classList.add("d-none");
     return false;
   } else {
     document.getElementById("invalidPhone").classList.add("d-none");
+    document.getElementById("missingCountryCode").classList.add("d-none");
     return true;
   }
 }
