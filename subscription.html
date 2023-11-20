@@ -987,11 +987,12 @@
         })
       }
 
-      const subscriptionCardClick = (name, value) => {
-        const key = `${name.replace(/\s/g, '')}${value}Clicked`;
+      const subscriptionCardClick = (name, value, tokens) => {
+        const hours =  Math.round(tokens / 60);
+        const key = `${hours}${hours > 1 ? 'hrs' : 'hr'}${name.replace(/\s/g, '')}Inr${value}Clicked`;
         countlyService.addEvent('subscriptionCardClick', {
           source: "subscriptionPage",
-          cta: "getStartedNow",
+          cta: "select",
           [XCountlySUM]: value,
           [key]: "yes",
         })
