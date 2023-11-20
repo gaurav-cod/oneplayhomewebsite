@@ -13,7 +13,6 @@
         <!-- Custom CSS Link -->
         <link href="./styles/main.css" rel="stylesheet" />
         <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
-        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 
         <title data-i18n-key="titlesection">Content Creator</title>
     
@@ -364,7 +363,7 @@
                                 <span id="invalidEmail" class="d-none cancelgradientText font500">*invalid email</span>
                             </div>
                             <div class="col-md-2 mt-4">
-                                <select class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="country_code">
+                                <select class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="country_code" id="country_code">
                                     <option value="+91">+91</option>
                                     <option value="+60">+60</option>
                                     <option value="+65">+65</option>
@@ -621,7 +620,9 @@
         <script src="./js/spatial-navigation.js"></script>
 
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-        
+
+        <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+
         <script src="./js/contentCreatorForm.js"></script>
 
         <!-- <script src="./js/multi-language.js"></script> -->
