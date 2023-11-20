@@ -3,6 +3,7 @@ document.getElementById("submitBtn").classList.add("disabled");
 
 const nameField = document.forms["businessData"]["name"];
 const emailField = document.forms["businessData"]["email"];
+const countryCode = document.forms["partnerData"]["country_code"];
 const phoneField = document.forms["businessData"]["phone"];
 const websiteField = document.forms["businessData"]["website"];
 const companyDetailField = document.forms["businessData"]["company_detail"];
@@ -35,13 +36,12 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
-  if (!phoneField.value.match(phonePattern)) {
+  if (!validator.isMobilePhone(phoneField.value)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
     return false;
-  } else {
-    document.getElementById("invalidPhone").classList.add("d-none");
-    return true;
   }
+  document.getElementById("invalidPhone").classList.add("d-none");
+  return true;
 }
 
 const isWebsiteFieldValid = () => {
@@ -121,7 +121,7 @@ thisForm.addEventListener("submit", function (e) {
     formData.append("Name_First", fisrtName);
     formData.append("Name_Last", lastName?.join(" ") || "");
     formData.append("Email", emailField.value);
-    formData.append("PhoneNumber_countrycode", phoneField.value);
+    formData.append("PhoneNumber_countrycode", countryCode.value + phoneField.value);
     formData.append("Website", websiteField.value);
     formData.append("SingleLine", companyDetailField.value);
     formData.append("MultiLine", partnershipField.value);
