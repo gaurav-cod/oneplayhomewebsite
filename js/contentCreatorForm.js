@@ -2,6 +2,7 @@ const thisForm = document.getElementById("partnerData");
 document.getElementById("submitBtn").classList.add("disabled");
 
 const nameField = document.forms["partnerData"]["name"];
+const countryCode = document.forms["partnerData"]["country_code"];
 const phoneField = document.forms["partnerData"]["phone_number"];
 const discordField = document.forms["partnerData"]["discord_server"];
 const emailField = document.forms["partnerData"]["oneplay_email"];
@@ -35,25 +36,13 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
-
-  var regex = /^(\+\d.*)$/gm
-  var match = phoneField.value.substring(0, 4).match(regex);
-  console.log(match);
-  if(!match)
-  {
-    document.getElementById("invalidPhone").classList.add("d-none");
-    document.getElementById("missingCountryCode").classList.remove("d-none");
-    return false;
-  }
-  else if (!phoneField.value.match(phonePattern)) {
+  if (!validator.isMobilePhone(phoneField.value)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
-    document.getElementById("missingCountryCode").classList.add("d-none");
     return false;
-  } else {
-    document.getElementById("invalidPhone").classList.add("d-none");
-    document.getElementById("missingCountryCode").classList.add("d-none");
-    return true;
   }
+
+  document.getElementById("invalidPhone").classList.add("d-none");
+  return true;
 }
 
 // const isDiscordValid = () => {
@@ -158,7 +147,7 @@ thisForm.addEventListener("submit", function (e) {
     formData.append("Website1", socialLinkField.value);
     formData.append("Email", emailField.value);
     formData.append("Email1", mediaField.value);
-    formData.append("PhoneNumber_countrycode", phoneField.value);
+    formData.append("PhoneNumber_countrycode", countryCode.value + phoneField.value);
     if (suggestionField.value.length) {
       formData.append("MultiLine", suggestionField.value);
     }

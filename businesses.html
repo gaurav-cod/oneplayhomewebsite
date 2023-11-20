@@ -117,7 +117,17 @@
                                 <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="email" placeholder="Email*" />
                                 <span id="invalidEmail" class="d-none cancelgradientText font500">*invalid email</span>
                             </div>
-                            <div class="col-md-12 mt-4">
+                            <div class="col-md-2 mt-4">
+                                <select class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="country_code">
+                                    <option value="+91">+91</option>
+                                    <option value="+60">+60</option>
+                                    <option value="+65">+65</option>
+                                    <option value="+82">+82</option>
+                                    <option value="+971">+971</option>
+                                    <option value="+974">+974</option>
+                                </select>
+                            </div>
+                            <div class="col-md-10 mt-4">
                                 <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="phone" placeholder="Phone number*" />
                                 <span id="invalidPhone" class="d-none cancelgradientText font500">*invalid phone number</span>
                             </div>
@@ -357,6 +367,8 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 
         <script src="./js/businessForm.js"></script>
 
