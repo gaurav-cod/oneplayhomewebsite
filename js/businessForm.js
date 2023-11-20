@@ -139,3 +139,17 @@ thisForm.addEventListener("submit", function (e) {
 
   return false;
 });
+
+$.get( config.BASE_API + '/location', function( data ) {
+  let currencyCountryCode = [];
+  currencyCountryCode['INR'] = '+91';
+  currencyCountryCode['MYR'] = '+60';
+  currencyCountryCode['SGD'] = '+65';
+  currencyCountryCode['KRW'] = '+82';
+  currencyCountryCode['AED'] = '+971';
+  currencyCountryCode['QAR'] = '+974';
+  if(data.currency != '')
+  {
+    $("#country_code").val(currencyCountryCode[data.currency]);
+  }
+});
