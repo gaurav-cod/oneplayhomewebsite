@@ -3,7 +3,7 @@ document.getElementById("submitBtn").classList.add("disabled");
 
 const nameField = document.forms["businessData"]["name"];
 const emailField = document.forms["businessData"]["email"];
-const countryCode = document.forms["partnerData"]["country_code"];
+const countryCode = document.forms["businessData"]["country_code"];
 const phoneField = document.forms["businessData"]["phone"];
 const websiteField = document.forms["businessData"]["website"];
 const companyDetailField = document.forms["businessData"]["company_detail"];
