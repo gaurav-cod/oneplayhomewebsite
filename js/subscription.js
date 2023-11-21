@@ -79,7 +79,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                         <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                         <p class="font38 font700 text-white mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                         <div class="d-grid">
-                            <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
+                            <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
                         </div>
                     </div>
                     <div class="height40"></div>
@@ -125,7 +125,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                     <p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                     <div class="d-grid">
-                        <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>
+                        <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>
                     </div>
                 </div>
             </div>
