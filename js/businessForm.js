@@ -149,6 +149,16 @@ thisForm.addEventListener("submit", function (e) {
   return false;
 });
 
+phoneField.addEventListener('input', function(event) {
+  const inputValue = event.target.value;
+  const numbersOnly = /^\d+$/; // Regular expression to match only numbers
+  
+  if (!inputValue.match(numbersOnly)) {
+      event.stopPropagation();
+      event.target.value = inputValue.match(/\d+/)[0]; // Clear the input field
+  }
+});
+
 $.get( config.BASE_API + '/location', function( data ) {
   let currencyCountryCode = [];
   currencyCountryCode['INR'] = '+91';
