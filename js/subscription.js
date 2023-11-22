@@ -184,9 +184,6 @@ loadSubscriptions().then((allSubscriptions) => {
         const pricings = document.querySelectorAll('#pricings');
         pricings.forEach(el => el.removeAttribute('hidden'));
         heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
-        subscriptions.forEach(sub => countlyService.updateEventData("websiteSubscriptionView", {
-          [`${sub['plan_name'].replace(/\s/g, '')}${sub['value']}Clicked`]: 'no',
-        }))
     } else {
         const comingSoon = document.getElementById('coming-soon');
         comingSoon?.removeAttribute('hidden');
