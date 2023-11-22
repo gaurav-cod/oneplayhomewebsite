@@ -14,6 +14,7 @@ const namePattern = /^([a-zA-Z]+\s?[a-zA-Z]+)+$/i;
 const phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const linkPattern = /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
+const numericPattern = /^\d+$/;
 
 const isNameValid = () => {
   if (!nameField.value.trim().match(namePattern)) {
@@ -36,7 +37,14 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
-  if (!validator.isMobilePhone(phoneField.value)) {
+  if (!validator.isMobilePhone(countryCode.value + phoneField.value)) {
+    document.getElementById("invalidPhone").classList.remove("d-none");
+    return false;
+  }
+
+  //this should be last validation always
+  document.getElementById("phone_number").value = phoneField.value.trim();
+  if (!phoneField.value.trim().match(numericPattern)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
     return false;
   }
