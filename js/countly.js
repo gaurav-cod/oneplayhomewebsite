@@ -56,7 +56,7 @@ function countlyEvent(ob){
         countlyService.endEvent("websiteDownloadView");
         break;
       case "subscription":
-        countlyService.endEvent("websiteSubscriptionView");
+        countlyService.endEvent("subscriptionCardClick");
         break;
       case "decentralization":
         countlyService.endEvent("websiteDecentralizationView");
