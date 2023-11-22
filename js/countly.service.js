@@ -71,17 +71,18 @@ class CountlyService {
     localStorage.removeItem(this.keyOfKey(event))
     if (!keyTS) return
     let sum = undefined
-    if (XCountlySUM in segments) {
-      sum = segments[XCountlySUM]
-      delete segments[XCountlySUM]
+    const segmentation = {...data, ...segments};
+    if (XCountlySUM in segmentation) {
+      sum = segmentation[XCountlySUM]
+      delete segmentation[XCountlySUM]
     }
-    segments["channel"] = "web"
-    segments["partner"] = config.BRAND_NAME;
+    segmentation["channel"] = "web"
+    segmentation["partner"] = config.BRAND_NAME;
     this._addEvent({
       sum,
       key: event,
       dur: (+new Date() - +ts) / 1000,
-      segmentation: { ...data, ...segments }
+      segmentation,
     })
   }
 
