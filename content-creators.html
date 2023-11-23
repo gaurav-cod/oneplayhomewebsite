@@ -182,7 +182,7 @@
                                     </div>
                                     <div class="p-4">
                                         <p class="font20 font600 text-center customOffWhite">Reach</p>
-                                        <p class="offWhiteColor font500 mb-0">we do not shy away from smaller creators and would like to see everyone benefit from this partnership</p>
+                                        <p class="offWhiteColor font500 mb-0">We do not shy away from smaller creators and would like to see everyone benefit from this partnership</p>
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +348,7 @@
                         Interested?
                     </h1>
                     <p class="font20 font500 offWhiteColor">
-                        please submit your channel information for review
+                        Please submit your channel information for review
                     </p>
                 </div>
                 <div class="col-lg-9 col-md-10">
@@ -356,30 +356,43 @@
                         <div class="row">
                             <div class="col-md-6 mt-4">
                                 <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="name" placeholder="Name*" />
-                                <span id="invalidName" class="d-none cancelgradientText font500">*invalid name</span>
+                                <span id="invalidName" class="d-none cancelgradientText font500">*Invalid name</span>
                             </div>
                             <div class="col-md-6 mt-4">
-                                <input type="tel" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="phone_number" placeholder="Phone number*"/>
-                                <span id="invalidPhone" class="d-none cancelgradientText font500">*invalid phone number</span>
+                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="oneplay_email" placeholder="Email linked to OnePlay account*"/>
+                                <span id="invalidEmail" class="d-none cancelgradientText font500">*Invalid email</span>
                             </div>
+                            <div class="input-group mt-4">
+                                <div class="input-group-append borderRadius0 ">
+                                    <select class="h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="country_code" id="country_code">
+                                        <option value="+91">+91</option>
+                                        <option value="+60">+60</option>
+                                        <option value="+65">+65</option>
+                                        <option value="+82">+82</option>
+                                        <option value="+971">+971</option>
+                                        <option value="+974">+974</option>
+                                    </select>
+                                </div>
+                                &nbsp;
+                                &nbsp;
+                                <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" id="phone_number" name="phone_number" placeholder="Phone number*"/>
+                            </div>
+                            <span id="invalidPhone" class="d-none cancelgradientText font500">*Invalid phone number</span>
                             <div class="col-md-12 mt-4">
                                 <input type="url" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="discord_server" placeholder="Discord server"/>
-                                <span id="invalidDiscord" class="d-none cancelgradientText font500">*invalid discord server</span>
+                                <span id="invalidDiscord" class="d-none cancelgradientText font500">*Invalid discord server</span>
                             </div>
-                            <div class="col-md-12 mt-4">
-                                <input type="email" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="oneplay_email" placeholder="Email linked to OnePlay account*"/>
-                                <span id="invalidEmail" class="d-none cancelgradientText font500">*invalid email</span>
-                            </div>
+                            
                             <div class="col-md-12 mt-4">
                                 <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="social_link" placeholder="Link to social media page/channel*"/>
-                                <span id="invalidLink" class="d-none cancelgradientText font500">*invalid social link</span>
+                                <span id="invalidLink" class="d-none cancelgradientText font500">*Invalid social link</span>
                             </div>
                             <div class="col-md-12 mt-4">
                                 <input type="text" class="form-control h56 borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="media_account" placeholder="Email linked to social media account*"/>
-                                <span id="invalidMediaAccount" class="d-none cancelgradientText font500">*invalid email</span>
+                                <span id="invalidMediaAccount" class="d-none cancelgradientText font500">*Invalid email</span>
                             </div>
                             <div class="col-md-12 mt-4">
-                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="suggestion" placeholder="would you like to share something..."></textarea>
+                                <textarea rows="5" class="form-control borderRadius10 offWhiteColor bgTransparent inputFocus font20 font500" name="suggestion" placeholder="Would you like to share something..."></textarea>
                                 <span id="invalidsuggestion" class="d-none cancelgradientText font500">*Character limit exceeded</span>
                             </div>
                             <div class="col-lg-12 mt-5 text-center">
@@ -606,6 +619,10 @@
         <!-- Spatial Navigation CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
         <script src="./js/spatial-navigation.js"></script>
+
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+
+        <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 
         <script src="./js/contentCreatorForm.js"></script>
 

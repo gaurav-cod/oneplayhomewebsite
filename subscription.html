@@ -964,10 +964,6 @@
         document.getElementById('slider').value = nearest_dot;
         changeCharacter(nearest_dot);
         moveCharacter();
-        if(nearest_dot == 100)
-        {
-          document.querySelector('#hoursPerDay').innerHTML = '<span class="unlimited-star">*</span>6';
-        }
         setTimeout(function () {
           document.getElementById('tipBg').hidden = false
         }, 300);
@@ -978,24 +974,26 @@
           e.classList.add("d-none");
         }); 
 
+        if(nearest_dot == 100)
+        {
+          document.querySelector('#hoursPerDay').innerHTML = '<span class="unlimited-star">*</span>6';
+        }
       }
 
-      const _event = countlyService.startEvent("websiteSubscriptionView")
-      const updateEvent = (segment) => {
+      const _event = countlyService.startEvent("subscriptionCardClick")
+
+      if (!_event.data().source) {
+        _event.update({ source: "subscriptionPage" });
+      }
+
+      const subscriptionCardClick = (name, value, tokens) => {
+        const hours =  Math.round(tokens / 60);
+        const key = `${hours}${hours > 1 ? 'hrs' : 'hr'}${name.replace(/\s/g, '')}Inr${value}Clicked`;
         _event.update({
-          [segment]: "yes",
-        })
-      }
-
-      const subscriptionCardClick = (name, value) => {
-        const key = `${name.replace(/\s/g, '')}${value}Clicked`;
-        countlyService.addEvent('subscriptionCardClick', {
-          source: "subscriptionPage",
-          cta: "getStartedNow",
+          cta: _event.data().cta ?? "select",
           [XCountlySUM]: value,
           [key]: "yes",
-        })
-        updateEvent(key);
+        });
       }
 
       var tooltipTriggerList = [].slice.call(

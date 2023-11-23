@@ -2,6 +2,7 @@ const thisForm = document.getElementById("partnerData");
 document.getElementById("submitBtn").classList.add("disabled");
 
 const nameField = document.forms["partnerData"]["name"];
+const countryCode = document.forms["partnerData"]["country_code"];
 const phoneField = document.forms["partnerData"]["phone_number"];
 const discordField = document.forms["partnerData"]["discord_server"];
 const emailField = document.forms["partnerData"]["oneplay_email"];
@@ -13,6 +14,7 @@ const namePattern = /^([a-zA-Z]+\s?[a-zA-Z]+)+$/i;
 const phonePattern = /^\+(?:[0-9] ?){6,14}[0-9]$/;
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const linkPattern = /\b(?:https?|ftp):\/\/[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]/;
+const numericPattern = /^\d+$/;
 
 const isNameValid = () => {
   if (!nameField.value.trim().match(namePattern)) {
@@ -35,13 +37,20 @@ const isEmailValid = () => {
 }
 
 const isPhoneValid = () => {
-  if (!phoneField.value.match(phonePattern)) {
+  if (!validator.isMobilePhone(countryCode.value + phoneField.value)) {
     document.getElementById("invalidPhone").classList.remove("d-none");
     return false;
-  } else {
-    document.getElementById("invalidPhone").classList.add("d-none");
-    return true;
   }
+
+  //this should be last validation always
+  document.getElementById("phone_number").value = phoneField.value.trim();
+  if (!phoneField.value.trim().match(numericPattern)) {
+    document.getElementById("invalidPhone").classList.remove("d-none");
+    return false;
+  }
+
+  document.getElementById("invalidPhone").classList.add("d-none");
+  return true;
 }
 
 // const isDiscordValid = () => {
@@ -146,7 +155,7 @@ thisForm.addEventListener("submit", function (e) {
     formData.append("Website1", socialLinkField.value);
     formData.append("Email", emailField.value);
     formData.append("Email1", mediaField.value);
-    formData.append("PhoneNumber_countrycode", phoneField.value);
+    formData.append("PhoneNumber_countrycode", countryCode.value + phoneField.value);
     if (suggestionField.value.length) {
       formData.append("MultiLine", suggestionField.value);
     }
@@ -163,4 +172,34 @@ thisForm.addEventListener("submit", function (e) {
   }
 
   return false;
+});
+
+phoneField.addEventListener('input', function(event) {
+  const inputValue = event.target.value;
+  const numbersOnly = /^\d+$/; // Regular expression to match only numbers
+  let isNotNumeric = /\D/.test(inputValue)
+
+  if(isNotNumeric)
+  {
+    event.target.value = '';
+  }
+  else
+  {
+    event.target.value = inputValue.match(numbersOnly)[0]; // Clear the input field
+  }
+  
+});
+
+$.get( config.BASE_API + '/location', function( data ) {
+  let currencyCountryCode = [];
+  currencyCountryCode['INR'] = '+91';
+  currencyCountryCode['MYR'] = '+60';
+  currencyCountryCode['SGD'] = '+65';
+  currencyCountryCode['KRW'] = '+82';
+  currencyCountryCode['AED'] = '+971';
+  currencyCountryCode['QAR'] = '+974';
+  if(data.currency != '')
+  {
+    $("#country_code").val(currencyCountryCode[data.currency]);
+  }
 });
