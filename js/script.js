@@ -104,7 +104,7 @@ function handleAuth() {
 }
 
 function loadSeriousNotification() {
-  fetch(config.BASE_API + "/notification/serious?partnerId=" + config.PARTNER_ID, {
+  fetch(config.BASE_API + "/notification/serious?platform=website&partnerId=" + config.PARTNER_ID, {
     headers: {
       "content-type": "application/json",
     },
