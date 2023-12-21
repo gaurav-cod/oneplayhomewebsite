@@ -312,6 +312,7 @@
     white-space: nowrap;
     flex-wrap: nowrap;
     margin-right: 1px;
+    scrollbar-width: none;
 }
 
 @media (max-width: 767px) {
