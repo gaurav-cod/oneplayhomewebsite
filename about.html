@@ -44,9 +44,6 @@
                         <li class="nav-item me-3">
                             <a class="nav-link" data-i18n-key="nav-download" href="./download.html">Download</a>
                         </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" data-i18n-key="nav-decentralization" href="./decentralization.html">Decentralization</a>
-                        </li>
                         <!-- <li class="nav-item">
                             <select data-i18n-switcher class="form-select bgTransparent mutedColor">
                               <option value="english">English</option>
@@ -190,7 +187,7 @@
                 </div>
                 <div class="col-md-10 mt-5">
                     <div class="wrapper">
-                        <video class="videoControl" poster= "./assets/aboutus/Rectangle 76.svg">
+                        <video class="videoControl" poster= "./assets/aboutus/Rectangle 76.svg" autoplay muted loop>
                             <source src="./assets/aboutus-video/merged_gameplay_music.mp4"type="video/mp4">
                         </video>
                         <div class="playpause"></div>
@@ -284,7 +281,18 @@
                                         <p class="font20 font600 mt-4 mb-0 text-white">Sujay Monteiro</p>
                                         <p class="font20 font500 mb-0 offWhiteColor">Lead UI UX Designer</p>
                                     </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/yamini.webp" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white" data-i18n-key="yamini">Shreya</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor" data-i18n-key="yamini-p">Program Manager</p>
+                                    </div>
+                                    <div class="col-md-4 col-6 padding70 text-center pt-">
+                                        <img src="./assets/TeamImg/yamini.webp" class="img-fluid rounded-border wh230" alt=" " />
+                                        <p class="font20 font600 mt-4 mb-0 text-white" data-i18n-key="yamini">Pavitra</p>
+                                        <p class="font20 font500 mb-0 offWhiteColor" data-i18n-key="yamini-p">HR</p>
+                                    </div>
                                 </div>
+                                
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#teamcarousel" data-bs-slide="prev">
@@ -700,6 +708,7 @@
                     if($(this).children(".videoControl").get(0).paused)
                     { 
                         $(this).children(".videoControl").get(0).play();   $(this).children(".playpause").fadeOut();
+                        $(this).children(".videoControl").get(0).muted = false;
                     }
                     else
                     { 
