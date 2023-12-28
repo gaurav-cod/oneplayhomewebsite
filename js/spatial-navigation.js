@@ -19,7 +19,11 @@ $('input, select, textarea, a, button')
   .SpatialNavigation()
   .focus(function() 
     { 
-      $(this).css({'outline': 'none', 'border-bottom': '2px solid #ffffff', 'color': '#ffffff'}); 
+      let isCorousalControls = $(this).hasClass('carousel-control');
+      if(!isCorousalControls)
+      {
+        $(this).css({'outline': 'none', 'border-bottom': '2px solid #ffffff', 'color': '#ffffff'}); 
+      }
     })
   .blur(function() { 
       $(this).css({'outline': '', 'border-bottom': '', 'color': ''}); 
