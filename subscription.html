@@ -843,6 +843,8 @@
       $('.userUnderstandingSlider').hide();
       window.onload = function ()
       {
+        updateSlider($("#slider").val());
+        
         setTimeout(function(){ 
           $('.userUnderstandingSlider').show();
         }, 4000);
