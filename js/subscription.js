@@ -182,6 +182,8 @@ loadSubscriptions().then((allSubscriptions) => {
 
     if (subscriptions.length > 0) {
         const pricings = document.querySelectorAll('#pricings');
+        const emptySection = document.querySelector('#emptySection');
+        emptySection.setAttribute('hidden', true);
         pricings.forEach(el => el.removeAttribute('hidden'));
         heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
     } else {
