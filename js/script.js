@@ -59,6 +59,7 @@ function signUpEvent() {
 
 function loadLinks() {
   const map = [
+    { selector: "#home", url: config.APP_URL + "/" },
     { selector: "#login", url: config.APP_URL + "/login" },
     { selector: "#signup", url: config.APP_URL + "/register" },
     { selector: "#starter", url: config.APP_URL + "?subscribe=Starter" },
