@@ -61,7 +61,7 @@ function loadLinks() {
   const map = [
     { selector: "#home", url: config.APP_URL + "/" },
     { selector: "#login", url: config.APP_URL + "/login" },
-    { selector: "#signup", url: config.APP_URL + "/register" },
+    { selector: "#signup", url: config.APP_URL + "/login" },
     { selector: "#starter", url: config.APP_URL + "?subscribe=Starter" },
     { selector: "#founder", url: config.APP_URL + "?subscribe=Founder" },
     { selector: "#elite", url: config.APP_URL + "?subscribe=Elite" },
