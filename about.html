@@ -708,7 +708,7 @@
         <script>
             const _event = countlyService.startEvent("websiteAboutUsView", {
               data: {
-                getStartedClicked: "no",
+                accessHomeClicked: "no",
                 browseArticlesClicked: "no",
                 joinDiscordClicked: "no",
                 browsePlansClicked: "no",
@@ -718,7 +718,7 @@
               _event.update({
                 [segment]: "yes",
               })
-              if (segment === "getStartedClicked") {
+              if (segment === "accessHomeClicked") {
                 countlyService.startEvent("signIn", {
                   data: { signInFromPage: "aboutUs" },
                   discardOldData: true,
