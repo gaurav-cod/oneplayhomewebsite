@@ -1207,6 +1207,12 @@ input, textarea {
     background: linear-gradient(270deg, #616161 0%, #434343 100%);
 }
 
+.text-color {
+    background: linear-gradient(270deg, #616161 0%, #434343 100%);
+    -webkit-background-clip: text; 
+    color: transparent; 
+}
+
 .wh28 {
     font-size: 2rem;
 }

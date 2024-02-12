@@ -1,14 +1,30 @@
 .slider {
     -webkit-appearance: none;
+    /* -moz-appearance:none; */
     width: 100%;
-    height: 0px;
+    height: 0px; 
     border-radius: 20px;
     background: transparent !important;
     outline: none;
     border: 0px !important;
+    cursor:pointer;
+}
+
+.marginTop-56 {
+    margin-top: -19px !important;
+}
+
+
+.sold-out{
+    font-weight: bolder  !important;
+    font-size:21px !important;
+    color:#000 !important;
+    padding:2px 5px !important;
 }
 
 .sliderTrack {
+    /* -webkit-appearance: none;
+    -moz-appearance:none; */
     height: 20px;
     border-radius: 20px !important; 
     background: linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%) !important;
@@ -16,6 +32,7 @@
 }
   
 .slider::-moz-range-thumb {
+    /* -moz-appearance:none; */
     width: 55px;
     height: 110px;
     border-radius: 50%;
@@ -61,6 +78,19 @@
     background-clip: text;
 }
 
+.soldOutGradientText {
+    background: linear-gradient(180deg, #616161 0%, #434343 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.text-color {
+    background: linear-gradient(270deg, #616161 0%, #434343 100%);
+    -webkit-background-clip: text; /* for webkit browsers like Chrome and Safari */
+    color: transparent; /* make the text transparent so that the gradient background is visible through it */
+}
+
+
 .orangeGradientText {
     background: linear-gradient(180deg, #E9651B 0%, #FF8933 100%);
     -webkit-background-clip: text;
@@ -97,6 +127,14 @@
 .foundationSubCard {
     background: transparent;
     background-image: linear-gradient(90deg, #212123, #212123), linear-gradient(180deg, #3BEEFF 20.72%, rgba(62, 66, 70, 0) 97.79%);
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    border: 2px solid transparent;
+    border-bottom: 0px !important;
+}
+.soldOutSubCard {
+    background: transparent;
+    background-image: linear-gradient(90deg, #212123, #212123), linear-gradient(180deg, #616161 20.72%, rgba(62, 66, 70, 0) 97.79%);
     background-clip: padding-box, border-box;
     background-origin: border-box;
     border: 2px solid transparent;
@@ -292,6 +330,11 @@
 .font12 {
     font-size: 12px !important;
     line-height: 14px !important;
+}
+
+.font15 {
+    font-size: 15px !important;
+    line-height: 16px !important;
 }
 
 .font8 {
@@ -583,6 +626,10 @@
 .marginTop-67 {
     margin-top: -67px !important;
 }
+.marginTop-2 {
+    margin-top: -10px !important;
+}
+
 
 @media (max-width: 1000px) {
     .marginTop-20 {
@@ -700,3 +747,156 @@
 .unlimited-star {
     color: red;
 }
+
+
+
+   
+
+  #overlay-msg{
+    display: none;
+    position: fixed;
+    top:20%;
+    background:transparent;
+    align-items: center;
+    justify-content: center;
+    z-index:1000;
+  }
+
+  #overlay-email{
+    display: none;
+    position: fixed;
+    top:30%;
+    background:transparent;
+    align-items: center;
+    justify-content: center;
+    z-index:2000;
+  }
+  #overlay-notif{
+     display: none;
+    position: fixed;
+    top:50%;
+    left:2%;
+    background:transparent;
+    align-items: center;
+    justify-content: center;
+    z-index:2000;
+  }
+
+  #popup-email{
+      background-color:#212123;
+    color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    width: 30rem;
+    height:24rem;
+    min-width: 25rem; 
+
+  }
+
+  #popup-msg{
+    background-color:#212123;
+    color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    width: 30rem;
+    height:36rem;
+    min-width: 25rem;
+    
+  }
+
+  #popup-notif {
+   background-color:#3E4246;
+   color: #fff;
+   border-radius: 40px;
+   text-align: center;
+   width: 28rem;
+   height:4rem;
+   min-width: 28rem;
+   word-wrap: break-word;
+   padding:10px;
+ }
+
+  #closeBtn {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 200;
+    margin-top: 10px;
+    display: inline-block;
+      font-size:1em;
+      border-radius:10px;
+      padding:13px;
+      width:100%;
+      margin-bottom:10px;
+  }
+  .subtext{
+      color:#959595;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: .02em;
+      word-wrap: break-word;
+      word-break: break-word;
+      padding:40px 0 40px 0;
+  }
+  .wait-icon{
+   display:flex;
+   
+  }
+  .container{
+    margin-top:60px !important;
+      display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+      padding:0 50px;
+      margin-top:0px;
+      
+      
+  }
+  .gradientBtnNotify{
+      color:#fff;
+      font-size:1em;
+      cursor:pointer;
+      border-radius:10px;
+      background:linear-gradient(300.3deg,#0575E6 9.6%,#FF0CF5 92.85%);
+      padding:13px;
+      font-weight:500;
+      width:100%;
+  }
+  .disableBtnNotify{
+    color:#fff;
+    font-size:1em;
+    cursor:pointer;
+    border-radius:10px;
+    background:linear-gradient(270deg, #616161 0%, #434343 100%);
+    padding:13px;
+    font-weight:500;
+    width:100%;
+}
+   .cross-wrapper{
+    pointer:cursor !important;
+   }
+  .cross{
+      display:flex;
+      float:right;
+      
+  }
+  .heading{
+      font-size: 22px;
+      font-weight: bold;
+  }
+
+  #input-email{
+      margin-top:15px;
+      background: none;
+      padding:15px;
+      font-size: 18px;
+      border:1px solid white;
+      border-radius:5px;
+      width:100%;
+      color:white;
+  }
+  .margin-custom{
+      margin-top:50px;
+  }

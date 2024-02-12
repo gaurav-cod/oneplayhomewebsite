@@ -60,11 +60,15 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             <div class="row justify-content-center">
                 <div class="col-auto p-0">
                     <div class="w100">
-                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" />  
+                    ${sub['plan_config']?.is_sold_out ?
+                    `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />`
+                    :
+                        `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" />`
+}
                     </div>
                 </div>
             </div>
-            ${sub['plan_config']?.is_recommended ? 
+            ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
                 `<div class="row justify-content-center position-relative">
                     <div class="col-auto position-absolute marginTop-20 text-center p-0">
                         <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1" class="width100" style="height: auto;" loop autoplay></lottie-player>
@@ -72,35 +76,69 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     </div>
                 </div>`
             : ''}
+            ${sub['plan_config']?.is_sold_out ? 
+            `<div class="row justify-content-center position-relative">
+                <div class="col-auto position-absolute marginTop-20 text-center p-0">
+                    <button class="btn disabledBtnGradient btn-sm customBorder0 font15 marginTop-2 sold-out px-md-4 px-2">SOLD OUT</button>
+                </div>
+            </div>`:''}
+
             <div class="row justify-content-center">
                 <div class="col-auto text-center p-0">
-                    <div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
+                ${sub['plan_config']?.is_sold_out ?
+                `<div class="brTop20 w100 py-3 px-2 soldOutSubCard">
+                <p class="font24 font500 mb-2 eGradientText soldOutGradientText">${sub['plan_name']}</p> 
+                <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
+                <p class="font38 font700 text-color mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
+                <div class="d-grid">
+                <button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Know More</button>
+                </div>`
+                :
+                    `<div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
                         <p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
                         <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                         <p class="font38 font700 text-white mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                         <div class="d-grid">
                             <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
-                        </div>
+                        </div>`
+}
                     </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white text-truncate">${getResolution(sub)}</p></div>
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                    ${sub['plan_config']?.is_sold_out?
+                    `<p class="mb-0 text-color text-truncate">${getResolution(sub)}</p>`
+                    :
+                    `<p class="mb-0 text-white text-truncate">${getResolution(sub)}</p>`
+}
+                    </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_duration_in_days']}</p></div>
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                    ${sub['plan_config']?.is_sold_out?
+                    `<p class="mb-0 text-color">${sub['plan_duration_in_days']}</p>`:
+                    `<p class="mb-0 text-white">${sub['plan_duration_in_days']}</p>`
+}
+</div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}"><p class="mb-0 text-white">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited.svg" width="28px" class="img-fluid" alt="" /><span class="unlimited-star">*</span>' : `${sub['total_offered_tokens'] / 60}`}</p></div>
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                    ${sub['plan_config']?.is_sold_out?
+                    `<p class="mb-0 text-color">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited_Sold_Out.svg" width="28px" class="img-fluid" alt="" />' : `${sub['total_offered_tokens'] / 60}`}</p>`:
+                    `<p class="mb-0 text-white">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited.svg" width="28px" class="img-fluid" alt="" />' : `${sub['total_offered_tokens'] / 60}`}</p>`
+}
+                    </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">
-                            ${sub['plan_config']?.is_queue ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                        
+                    <p class="mb-0 text-white">
+                            ${sub['plan_config']?.is_queue ?  (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                         </p>
                     </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white"><img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" /></p>
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                        <p class="mb-0 text-white">${sub['plan_config']?.play_games_you_own ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
                     </div>
                     <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
+                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                        <p class="mb-0 text-white">${sub['plan_config']?.is_refundable ?  (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
                     </div>
                 </div>
             </div>
@@ -109,11 +147,17 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             <div class="row justify-content-center">
                 <div class="col-12 p-0">
                     <div class="w218">
-                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" /> 
+                       ${!sub['plan_config']?.is_sold_out?
+                        `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" />`
+                        :`<img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />`} 
                     </div>
                 </div>
-                <div class="col-auto brTop30 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : '' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-md-3 px-2 w218 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
-                    ${sub['plan_config']?.is_recommended ? 
+                ${sub['plan_config']?.is_sold_out?
+                `<div class="col-auto brTop30 py-3 px-md-3 px-2 w218 soldOutSubCard">`
+                :
+                `<div class="col-auto brTop30 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : '' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-md-3 px-2 w218 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">`
+}
+                    ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
                         `<div class="row justify-content-center position-relative">
                             <div class="col-auto position-absolute marginTop-20">
                             <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
@@ -121,49 +165,83 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                             </div>
                         </div>`
                     : ''}
-                    <p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
-                    <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
-                    <p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
-                    <div class="d-grid">
-                        <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>
+                    ${sub['plan_config']?.is_sold_out ? 
+                `<div class="row justify-content-center position-relative">
+                    <div class="col-auto position-absolute marginTop-20 text-center p-0">
+                        <button class="btn disabledBtnGradient btn-sm customBorder0 marginTop-2 sold-out">SOLD OUT</button>
                     </div>
+                </div>`
+            : ''}
+                   {${sub['plan_config']?.is_sold_out?
+                   `<p class="font24 font500 mb-2 soldOutGradientText">${sub['plan_name']}</p>`
+                   :
+                    `<p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p>`
+}
+                    <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
+                    ${sub['plan_config']?.is_sold_out ?
+                    `<p class="font38 font700 text-color">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p>`
+                    :
+                    `<p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p>`
+}
+                    <div class="d-grid">
+    ${sub['plan_config']?.is_sold_out ?
+    `<button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Know More</button>`
+        :
+        `<a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>`
+    }
+</div>
+
                 </div>
             </div>
             <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out)? 'recommendBorder' : ''}">
+                ${sub['plan_config']?.is_sold_out?
+                `<p class="mb-0 text-color py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>`
+                :
+                    `<p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>`
+}
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                    ${sub['plan_config']?.is_sold_out?
+                `<p class="mb-0 text-color py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>`
+                    :
+                    `<p class="mb-0 mutedColor py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>`
+}
                 </div>
             </div>
             <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
-                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
+                ${sub['plan_config']?.is_sold_out?
+                   `<p class="mb-0 text-color py-3 px-md-3 px-2 lightBlackBg">
+                        ${sub['plan_config']?.is_unlimited ? 'Unlimited' : `${sub['total_offered_tokens'] / 60}`}
+                    </p>`
+                    :
+                    `<p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
                         ${sub['plan_config']?.is_unlimited ? 'Unlimited<span class="unlimited-star">*</span>' : `${sub['total_offered_tokens'] / 60}`}
-                    </p>
+                    </p>`
+}
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${sub['plan_config']?.is_queue ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                        ${sub['plan_config']?.is_queue ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
             <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
                     <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">
-                        ${sub['plan_config']?.play_games_you_own ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                        ${sub['plan_config']?.play_games_you_own ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${sub['plan_config']?.is_recommended ? 'recommendBorder' : ''}">
+                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
                     <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${sub['plan_config']?.is_refundable ? '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
+                        ${sub['plan_config']?.is_refundable ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
                     </p>
                 </div>
             </div>
