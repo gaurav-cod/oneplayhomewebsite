@@ -380,7 +380,7 @@
          </div>
          <div id="overlay-notif">
           <div id="popup-notif">
-           <p id="notify-user-msg"></p>
+           <p id="notify-user-msg">you will be notified once this subscription pack is available again</p>
            </div>
            </div>
         <div class="row justify-content-center" id="pricings" hidden>
@@ -989,10 +989,7 @@
       }
 
       const updateSlider = (value) => {
-        
-        //changed here
-        console.log('From Update Slider');
-        console.log(value);
+
         document.querySelectorAll('.sliderText').hidden = true;          
         document.getElementById('tipBg').hidden = true;
         const nearest_dot = calculateNearestDot(value)
@@ -1006,9 +1003,6 @@
       }
 
       const updateSliderText = (value) => {
-        // changed here
-        console.log('From UpdateSlider Text')
-        console.log(value);
         document.querySelectorAll('.sliderText').forEach(e => { 
           e.classList.add("d-none");
         }); 
@@ -1180,13 +1174,11 @@
     };
         fetch(config.BASE_API + "/subscriptions/store_sold_out",requestConfig).then(response => {
           if (!response.ok) {
-            document.getElementById('notify-user-msg').innerHTML='the email address you are trying is not valid. Please try again';
-            throw new Error('Network response was not ok');
+            document.getElementById('notify-user-msg').innerHTML='There is some problem, try again later.';
           }
           return response.json();
         })
         .then(data => {
-          document.getElementById('notify-user-msg').innerHTML='you will be notified once this subscription pack is available again';
         })
         .catch(error => {
           console.error('There was a problem with the notification request:', error);

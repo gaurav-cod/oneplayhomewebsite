@@ -79,7 +79,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
             ${sub['plan_config']?.is_sold_out ? 
             `<div class="row justify-content-center position-relative">
                 <div class="col-auto position-absolute marginTop-20 text-center p-0">
-                    <button class="btn disabledBtnGradient btn-sm customBorder0 font15 marginTop-2 sold-out px-md-4 px-2">SOLD OUT</button>
+                    <div class="btn disabledBtnGradient btn-sm customBorder0 font15 marginTop-2 sold-out px-md-4 px-2">SOLD OUT</div>
                 </div>
             </div>`:''}
 
@@ -168,7 +168,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     ${sub['plan_config']?.is_sold_out ? 
                 `<div class="row justify-content-center position-relative">
                     <div class="col-auto position-absolute marginTop-20 text-center p-0">
-                        <button class="btn disabledBtnGradient btn-sm customBorder0 marginTop-2 sold-out">SOLD OUT</button>
+                        <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-2 sold-out">SOLD OUT</div>
                     </div>
                 </div>`
             : ''}
