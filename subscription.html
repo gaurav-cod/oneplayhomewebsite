@@ -1158,7 +1158,7 @@
   }
   function validateEmail(value) {
     
-    var emailRegex = /^[a-zA-Z0-9-_]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}$/;
+    var emailRegex = /^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}$/;
     var isValid = emailRegex.test(value);
 
     var notifyBtn= document.getElementById('notify-me');
