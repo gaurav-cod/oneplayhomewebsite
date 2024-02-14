@@ -359,6 +359,38 @@
             </div>
           </div>
         </div>
+        <div id="overlay-msg">
+   
+          <div id="popup-msg">
+            <a onclick="handlePopupClose()">
+              <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
+          </a>
+            <div class="container">
+            
+            <img class="wait-icon" src="./assets/subscriptionNew/Wait.svg">
+            <div class="subtext">We regret to inform you that the subscription pack is currently sold out due to high demand and limited server availability. Our team is actively working to increase capacity, and we'll notify you as soon as the pack is available again. Thank you for your patience and understanding.</div>
+            <span class="gradientBtnNotify" onclick="notifyWithEmail()">Notify Me</span>
+            <span id="closeBtn" onclick="closePopup()">Close</span>
+        </div> 
+        </div>
+        </div>
+        <div id="overlay-email">
+          <div id="popup-email">
+            <a onclick="handlePopupClose()">
+              <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
+          </a>
+           <div class="container">
+           <p class="heading">Share your email address to be notified</p>
+           <input id="input-email" type="email" oninput="validateEmail(this.value)" placeholder="Enter your Email" autocomplete="off">
+           <button id="notify-me" class="disableBtnNotify margin-custom" disabled onclick="displayNotif()">Notify Me</button>
+       </div>
+          </div>
+         </div>
+         <div id="overlay-notif">
+          <div id="popup-notif">
+           <p id="notify-user-msg">you will be notified once this subscription pack is available again</p>
+           </div>
+           </div>
         <div class="row justify-content-center" id="pricings" hidden>
           <div class="col-lg-10 col-md-12 text-center p-0">
             <img src="./assets/subscriptionNew/happy-pack.svg" class="img-fluid d-none d-md-block" alt="" />
@@ -370,7 +402,7 @@
             <img src="assets/subscription/loading.gif" height="250" alt="">
           </div>
         </div>
-      </div>
+     </div>
     </div>
     <div class="container padding100">
       <div class="row justify-content-center">
@@ -865,7 +897,7 @@
       $(document).click(function() {
         $('.userUnderstandingSlider').hide();
       });
-
+      
       // init
         const moveCharacter = () => {
           const rangeThumb = document.getElementById("range-thumb");
@@ -1093,6 +1125,76 @@
                 [segment]: "yes",
               })
             }
+            let sub_id='';
+            let email='';
+            const openPopup=(id)=>{
+            sub_id=id;
+            document.getElementById('overlay-msg').style.display = 'flex';
+            }
+            function closePopup() {
+    document.getElementById('overlay-msg').style.display = 'none';
+  }
+  function notifyWithEmail(){
+    document.getElementById('overlay-msg').style.display = 'none';
+    document.getElementById('overlay-email').style.display = 'flex';
+    document.getElementById('input-email').value=null;
+  }
+
+  function displayNotif(){
+    document.getElementById('overlay-email').style.display = 'none';
+    document.getElementById('overlay-notif').style.display = 'flex';
+    setTimeout(function () {
+      document.getElementById('overlay-notif').style.display = 'none';
+    }, 2000);
+    var emailInput = document.getElementById('input-email');
+    email=emailInput.value;
+    collectUserEmailForNotification();
+    
+  }
+  function handlePopupClose(){
+    document.getElementById('overlay-msg').style.display = 'none';
+    document.getElementById('overlay-email').style.display = 'none';
+    document.getElementById('input-email').value=null;
+  }
+  function validateEmail(value) {
+    
+    var emailRegex = /^[a-zA-Z0-9-_.]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}$/;
+    var isValid = emailRegex.test(value);
+
+    var notifyBtn= document.getElementById('notify-me');
+    isValid ?  notifyBtn.classList.remove('disableBtnNotify'):notifyBtn.classList.remove('gradientBtnNotify');
+    isValid ?  notifyBtn.classList.add('gradientBtnNotify'):notifyBtn.classList.add('disableBtnNotify');
+    isValid? notifyBtn.removeAttribute('disabled'):notifyBtn.addAttribute('disabled');
+  }
+  function collectUserEmailForNotification() {
+    
+    var requestData = {
+      email:email,
+      subscription_package_id:sub_id
+    };
+
+    var requestConfig = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+         referrerPolicy: "strict-origin-when-cross-origin",
+        mode: "cors",
+        credentials: "omit",
+      body: JSON.stringify(requestData)
+    };
+        fetch(config.BASE_API + "/subscriptions/store_sold_out",requestConfig).then(response => {
+          if (!response.ok) {
+            document.getElementById('notify-user-msg').innerHTML='There is some problem with your email, please try again.';
+          }
+          return response.json();
+        })
+        .then(data => {
+        })
+        .catch(error => {
+          console.error('There was a problem with the notification request:', error);
+        });
+}
     </script>
   </body>
 </html>

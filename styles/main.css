@@ -5,7 +5,7 @@ html {
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 350px) {
     .btn {
-        font-size: 12px !important;
+        font-size: 8px !important;
         line-height: 17px;
     }
 }
@@ -1207,6 +1207,12 @@ input, textarea {
     background: linear-gradient(270deg, #616161 0%, #434343 100%);
 }
 
+.text-color {
+    background: linear-gradient(270deg, #616161 0%, #434343 100%);
+    -webkit-background-clip: text; 
+    color: transparent; 
+}
+
 .wh28 {
     font-size: 2rem;
 }
@@ -1592,6 +1598,11 @@ a {
     background: linear-gradient(300.3deg, #0575E6 9.6%, #FF0CF5 92.85%) !important;
 }
 
+@media (max-width: 992px) {
+    .btn {
+        font-size: 0.6rem !important;
+    }
+}
 @media (min-width: 992px) and (max-width: 1300px) {
     .btn {
         font-size: 0.85rem !important;
