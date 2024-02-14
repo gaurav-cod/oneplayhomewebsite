@@ -381,8 +381,8 @@
           </a>
            <div class="container">
            <p class="heading">Share your email address to be notified</p>
-           <input id="input-email" type="email" oninput="validateEmail(this.value)" placeholder="Enter your Email">
-           <span id="notify-me" class="disableBtnNotify margin-custom" onclick="displayNotif()">Notify Me</span>
+           <input id="input-email" type="email" oninput="validateEmail(this.value)" placeholder="Enter your Email" autocomplete="off">
+           <button id="notify-me" class="disableBtnNotify margin-custom" disabled onclick="displayNotif()">Notify Me</button>
        </div>
           </div>
          </div>
@@ -1137,7 +1137,6 @@
   function notifyWithEmail(){
     document.getElementById('overlay-msg').style.display = 'none';
     document.getElementById('overlay-email').style.display = 'flex';
-    
   }
 
   function displayNotif(){
@@ -1156,12 +1155,13 @@
   }
   function validateEmail(value) {
     
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var emailRegex = /^[a-zA-Z0-9-_]+@[a-zA-Z0-9-_]+\.[a-zA-Z]{2,}$/;
     var isValid = emailRegex.test(value);
 
     var notifyBtn= document.getElementById('notify-me');
     isValid ?  notifyBtn.classList.remove('disableBtnNotify'):notifyBtn.classList.remove('gradientBtnNotify');
     isValid ?  notifyBtn.classList.add('gradientBtnNotify'):notifyBtn.classList.add('disableBtnNotify');
+    isValid? notifyBtn.removeAttribute('disabled'):notifyBtn.addAttribute('disabled');
   }
   function collectUserEmailForNotification() {
     
@@ -1182,7 +1182,7 @@
     };
         fetch(config.BASE_API + "/subscriptions/store_sold_out",requestConfig).then(response => {
           if (!response.ok) {
-            document.getElementById('notify-user-msg').innerHTML='There is some problem, try again later.';
+            document.getElementById('notify-user-msg').innerHTML='There is some problem with your email, please try again.';
           }
           return response.json();
         })
