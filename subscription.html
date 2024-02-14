@@ -1129,6 +1129,7 @@
   function notifyWithEmail(){
     document.getElementById('overlay-msg').style.display = 'none';
     document.getElementById('overlay-email').style.display = 'flex';
+    document.getElementById('input-email').value=null;
   }
 
   function displayNotif(){
@@ -1140,10 +1141,12 @@
     var emailInput = document.getElementById('input-email');
     email=emailInput.value;
     collectUserEmailForNotification();
+    
   }
   function handlePopupClose(){
     document.getElementById('overlay-msg').style.display = 'none';
     document.getElementById('overlay-email').style.display = 'none';
+    document.getElementById('input-email').value=null;
   }
   function validateEmail(value) {
     
