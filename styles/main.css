@@ -1600,7 +1600,7 @@ a {
 
 @media (max-width: 992px) {
     .btn {
-        font-size: 0.6rem !important;
+        font-size: 0.7rem !important;
     }
 }
 @media (min-width: 992px) and (max-width: 1300px) {
