@@ -180,7 +180,7 @@
 .tipBg {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);
     border-radius: 0px 0px 20px 20px;
-    z-index: 2;
+    z-index: 0;
 }
 
 .textHour {
@@ -875,6 +875,10 @@
     font-weight:500;
     width:100%;
 }
+.know-more-btn{
+    padding:0.3rem 0.2rem !important;
+}
+
    .cross-wrapper{
     pointer:cursor !important;
    }

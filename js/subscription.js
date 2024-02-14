@@ -91,7 +91,7 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                 <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
                 <p class="font38 font700 text-color mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
                 <div class="d-grid">
-                <button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Know More</button>
+                <button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient know-more-btn">Know More</button>
                 </div>`
                 :
                     `<div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
