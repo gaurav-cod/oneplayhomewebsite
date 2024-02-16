@@ -449,11 +449,22 @@ loadSubscriptions().then((allSubscriptions) => {
 function unlimitedPlan() {
     $('#slider').val(100);
     changeCharacter2(100);
-    moveCharacter();
+    moveCharacter2();
   }
 
   function premiumPlan() {
     $('#slider').val(60);
     changeCharacter2(60);
-    moveCharacter();
+    moveCharacter2();
   }
+
+  const moveCharacter2 = () => {
+    const rangeThumb = document.getElementById("range-thumb");
+    const rangeInput = document.getElementById("slider");
+    const rangeValue = parseInt(rangeInput.value);
+    const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
+    const thumbWidth = 20;
+    const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
+    rangeThumb.style.transform = `translateX(${newPosition}px)`;
+    
+  };
