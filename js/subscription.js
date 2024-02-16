@@ -253,6 +253,74 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
     `
 }
 
+// movemoster
+const changeCharacter2 = (pos) => {
+
+    const pos_map= {
+      0: {
+        id: "1monsterImg",
+        subCard: "subCard1",
+        hrs: 1,
+        gameplay_hrs: 4,
+      },
+      10: {
+        id: "3monsterImg",
+        subCard: "subCard2",
+        hrs: 3,
+        gameplay_hrs: 4,
+      },
+      20: {
+        id: "5monsterImg",
+        subCard: "subCard3",
+        hrs: 5,
+        gameplay_hrs: 4,
+      },
+      40: {
+        id: "10monsterImg",
+        subCard: "subCard4",
+        hrs: 10,
+        gameplay_hrs: 4,
+      },
+      60: {
+        id: "20monsterImg",
+        subCard: "subCard5",
+        hrs: 20,
+        gameplay_hrs: 6,
+      },
+      100: {
+        id: "UnmonsterImg",
+        subCard: "subCard6",
+        hrs: 'unlimited',
+        gameplay_hrs: 6,
+      },
+    };
+    [
+      "1monsterImg",
+      "3monsterImg",
+      "5monsterImg",
+      "10monsterImg",
+      "20monsterImg",
+      "UnmonsterImg",
+    ].map(e => document.getElementById(e).classList.add("d-none"));
+    document.getElementById(pos_map[pos].id).classList.remove("d-none");
+    document.querySelector('#hoursPerDay').innerText = pos_map[pos].gameplay_hrs;
+    
+    [
+      "subCard1",
+      "subCard2",
+      "subCard3",
+      "subCard4",
+      "subCard5",
+      "subCard6",
+    ].map(e => document.querySelectorAll('.'+e).forEach(e => { 
+        e.classList.remove('moveleft'); 
+        e.classList.add('moveright');
+        e.classList.add('d-none');
+      })
+    );
+    document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
+    
+  }
 loadSubscriptions().then((allSubscriptions) => {
     const heading1 = document.getElementById('heading1');
     const subscriptions = allSubscriptions
@@ -380,12 +448,12 @@ loadSubscriptions().then((allSubscriptions) => {
 
 function unlimitedPlan() {
     $('#slider').val(100);
-    changeCharacter(100);
+    changeCharacter2(100);
     moveCharacter();
   }
 
   function premiumPlan() {
     $('#slider').val(60);
-    changeCharacter(60);
+    changeCharacter2(60);
     moveCharacter();
   }
