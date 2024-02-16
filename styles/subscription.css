@@ -791,8 +791,6 @@
     text-align: center;
     width: 30rem;
     height:24rem;
-    min-width: 25rem; 
-
   }
 
   #popup-msg{
@@ -801,10 +799,8 @@
     padding: 20px;
     border-radius: 16px;
     text-align: center;
-    width: 30rem;
-    height:36rem;
-    min-width: 25rem;
-    
+    width: 480px;
+    height:576px;
   }
 
   #popup-notif {
@@ -814,7 +810,6 @@
    text-align: center;
    width: 28rem;
    height:4rem;
-   min-width: 28rem;
    word-wrap: break-word;
    padding:10px;
  }
@@ -844,17 +839,130 @@
    display:flex;
    
   }
-  .container{
-    margin-top:60px !important;
+  .popup-container{
+    margin-top:60px;
       display:flex;
     flex-direction: column;
     align-items:center;
     justify-content: center;
-      padding:0 50px;
-      margin-top:0px;
-      
-      
+      padding:0 50px;     
   }
+
+  @media (max-width:600px){
+    #popup-msg{
+        width:18rem;
+        height:22rem;
+    }
+    #popup-email{
+        width:18rem !important;
+        height:15rem;
+    }
+    .heading{
+        font-size: 15px !important;
+        width:14rem;
+    }
+    .wait-icon{
+        width:3rem;
+        height:3rem;
+    }
+    .subtext{
+        font-size:10px;
+        padding: 20px 0;
+        width:12rem !important;
+    }
+    .cross{
+        width:0.8rem;
+        height:0.8rem;
+    }
+    .popup-container{
+        margin-top:25px;
+    }
+    .gradientBtnNotify{
+        padding:4px !important;
+        font-size:0.7rem !important;
+        border-radius:15px !important;
+    }
+    #closeBtn{
+        padding:3px !important;
+        font-size:0.7rem !important;
+        border-radius:4px !important;
+    }
+    .disableBtnNotify{
+        padding:4px !important;
+        font-size:0.7rem !important;
+        border-radius:15px !important;
+    }
+    #input-email{
+        font-size:0.7rem !important;
+        height:10px !important;
+        margin-top:10px !important;
+        width:13rem !important;
+    }
+    .margin-custom{
+        margin-top:25px !important;
+    }
+    #popup-notif {
+        border-radius: 10px;
+        width: 15rem !important;
+        height:3rem;
+        padding:10px 20px;
+        
+      }
+      #notify-user-msg{
+        font-size:0.65rem;
+      }
+  }
+  @media (min-width:600.01px) and (max-width:1024px){
+    #popup-msg{
+        width:25rem;
+        height:34rem;
+    }
+    .wait-icon{
+        width:5rem;
+        height:5rem;
+    }
+    .subtext{
+        font-size:15px;
+        padding: 30px 0;
+        width:16rem;
+    }
+    .cross{
+        width:1rem;
+        height:1rem;
+    }
+    .popup-container{
+        margin-top:46px;
+    }
+    .gradientBtnNotify{
+        padding:8px !important;
+        font-size:1.2rem !important;
+        border-radius:17px !important;
+        width:16rem !important;
+    }
+    .disableBtnNotify{
+        padding:8px !important;
+        font-size:1.2rem !important;
+        border-radius:17px !important;
+        width:16rem !important;
+    }
+    #closeBtn{
+        padding:3px !important;
+        font-size:1rem !important;
+        border-radius:6px !important;
+    }
+    #popup-notif {
+        border-radius: 10px;
+        width: 26rem !important;
+        height:4.3rem;
+        padding:10px 20px;
+        
+      }
+      #notify-user-msg{
+        font-size:1rem;
+      }
+    
+  }
+  
   .gradientBtnNotify{
       color:#fff;
       font-size:1em;
@@ -864,6 +972,7 @@
       padding:13px;
       font-weight:500;
       width:100%;
+      border:none;
   }
   .disableBtnNotify{
     color:#fff;
@@ -874,6 +983,7 @@
     padding:13px;
     font-weight:500;
     width:100%;
+    border:none;
 }
 .know-more-btn{
     padding:0.3rem 0.2rem !important;

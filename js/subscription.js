@@ -269,6 +269,16 @@ loadSubscriptions().then((allSubscriptions) => {
         comingSoon?.removeAttribute('hidden');
         heading1.innerText = 'Coming Soon';
     }
+    const url = window.location.href;
+    const urlObj = new URL(url);
+    const tokensParam = +(urlObj.searchParams.get('plan'));
+    if (tokensParam) {
+        if(tokensParam > 600 && tokensParam <= 1200) {
+        premiumPlan();
+        } else if(tokensParam > 1200){
+        unlimitedPlan();
+        }
+    }
 
     const container1 = document.getElementById('plan1Hour');
     const container3 = document.getElementById('plan3Hour');
@@ -364,5 +374,18 @@ loadSubscriptions().then((allSubscriptions) => {
     container20?.insertAdjacentHTML('afterbegin', child20);
     containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
 
+    
     document.querySelector('#hoursPerDay').innerText = hourlyPlan1[0]?.gameplay_limit_hrs_per_day;
 })
+
+function unlimitedPlan() {
+    $('#slider').val(100);
+    changeCharacter(100);
+    moveCharacter();
+  }
+
+  function premiumPlan() {
+    $('#slider').val(60);
+    changeCharacter(60);
+    moveCharacter();
+  }

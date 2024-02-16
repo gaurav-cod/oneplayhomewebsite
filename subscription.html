@@ -371,7 +371,7 @@
             <a onclick="handlePopupClose()">
               <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
           </a>
-            <div class="container">
+            <div class="popup-container">
             
             <img class="wait-icon" src="./assets/subscriptionNew/Wait.svg">
             <div class="subtext">We regret to inform you that the subscription pack is currently sold out due to high demand and limited server availability. Our team is actively working to increase capacity, and we'll notify you as soon as the pack is available again. Thank you for your patience and understanding.</div>
@@ -385,7 +385,7 @@
             <a onclick="handlePopupClose()">
               <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
           </a>
-           <div class="container">
+           <div class="popup-container">
            <p class="heading">Share your email address to be notified</p>
            <input id="input-email" type="email" oninput="validateEmail(this.value)" placeholder="Enter your Email" autocomplete="off">
            <button id="notify-me" class="disableBtnNotify margin-custom" disabled onclick="displayNotif()">Notify Me</button>
@@ -886,6 +886,11 @@
       // document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = "4")
       // User Slider Animation
       $('.userUnderstandingSlider').hide();
+      document.onreadystatechange = function(e)
+      {
+        const emptySection = document.querySelector('#emptySection');
+        emptySection.setAttribute('hidden', false);
+      };
       window.onload = function ()
       {
         updateSlider($("#slider").val());
@@ -1185,7 +1190,10 @@
     };
         fetch(config.BASE_API + "/subscriptions/store_sold_out",requestConfig).then(response => {
           if (!response.ok) {
-            document.getElementById('notify-user-msg').innerHTML='There is some problem with your email, please try again.';
+            document.getElementById('notify-user-msg').innerHTML='Email address is wrong or cannot be empty, please try again';
+          }
+          else{
+            document.getElementById('notify-user-msg').innerHTML='you will be notified once this subscription pack is available again';
           }
           return response.json();
         })
