@@ -364,5 +364,13 @@ loadSubscriptions().then((allSubscriptions) => {
     container20?.insertAdjacentHTML('afterbegin', child20);
     containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
 
+    const tokensParam = +(urlObj.searchParams.get('plan'));
+    if (tokensParam) {
+        if(tokensParam > 600 && tokensParam <= 1200) {
+        premiumPlan();
+        } else if(tokensParam > 1200){
+        unlimitedPlan();
+        }
+    }
     document.querySelector('#hoursPerDay').innerText = hourlyPlan1[0]?.gameplay_limit_hrs_per_day;
 })
