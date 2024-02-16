@@ -364,6 +364,8 @@ loadSubscriptions().then((allSubscriptions) => {
     container20?.insertAdjacentHTML('afterbegin', child20);
     containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
 
+    const url = window.location.href;
+    const urlObj = new URL(url);
     const tokensParam = +(urlObj.searchParams.get('plan'));
     if (tokensParam) {
         if(tokensParam > 600 && tokensParam <= 1200) {
@@ -374,3 +376,15 @@ loadSubscriptions().then((allSubscriptions) => {
     }
     document.querySelector('#hoursPerDay').innerText = hourlyPlan1[0]?.gameplay_limit_hrs_per_day;
 })
+
+function unlimitedPlan() {
+    $('#slider').val(100);
+    changeCharacter(100);
+    moveCharacter();
+  }
+
+  function premiumPlan() {
+    $('#slider').val(60);
+    changeCharacter(60);
+    moveCharacter();
+  }
