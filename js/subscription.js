@@ -388,3 +388,14 @@ function unlimitedPlan() {
     changeCharacter(60);
     moveCharacter();
   }
+
+  const moveCharacter = () => {
+    const rangeThumb = document.getElementById("range-thumb");
+    const rangeInput = document.getElementById("slider");
+    const rangeValue = parseInt(rangeInput.value);
+    const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
+    const thumbWidth = 20;
+    const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
+    rangeThumb.style.transform = `translateX(${newPosition}px)`;
+    
+  };
