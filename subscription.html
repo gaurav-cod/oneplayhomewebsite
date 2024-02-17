@@ -235,7 +235,7 @@
               <div class="position-absolute marginTop-45 userUnderstandingSlider">
                 <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
               </div>
-              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)" onmousedown="updateSliderText(this.value)" ontouchstart="updateSliderText(this.value)">
+              <input type="range" min="0" max="100" value="100" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)" onmousedown="updateSliderText(this.value)" ontouchstart="updateSliderText(this.value)">
             </div>
           </div>
         </div>
@@ -1088,8 +1088,10 @@
         }
 
         function premiumPlan() {
-          $('#slider').val(60);
-          changeCharacter(60);
+          // $('#slider').val(60);
+          // changeCharacter(60);
+          $('#slider').val(100);
+          changeCharacter(100);
           moveCharacter();
         }
       })
