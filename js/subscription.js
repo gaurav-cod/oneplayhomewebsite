@@ -6,6 +6,7 @@ function loadSubscriptions() {
     return fetch(config.BASE_API + "/accounts/subscription/available_plans", {
         headers: {
           "content-type": "application/json",
+          "x-partner-id": localStorage.getItem("x-partner-id")
         },
         referrerPolicy: "strict-origin-when-cross-origin",
         mode: "cors",
