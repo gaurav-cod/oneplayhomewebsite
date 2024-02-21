@@ -1,3 +1,4 @@
+
 /**
  * 
  * @returns {Promise<object[]>}
@@ -54,109 +55,69 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
         individual_offer_available_flag = false;
     }
 
-    return ` 
-        <div class="col d-md-none">
-            <span class="data-span" data-hrs-per-day="${sub['gameplay_limit_hrs_per_day']}" ></span>
-            <div class="row justify-content-center">
-                <div class="col-auto p-0">
-                    <div class="w100">
-                    ${sub['plan_config']?.is_sold_out ?
-                    `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />`
-                    :
-                        `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" />`
+   
 }
-                    </div>
-                </div>
-            </div>
-            ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
-                `<div class="row justify-content-center position-relative">
-                    <div class="col-auto position-absolute marginTop-20 text-center p-0">
-                        <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1" class="width100" style="height: auto;" loop autoplay></lottie-player>
-                        <button class="btn recommendedBg text-white btn-sm customBorder0 font12 marginTop-67 px-md-4 px-2">Recommended</button>
-                    </div>
-                </div>`
-            : ''}
-            ${sub['plan_config']?.is_sold_out ? 
-            `<div class="row justify-content-center position-relative">
-                <div class="col-auto position-absolute marginTop-20 text-center p-0">
-                    <div class="btn disabledBtnGradient btn-sm customBorder0 font15 marginTop-2 sold-out px-md-4 px-2">SOLD OUT</div>
-                </div>
-            </div>`:''}
 
-            <div class="row justify-content-center">
-                <div class="col-auto text-center p-0">
-                ${sub['plan_config']?.is_sold_out ?
-                `<div class="brTop20 w100 py-3 px-2 soldOutSubCard">
-                <p class="font24 font500 mb-2 eGradientText soldOutGradientText">${sub['plan_name']}</p> 
-                <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
-                <p class="font38 font700 text-color mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
-                <div class="d-grid">
-                <button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient know-more-btn">Know More</button>
-                </div>`
-                :
-                    `<div class="brTop20 w100 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : 'enhancedGradient' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-2 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">
-                        <p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p> 
-                        <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
-                        <p class="font38 font700 text-white mb-3">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p> 
-                        <div class="d-grid">
-                            <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</a>
-                        </div>`
-}
-                    </div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    ${sub['plan_config']?.is_sold_out?
-                    `<p class="mb-0 text-color text-truncate">${getResolution(sub)}</p>`
-                    :
-                    `<p class="mb-0 text-white text-truncate">${getResolution(sub)}</p>`
-}
-                    </div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    ${sub['plan_config']?.is_sold_out?
-                    `<p class="mb-0 text-color">${sub['plan_duration_in_days']}</p>`:
-                    `<p class="mb-0 text-white">${sub['plan_duration_in_days']}</p>`
-}
-</div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    ${sub['plan_config']?.is_sold_out?
-                    `<p class="mb-0 text-color">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited_Sold_Out.svg" width="28px" class="img-fluid" alt="" />' : `${sub['total_offered_tokens'] / 60}`}</p>`:
-                    `<p class="mb-0 text-white">${sub['plan_config']?.is_unlimited ? '<img src="./assets/subscriptionNew/Unlimited.svg" width="28px" class="img-fluid" alt="" />' : `${sub['total_offered_tokens'] / 60}`}</p>`
-}
-                    </div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                        
-                    <p class="mb-0 text-white">
-                            ${sub['plan_config']?.is_queue ?  (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
-                        </p>
-                    </div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">${sub['plan_config']?.play_games_you_own ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
-                    </div>
-                    <div class="height40"></div>
-                    <div class="w100 p-2 height45 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                        <p class="mb-0 text-white">${sub['plan_config']?.is_refundable ?  (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col p-0 text-center font20 font500 d-none d-md-block">
-            <div class="row justify-content-center">
-                <div class="col-12 p-0">
-                    <div class="w218">
-                       ${!sub['plan_config']?.is_sold_out?
-                        `<img src="./assets/subscriptionNew/offer.svg" class="img-fluid ${individual_offer_available_flag ? '' : 'invisible'}" alt="" />`
-                        :`<img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />`} 
-                    </div>
-                </div>
-                ${sub['plan_config']?.is_sold_out?
-                `<div class="col-auto brTop30 py-3 px-md-3 px-2 w218 soldOutSubCard">`
-                :
-                `<div class="col-auto brTop30 ${sub['plan_name'] == 'Foundation' ? 'foundationSubCard' : '' && sub['plan_name'] == 'Ultimate' ? 'unlimitedSubCard' : 'enhancedGradient'} py-3 px-md-3 px-2 w218 ${sub['plan_config']?.is_recommended ? 'recommendSubCard' : ''}">`
-}
+loadSubscriptions().then((allSubscriptions) => {
+   
+    const subscriptions = allSubscriptions
+        .filter(sub => sub?.partner_id === config.PARTNER_ID || !sub?.partner_id);
+        const heading1 = document.getElementById('heading1');
+        
+        if (subscriptions.length > 0) {
+            const pricings = document.querySelectorAll('#pricings');
+        const emptySection = document.querySelector('#emptySection');
+        emptySection.setAttribute('hidden', true);
+        pricings.forEach(el => el.removeAttribute('hidden'));
+            heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
+        } else {
+            const comingSoon = document.getElementById('coming-soon');
+            comingSoon?.removeAttribute('hidden');
+            heading1.innerText = 'Coming Soon';
+        }
+
+  const tabs = ['Trial','Monthly'];
+  const isActive='Monthly';
+ const tabContainer = document.getElementById('tabContainer');
+
+tabs.forEach(tab => {
+    const swiperSlide = document.createElement('div');
+    swiperSlide.style.display='flex';
+    swiperSlide.style.justifyContent='center';
+    swiperSlide.style.alignItems='center';
+    swiperSlide.innerHTML = `
+        <a href="#${tab.toLowerCase()}" class="btn fontCustom tab ${tab === isActive ? 'activeTab' : 'disabledTab'}" id="${tab.toLowerCase()}" onclick="switchTab('${tab.toLowerCase()}')">${tab}</a>
+    `;
+    tabContainer.appendChild(swiperSlide);
+});
+
+     
+      
+    const subCard=document.getElementById('swiper-wrapper-monthly');
+    const subCardTrial=document.getElementById('swiper-wrapper-trial');
+    let countMonthly=-1;
+    let countTrial=-1;
+    let firstRecommendMonthly=false;
+    let firstRecommendTrial=false;
+    firstRecommendTrialIndex=0;
+    let firstRecommendMonthlyIndex=0;
+    
+    subscriptions.forEach(sub=>{
+       
+        if (sub?.tab_label === 'Monthly') {
+            ++countMonthly;
+            const swiperSlide = document.createElement('div');
+            swiperSlide.classList.add('swiper-slide');
+            swiperSlide.classList.add('swiper-slide-monthly');
+            if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
+            swiperSlide.classList.add('recommendedBorder');
+            if(!firstRecommendMonthly){
+                firstRecommendMonthly=true;
+                firstRecommendMonthlyIndex=countMonthly;
+            }
+            }
+            swiperSlide.innerHTML = `
+            
                     ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
                         `<div class="row justify-content-center position-relative">
                             <div class="col-auto position-absolute marginTop-20">
@@ -167,202 +128,222 @@ function makeElementFromSubscription(sub, all_offer_flag = false) {
                     : ''}
                     ${sub['plan_config']?.is_sold_out ? 
                 `<div class="row justify-content-center position-relative">
-                    <div class="col-auto position-absolute marginTop-20 text-center p-0">
-                        <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-2 sold-out">SOLD OUT</div>
+                    <div class="col-auto position-absolute marginTop-20">
+                        <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
                     </div>
                 </div>`
             : ''}
-                   {${sub['plan_config']?.is_sold_out?
-                   `<p class="font24 font500 mb-2 soldOutGradientText">${sub['plan_name']}</p>`
-                   :
-                    `<p class="font24 font500 mb-2 ${sub['plan_name'] == 'Foundation' ? 'fountGradientText' : 'orangeGradientText' && sub['plan_name'] == 'Ultimate' ? 'unlimitedGradientText' : 'orangeGradientText'}">${sub['plan_name']}</p>`
-}
-                    <p class="mutedColor my-2 ${sub['plan_config']?.actual_price == sub['value'] ? 'invisible' : ''} ${sub['plan_config'].actual_price ? '' : 'invisible'}"><del>${currencyMap[sub['currency']] || sub['currency']}${sub['plan_config']?.actual_price}</del></p>
-                    ${sub['plan_config']?.is_sold_out ?
-                    `<p class="font38 font700 text-color">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p>`
-                    :
-                    `<p class="font38 font700 text-white">${currencyMap[sub['currency']] || sub['currency']}${sub['value']}</p>`
-}
-                    <div class="d-grid">
-    ${sub['plan_config']?.is_sold_out ?
-    `<button  onclick="openPopup('${sub['id']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Know More</button>`
-        :
-        `<a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn disabledBtnGradient customBorder0 borderRadius10 text-white hoverGradient">Select</a>`
-    }
-</div>
+            <div class="row"
+                    <div class="col sub-container ">
+            ${sub['plan_config']?.is_sold_out ? 
+                        `<span class="discount text-sold-out">₹ ${sub?.value}</span>
+                        <span class="price text-sold-out">₹ ${sub.plan_config.actual_price}</span>
+                        <span class="plan-name text-sold-out">${sub.plan_name}</span>
+                        <div class="img-container">
+                            
+                        
+                            <button class="btn grey-btn sub-btn text-white " onclick="openPopup('${sub['id']}')">Know More</button>
+                            <span class="mobile-tag">Validity</span>
+                            <span class="number text-sold-out font500">${sub.plan_duration_in_days} Days</span>
+                            <span class="mobile-tag">Resolution</span>
+                            <span class="number text-sold-out font500">${getResolution(sub)}</span>
+                            <span class="mobile-tag">Daily Gaming Limit</span>
+                            <span class="number text-sold-out font500">${sub.gameplay_limit_hrs_per_day} hrs</span>
+                            <span class="mobile-tag">Gaming Hours</span>
+                            <span class="number text-sold-out font500">${sub['total_offered_tokens'] / 60} hrs</span>
+                        </div>
+                        <div class="img-container">
+                            <span class="mobile-tag">Queue Basis</span>
+                            ${sub['plan_config']?.is_queue ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+                            
+                            <span class="mobile-tag">RTX Enabled</span>
+                            ${sub['plan_config']?.has_rtx_enabled ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+                            <span class="mobile-tag">Play games you own*</span>
+                            ${sub['plan_config']?.play_games_you_own ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+                            <span class="mobile-tag">Refundable</span>
+                            ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+                        </div>`:
+                        `<span class="discount fontCustom">₹ ${sub?.value}</span>
+                        <span class="price text-white">₹ ${sub.plan_config.actual_price}</span>
+                        <span class="plan-name ${sub['plan_name'] == 'Foundation' ? 'blue-gradient' : sub['plan_name'] == 'Ultimate' ? 'dark-orange-gradient' : 'orange-gradient'}">${sub.plan_name}</span>
+                        <div class="img-container">
+                            <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white ">Select</a>
+                            <span class="mobile-tag">Validity</span>
+                            <span class="number text-dull">${sub.plan_duration_in_days} Days</span>
+                            <span class="mobile-tag">Resolution</span>
+                            <span class="number text-dull">${getResolution(sub)}</span>
+                            <span class="mobile-tag">Daily Gaming Limit</span>
+                            <span class="number text-muted">${sub.gameplay_limit_hrs_per_day} hrs</span>
+                            <span class="mobile-tag">Gaming Hours</span>
+                            <span class="number text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
+                        </div>
+                        <div class="img-container">
+                            <span class="mobile-tag">Queue Basis</span>
+                            ${sub['plan_config']?.is_queue ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+                            
+                            <span class="mobile-tag">RTX Enabled</span>
+                            ${sub['plan_config']?.has_rtx_enabled ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+                            <span class="mobile-tag">Play games you own*</span>
+                            ${sub['plan_config']?.play_games_you_own ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+                            <span class="mobile-tag">Refundable</span>
+                            ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+                        </div>`
 
+        }
+                    </div>
                 </div>
-            </div>
-            <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out)? 'recommendBorder' : ''}">
-                ${sub['plan_config']?.is_sold_out?
-                `<p class="mb-0 text-color py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>`
-                :
-                    `<p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg text-truncate">${getResolution(sub)}</p>`
-}
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    ${sub['plan_config']?.is_sold_out?
-                `<p class="mb-0 text-color py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>`
-                    :
-                    `<p class="mb-0 mutedColor py-3 px-md-3 px-2 ">${sub['plan_duration_in_days']} Days </p>`
-}
-                </div>
-            </div>
-            <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                ${sub['plan_config']?.is_sold_out?
-                   `<p class="mb-0 text-color py-3 px-md-3 px-2 lightBlackBg">
-                        ${sub['plan_config']?.is_unlimited ? 'Unlimited' : `${sub['total_offered_tokens'] / 60}`}
-                    </p>`
-                    :
-                    `<p class="mb-0 mutedColor py-3 px-md-3 px-2 lightBlackBg">
-                        ${sub['plan_config']?.is_unlimited ? 'Unlimited<span class="unlimited-star">*</span>' : `${sub['total_offered_tokens'] / 60}`}
-                    </p>`
-}
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${sub['plan_config']?.is_queue ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
-                    </p>
-                </div>
-            </div>
-            <div class="row lightBlackBg justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    <p class="mb-0 text-white py-3 px-md-3 px-2 lightBlackBg">
-                        ${sub['plan_config']?.play_games_you_own ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
-                    </p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-auto p-0 w218 ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 'recommendBorder' : ''}">
-                    <p class="mb-0 mutedColor py-3 px-md-3 px-2 ">
-                        ${sub['plan_config']?.is_refundable ? (sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/TickSoldOut.svg" width="20px" class="img-fluid" alt="" />' : '<img src="./assets/subscriptionNew/Tick.svg" width="20px" class="img-fluid" alt="" />'):sub['plan_config']?.is_sold_out?'<img src="./assets/subscriptionNew/Cross_Sold_Out.svg" width="20px" class="img-fluid" alt="" />':'<img src="./assets/subscriptionNew/Cross.svg" width="20px" class="img-fluid" alt="" />'}
-                    </p>
-                </div>
-            </div>
+                `;
+            subCard.appendChild(swiperSlide);
             
+        }
+        else if (sub?.tab_label === 'Trial') {
+            ++countTrial;
+            const swiperSlide2 = document.createElement('div');
+            swiperSlide2.classList.add('swiper-slide');
+            swiperSlide2.classList.add('swiper-slide-trial');
+            if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
+                swiperSlide2.classList.add('recommendedBorder');
+                if(!firstRecommendTrial){
+                    firstRecommendTrial=true;
+                    firstRecommendTrialIndex=countMonthly;
+                }
+            }
+    
+            swiperSlide2.innerHTML = `
+            ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
+            `<div class="row justify-content-center position-relative">
+                <div class="col-auto position-absolute marginTop-20">
+                <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
+                <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
+                </div>
+            </div>`
+        : ''}
+        ${sub['plan_config']?.is_sold_out ? 
+    `<div class="row justify-content-center position-relative">
+        <div class="col-auto position-absolute marginTop-20">
+            <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
         </div>
-        <div class="position-absolute justify-content-center text-center">
-            <img src="./assets/subscriptionNew/offer-for-all.svg" class="${all_offer_flag ? '' : 'invisible'} img-fluid" alt="" />
+    </div>`
+: ''}
+            <div class="row">
+              <div class="col sub-container">
+
+              ${sub['plan_config']?.is_sold_out ?`<span class="discount text-sold-out">₹ ${sub?.value}</span>
+                <span class="price text-sold-out">₹ ${sub.plan_config.actual_price}</span>
+                <div class="img-container">
+                <button class="btn grey-btn sub-btn text-white margin-trial" onclick="openPopup('${sub['id']}')">Know More</button>
+                <span class="mobile-tag">Validity</span>
+                <span class="number text-sold-out">${sub.plan_duration_in_days} Days</span>
+                <span class="mobile-tag">Resolution</span>
+                <span class="number text-sold-out">${getResolution(sub)}</span>
+                <span class="mobile-tag">Gaming Hours</span>
+                <span class="number text-sold-out">${sub['total_offered_tokens'] / 60} hrs</span>
+              </div>
+              <div class="img-container">
+              <span class="mobile-tag">Queue Basis</span>
+              ${sub['plan_config']?.is_queue ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+              <span class="mobile-tag">Play games you own*</span>
+              ${sub['plan_config']?.play_games_you_own ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+              <span class="mobile-tag">Refundable</span>
+              ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+          </div>`:
+          `<span class="discount fontCustom">₹ ${sub?.value}</span>
+          <span class="price text-white">₹ ${sub.plan_config.actual_price}</span>
+          <div class="img-container">
+          <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white margin-trial">Select</a>
+          <span class="mobile-tag">Validity</span>
+          <span class="number text-dull">${sub.plan_duration_in_days} Days</span>
+          <span class="mobile-tag">Resolution</span>
+          <span class="number text-dull">${getResolution(sub)}</span>
+          <span class="mobile-tag">Gaming Hours</span>
+          <span class="number text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
         </div>
-    `
-}
-
-loadSubscriptions().then((allSubscriptions) => {
-    const heading1 = document.getElementById('heading1');
-    const subscriptions = allSubscriptions
-        .filter(sub => sub?.partner_id === config.PARTNER_ID || !sub?.partner_id);
-
-    if (subscriptions.length > 0) {
-        const pricings = document.querySelectorAll('#pricings');
-        const emptySection = document.querySelector('#emptySection');
-        emptySection.setAttribute('hidden', true);
-        pricings.forEach(el => el.removeAttribute('hidden'));
-        heading1.innerText = 'Experience the Thrill of High Graphics at Low Prices!';
-    } else {
-        const comingSoon = document.getElementById('coming-soon');
-        comingSoon?.removeAttribute('hidden');
-        heading1.innerText = 'Coming Soon';
+        <div class="img-container">
+        <span class="mobile-tag">Queue Basis</span>
+        ${sub['plan_config']?.is_queue ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+        <span class="mobile-tag">Play games you own*</span>
+        ${sub['plan_config']?.play_games_you_own ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+        <span class="mobile-tag">Refundable</span>
+        ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+    </div>`
     }
+              </div>
+           </div>`;
+            subCardTrial.appendChild(swiperSlide2); 
+        }
+    
+})
+    
+new Swiper('#sub-swiper',{
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween:30,
+    initialSlide:firstRecommendMonthlyIndex,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        spaceBetween:15,
+        centeredSlides:false,
+        slidesPerView:3,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+        },
+      }
+    }
+  });
 
-    const container1 = document.getElementById('plan1Hour');
-    const container3 = document.getElementById('plan3Hour');
-    const container5 = document.getElementById('plan5Hour');
-    const container10 = document.getElementById('plan10Hour');
-    const container20 = document.getElementById('plan20Hour');
-    const containerUnlimited = document.getElementById('UnlimitedHours-plan');
-    const hourlyPlan1 = subscriptions.filter(s => s?.total_offered_tokens <= 60);
-    const hourlyPlan3 = subscriptions.filter(s => s?.total_offered_tokens > 60 && s?.total_offered_tokens <=180);
-    const hourlyPlan5 = subscriptions.filter(s => s?.total_offered_tokens > 180 && s?.total_offered_tokens <= 300);
-    const hourlyPlan10 = subscriptions.filter(s => s?.total_offered_tokens > 300 && s?.total_offered_tokens <= 600);
-    const hourlyPlan20 = subscriptions.filter(s => s?.total_offered_tokens > 600 && s?.total_offered_tokens <= 1200);
-    const hourlyPlanUnlimited = subscriptions.filter(s => s?.total_offered_tokens > 1200 || s.plan_config?.is_unlimited == true);
 
-    let hourlyPlan1_flag = false;
-    document.getElementById('discountGif1hrs').hidden = true;
-    document.getElementById('discountGif3hrs').hidden = true;
-    document.getElementById('discountGif5hrs').hidden = true;
-    document.getElementById('discountGif10hrs').hidden = true;
-    document.getElementById('discountGif20hrs').hidden = true;
-    document.getElementById('discountGifunlimited').hidden = true;
+  
 
-    if(Object.keys(hourlyPlan1).length == Object.keys(hourlyPlan1.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlan1_flag = true;
+  new Swiper('#sub-swiper-trial', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween:30,
+    initialSlide:firstRecommendTrialIndex,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        spaceBetween:15,
+        centeredSlides:false,
+        slidesPerView:3,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+        },
+      }
     }
-    if(Object.keys(hourlyPlan1.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGif1hrs').hidden = false;
-    }
-    const child1 = hourlyPlan1.map(function(x) { return makeElementFromSubscription(x, hourlyPlan1_flag);}).join("");
+   
+  });
 
-    let hourlyPlan3_flag = false;
-    if(Object.keys(hourlyPlan3).length == Object.keys(hourlyPlan3.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlan3_flag = true;
-    }
-    if(Object.keys(hourlyPlan3.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGif3hrs').hidden = false;
-    }
-
-    const child3 = hourlyPlan3.map(function(x) { return makeElementFromSubscription(x, hourlyPlan3_flag);}).join("");
-
-    let hourlyPlan5_flag = false;
-    if(Object.keys(hourlyPlan5).length == Object.keys(hourlyPlan5.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlan5_flag = true;
-    }
-    if(Object.keys(hourlyPlan5.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGif5hrs').hidden = false;
-    }
-    const child5 = hourlyPlan5.map(function(x) { return makeElementFromSubscription(x, hourlyPlan5_flag);}).join("");
-
-    let hourlyPlan10_flag = false;
-    if(Object.keys(hourlyPlan10).length == Object.keys(hourlyPlan10.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlan10_flag = true;
-    }
-    if(Object.keys(hourlyPlan10.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGif10hrs').hidden = false;
-    }
-    const child10 = hourlyPlan10.map(function(x) { return makeElementFromSubscription(x, hourlyPlan10_flag);}).join("");
-
-    let hourlyPlan20_flag = false;
-    if(Object.keys(hourlyPlan20).length == Object.keys(hourlyPlan20.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlan20_flag = true;
-    }
-    if(Object.keys(hourlyPlan20.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGif20hrs').hidden = false;
-    }
-    const child20 = hourlyPlan20.map(function(x) { return makeElementFromSubscription(x, hourlyPlan20_flag);}).join("");
-
-    let hourlyPlanUnlimited_flag = false;
-    if(Object.keys(hourlyPlanUnlimited).length == Object.keys(hourlyPlanUnlimited.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length)
-    {
-        hourlyPlanUnlimited_flag = true;
-    }
-    if(Object.keys(hourlyPlanUnlimited.filter(s => s?.plan_config?.actual_price > 0 && s?.plan_config?.actual_price != s?.value)).length > 0)
-    {
-        document.getElementById('discountGifunlimited').hidden = false;
-    }
-    const childUnlimited = hourlyPlanUnlimited.map(function(x) { return makeElementFromSubscription(x, hourlyPlanUnlimited_flag);}).join("");
-
-    container1?.insertAdjacentHTML('afterbegin', child1);
-    container3?.insertAdjacentHTML('afterbegin', child3);
-    container5?.insertAdjacentHTML('afterbegin', child5);
-    container10?.insertAdjacentHTML('afterbegin', child10);
-    container20?.insertAdjacentHTML('afterbegin', child20);
-    containerUnlimited?.insertAdjacentHTML('afterbegin', childUnlimited);
-
-    document.querySelector('#hoursPerDay').innerText = hourlyPlan1[0]?.gameplay_limit_hrs_per_day;
+    
 })

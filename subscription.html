@@ -9,12 +9,15 @@
     <meta name="og:description" content="Unlock a world of limitless gaming possibilities with OnePlay's premium subscriptions. Dive into a realm of AAA gaming on all your devices. Subscribe now for the ultimate gaming journey. Register for free and play now!"/>
 
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Custom CSS Link -->
     <link href="./styles/main.css" rel="stylesheet" />
     <link href="./assets/css-cdn/cdn.css" rel="stylesheet" />
     <link href="./styles/subscription.css" rel="stylesheet" />
-
+    
     <title data-i18n-key="titlesection">OnePlay - Elevate Your Gaming Experience with Exclusive Subscriptions</title>
   </head>
   <body>
@@ -120,8 +123,21 @@
         </div>
       </div>
     </nav>
-    
-    <div class="container padding50 paddingRemove customH1 overflowXHidden">
+    <div class="position-relative">
+    <img class="hero-banner desktop-img" src="./assets/subscription/hero/D-Hero.png"/>
+    <img class="hero-banner tablet-img" src="./assets/subscription/hero/T-Hero.png"/>
+    <img class="hero-banner mobile-img" src="./assets/subscription/hero/M-hero.png"/>
+    <div class="text-overlay position-absolute">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-12 text-center">
+      <h2 class="banner-heading" id="heading1"></h2>
+      </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- <div class="container padding50 paddingRemove customH1 overflowXHidden">
       
       <div class="row justify-content-center">
         <div class="col-lg-7 col-md-8 text-center">
@@ -130,7 +146,8 @@
             class="text-white font50 customfont50 font800 mt-5"
             data-i18n-key="heading1"
           ></h2>
-        </div>
+         
+        </div> -->
         <div id="coming-soon" class="col-lg-8 col-md-10 text-center" hidden>
           <p class="font20 font500 offWhiteColor mt-4 gradientAnchor">
             Don't miss out on the opportunity to be part of the future of gaming. 
@@ -144,234 +161,22 @@
             <a href="https://discord.com/invite/Cg4ZskStE2" target="_blank"><img src="./assets/subscription/icons8-discord.svg" class="img-fluid" alt="" /></a>
           </div>
         </div>
+        <!-- new styles start -->
+        <div  class="sub-heading text-white">Choose your plan</div>
 
-        <div class="row justify-content-center" id="pricings" hidden>
-          <div class="col-11 col-md-11 col-lg-9 p-0" id="range-thumb">
-            <div class="row height130px align-items-end">
-              <div class="col-auto px-3">
-                <div class="row justify-content-center sliderText" id="1monsterImg">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">1 hr</div>
-                  <div class="col-auto discountGif" style="margin-left:66px" id="discountGif1hrs">
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="col-auto mt-2 px-0">
-                    <lottie-player src="./js/lottieAnimation/subscription/1 Hours Monster V2.json" background="transparent" style="width:30px; height: 30px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  
-                </div>
-                
-                <div class="row justify-content-center d-none sliderText" id="3monsterImg">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">3 hrs</div>
-                  <div class="col-auto discountGif" style="margin-left:85px" id="discountGif3hrs">
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="col-auto px-0 mt-2">
-                    <lottie-player src="./js/lottieAnimation/subscription/3Hours Monster v2.json"  background="transparent" style="width:40px; height: 40px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row justify-content-center d-none sliderText" id="5monsterImg">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">5 hrs</div>
-                  <div class="col-auto discountGif" style="margin-left:85px" id="discountGif5hrs">
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="col-auto mt-2 px-0">
-                    <lottie-player src="./js/lottieAnimation/subscription/5 Hours Monster V2.json" background="transparent" style="width: 45px; height: 45px; margin: 0px" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row justify-content-center d-none sliderText" style="margin-left: -25px;" id="10monsterImg">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">10 hrs</div>
-                  <div class="col-auto discountGif" style="margin-left:95px" id="discountGif10hrs">
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="col-auto mt-2 px-0">
-                    <lottie-player src="./js/lottieAnimation/subscription/10 hours Monster V2.json"  background="transparent" style="height: 50px; width:50px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row justify-content-center d-none sliderText" style="margin-left: -35px;" id="20monsterImg">
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center">20 hrs</div>
-                  <div class="col-auto discountGif" style="margin-left:100px" id="discountGif20hrs"> 
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="col-auto mt-2 px-0">
-                    <lottie-player src="./js/lottieAnimation/subscription/20 Hours Monster v2.json"  background="transparent" style="height: 55px; width: 55px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-                <div class="row justify-content-center d-none sliderText" id="UnmonsterImg" style="margin-left: -55px;">
-                  <div class="col-auto" id="discountGifunlimited">
-                    <lottie-player id="discountTag" src="./js/lottieAnimation/subscription/Discount.json" style="width: 45px; height: 45px; margin: 0px 0px -20px 80px" background="transparent" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                  <div class="monterRange textHour font700 text-white gradientBorder text-center" style="margin-right: 10px;">Unlimited</div>
-                  <div class="col-auto mt-2 px-0">
-                    <lottie-player src="./js/lottieAnimation/subscription/Unlimited Monster v2.json" id="UnmonsterImg"  background="transparent" style="height: 70px; width: 70px;" class="flipImage" loop autoplay></lottie-player>
-                  </div>
-                </div>
-              </div>       
-            </div>
-          </div>
-          <div class="col-11 col-md-11 col-lg-9 p-0">
-            <div class="row sliderTrack mx-md-3 mx-1 px-md-2">
-              <div class="col-auto p-0">
-                <div class="hrDot"></div>
-              </div>
-              <div class="col-auto marginLeft5P p-0">
-                <div class="hrDot"></div>
-              </div>
-              <div class="col-auto marginLeft5P p-0">
-                <div class="hrDot"></div>
-              </div>
-              <div class="col-auto marginLeft15P p-0">
-                <div class="hrDot"></div>
-              </div>
-              <div class="col-auto marginLeft15P p-0">
-                <div class="hrDot"></div>
-              </div>
-              <div class="col text-end">
-                <div class="row justify-content-end">
-                  <div class="hrDot p-0 me-3 me-md-0"></div>
-                </div>
-              </div>
-            </div>
-            <div class="slidecontainer">
-              <div class="position-absolute marginTop-45 userUnderstandingSlider">
-                <lottie-player src="./js/lottieAnimation/subscription/Slider Help Overlay.json" background="transparent" style="width: auto; height: auto;" loop autoplay></lottie-player>
-              </div>
-              <input type="range" min="0" max="100" value="0" step="1" class="slider range__input" id="slider" onchange="updateSlider(this.value)" onmousedown="updateSliderText(this.value)" ontouchstart="updateSliderText(this.value)">
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center pt-md-2" id="pricings" hidden>
-          <div class="col-12 col-md-12 col-lg-11 col-xl-10 p-0">
-            <div class="card bgTransparent border-0">
-              <div class="row h-100 align-items-end visibleHideInDesktop">
-                <div class="col text-center p-0">
-                  <div class="row justify-content-center opacity0">
-                    <div class="col-auto p-0">
-                      <div class="w100">
-                        <img src="./assets/subscriptionNew/offer.svg" class="img-fluid invisible" alt="" />  
-                      </div>
-                    </div>
-                  </div>
-                  <div class="opacity0">
-                    <div class="brTop20 w100 foundationSubCard py-3">
-                      <p class="font24 font500 fountGradientText mb-2">Foundation</p> 
-                      <p class="mutedColor my-2"><del>23</del></p>
-                      <p class="font38 font700 text-white mb-3">₹39</p> 
-                      <div class="d-grid">
-                        <button class="btn disabledBtnGradient customBorder0 borderRadius60 text-white hoverGradient">Select</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Resolution</p></div>
-                  <div class="height45 invisible">Resolution</div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Validity(Days)</p></div>
-                  <div class="height45 invisible">Resolution</div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Gaming Hours </p></div>
-                  <div class="height45 invisible">Resolution</div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Queue basis</p></div>
-                  <div class="height45 invisible">Resolution</div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Play games you own*</p></div>
-                  <div class="height45 invisible">Resolution</div>
-                  <div class="height40 lightBlackBg"><p class="mb-0 offWhiteColor pt-1">Refundable</p></div>
-                  <div class="height45 invisible">Resolution</div>
-                </div>
-              </div>
-              <div class="card-img-overlay p-0">
-                <div class="row justify-content-center">
-                  <div class="col-md-4 col-lg-3 font20 font500 p-0 text-truncate h-100 d-none d-md-block align-self-end">
-                    <div class="text-end">
-                      <div class="py-3 px-3 lightBlackBg mt-5 pe-lg-5">
-                        <p class="mb-0 offWhiteColor">Resolution</p>
-                      </div>
-                      <div class="py-3 px-3 pe-lg-5"><p class="mb-0 offWhiteColor">Validity</p></div>
-                      <div class="py-3 px-3 lightBlackBg pe-lg-5"><p class="mb-0 offWhiteColor">Gaming Hours</p></div>
-                      <div class="py-3 px-3 pe-lg-5">
-                        <p class="mb-0 offWhiteColor">Queue basis</p>
-                      </div>
-                      <div class="py-3 px-3 lightBlackBg pe-lg-5">
-                        <p class="mb-0 offWhiteColor">Play games you Own*</p>
-                      </div>
-                      <div class="py-3 px-3 pe-lg-5"><p class="mb-0 offWhiteColor">Refundable</p></div>
-                    </div>
-                  </div>
-                  <div class="col-md-8 col-lg-9 p-0">
-                    <div class="position-absolute" >
-                      <img src="./assets/subscriptionNew/offer-for-all.svg" id="offer-for-all" class="img-fluid pt-3 invisible" alt="" />
-                    </div>
-                    <div class="position-relative">
-                      <div class="subCard1 moveleft">
-                        <div class="testimonial-group">
-                          <div class="row" id="plan1Hour"></div>
-                        </div>
-                      </div>
-                      <div class="subCard2 d-none">
-                        <div class="testimonial-group">
-                          <div class="row" id="plan3Hour"></div>
-                        </div>
-                      </div>
-                      <div class="subCard3 d-none">
-                        <div class="testimonial-group">
-                          <div class="row" id="plan5Hour"></div>
-                        </div>
-                      </div>
-                      <div class="subCard4 d-none">
-                        <div class="testimonial-group">
-                          <div class="row" id="plan10Hour"></div>
-                        </div>
-                      </div>
-                      <div class="subCard5 d-none">
-                        <div class="testimonial-group">
-                          <div class="row" id="plan20Hour"></div>
-                        </div>
-                      </div>
-                      <div class="subCard6 d-none">
-                        <div class="testimonial-group">
-                          <div class="row" id="UnlimitedHours-plan"></div>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="row tipBg py-2 px-1 info-card" id="tipBg">
-                      <div class="row my-1 mx-3">
-                        <div class="col-auto ps-0">
-                          <img src="./assets/subscriptionNew/clock.svg" class="img-fluid" alt="" />
-                        </div>
-                        <div class="col p-0">
-                          <p class="mb-0 text-white bottom-text">
-                            <span id="hoursPerDay"></span> hours per day is the daily limit for gameplay.
-                          </p>
-                        </div>
-                      </div>
-                      <div class="row my-1 mx-3">
-                        <div class="col-auto ps-0">
-                          <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
-                        </div>
-                        <div class="col p-0">
-                          <p class="mb-0  text-white bottom-text">
-                            To play a game, you must have ownership of the game through the available stores.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center" id="pricings" hidden>
-          <div class="col-lg-10 col-md-12 text-center p-0">
-            <img src="./assets/subscriptionNew/happy-pack.svg" class="img-fluid d-none d-md-block" alt="" />
-            <img src="./assets/subscriptionNew/happy-for-mobile.svg" class="img-fluid d-md-none w-100" style="margin-top: 200px"  alt="" />
-          </div>
-        </div>
-        <div id="overlay-msg">
+
+          <div id="tabContainer">
+             </div>
+ 
+        <div class="position-relative">
+        <!-- sold out notif start -->
+        <div class="position-absolute" id="overlay-msg">
    
           <div id="popup-msg">
             <a onclick="handlePopupClose()">
               <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
           </a>
-            <div class="popup-container">
+            <div  class="popup-container">
             
             <img class="wait-icon" src="./assets/subscriptionNew/Wait.svg">
             <div class="subtext">We regret to inform you that the subscription pack is currently sold out due to high demand and limited server availability. Our team is actively working to increase capacity, and we'll notify you as soon as the pack is available again. Thank you for your patience and understanding.</div>
@@ -380,7 +185,7 @@
         </div> 
         </div>
         </div>
-        <div id="overlay-email">
+        <div class="position-absolute" id="overlay-email">
           <div id="popup-email">
             <a onclick="handlePopupClose()">
               <img class="cross" src="./assets/subscriptionNew/Close.svg" alt="Close">
@@ -392,11 +197,90 @@
        </div>
           </div>
          </div>
-         <div id="overlay-notif">
+         <div class="position-absolute" id="overlay-notif">
           <div id="popup-notif">
            <p id="notify-user-msg">you will be notified once this subscription pack is available again</p>
            </div>
            </div>
+        <!-- sold out notif end -->
+
+
+        <!-- <div class="tabContainer">
+        <button class="btn fontCustom disabledTab tab" id="trial" onClick="switchTab('trial')">Trial</button>
+        <button class="btn fontCustom activeTab tab" id="monthly" onClick="switchTab('monthly')">Monthly</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly" onClick="switchTab('weekly')">Weekly</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly1" onClick="switchTab('weekly1')">Weekly1</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly2" onClick="switchTab('weekly2')">Weekly2</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly3" onClick="switchTab('weekly3')">Weekly3</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly4" onClick="switchTab('weekly4')">Weekly4</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly5" onClick="switchTab('weekly5')">Weekly5</button>
+        <button class="btn fontCustom disabledTab tab" id="weekly6" onClick="switchTab('weekly6')">Weekly6</button>
+      </div> -->
+      <section id="section-monthly">
+        <div class="main ">
+        <div class="labels">
+        <div class="row">
+          <div class="col label-container">
+            <div class="empty-container"></div>
+            <span class="number1 label-content fontCustom">Validity</span>
+            <span class="number1 label-content fontCustom">Resolution</span>
+            <span class="number1 label-content fontCustom">Daily Gameplay Limit</span>
+            <span class="number1 label-content fontCustom">Gaming Hours</span>
+            <span class="number1 label-content fontCustom">Queue Basis</span>
+            <span class="number1 label-content fontCustom">RTX Enabled</span>
+            <span class="number1 label-content fontCustom">Play Games you Own*</span>
+            <span class="number1 label-content fontCustom">Refundable</span>
+          </div>
+       </div>
+      </div>
+        <div class="swiper" id="sub-swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper-monthly">
+            
+             </div>
+          </div>
+          <div class="swiper-pagination"></div>
+      </div> 
+      </section>
+    <section id="section-trial">
+        <div class="main">
+        <div class="labels">
+        <div class="row">
+          <div class="col label-container-tab">
+            <div class="empty-container"></div>
+            <span class="number1 label-content fontCustom">Validity</span>
+            <span class="number1 label-content fontCustom">Resolution</span>
+            <span class="number1 label-content fontCustom">Gaming Hours</span>
+            <span class="number1 label-content fontCustom">Queue Basis</span>
+            <span class="number1 label-content fontCustom">Play Games you Own*</span>
+            <span class="number1 label-content fontCustom">Refundable</span>
+          </div>
+       </div>
+      </div>
+        <div class="swiper" id="sub-swiper-trial">
+          <div class="swiper-wrapper " id="swiper-wrapper-trial">     
+            </div>  
+             </div>
+          <div class="swiper-pagination"></div>
+      </div>
+    </section>
+  </div>
+          <div class="col-12">
+            <div class="row tipBg mt-4 px-2" id="tipBg">
+              <div class="row my-1 mx-2">
+                <div class="col-auto ps-0">
+                  <img src="./assets/subscriptionNew/accept_4315445.svg" class="img-fluid" alt="" />
+                </div>
+                <div class="col p-0">
+                  <p class="mb-0  text-white">
+                    To play a game, you must have ownership of the game through the available stores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- new styles end -->
+        
         <div class="row justify-content-center" id="emptySection" style="height: 70vh; width: 100%;">
           <div class="loader-container d-flex align-items-center justify-content-center" style="width: 100%;">
             <img src="assets/subscription/loading.gif" height="250" alt="">
@@ -512,7 +396,7 @@
                       <p
                         class="font20 font500 offWhiteColor border-bttom gradientAnchor"
                       >
-                      When it comes to OnePlay's Active 20 hrs or Unlimited plans, it's important to understand the refund policy. OnePlay provides a refund option within 24 hours of the payment transaction's completion, provided less than or equal to 1 hour of gaming hours have been used during this period. However, after this 24-hour period has passed, you will be ineligible for a refund on a purchased subscription. Customers can also apply for a cancellation/refund for an upcoming monthly plan through OnePlay. If you have a subscription plan with OnePlay and want to cancel it, you can do so up to 5 days before the next billing cycle begins.
+                      When it comes to OnePlay's plans, it's important to understand the refund policy. OnePlay provides a refund option within 24 hours of the payment transaction's completion, provided less than or equal to 1 hour of gaming hours have been used during this period. However, after this 24-hour period has passed, you will be ineligible for a refund on a purchased subscription. Customers can also apply for a cancellation/refund for an upcoming monthly plan through OnePlay. If you have a subscription plan with OnePlay and want to cancel it, you can do so up to 5 days before the next billing cycle begins.
                       </p>
                       <p class="font20 font500 offWhiteColor border-bttom gradientAnchor">
                         It is important to note that there is no cancellation or refund option available for other OnePlay plans. Please contact us at <a href="mailto:support@oneplay.in">support@oneplay.in</a> if you want to cancel or get a refund.
@@ -856,6 +740,8 @@
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -868,7 +754,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/subscription.js"></script>
+    <script src="./js/subscriptionRevised.js"></script>
 
     <!-- countly Integrated -->
     <script src="./js/countly.js"></script>
@@ -1125,12 +1011,33 @@
                 [segment]: "yes",
               })
             }
-            let sub_id='';
+            
+
+
+        function switchTab(tabName) {
+    const tabs = ['trial', 'monthly','weekly']; 
+    tabs.forEach(name => {
+        const section = document.getElementById(`section-${name}`);
+        const tab = document.getElementById(name);
+        if (name === tabName) {
+            section.style.display = 'flex';
+            tab.classList.add('activeTab');
+            tab.classList.remove('disabledTab');
+        } else {
+            section.style.display = 'none';
+            tab.classList.remove('activeTab');
+            tab.classList.add('disabledTab');
+        }
+    });
+}
+
+            var sub_id='';
             let email='';
-            const openPopup=(id)=>{
+            function openPopup(id){
             sub_id=id;
             document.getElementById('overlay-msg').style.display = 'flex';
             }
+
             function closePopup() {
     document.getElementById('overlay-msg').style.display = 'none';
   }
