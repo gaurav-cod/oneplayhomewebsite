@@ -1039,8 +1039,8 @@
   
   @font-face {
     font-family: 'Nine Tsuki';
-    src: url('assets/fonts/NineTsukiRegular.ttf') format('truetype'),
-         url('assets/fonts/NineTsuki.otf') format('opentype');
+    src: url('../assets/fonts/NineTsukiRegular.ttf') format('truetype'),
+         url('../assets/fonts/NineTsuki.otf') format('opentype');
   }
   
   *{
