@@ -672,7 +672,7 @@ body {
 }
 
 .font500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .lightWhite {
@@ -778,6 +778,7 @@ body {
     font-size: 38px;
     line-height: 50px;
 }
+
 
 .font700 {
     font-weight: 700;
