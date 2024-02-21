@@ -7,7 +7,6 @@ function loadSubscriptions() {
     return fetch(config.BASE_API + "/accounts/subscription/available_plans", {
         headers: {
           "content-type": "application/json",
-          "x-partner-id": localStorage.getItem("x-partner-id")
         },
         referrerPolicy: "strict-origin-when-cross-origin",
         mode: "cors",
@@ -348,28 +347,3 @@ new Swiper('#sub-swiper',{
 
     
 })
-
-function unlimitedPlan() {
-    $('#slider').val(100);
-    changeCharacter2(100);
-    moveCharacter2();
-  }
-
-  function premiumPlan() {
-    // $('#slider').val(60);
-    // changeCharacter2(60);
-    $('#slider').val(100);
-    changeCharacter2(100);
-    moveCharacter2();
-  }
-
-  const moveCharacter2 = () => {
-    const rangeThumb = document.getElementById("range-thumb");
-    const rangeInput = document.getElementById("slider");
-    const rangeValue = parseInt(rangeInput.value);
-    const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
-    const thumbWidth = 20;
-    const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
-    rangeThumb.style.transform = `translateX(${newPosition}px)`;
-    
-  };

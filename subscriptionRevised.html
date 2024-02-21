@@ -772,11 +772,6 @@
       // document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = "4")
       // User Slider Animation
       $('.userUnderstandingSlider').hide();
-      document.onreadystatechange = function(e)
-      {
-        const emptySection = document.querySelector('#emptySection');
-        emptySection.setAttribute('hidden', false);
-      };
       window.onload = function ()
       {
         updateSlider($("#slider").val());
@@ -974,10 +969,8 @@
         }
 
         function premiumPlan() {
-          // $('#slider').val(60);
-          // changeCharacter(60);
-          $('#slider').val(100);
-          changeCharacter(100);
+          $('#slider').val(60);
+          changeCharacter(60);
           moveCharacter();
         }
       })
