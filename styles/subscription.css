@@ -282,6 +282,9 @@
 .marginTop-20 {
     margin-top: -40px !important;
 }
+.marginTopSoldOut {
+    margin-top: -40px !important;
+}
 
 .hoverGradient:hover {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), linear-gradient(270deg, #A83AFE 0%, #6E59FE 100%);    
@@ -1199,13 +1202,13 @@
         height:640px !important;
     }
     .marginTopSoldOut{
-        margin-top: -45px;
+        margin-top: -57px;
     }
     .marginTop-20 {
         margin-top: -57px !important;
     } 
     .marginTop-5 {
-        margin-top: -1px ;
+        margin-top: -15px ;
     }
    
   }
@@ -1252,6 +1255,9 @@
     color:#959595;
   }
   .marginTop-20 {
+    margin-top: -60px !important;
+}
+.marginTopSoldOut {
     margin-top: -60px !important;
 }
 .marginTop-5 {

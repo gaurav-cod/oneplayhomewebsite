@@ -76,7 +76,19 @@ loadSubscriptions().then((allSubscriptions) => {
             heading1.innerText = 'Coming Soon';
         }
 
-  const tabs = ['Trial','Monthly'];
+
+  let tabs = [];
+
+let seen = {};
+subscriptions.forEach(sub=>{
+    let currentItem = sub?.tab_label;
+    if (!seen[currentItem]) {
+        tabs.push(currentItem);
+        seen[currentItem] = true;
+    }
+})
+
+
   const isActive='Monthly';
  const tabContainer = document.getElementById('tabContainer');
 
@@ -99,7 +111,7 @@ tabs.forEach(tab => {
     let countTrial=-1;
     let firstRecommendMonthly=false;
     let firstRecommendTrial=false;
-    firstRecommendTrialIndex=0;
+    let firstRecommendTrialIndex=0;
     let firstRecommendMonthlyIndex=0;
     
     subscriptions.forEach(sub=>{
