@@ -294,7 +294,7 @@ new Swiper('#sub-swiper',{
     loop: false,
     slidesPerView: 'auto',
     spaceBetween:30,
-    initialSlide:firstRecommendMonthlyIndex,
+    initialSlide:0,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -330,7 +330,7 @@ new Swiper('#sub-swiper',{
     loop: false,
     slidesPerView: 'auto',
     spaceBetween:30,
-    initialSlide:firstRecommendTrialIndex,
+    initialSlide:0,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
