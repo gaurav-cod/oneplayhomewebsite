@@ -128,7 +128,7 @@ tabs.forEach(tab => {
                     : ''}
                     ${sub['plan_config']?.is_sold_out ? 
                 `<div class="row justify-content-center position-relative">
-                    <div class="col-auto position-absolute marginTop-20">
+                    <div class="col-auto position-absolute marginTopSoldOut">
                         <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
                     </div>
                 </div>`
@@ -221,7 +221,7 @@ tabs.forEach(tab => {
         : ''}
         ${sub['plan_config']?.is_sold_out ? 
     `<div class="row justify-content-center position-relative">
-        <div class="col-auto position-absolute marginTop-20">
+        <div class="col-auto position-absolute marginTopSoldOut">
             <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
         </div>
     </div>`

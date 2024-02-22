@@ -634,7 +634,7 @@
     margin-top: -67px !important;
 }
 .marginTop-5 {
-    margin-top: 5px !important;
+    margin-top: 5px;
 }
 
 
@@ -1198,11 +1198,14 @@
       .swiper-slide-trial {
         height:640px !important;
     }
+    .marginTopSoldOut{
+        margin-top: -45px;
+    }
     .marginTop-20 {
-        margin-top: -40px !important;
+        margin-top: -57px !important;
     } 
     .marginTop-5 {
-        margin-top: -17px !important;
+        margin-top: -1px ;
     }
    
   }
@@ -1249,10 +1252,10 @@
     color:#959595;
   }
   .marginTop-20 {
-    margin-top: -35px !important;
+    margin-top: -60px !important;
 }
 .marginTop-5 {
-    margin-top: -29px !important;
+    margin-top: -2px ;
 }
 
 }
@@ -1340,7 +1343,7 @@
     align-item:center;
     justify-content: center;
     width:334px;
-    margin-top:242px;
+    margin-top:277px;
     
   }
   .label-container-tab{
