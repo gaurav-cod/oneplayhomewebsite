@@ -31,7 +31,7 @@ function getResolution(sub) {
 }
 
 const currencyMap = {
-    'inr': '₹'
+        "INR": "₹",
 }
 
 /**
@@ -148,8 +148,8 @@ tabs.forEach(tab => {
             <div class="row"
                     <div class="col sub-container ">
             ${sub['plan_config']?.is_sold_out ? 
-                        `<span class="discount text-sold-out">₹ ${sub?.value}</span>
-                        <span class="price text-sold-out">₹ ${sub.plan_config.actual_price}</span>
+                        `<span class="discount text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+                        <span class="price text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
                         <span class="plan-name text-sold-out">${sub.plan_name}</span>
                         <div class="img-container">
                             
@@ -182,8 +182,8 @@ tabs.forEach(tab => {
                             ${sub['plan_config']?.is_refundable ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
                         </div>
                             </div>`:
-                        `<span class="discount fontCustom">₹ ${sub?.value}</span>
-                        <span class="price text-white">₹ ${sub.plan_config.actual_price}</span>
+                        `<span class="discount fontCustom">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+                        <span class="price text-white">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
                         <span class="plan-name ${sub['plan_name'] == 'Foundation' ? 'blue-gradient' : sub['plan_name'] == 'Ultimate' ? 'dark-orange-gradient' : 'orange-gradient'}">${sub.plan_name}</span>
                         <div class="img-container">
                             <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white ">Select</a>
@@ -255,8 +255,8 @@ tabs.forEach(tab => {
             <div class="row">
               <div class="col sub-container">
 
-              ${sub['plan_config']?.is_sold_out ?`<span class="discount text-sold-out">₹ ${sub?.value}</span>
-                <span class="price text-sold-out">₹ ${sub.plan_config.actual_price}</span>
+              ${sub['plan_config']?.is_sold_out ?`<span class="discount text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+                <span class="price text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
                 <div class="img-container">
                 <button class="btn grey-btn sub-btn text-white margin-trial" onclick="openPopup('${sub['id']}')">Know More</button>
                 <span class="mobile-tag">Validity</span>
@@ -280,8 +280,8 @@ tabs.forEach(tab => {
               ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
               </div>
               </div>`:
-          `<span class="discount fontCustom">₹ ${sub?.value}</span>
-          <span class="price text-white">₹ ${sub.plan_config.actual_price}</span>
+          `<span class="discount fontCustom">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+          <span class="price text-white">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
           <div class="img-container">
           <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white margin-trial">Select</a>
           <span class="mobile-tag">Validity</span>
