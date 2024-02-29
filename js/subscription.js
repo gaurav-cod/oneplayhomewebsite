@@ -232,7 +232,7 @@ tabs.forEach(tab => {
                 swiperSlide2.classList.add('recommendedBorder');
                 if(!firstRecommendTrial){
                     firstRecommendTrial=true;
-                    firstRecommendTrialIndex=countMonthly;
+                    firstRecommendTrialIndex=countTrial;
                 }
             }
     
@@ -320,7 +320,7 @@ new Swiper('#sub-swiper',{
     loop: false,
     slidesPerView: 'auto',
     spaceBetween:30,
-    initialSlide:0,
+    initialSlide:firstRecommendMonthlyIndex,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -336,6 +336,7 @@ new Swiper('#sub-swiper',{
         spaceBetween:15,
         centeredSlides:false,
         slidesPerView:3,
+        initialSlide:0,
         coverflowEffect: {
           rotate: 0,
           stretch: 0,
@@ -347,8 +348,6 @@ new Swiper('#sub-swiper',{
   });
 
 
-  
-
   new Swiper('#sub-swiper-trial', {
     effect: 'coverflow',
     grabCursor: true,
@@ -356,7 +355,7 @@ new Swiper('#sub-swiper',{
     loop: false,
     slidesPerView: 'auto',
     spaceBetween:30,
-    initialSlide:0,
+    initialSlide:firstRecommendTrialIndex,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
@@ -372,6 +371,7 @@ new Swiper('#sub-swiper',{
         spaceBetween:15,
         centeredSlides:false,
         slidesPerView:3,
+        initialSlide:0,
         coverflowEffect: {
           rotate: 0,
           stretch: 0,

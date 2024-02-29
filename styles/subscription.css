@@ -1083,6 +1083,9 @@
     width: 140px !important;
     height:38px;
     border-radius:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
   .disabledTab:hover {
     color: #959595;
@@ -1103,6 +1106,9 @@
     width: 140px !important;
     height:38px;
     border-radius:60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
   }
   .activeTab:hover{
     color: white;
@@ -1160,7 +1166,7 @@
       
   }
   .swiper-slide-monthly{
-    height:575px !important;
+    height:585px !important;
   }
   .swiper-slide-trial {
      
@@ -1233,8 +1239,8 @@
 
   .swiper-slide {
     font-size: 14px;
-    width:85vw !important;
-   
+width:85vw !important;
+    
   }
 
   .swiper-slide-monthly{
