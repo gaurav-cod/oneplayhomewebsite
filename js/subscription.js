@@ -131,7 +131,7 @@ tabs.forEach(tab => {
             swiperSlide.innerHTML = `
             
                     ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
-                        `<div class="row justify-content-center position-relative">
+                        `<div class="row justify-content-center">
                             <div class="col-auto position-absolute marginTop-20">
                             <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                             <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
@@ -139,7 +139,7 @@ tabs.forEach(tab => {
                         </div>`
                     : ''}
                     ${sub['plan_config']?.is_sold_out ? 
-                `<div class="row justify-content-center position-relative">
+                `<div class="row justify-content-center">
                     <div class="col-auto position-absolute marginTopSoldOut">
                         <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
                     </div>
@@ -238,7 +238,7 @@ tabs.forEach(tab => {
     
             swiperSlide2.innerHTML = `
             ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
-            `<div class="row justify-content-center position-relative">
+            `<div class="row justify-content-center">
                 <div class="col-auto position-absolute marginTop-20">
                 <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                 <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
@@ -246,7 +246,7 @@ tabs.forEach(tab => {
             </div>`
         : ''}
         ${sub['plan_config']?.is_sold_out ? 
-    `<div class="row justify-content-center position-relative">
+    `<div class="row justify-content-center">
         <div class="col-auto position-absolute marginTopSoldOut">
             <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
         </div>
