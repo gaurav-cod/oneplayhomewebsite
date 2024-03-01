@@ -1283,6 +1283,7 @@ width:85vw !important;
     margin-top: -2px ;
 }
 #swiper-wrapper-trial{
+    display:block;
     margin:0 !important;
   }
 #section-trial{
