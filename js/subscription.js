@@ -335,7 +335,6 @@ new Swiper('#sub-swiper',{
       640: {
         spaceBetween:15,
         centeredSlides:false,
-        slidesPerView:3,
         initialSlide:0,
         coverflowEffect: {
           rotate: 0,
@@ -370,7 +369,6 @@ new Swiper('#sub-swiper',{
       640: {
         spaceBetween:15,
         centeredSlides:false,
-        slidesPerView:3,
         initialSlide:0,
         coverflowEffect: {
           rotate: 0,
