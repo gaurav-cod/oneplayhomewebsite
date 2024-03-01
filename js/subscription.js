@@ -120,6 +120,7 @@ tabs.forEach(tab => {
             ++countMonthly;
             const swiperSlide = document.createElement('div');
             swiperSlide.classList.add('swiper-slide');
+            swiperSlide.classList.add('position-relative');
             swiperSlide.classList.add('swiper-slide-monthly');
             if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
             swiperSlide.classList.add('recommendedBorder');
@@ -227,6 +228,7 @@ tabs.forEach(tab => {
             ++countTrial;
             const swiperSlide2 = document.createElement('div');
             swiperSlide2.classList.add('swiper-slide');
+            swiperSlide2.classList.add('position-relative');
             swiperSlide2.classList.add('swiper-slide-trial');
             if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
                 swiperSlide2.classList.add('recommendedBorder');
