@@ -164,7 +164,11 @@
         <!-- new styles start -->
         <div  class="sub-heading text-white">Choose your plan</div>
 
-
+        <div class="row justify-content-center" id="emptySection" style="height: 70vh; width: 100%;">
+          <div class="loader-container d-flex align-items-center justify-content-center" style="width: 100%;">
+            <img src="assets/subscription/loading.gif" height="250" alt="">
+          </div>
+        </div>
           <div id="tabContainer">
              </div>
  
@@ -221,15 +225,24 @@
         <div class="labels">
         <div class="row">
           <div class="col label-container">
-            <div class="empty-container"></div>
+            <span class="discount text-sold-out hidden">Hidden</span>
+                        <span class="price text-sold-out hidden">Hidden</span>
+                        <span class="plan-name text-sold-out hidden">Hidden</span>
+                        <div class="img-container">
+                            
+                        
+                          <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
             <span class="number1 label-content fontCustom">Validity</span>
             <span class="number1 label-content fontCustom">Resolution</span>
             <span class="number1 label-content fontCustom">Daily Gameplay Limit</span>
             <span class="number1 label-content fontCustom">Gaming Hours</span>
+            </div>
+            <div class="img-container">
             <span class="number1 label-content fontCustom">Queue Basis</span>
             <span class="number1 label-content fontCustom">RTX Enabled</span>
             <span class="number1 label-content fontCustom">Play Games you Own*</span>
             <span class="number1 label-content fontCustom">Refundable</span>
+            </div>
           </div>
        </div>
       </div>
@@ -246,18 +259,25 @@
         <div class="labels">
         <div class="row">
           <div class="col label-container-tab">
-            <div class="empty-container"></div>
+            <span class="discount text-sold-out hidden">Hidden</span>
+            <span class="price text-sold-out hidden">Hidden</span>
+            <span class="plan-name text-sold-out hidden">Hidden</span>
+            <div class="img-container">
+              <button class="btn grey-btn sub-btn text-white margin-trial hidden">Know More</button>
             <span class="number1 label-content fontCustom">Validity</span>
             <span class="number1 label-content fontCustom">Resolution</span>
             <span class="number1 label-content fontCustom">Gaming Hours</span>
+            </div>
+            <div class="img-container">
             <span class="number1 label-content fontCustom">Queue Basis</span>
             <span class="number1 label-content fontCustom">Play Games you Own*</span>
             <span class="number1 label-content fontCustom">Refundable</span>
           </div>
+          </div>
        </div>
       </div>
         <div class="swiper" id="sub-swiper-trial">
-          <div class="swiper-wrapper " id="swiper-wrapper-trial">     
+          <div class="swiper-wrapper" id="swiper-wrapper-trial">     
             </div>  
              </div>
           <div class="swiper-pagination"></div>
@@ -281,11 +301,7 @@
         
         <!-- new styles end -->
         
-        <div class="row justify-content-center" id="emptySection" style="height: 70vh; width: 100%;">
-          <div class="loader-container d-flex align-items-center justify-content-center" style="width: 100%;">
-            <img src="assets/subscription/loading.gif" height="250" alt="">
-          </div>
-        </div>
+        
      </div>
     </div>
     <div class="container padding100">
@@ -741,7 +757,6 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -754,7 +769,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/subscriptionRevised.js"></script>
+    <script src="./js/subscription.js"></script>
 
     <!-- countly Integrated -->
     <script src="./js/countly.js"></script>
@@ -1032,7 +1047,7 @@
 }
 
             var sub_id='';
-            let email='';
+            var email='';
             function openPopup(id){
             sub_id=id;
             document.getElementById('overlay-msg').style.display = 'flex';
