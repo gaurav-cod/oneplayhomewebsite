@@ -113,6 +113,9 @@ tabs.forEach(tab => {
     let firstRecommendTrial=false;
     let firstRecommendTrialIndex=0;
     let firstRecommendMonthlyIndex=0;
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
     
     subscriptions.forEach(sub=>{
        
@@ -133,7 +136,7 @@ tabs.forEach(tab => {
             
                     ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
                         `<div class="row justify-content-center">
-                            <div class="col-auto position-absolute marginTop-20" style="top: 10px; ">
+                            <div class="col-auto position-absolute marginTop-20" style="${isSafari ? 'top: 8px;': ''}">
                             <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                             <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
                             </div>
