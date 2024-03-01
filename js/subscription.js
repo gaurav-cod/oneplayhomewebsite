@@ -133,7 +133,7 @@ tabs.forEach(tab => {
             
                     ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
                         `<div class="row justify-content-center">
-                            <div class="col-auto position-absolute marginTop-20">
+                            <div class="col-auto position-absolute marginTop-20" style="top: 10px; ">
                             <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                             <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
                             </div>
@@ -241,7 +241,7 @@ tabs.forEach(tab => {
             swiperSlide2.innerHTML = `
             ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
             `<div class="row justify-content-center">
-                <div class="col-auto position-absolute marginTop-20">
+                <div class="col-auto position-absolute marginTop-20" >
                 <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                 <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
                 </div>

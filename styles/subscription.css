@@ -280,8 +280,8 @@
 }
 
 .marginTop-20 {
-    /* margin-top: -40px !important; */
-    top: -20px !important;
+    margin-top: -40px !important;
+    /* top: -20px !important; */
 }
 .marginTopSoldOut {
     margin-top: -40px !important;
