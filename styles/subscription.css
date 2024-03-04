@@ -1318,7 +1318,7 @@ width:85vw !important;
       font-size: 16px;
       padding:40px 25px 40px 25px;
     }
-    .number{ 
+    .margin10{ 
       margin:8px !important;
     }
     .cross{
@@ -1357,10 +1357,7 @@ width:85vw !important;
 
 
   
-  .number{ 
-    margin:10px !important;
-  }
-  .number1{
+  .margin10{ 
     margin:10px !important;
   }
   .sub-container{
