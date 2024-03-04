@@ -156,29 +156,29 @@ tabs.forEach(tab => {
                         
                             <button class="btn grey-btn sub-btn text-white " onclick="openPopup('${sub['id']}')">Know More</button>
                             <span class="mobile-tag">Validity</span>
-                            <span class="number text-sold-out font500">${sub.plan_duration_in_days} Days</span>
+                            <span class="margin10 text-sold-out font500">${sub.plan_duration_in_days} Days</span>
                             <span class="mobile-tag">Resolution</span>
-                            <span class="number text-sold-out font500">${getResolution(sub)}</span>
+                            <span class="margin10 text-sold-out font500">${getResolution(sub)}</span>
                             <span class="mobile-tag">Daily Gaming Limit</span>
-                            <span class="number text-sold-out font500">${sub.gameplay_limit_hrs_per_day} hrs</span>
+                            <span class="margin10 text-sold-out font500">${sub.gameplay_limit_hrs_per_day} hrs</span>
                             <span class="mobile-tag">Gaming Hours</span>
-                            <span class="number text-sold-out font500">${sub['total_offered_tokens'] / 60} hrs</span>
+                            <span class="margin10 text-sold-out font500">${sub['total_offered_tokens'] / 60} hrs</span>
                         </div>
                         <div class="img-container">
                             <span class="mobile-tag">Queue Basis</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.is_queue ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
                             </div>
                             <span class="mobile-tag">RTX Enabled</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.has_rtx_enabled ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
                             </div>
                             <span class="mobile-tag">Play games you own*</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.play_games_you_own ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
                             </div>
                             <span class="mobile-tag">Refundable</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.is_refundable ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
                         </div>
                             </div>`:
@@ -188,29 +188,29 @@ tabs.forEach(tab => {
                         <div class="img-container">
                             <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white ">Select</a>
                             <span class="mobile-tag">Validity</span>
-                            <span class="number text-dull">${sub.plan_duration_in_days} Days</span>
+                            <span class="margin10 text-dull">${sub.plan_duration_in_days} Days</span>
                             <span class="mobile-tag">Resolution</span>
-                            <span class="number text-dull">${getResolution(sub)}</span>
+                            <span class="margin10 text-dull">${getResolution(sub)}</span>
                             <span class="mobile-tag">Daily Gaming Limit</span>
-                            <span class="number text-muted">${sub.gameplay_limit_hrs_per_day} hrs</span>
+                            <span class="margin10 text-muted">${sub.gameplay_limit_hrs_per_day} hrs</span>
                             <span class="mobile-tag">Gaming Hours</span>
-                            <span class="number text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
+                            <span class="margin10 text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
                         </div>
                         <div class="img-container">
                             <span class="mobile-tag">Queue Basis</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.is_queue ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
                             </div>
                             <span class="mobile-tag">RTX Enabled</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.has_rtx_enabled ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
                             </div>
                             <span class="mobile-tag">Play games you own*</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.play_games_you_own ? '<img class=" cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
                             </div>
                             <span class="mobile-tag">Refundable</span>
-                            <div class="img-wrapper number1">
+                            <div class="img-wrapper margin10">
                             ${sub['plan_config']?.is_refundable ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
                             </div>
                         </div>`
@@ -260,24 +260,24 @@ tabs.forEach(tab => {
                 <div class="img-container">
                 <button class="btn grey-btn sub-btn text-white margin-trial" onclick="openPopup('${sub['id']}')">Know More</button>
                 <span class="mobile-tag">Validity</span>
-                <span class="number text-sold-out">${sub.plan_duration_in_days} Days</span>
+                <span class="margin10 text-sold-out">${sub.plan_duration_in_days} Days</span>
                 <span class="mobile-tag">Resolution</span>
-                <span class="number text-sold-out">${getResolution(sub)}</span>
+                <span class="margin10 text-sold-out">${getResolution(sub)}</span>
                 <span class="mobile-tag">Gaming Hours</span>
-                <span class="number text-sold-out">${sub['total_offered_tokens'] / 60} hrs</span>
+                <span class="margin10 text-sold-out">${sub['total_offered_tokens'] / 60} hrs</span>
               </div>
               <div class="img-container">
               <span class="mobile-tag">Queue Basis</span>
-              <div class="img-wrapper number1">
-              ${sub['plan_config']?.is_queue ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+              <div class="img-wrapper margin10">
+              ${sub['plan_config']?.is_queue ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
               </div>
               <span class="mobile-tag">Play games you own*</span>
-              <div class="img-wrapper number1">
-              ${sub['plan_config']?.play_games_you_own ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+              <div class="img-wrapper margin10">
+              ${sub['plan_config']?.play_games_you_own ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
               </div>
               <span class="mobile-tag">Refundable</span>
-              <div class="img-wrapper number1">
-              ${sub['plan_config']?.is_refundable ? '<img class="number cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="number cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+              <div class="img-wrapper margin10">
+              ${sub['plan_config']?.is_refundable ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
               </div>
               </div>`:
           `<span class="discount fontCustom">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
@@ -285,23 +285,23 @@ tabs.forEach(tab => {
           <div class="img-container">
           <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white margin-trial">Select</a>
           <span class="mobile-tag">Validity</span>
-          <span class="number text-dull">${sub.plan_duration_in_days} Days</span>
+          <span class="margin10 text-dull">${sub.plan_duration_in_days} Days</span>
           <span class="mobile-tag">Resolution</span>
-          <span class="number text-dull">${getResolution(sub)}</span>
+          <span class="margin10 text-dull">${getResolution(sub)}</span>
           <span class="mobile-tag">Gaming Hours</span>
-          <span class="number text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
+          <span class="margin10 text-muted">${sub['total_offered_tokens'] / 60} hrs</span>
         </div>
         <div class="img-container">
         <span class="mobile-tag">Queue Basis</span>
-        <div class="img-wrapper number1">
+        <div class="img-wrapper margin10">
         ${sub['plan_config']?.is_queue ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
         </div>
         <span class="mobile-tag">Play games you own*</span>
-        <div class="img-wrapper number1">
+        <div class="img-wrapper margin10">
         ${sub['plan_config']?.play_games_you_own ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
         </div>
         <span class="mobile-tag">Refundable</span>
-        <div class="img-wrapper number1">
+        <div class="img-wrapper margin10">
         ${sub['plan_config']?.is_refundable ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
         </div>
         </div>`
