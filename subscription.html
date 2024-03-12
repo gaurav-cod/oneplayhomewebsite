@@ -221,69 +221,13 @@
         <button class="btn fontCustom disabledTab tab" id="weekly6" onClick="switchTab('weekly6')">Weekly6</button>
       </div> -->
       <section id="section-monthly">
-        <div class="main ">
-        <div class="labels">
-        <div class="row">
-          <div class="col label-container">
-            <span class="discount text-sold-out hidden">Hidden</span>
-                        <span class="price text-sold-out hidden">Hidden</span>
-                        <span class="plan-name text-sold-out hidden">Hidden</span>
-                        <div class="img-container">
-                            
-                        
-                          <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
-            <span class="margin10 label-content fontCustom">Validity</span>
-            <span class="margin10 label-content fontCustom">Resolution</span>
-            <span class="margin10 label-content fontCustom">Daily Gameplay Limit</span>
-            <span class="margin10 label-content fontCustom">Gaming Hours</span>
-            </div>
-            <div class="img-container">
-            <span class="margin10 label-content fontCustom">Queue Basis</span>
-            <span class="margin10 label-content fontCustom">RTX Enabled</span>
-            <span class="margin10 label-content fontCustom">Play Games you Own*</span>
-            <span class="margin10 label-content fontCustom">Refundable</span>
-            </div>
-          </div>
-       </div>
-      </div>
-        <div class="swiper" id="sub-swiper">
-          <div class="swiper-wrapper position-relative" id="swiper-wrapper-monthly">
-            
-             </div>
-          </div>
-          <div class="swiper-pagination"></div>
+        <div class="main " id="main">
       </div> 
       </section>
-    <section id="section-trial" class="position-relative">
+    <section id="section-trial">
        
-      <div class="main">
-      <div class="swiper-container position-relative">
-        <div class="labels position-absolute">
-          <div class="row">
-            <div class="col label-container-tab">
-              <span class="discount text-sold-out hidden">Hidden</span>
-              <span class="price text-sold-out hidden">Hidden</span>
-              <span class="plan-name text-sold-out hidden">Hidden</span>
-              <div class="img-container">
-                <button class="btn grey-btn sub-btn text-white margin-trial hidden">Know More</button>
-              <span class="margin10 label-content fontCustom">Validity</span>
-              <span class="margin10 label-content fontCustom">Resolution</span>
-              <span class="margin10 label-content fontCustom">Gaming Hours</span>
-              </div>
-              <div class="img-container">
-              <span class="margin10 label-content fontCustom">Queue Basis</span>
-              <span class="margin10 label-content fontCustom">Play Games you Own*</span>
-              <span class="margin10 label-content fontCustom">Refundable</span>
-            </div>
-            </div>
-         </div>
-        </div>
-        <div class="swiper" id="sub-swiper-trial">
-          <div class="swiper-wrapper position-relative" id="swiper-wrapper-trial">     
-            </div>  
-             </div>
-          <div class="swiper-pagination"></div>
-        </div>
+      <div class="main" id="main-trial">
+      
       </div>
     </section>
   </div>
@@ -802,20 +746,6 @@
         $('.userUnderstandingSlider').hide();
       });
       
-      // init
-        const moveCharacter = () => {
-          const rangeThumb = document.getElementById("range-thumb");
-          const rangeInput = document.getElementById("slider");
-          const rangeValue = parseInt(rangeInput.value);
-          const percentage = (rangeValue - rangeInput.min) / (rangeInput.max - rangeInput.min);
-          const thumbWidth = 20;
-          const newPosition = percentage * (rangeInput.clientWidth - thumbWidth);
-          rangeThumb.style.transform = `translateX(${newPosition}px)`;
-          
-        };
-        document.getElementById("slider").addEventListener("input", () => {
-          moveCharacter();
-        });
 
       // calc nearest dot
       const calculateNearestDot = (value) => {
@@ -1033,7 +963,7 @@
 
 
         function switchTab(tabName) {
-    const tabs = ['trial', 'monthly','weekly']; 
+    const tabs = ['trial', 'monthly']; 
     tabs.forEach(name => {
         const section = document.getElementById(`section-${name}`);
         const tab = document.getElementById(name);
