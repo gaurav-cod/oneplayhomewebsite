@@ -283,12 +283,17 @@ else{
     let firstRecommendTrial=false;
     let firstRecommendTrialIndex=0;
     let firstRecommendMonthlyIndex=0;
+    // Safari 3.0+ "[object HTMLElementConstructor]" 
+    var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
+
+    
     subscriptions.forEach(sub=>{
        
         if (sub?.tab_label === 'Monthly') {
             ++countMonthly;
             const swiperSlide = document.createElement('div');
             swiperSlide.classList.add('swiper-slide');
+            swiperSlide.classList.add('position-relative');
             swiperSlide.classList.add('swiper-slide-monthly');
             if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
             swiperSlide.classList.add('recommendedBorder');
@@ -300,15 +305,15 @@ else{
             swiperSlide.innerHTML = `
             
                     ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
-                        `<div class="row justify-content-center position-relative">
-                            <div class="col-auto position-absolute marginTop-20">
+                        `<div class="row justify-content-center">
+                            <div class="col-auto position-absolute marginTop-20" style="${isSafari ? 'top: 8px;': ''}">
                             <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                             <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
                             </div>
                         </div>`
                     : ''}
                     ${sub['plan_config']?.is_sold_out ? 
-                `<div class="row justify-content-center position-relative">
+                `<div class="row justify-content-center">
                     <div class="col-auto position-absolute marginTopSoldOut">
                         <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
                     </div>
@@ -396,6 +401,7 @@ else{
             ++countTrial;
             const swiperSlide2 = document.createElement('div');
             swiperSlide2.classList.add('swiper-slide');
+            swiperSlide2.classList.add('position-relative');
             swiperSlide2.classList.add('swiper-slide-trial');
             if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
                 swiperSlide2.classList.add('recommendedBorder');
@@ -407,15 +413,15 @@ else{
     
             swiperSlide2.innerHTML = `
             ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
-            `<div class="row justify-content-center position-relative">
-                <div class="col-auto position-absolute marginTop-20">
+            `<div class="row justify-content-center">
+                <div class="col-auto position-absolute marginTop-20" >
                 <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
                 <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
                 </div>
             </div>`
         : ''}
         ${sub['plan_config']?.is_sold_out ? 
-    `<div class="row justify-content-center position-relative">
+    `<div class="row justify-content-center">
         <div class="col-auto position-absolute marginTopSoldOut">
             <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
         </div>
