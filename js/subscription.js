@@ -80,12 +80,39 @@ loadSubscriptions().then((allSubscriptions) => {
   let tabs = [];
 
 let seen = {};
+let label_margin_trial=0;
+let label_margin_monthly=0;
+let countMonthly=0;
+let countTrial=0;
+let trial_less_than_two=true;
+let monthly_less_than_two=true;
+let maxAllowed=2;
 subscriptions.forEach(sub=>{
     let currentItem = sub?.tab_label;
     if (!seen[currentItem]) {
         tabs.push(currentItem);
         seen[currentItem] = true;
     }
+    if(sub?.tab_label === 'Trial'){
+        
+        if(countTrial<maxAllowed){
+            label_margin_trial+=300;
+        }
+        else{
+            trial_less_than_two = false;
+        }
+        countTrial++;
+    }
+    if(sub?.tab_label === 'Monthly'){
+       if(countMonthly<maxAllowed){
+       label_margin_monthly+=300;
+       }
+       else{
+       monthly_less_than_two=false;
+       }
+       countMonthly++;
+    }
+   
 })
 
 
@@ -103,17 +130,159 @@ tabs.forEach(tab => {
     tabContainer.appendChild(swiperSlide);
 });
 
-     
+if(trial_less_than_two){
+    const mainContainer=document.getElementById('main-trial');
+mainContainer.innerHTML=
+`
+<div class="swiper-container position-relative">
+        <div id="labels" class="position-absolute">
+          <div class="row">
+            <div class="col label-container-tab">
+              <span class="discount text-sold-out hidden">Hidden</span>
+              <span class="price text-sold-out hidden">Hidden</span>
+              <span class="plan-name text-sold-out hidden">Hidden</span>
+              <div class="img-container">
+                <button class="btn grey-btn sub-btn text-white margin-trial hidden">Know More</button>
+              <span class="margin10 label-content fontCustom">Validity</span>
+              <span class="margin10 label-content fontCustom">Resolution</span>
+              <span class="margin10 label-content fontCustom">Gaming Hours</span>
+              </div>
+              <div class="img-container">
+              <span class="margin10 label-content fontCustom">Queue Basis</span>
+              <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+              <span class="margin10 label-content fontCustom">Refundable</span>
+            </div>
+            </div>
+         </div>
+        </div>
+        <div class="swiper" id="sub-swiper-trial">
+          <div class="swiper-wrapper" id="swiper-wrapper-trial">     
+            </div>  
+             </div>
+          <div class="swiper-pagination"></div>
+        </div>
+`
+document.getElementById('labels').style.right = label_margin_trial + 'px';
+}
+else{
+    const mainContainer=document.getElementById('main-trial');
+    mainContainer.innerHTML=
+    `
+            <div id="labels">
+              <div class="row">
+                <div class="col label-container-tab">
+                  <span class="discount text-sold-out hidden">Hidden</span>
+                  <span class="price text-sold-out hidden">Hidden</span>
+                  <span class="plan-name text-sold-out hidden">Hidden</span>
+                  <div class="img-container">
+                    <button class="btn grey-btn sub-btn text-white margin-trial hidden">Know More</button>
+                  <span class="margin10 label-content fontCustom">Validity</span>
+                  <span class="margin10 label-content fontCustom">Resolution</span>
+                  <span class="margin10 label-content fontCustom">Gaming Hours</span>
+                  </div>
+                  <div class="img-container">
+                  <span class="margin10 label-content fontCustom">Queue Basis</span>
+                  <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+                  <span class="margin10 label-content fontCustom">Refundable</span>
+                </div>
+                </div>
+             </div>
+            </div>
+            <div class="swiper" id="sub-swiper-trial">
+              <div class="swiper-wrapper" id="swiper-wrapper-trial">     
+                </div>  
+                 </div>
+              <div class="swiper-pagination"></div>
+    `   
+}
+if(monthly_less_than_two){
+const mainContainer=document.getElementById('main');
+mainContainer.innerHTML=
+`
+<div id="swiper-container-monthly" class="position-relative">
+          <div id="labels-monthly" class="position-absolute">
+        <div class="row">
+          <div class="col label-container">
+            <span class="discount text-sold-out hidden">Hidden</span>
+                        <span class="price text-sold-out hidden">Hidden</span>
+                        <span class="plan-name text-sold-out hidden">Hidden</span>
+                        <div class="img-container">
+                            
+                        
+                          <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
+            <span class="margin10 label-content fontCustom">Validity</span>
+            <span class="margin10 label-content fontCustom">Resolution</span>
+            <span class="margin10 label-content fontCustom">Daily Gameplay Limit</span>
+            <span class="margin10 label-content fontCustom">Gaming Hours</span>
+            </div>
+            <div class="img-container">
+            <span class="margin10 label-content fontCustom">Queue Basis</span>
+            <span class="margin10 label-content fontCustom">RTX Enabled</span>
+            <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+            <span class="margin10 label-content fontCustom">Refundable</span>
+            </div>
+          </div>
+       </div>
+      </div>
+        <div class="swiper" id="sub-swiper">
+          <div class="swiper-wrapper" id="swiper-wrapper-monthly">
+            
+             </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+`
+
+
+document.getElementById('labels-monthly').style.right = label_margin_monthly + 'px';
+}
+else{
+    const mainContainer=document.getElementById('main');
+    mainContainer.innerHTML=
+    `
+              <div id="labels-monthly">
+            <div class="row">
+              <div class="col label-container">
+                <span class="discount text-sold-out hidden">Hidden</span>
+                            <span class="price text-sold-out hidden">Hidden</span>
+                            <span class="plan-name text-sold-out hidden">Hidden</span>
+                            <div class="img-container">
+                                
+                            
+                              <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
+                <span class="margin10 label-content fontCustom">Validity</span>
+                <span class="margin10 label-content fontCustom">Resolution</span>
+                <span class="margin10 label-content fontCustom">Daily Gameplay Limit</span>
+                <span class="margin10 label-content fontCustom">Gaming Hours</span>
+                </div>
+                <div class="img-container">
+                <span class="margin10 label-content fontCustom">Queue Basis</span>
+                <span class="margin10 label-content fontCustom">RTX Enabled</span>
+                <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+                <span class="margin10 label-content fontCustom">Refundable</span>
+                </div>
+              </div>
+           </div>
+          </div>
+            <div class="swiper" id="sub-swiper">
+              <div class="swiper-wrapper" id="swiper-wrapper-monthly">
+                
+                 </div>
+              </div>
+              <div class="swiper-pagination"></div>
+    `
+    
+      
+}
       
     const subCard=document.getElementById('swiper-wrapper-monthly');
     const subCardTrial=document.getElementById('swiper-wrapper-trial');
-    let countMonthly=-1;
-    let countTrial=-1;
+    countMonthly=-1;
+    countTrial=-1;
     let firstRecommendMonthly=false;
     let firstRecommendTrial=false;
     let firstRecommendTrialIndex=0;
     let firstRecommendMonthlyIndex=0;
-    
     subscriptions.forEach(sub=>{
        
         if (sub?.tab_label === 'Monthly') {
@@ -310,9 +479,9 @@ tabs.forEach(tab => {
            </div>`;
             subCardTrial.appendChild(swiperSlide2); 
         }
-    
+ 
 })
-    
+
 new Swiper('#sub-swiper',{
     effect: 'coverflow',
     grabCursor: true,
@@ -380,6 +549,6 @@ new Swiper('#sub-swiper',{
     }
    
   });
+  
 
-    
 })
