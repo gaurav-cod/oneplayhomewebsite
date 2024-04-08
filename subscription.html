@@ -163,7 +163,9 @@
         </div>
         <!-- new styles start -->
         <div  class="sub-heading text-white">Choose your plan</div>
+            
 
+        <!-- Loader -->
         <div class="row justify-content-center" id="emptySection" style="height: 70vh; width: 100%;">
           <div class="loader-container d-flex align-items-center justify-content-center" style="width: 100%;">
             <img src="assets/subscription/loading.gif" height="250" alt="">
@@ -207,29 +209,23 @@
            </div>
            </div>
         <!-- sold out notif end -->
-
-
-        <!-- <div class="tabContainer">
-        <button class="btn fontCustom disabledTab tab" id="trial" onClick="switchTab('trial')">Trial</button>
-        <button class="btn fontCustom activeTab tab" id="monthly" onClick="switchTab('monthly')">Monthly</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly" onClick="switchTab('weekly')">Weekly</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly1" onClick="switchTab('weekly1')">Weekly1</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly2" onClick="switchTab('weekly2')">Weekly2</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly3" onClick="switchTab('weekly3')">Weekly3</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly4" onClick="switchTab('weekly4')">Weekly4</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly5" onClick="switchTab('weekly5')">Weekly5</button>
-        <button class="btn fontCustom disabledTab tab" id="weekly6" onClick="switchTab('weekly6')">Weekly6</button>
-      </div> -->
+      
+      <!-- monthly -->
       <section id="section-monthly">
         <div class="main " id="main">
       </div> 
       </section>
+      <!-- hourly -->
     <section id="section-trial">
-       
       <div class="main" id="main-trial">
-      
       </div>
     </section>
+    <!-- night plans -->
+    <section id="section-night plans">
+      <div class="main" id="main-night">
+      </div>
+    </section>
+    
   </div>
           <div class="col-12">
             <div class="row tipBg mt-4 px-2" id="tipBg">
@@ -963,7 +959,7 @@
 
 
         function switchTab(tabName) {
-    const tabs = ['trial', 'monthly']; 
+    const tabs = ['trial', 'monthly','night plans']; 
     tabs.forEach(name => {
         const section = document.getElementById(`section-${name}`);
         const tab = document.getElementById(name);

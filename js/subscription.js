@@ -4,7 +4,7 @@
  * @returns {Promise<object[]>}
  */
 function loadSubscriptions() {
-    return fetch(config.BASE_API + "/accounts/subscription/available_plans", {
+    return fetch(config.BASE_API + "/subscriptions/available_plans", {
         headers: {
           "content-type": "application/json",
         },
@@ -77,16 +77,23 @@ loadSubscriptions().then((allSubscriptions) => {
         }
 
 
-  let tabs = [];
-
+let tabs = [];
 let seen = {};
+
 let label_margin_trial=0;
 let label_margin_monthly=0;
+let label_margin_night=0;
+
 let countMonthly=0;
 let countTrial=0;
+let countNight=0;
+
 let trial_less_than_two=true;
 let monthly_less_than_two=true;
+let night_less_than_two=true;
+
 let maxAllowed=2;
+
 subscriptions.forEach(sub=>{
     let currentItem = sub?.tab_label;
     if (!seen[currentItem]) {
@@ -96,7 +103,7 @@ subscriptions.forEach(sub=>{
     if(sub?.tab_label === 'Trial'){
         
         if(countTrial<maxAllowed){
-            label_margin_trial+=300;
+            label_margin_trial+=350;
         }
         else{
             trial_less_than_two = false;
@@ -105,17 +112,25 @@ subscriptions.forEach(sub=>{
     }
     if(sub?.tab_label === 'Monthly'){
        if(countMonthly<maxAllowed){
-       label_margin_monthly+=300;
+       label_margin_monthly+=350;
        }
        else{
        monthly_less_than_two=false;
        }
        countMonthly++;
     }
+
+    if(sub?.tab_label === 'Night Plans'){
+      if(countNight<maxAllowed){
+      label_margin_night+=350;
+      }
+      else{
+      night_less_than_two=false;
+      }
+      countNight++;
+   }
    
 })
-
-
   const isActive='Monthly';
  const tabContainer = document.getElementById('tabContainer');
 
@@ -206,6 +221,7 @@ mainContainer.innerHTML=
             <span class="discount text-sold-out hidden">Hidden</span>
                         <span class="price text-sold-out hidden">Hidden</span>
                         <span class="plan-name text-sold-out hidden">Hidden</span>
+                        
                         <div class="img-container">
                             
                         
@@ -274,15 +290,101 @@ else{
     
       
 }
+
+
+// night plans start
+if(night_less_than_two){
+  const mainContainer=document.getElementById('main-night');
+  mainContainer.innerHTML=
+  `
+  <div id="swiper-container-night" class="position-relative">
+            <div id="labels-night" class="position-absolute">
+          <div class="row">
+            <div class="col label-container-night">
+              <span class="discount text-sold-out hidden">Hidden</span>
+                          <span class="price text-sold-out hidden">Hidden</span>
+                          <span class="plan-name text-sold-out hidden">Hidden</span>
+                          <div class="img-container">
+                              
+                          
+                            <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
+                            <span class="plan-name text-sold-out hidden">Hidden</span>
+              <span class="margin10 label-content fontCustom">Validity</span>
+              <span class="margin10 label-content fontCustom">Resolution</span>
+              <span class="margin10 label-content fontCustom">Gaming Hours</span>
+              </div>
+              <div class="img-container">
+              <span class="margin10 label-content fontCustom">Shorter Queue</span>
+              <span class="margin10 label-content fontCustom">RTX Enabled</span>
+              <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+              <span class="margin10 label-content fontCustom">Refundable</span>
+              </div>
+            </div>
+         </div>
+        </div>
+          <div class="swiper" id="sub-swiper-night">
+            <div class="swiper-wrapper" id="swiper-wrapper-night">
+              
+               </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  `
+  document.getElementById('labels-night').style.right = label_margin_night + 'px';
+  }
+  else{
+      const mainContainer=document.getElementById('main-night');
+      mainContainer.innerHTML=
+      `
+                <div id="labels-night">
+              <div class="row">
+                <div class="col label-container-night">
+                  <span class="discount text-sold-out hidden">Hidden</span>
+                              <span class="price text-sold-out hidden">Hidden</span>
+                              <span class="plan-name text-sold-out hidden">Hidden</span>
+                              <span class="plan-name text-sold-out hidden">Hidden</span>
+                              <div class="img-container">
+                                  
+                              
+                                <button class="btn grey-btn sub-btn text-white hidden">Know More</button>
+                  <span class="margin10 label-content fontCustom">Validity</span>
+                  <span class="margin10 label-content fontCustom">Resolution</span>
+                  <span class="margin10 label-content fontCustom">Gaming Hours</span>
+                  </div>
+                  <div class="img-container">
+                  <span class="margin10 label-content fontCustom">Shorter Queue</span>
+                  <span class="margin10 label-content fontCustom">RTX Enabled</span>
+                  <span class="margin10 label-content fontCustom">Play Games you Own*</span>
+                  <span class="margin10 label-content fontCustom">Refundable</span>
+                  </div>
+                </div>
+             </div>
+            </div>
+              <div class="swiper" id="sub-swiper-night">
+                <div class="swiper-wrapper" id="swiper-wrapper-night">
+                  
+                   </div>
+                </div>
+                <div class="swiper-pagination"></div>
+      `
+      
+        
+  }
+// night plans end
+
       
     const subCard=document.getElementById('swiper-wrapper-monthly');
     const subCardTrial=document.getElementById('swiper-wrapper-trial');
+    const subCardNight=document.getElementById('swiper-wrapper-night');
     countMonthly=-1;
     countTrial=-1;
+    countNight=-1;
     let firstRecommendMonthly=false;
     let firstRecommendTrial=false;
+    let firstRecommendNight=false;
     let firstRecommendTrialIndex=0;
     let firstRecommendMonthlyIndex=0;
+    let firstRecommendNightIndex=0;
     // Safari 3.0+ "[object HTMLElementConstructor]" 
     var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && window['safari'].pushNotification));
 
@@ -485,6 +587,125 @@ else{
            </div>`;
             subCardTrial.appendChild(swiperSlide2); 
         }
+
+        else if (sub?.tab_label === 'Night Plans') {
+          ++countNight;
+          const swiperSlide2 = document.createElement('div');
+          swiperSlide2.classList.add('swiper-slide');
+          swiperSlide2.classList.add('position-relative');
+          swiperSlide2.classList.add('swiper-slide-night');
+          if(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out){
+              swiperSlide2.classList.add('recommendedBorder');
+              if(!firstRecommendNight){
+                  firstRecommendNight=true;
+                  firstRecommendNight=countNight;
+              }
+          }
+  
+          swiperSlide2.innerHTML = `
+          ${(sub['plan_config']?.is_recommended && !sub['plan_config']?.is_sold_out) ? 
+          `<div class="row justify-content-center">
+              <div class="col-auto position-absolute marginTop-20" >
+              <lottie-player src="./js/lottieAnimation/subscription/Recommended.json" background="transparent"  speed="1"  style="width: auto; height: auto;" loop autoplay></lottie-player>
+              <button class="btn recommendedBg text-white btn-sm customBorder0 marginTop-67 px-lg-4 px-2">Recommended</button>
+              </div>
+          </div>`
+      : ''}
+      ${sub['plan_config']?.is_sold_out ? 
+  `<div class="row justify-content-center">
+      <div class="col-auto position-absolute marginTopSoldOut">
+          <div class="btn disabledBtnGradient btn-sm customBorder0 marginTop-5 px-lg-1 py-lg-0 px-1 sold-out">SOLD OUT</div>
+      </div>
+  </div>`
+: ''}
+          <div class="row">
+            <div class="col sub-container">
+
+            ${sub['plan_config']?.is_sold_out ?`<span class="discount text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
+              <span class="price text-sold-out">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+              <div class="row">
+        <div class="col">
+        <div class="flexContainer">
+          <img class="night-img img-fluid" src="./assets/subscriptionNew/night.svg"/>
+          <span class="plan-name text-sold-out">${sub.plan_name}</span>
+          <img class="night-img img-fluid" src="./assets/subscriptionNew/sunset.svg"/>
+          </div>
+          </div>
+      </div>
+              
+              <div class="img-container">
+              <button class="btn grey-btn sub-btn text-white margin-trial" onclick="openPopup('${sub['id']}')">Know More</button>
+              <span class="mobile-tag">Validity</span>
+              <span class="margin10 text-sold-out">${sub.plan_duration_in_days} Days</span>
+              <span class="mobile-tag">Resolution</span>
+              <span class="margin10 text-sold-out">${getResolution(sub)}</span>
+              <span class="mobile-tag">Gaming Hours</span>
+              <span class="margin10 text-sold-out">${sub['total_offered_tokens'] / 60} hrs</span>
+            </div>
+            <div class="img-container">
+            <span class="mobile-tag">Queue Basis</span>
+            <div class="img-wrapper margin10">
+            ${sub['plan_config']?.is_shorter_queue ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+            </div>
+            <span class="mobile-tag">Play games you own*</span>
+            <div class="img-wrapper margin10">
+            ${sub['plan_config']?.play_games_you_own ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+            </div>
+            <span class="mobile-tag">RTX Enabled</span>
+                            <div class="img-wrapper margin10">
+                            ${sub['plan_config']?.has_rtx_enabled ? '<img class="cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+                            </div>
+            <span class="mobile-tag">Refundable</span>
+            <div class="img-wrapper margin10">
+            ${sub['plan_config']?.is_refundable ? '<img class="margin10 cross" src="../assets/subscriptionNew/TickSoldOut.svg"/>':'<img class="margin10 cross" src="./assets/subscriptionNew/Cross_Sold_Out.svg"/>'}
+            </div>
+            </div>`:
+        `<span class="discount fontCustom">${currencyMap[sub['currency']] || sub['currency']} ${sub['plan_config']?.actual_price}</span>
+        <span class="price text-white">${currencyMap[sub['currency']] || sub['currency']} ${sub?.value}</span>
+        <div class="row">
+        <div class="col">
+        <div class="flexContainer">
+          <img class="night-img img-fluid" src="./assets/subscriptionNew/night.svg"/>
+          <span class="plan-name green-yellow-gradient night">${sub.plan_name}</span>
+          <img class="night-img img-fluid" src="./assets/subscriptionNew/sunset.svg"/>
+          </div>
+          </div>
+      </div>
+      
+        <div class="img-container">
+        <a href="${config.APP_URL + '/checkout/' + sub['id']}" onclick="subscriptionCardClick('${sub['plan_name']}', '${sub['value']}', '${sub['total_offered_tokens']}')" class="btn grey-btn sub-btn text-white margin-trial">Select</a>
+        <span class="mobile-tag">Validity</span>
+        <span class="margin10 text-dull">${sub.plan_duration_in_days} Days</span>
+        <span class="mobile-tag">Resolution</span>
+        <span class="margin10 text-dull">${getResolution(sub)}</span>
+        <span class="mobile-tag">Gaming Hours</span>
+        <div class="img-wrapper margin10">
+        <img class="margin10 cross" src="./assets/subscriptionNew/Infinity.svg"/>
+        </div>
+      </div>
+      <div class="img-container">
+      <span class="mobile-tag">Queue Basis</span>
+      <div class="img-wrapper margin10">
+      ${sub['plan_config']?.is_shorter_queue ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+      </div>
+      <span class="mobile-tag">Play games you own*</span>
+      <div class="img-wrapper margin10">
+      ${sub['plan_config']?.play_games_you_own ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+      </div>
+      <span class="mobile-tag">RTX Enabled</span>
+                            <div class="img-wrapper margin10">
+                            ${sub['plan_config']?.has_rtx_enabled ? '<img class="cross" src="../assets/subscriptionNew/TickS.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+                            </div>
+      <span class="mobile-tag">Refundable</span>
+      <div class="img-wrapper margin10">
+      ${sub['plan_config']?.is_refundable ? '<img class="cross" src="../assets/subscriptionNew/Tick.svg"/>':'<img class="cross" src="./assets/subscriptionNew/Cross.svg"/>'}
+      </div>
+      </div>`
+  }
+            </div>
+         </div>`;
+          subCardNight.appendChild(swiperSlide2); 
+      }
  
 })
 
@@ -496,6 +717,39 @@ new Swiper('#sub-swiper',{
     slidesPerView: 'auto',
     spaceBetween:30,
     initialSlide:firstRecommendMonthlyIndex,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        spaceBetween:15,
+        centeredSlides:false,
+        initialSlide:0,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+        },
+      }
+    }
+  });
+
+  new Swiper('#sub-swiper-night',{
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween:30,
+    initialSlide:firstRecommendNightIndex,
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
