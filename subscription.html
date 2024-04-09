@@ -208,25 +208,26 @@
            <p id="notify-user-msg">you will be notified once this subscription pack is available again</p>
            </div>
            </div>
+          </div>
         <!-- sold out notif end -->
       
       <!-- monthly -->
-      <section id="section-monthly">
+      <section id="section-base">
         <div class="main " id="main">
       </div> 
       </section>
       <!-- hourly -->
-    <section id="section-trial">
+    <section id="section-topup">
       <div class="main" id="main-trial">
       </div>
     </section>
     <!-- night plans -->
-    <section id="section-night plans">
+    <section id="section-base_nightly">
       <div class="main" id="main-night">
       </div>
     </section>
     
-  </div>
+
           <div class="col-12">
             <div class="row tipBg mt-4 px-2" id="tipBg">
               <div class="row my-1 mx-2">
@@ -729,127 +730,10 @@
     <script>
       // document.querySelectorAll(".hoursPerDay").forEach(elm => elm.innerHTML = "4")
       // User Slider Animation
-      $('.userUnderstandingSlider').hide();
-      window.onload = function ()
-      {
-        updateSlider($("#slider").val());
-        
-        setTimeout(function(){ 
-          $('.userUnderstandingSlider').show();
-        }, 4000);
-      };
-      $(document).click(function() {
-        $('.userUnderstandingSlider').hide();
-      });
+
+
       
 
-      // calc nearest dot
-      const calculateNearestDot = (value) => {
-        const dot_pos = [0, 10, 20, 40, 60, 100];
-        let nearest_dot = 0;
-        let difference = Math.abs(dot_pos[0] - value);
-        for (let i = 0; i < dot_pos.length; i++) {
-          let new_differnce = Math.abs(dot_pos[i] - value)
-          if (new_differnce < difference) {
-            difference = new_differnce;
-            nearest_dot = i;
-          }
-        }
-        return dot_pos[nearest_dot]
-      }
-      // movemoster
-      const changeCharacter = (pos) => {
-
-        const pos_map= {
-          0: {
-            id: "1monsterImg",
-            subCard: "subCard1",
-            hrs: 1,
-            gameplay_hrs: 4,
-          },
-          10: {
-            id: "3monsterImg",
-            subCard: "subCard2",
-            hrs: 3,
-            gameplay_hrs: 4,
-          },
-          20: {
-            id: "5monsterImg",
-            subCard: "subCard3",
-            hrs: 5,
-            gameplay_hrs: 4,
-          },
-          40: {
-            id: "10monsterImg",
-            subCard: "subCard4",
-            hrs: 10,
-            gameplay_hrs: 4,
-          },
-          60: {
-            id: "20monsterImg",
-            subCard: "subCard5",
-            hrs: 20,
-            gameplay_hrs: 6,
-          },
-          100: {
-            id: "UnmonsterImg",
-            subCard: "subCard6",
-            hrs: 'unlimited',
-            gameplay_hrs: 6,
-          },
-        };
-        [
-          "1monsterImg",
-          "3monsterImg",
-          "5monsterImg",
-          "10monsterImg",
-          "20monsterImg",
-          "UnmonsterImg",
-        ].map(e => document.getElementById(e).classList.add("d-none"));
-        document.getElementById(pos_map[pos].id).classList.remove("d-none");
-        document.querySelector('#hoursPerDay').innerText = pos_map[pos].gameplay_hrs;
-        
-        [
-          "subCard1",
-          "subCard2",
-          "subCard3",
-          "subCard4",
-          "subCard5",
-          "subCard6",
-        ].map(e => document.querySelectorAll('.'+e).forEach(e => { 
-            e.classList.remove('moveleft'); 
-            e.classList.add('moveright');
-            e.classList.add('d-none');
-          })
-        );
-        document.querySelectorAll('.'+pos_map[pos].subCard).forEach(e => { e.classList.remove("d-none",'moveright'); e.classList.add('moveleft');});  
-        
-      }
-
-      const updateSlider = (value) => {
-
-        document.querySelectorAll('.sliderText').hidden = true;          
-        document.getElementById('tipBg').hidden = true;
-        const nearest_dot = calculateNearestDot(value)
-        console.warn(nearest_dot)
-        document.getElementById('slider').value = nearest_dot;
-        changeCharacter(nearest_dot);
-        moveCharacter();
-        setTimeout(function () {
-          document.getElementById('tipBg').hidden = false
-        }, 300);
-      }
-
-      const updateSliderText = (value) => {
-        document.querySelectorAll('.sliderText').forEach(e => { 
-          e.classList.add("d-none");
-        }); 
-
-        if(nearest_dot == 100)
-        {
-          document.querySelector('#hoursPerDay').innerHTML = '<span class="unlimited-star">*</span>6';
-        }
-      }
 
       const _event = countlyService.startEvent("subscriptionCardClick")
 
@@ -958,19 +842,43 @@
             
 
 
-        function switchTab(tabName) {
-    const tabs = ['trial', 'monthly','night plans']; 
-    tabs.forEach(name => {
-        const section = document.getElementById(`section-${name}`);
-        const tab = document.getElementById(name);
-        if (name === tabName) {
+        function switchTab(tabName,tabLabel) {
+          const tabs=[
+    {
+        "name": "base",
+        "label": "Monthly"
+    },
+    {
+        "name": "topup",
+        "label": "Trial"
+    },
+    {
+        "name": "base_nightly",
+        "label": "Night Plans"
+    }
+]
+   
+    tabs.forEach(tab => {
+      
+        const section = document.getElementById(`section-${tab.name}`);
+        const tabClass = document.getElementById(tab.name);
+        const descElements=document.getElementsByClassName('tab-desc');
+        if (tab.name === tabName) {
             section.style.display = 'flex';
-            tab.classList.add('activeTab');
-            tab.classList.remove('disabledTab');
+            tabClass.classList.add('activeTab');
+            tabClass.classList.remove('disabledTab');
+            for(let i=0;i<descElements.length;i++){
+              descElements[i].classList.add('text-gradient-enabled');
+              descElements[i].classList.remove('text-gradient-disabled');
+            }
         } else {
             section.style.display = 'none';
-            tab.classList.remove('activeTab');
-            tab.classList.add('disabledTab');
+            tabClass.classList.remove('activeTab');
+            tabClass.classList.add('disabledTab');
+            for(let i=0;i<descElements.length;i++){
+              descElements[i].classList.remove('text-gradient-enabled');
+              descElements[i].classList.add('text-gradient-disabled');
+            }
         }
     });
 }
