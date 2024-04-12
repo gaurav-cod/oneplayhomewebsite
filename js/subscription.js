@@ -135,12 +135,12 @@ tabsNameAndLabel.forEach((tab)=>{
      <div class="position-relative">
       <a href="#${tab.name}" class="btn fontCustom tab ${tab.name === isActive ? 'activeTab' : 'disabledTab'}" id="${tab.name}" onclick="switchTab('${tab.name}','${tab.label}')">${tab.label}</a>
       ${tab.desc!=='' ? `
-      <div class="position-absolute tab-desc-container">
+      <div class="position-absolute tab-desc-container specialNightTagContainer">
           <span class="tab-desc text-gradient-disabled">${tab.desc.toUpperCase()}</span>
       </div>` : ''}  
       </div>
   `;
-  tabContainer.appendChild(swiperSlide);
+  tabContainer.appendChild(swiperSlide);  
 })
 console.log(tabsNameAndLabel);
 // tabs.forEach(tab => {
